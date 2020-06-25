@@ -6,23 +6,39 @@
 
 \newcommand{\myCognitiveVerb}[1]{\textcolor{blue}{\textbf{#1}}}
 
-\NewDocumentCommand{\myUnitFont}{}{\sffamily\bfseries\HUGE}
-\NewDocumentCommand{\myTitleFont}{}{\sffamily\bfseries\huge}
-\NewDocumentCommand{\mySectionFont}{}{\sffamily\bfseries\Large}
+%
+% Terminology explanation:
+%
+% "unit" refers to the Algebra 2 unit being taught.
+% "section" refers to the section within the unit being taught.
+% "heading" refers to the headings in this document (Objectives, Example, ...)
+%
+\NewDocumentCommand{\myUnitSectionNumberFont}{}{\sffamily\bfseries\HUGE}
+\NewDocumentCommand{\myUnitNameFont}{}{\sffamily\large}
+\NewDocumentCommand{\mySectionNameFont}{}{\sffamily\bfseries\huge}
+\NewDocumentCommand{\myHeadingFont}{}{\sffamily\bfseries\Large}
 
 %
-% #1 : optional unit/section number
-% #2 : mandatory title
+% #1 : optional unit name
+% #2 : optional unit/section number
+% #3 : mandatory title
 %
-\NewDocumentEnvironment{myNotesHeader}{om}{
-    \title{#2}
+\NewDocumentEnvironment{myNotesHeader}{oom}{
+    \title{#3}
     \begin{flushleft}
-        \IfValueT{#1}{{\myUnitFont#1}}
+        \IfValueT{#2}{{\myUnitSectionNumberFont#2}}
         \hfill\;\;
-        {\myTitleFont#2}
+        \begin{minipage}[b]{0.75\textwidth}
+            \begin{flushright}
+                \IfValueT{#1}{
+                    {\myUnitNameFont#1}\\ \vspace{0.75em}
+                }
+                {\mySectionNameFont#3}
+            \end{flushright}
+        \end{minipage}
         \hrule
     \end{flushleft}
-    \noindent{\mySectionFont Objectives:}
+    \noindent{\myHeadingFont Objectives:}
     \begin{enumerate}[label=\arabic*)]
 }{
     \end{enumerate}
@@ -33,7 +49,7 @@
 %
 \newenvironment{myKeyConcepts}[1][{}]{
     \begin{tcolorbox}[
-        title=Key Concepts:, fonttitle=\mySectionFont,
+        title=Key Concepts:, fonttitle=\myHeadingFont,
         coltitle=black, colbacktitle=black!25!yellow,
         colback=white!70!yellow,
         boxrule=2pt, 
@@ -54,7 +70,7 @@
         boxrule=0pt,
         borderline={0.5pt}{0pt}{black},
         ]
-        {\mySectionFont Example:}
+        {\myHeadingFont Example:}
         #1
         \tcblower
         \vspace{#2}
@@ -76,7 +92,7 @@
 %
 \newenvironment{myProblems2}[4]{%
     \noindent
-    {\mySectionFont Practice:}\hspace{0.5em}#1\nopagebreak%
+    {\myHeadingFont Practice:}\hspace{0.5em}#1\nopagebreak%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
@@ -113,7 +129,7 @@
 %
 \newenvironment{myProblems4}[6]{%
     \noindent
-    \textbf{\mySectionFont Practice:}\hspace{0.5em}#1\nopagebreak%
+    \textbf{\myHeadingFont Practice:}\hspace{0.5em}#1\nopagebreak%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
