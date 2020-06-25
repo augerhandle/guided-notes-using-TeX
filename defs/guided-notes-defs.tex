@@ -1,0 +1,149 @@
+\copypagestyle{myPagestyle}{empty}
+
+\newcommand{\myFooterSize}{\footnotesize}
+\makeoddfoot{myPagestyle}{{}}{\myFooterSize\thepage;}{\myFooterSize\thetitle}
+\makeevenfoot{myPagestyle}{{}}{\myFooterSize\thepage}{\myFooterSize\thetitle}
+
+\newcommand{\myCognitiveVerb}[1]{\textcolor{blue}{\textbf{#1}}}
+
+\NewDocumentCommand{\myUnitFont}{}{\sffamily\bfseries\HUGE}
+\NewDocumentCommand{\myTitleFont}{}{\sffamily\bfseries\huge}
+\NewDocumentCommand{\mySectionFont}{}{\sffamily\bfseries\Large}
+
+%
+% #1 : optional unit/section number
+% #2 : mandatory title
+%
+\NewDocumentEnvironment{myNotesHeader}{om}{
+    \title{#2}
+    \begin{flushleft}
+        \IfValueT{#1}{{\myUnitFont#1}}
+        \hfill\;\;
+        {\myTitleFont#2}
+        \hrule
+    \end{flushleft}
+    \noindent{\mySectionFont Objectives:}
+    \begin{enumerate}[label=\arabic*)]
+}{
+    \end{enumerate}
+}
+
+%
+% #1 : a name to give to this set of concepts (empty by default)
+%
+\newenvironment{myKeyConcepts}[1][{}]{
+    \begin{tcolorbox}[
+        title=Key Concepts:, fonttitle=\mySectionFont,
+        coltitle=black, colbacktitle=black!25!yellow,
+        colback=white!70!yellow,
+        boxrule=2pt, 
+        ]{#1}
+}{
+    \end{tcolorbox}
+}
+
+%
+% #1 A statement of the example problem.
+% #2 How much empty vertical space to leave for the example box.
+%
+\newcommand{\myExample}[2]{%
+    \begin{tcolorbox}[
+        enhanced,
+        sharp corners,
+        colback=white,
+        boxrule=0pt,
+        borderline={0.5pt}{0pt}{black},
+        ]
+        {\mySectionFont Example:}
+        #1
+        \tcblower
+        \vspace{#2}
+    \end{tcolorbox}
+}
+
+%
+% A counter to number the problems in the guided notes.
+%
+\newcounter{MyProblemCounter}
+\setcounter{MyProblemCounter}{1}
+\newcommand{\useMyProblemCounter}{\theMyProblemCounter\stepcounter{MyProblemCounter}}
+
+%
+% #1 : directions for all the problems
+% #2 : vertical height of the problem boxes
+% #3 : details for problem 1
+% #4 : details for problem 2
+%
+\newenvironment{myProblems2}[4]{%
+    \noindent
+    {\mySectionFont Practice:}\hspace{0.5em}#1\nopagebreak%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        raster every box/.style={%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt\useMyProblemCounter},%
+            },%
+        ]%
+        \begin{tcolorbox}[attach boxed title to top left]
+            #3
+            \tcblower\vspace{#2}
+        \end{tcolorbox}
+        \begin{tcolorbox}[attach boxed title to top right]
+            #4
+            \tcblower
+        \end{tcolorbox}%
+}{%
+    \end{tcbraster}
+}
+
+%
+% #1 : directions for all the problems
+% #2 : vertical height of the problem boxes
+% #3 : details for problem 1
+% #4 : details for problem 2
+% #5 : details for problem 3
+% #6 : details for problem 4
+%
+\newenvironment{myProblems4}[6]{%
+    \noindent
+    \textbf{\mySectionFont Practice:}\hspace{0.5em}#1\nopagebreak%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        raster every box/.style={%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt\useMyProblemCounter},%
+            },%
+        ]%
+        \begin{tcolorbox}[attach boxed title to top left]
+            #3
+            \tcblower\vspace{#2}
+        \end{tcolorbox}
+        \begin{tcolorbox}[attach boxed title to top right]
+            #4
+            \tcblower
+        \end{tcolorbox}%
+        \begin{tcolorbox}[attach boxed title to bottom left]
+            #5
+            \tcblower
+        \end{tcolorbox}%
+        \begin{tcolorbox}[attach boxed title to bottom right]
+            #6
+            \tcblower
+        \end{tcolorbox}%
+}{%
+    \end{tcbraster}
+}

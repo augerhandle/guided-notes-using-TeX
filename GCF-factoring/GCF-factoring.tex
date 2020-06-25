@@ -1,0 +1,102 @@
+\documentclass[letterpaper,9pt,oneside]{memoir}
+\usepackage{amsmath}
+\usepackage{xparse} % for NewDocumentCommand et al.
+% The following package makes prettier tables.  We're all about the bling!
+% \usepackage{booktabs}
+% \usepackage{array,tabularx}
+% \usepackage{colortbl}
+\usepackage{enumitem}
+% \usepackage{calc}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{raster}
+
+% use Palatino et al.
+\usepackage[slantedGreek]{mathpazo} \usepackage{helvet}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.75in}{*}{*}
+
+% ---------------------DOCUMENT------------------------------
+\begin{document}
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+% ---------------------Notes------------------------------
+\begin{myNotesHeader}[15.5]{Factoring A GCF Out of a Polynomial}
+    \item \myCognitiveVerb{factor} a monomial term into \emph{``prime'' factors}
+    \item \myCognitiveVerb{find} the \emph{GCF} of several monomials
+    \item \myCognitiveVerb{factor} the \emph{GCF} out of a polynomial
+\end{myNotesHeader}
+  
+% ---------------------1------------------------------
+\begin{myKeyConcepts}
+    To factor a monomial into its ``prime'' factors,
+    \begin{itemize}
+    \item Factor the coefficient (number) into its prime factors
+    and write each of the prime factors down.
+    \item Write each variable down a number of times equal to its exponent.
+    \end{itemize}
+\end{myKeyConcepts}
+
+\myExample{
+    Factor this monomial term into its prime factors: 
+    \( 24 x^2yz^3 \)
+}{1.5in}
+
+\begin{myProblems2}%
+    {Factor the following monomials into prime factors.}%
+    {2in}%
+    %
+    {\( 32x^2 \)}
+    {\( 8 x^3y^2z \)}
+\end{myProblems2}
+  
+% ---------------------2------------------------------
+\begin{myKeyConcepts}
+    To find the GCF of several monomials,
+    \begin{itemize}
+    \item Factor each term into its prime factors.
+    \item Write down each prime factor that occurs in every term. 
+    If a prime factor occurs multiple times \emph{in every term}, 
+    write it down that many times.
+    \item Multiply all those prime factors together.
+    \end{itemize}
+\end{myKeyConcepts}
+
+\myExample{
+    Find the GCF of the following monomials: 
+    \( 24 x^2yz^3 \quad\text{and}\quad 8 xyz^2 \)
+}{1.5in}
+
+\begin{myProblems2}{Find the GCFs of the monomials shown.}{2in}
+    {    \( 9x^3 \quad\text{and}\quad 27x \)}
+    {    \( 12x^2y^2 \quad\text{and}\quad 2xy^2 \)}
+  \end{myProblems2}
+
+  % ---------------------3------------------------------
+\begin{myKeyConcepts}
+    To factor the GCF out of a polynomial,
+    \begin{itemize}
+    \item Factor each term into its prime factors.
+    \item Find the GCF of all the terms in the polynomial, 
+    \item Factor that GCF out of each term and write it in front.
+    \end{itemize}
+\end{myKeyConcepts}
+
+\myExample{
+    Find the GCF of the following polynomial: 
+    \( 24 x^2yz^3 + 8 xyz^2 + 4xy \)
+}{1.5in}
+
+\begin{myProblems2}{Find the GCFs of the polynomials shown.}{2in}
+    {    \( 4x^3 + 12x \)}
+    {    \( 6x^3 + 3x^2 + 27x \)}
+  \end{myProblems2}
+  
+
+\end{document}
