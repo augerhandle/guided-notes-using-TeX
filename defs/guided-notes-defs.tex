@@ -50,7 +50,9 @@
 \newenvironment{myKeyConcepts}[1][{}]{
     \begin{tcolorbox}[
         title=Key Concepts:, fonttitle=\myHeadingFont,
-        coltitle=black, colbacktitle=black!25!yellow,
+        coltitle=black, 
+        colbacktitle=black!25!yellow, 
+        colframe=black!50!yellow,
         colback=white!70!yellow,
         boxrule=2pt, 
         ]{#1}
@@ -68,7 +70,7 @@
         sharp corners,
         colback=white,
         boxrule=0pt,
-        borderline={0.5pt}{0pt}{black},
+        borderline={0.5pt}{0pt}{black,dashed},
         ]
         {\myHeadingFont Example:}
         #1
