@@ -13,7 +13,7 @@
 % Since we're using oneside, thee is only an ODD footer (no even one)
 %
 \newcommand{\myFooterSize}{\footnotesize}
-\makeoddfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref{LastPage}}}{\myFooterSize\thetitle}
+\makeoddfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\thetitle}
 
 \newcommand{\myCognitiveVerb}[1]{\textcolor{blue}{\textbf{#1}}}
 
