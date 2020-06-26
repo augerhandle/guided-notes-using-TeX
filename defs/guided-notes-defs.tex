@@ -1,5 +1,14 @@
 \copypagestyle{myPagestyle}{empty}
 
+\newwatermark*[
+    allpages,
+    color=red!30,angle=45,
+    scale=4,
+    xpos=-10, ypos=0
+]{%
+    \transparent{0.4}example%
+}
+
 %
 % Since we're using oneside, thee is only an ODD footer (no even one)
 %
@@ -69,7 +78,7 @@
 \newcommand{\myExample}[2]{%
     \begin{tcolorbox}[
         enhanced,
-        sharp corners,
+        sharp corners, 
         colback=white,
         boxrule=0pt,
         borderline={0.5pt}{0pt}{black,dashed},
