@@ -6,7 +6,7 @@
     scale=4,
     xpos=-10, ypos=0
 ]{%
-    \transparent{0.4}example%
+    \transparent{0.4}dhasan example%
 }
 
 %
@@ -28,6 +28,16 @@
 \NewDocumentCommand{\myUnitNameFont}{}{\sffamily\large}
 \NewDocumentCommand{\mySectionNameFont}{}{\sffamily\bfseries\huge}
 \NewDocumentCommand{\myHeadingFont}{}{\sffamily\bfseries\Large}
+
+
+%
+% #1 is the fill-in text
+% #2 is an INTEGER scale factor that makes the box wider than the text
+%
+\NewDocumentCommand{\myFillInBox}{m O{3} }{%
+ \fbox{\makebox[\widthof{#1}*#2][c]{#1}}%
+ }
+
 
 %
 % #1 : optional unit name

@@ -9,7 +9,7 @@
 % \usepackage{array,tabularx}
 % \usepackage{colortbl}
 \usepackage{enumitem}
-% \usepackage{calc}
+\usepackage{calc} % for \widthof
 
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
@@ -38,11 +38,12 @@
   
 % ---------------------1------------------------------
 \begin{myKeyConcepts}[To factor a monomial into its ``prime'' factors\dots]
-    \begin{itemize}
-    \item Factor the coefficient (number) into its prime factors
-    and write each of the prime factors down.
+    \setlist{labelindent=\parindent,leftmargin=*,itemsep=1em}
+    \begin{enumerate}
+    \item Factor the coefficient (number) into \myFillInBox{prime factors}
+    and write each of them down.
     \item Write each variable down a number of times equal to its exponent.
-    \end{itemize}
+    \end{enumerate}
 \end{myKeyConcepts}
 
 \myExample{
