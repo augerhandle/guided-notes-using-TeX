@@ -1,14 +1,26 @@
 \documentclass[letterpaper,9pt]{memoir}
-\usepackage[]{xwatermark}
-\usepackage{transparent}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.75in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
 \usepackage{amsmath}
 \usepackage{xparse} % for NewDocumentCommand et al.
 \usepackage{enumitem}
+\usepackage{transparent} % for \transparent, which I use in the watermark
+\usepackage[slantedGreek]{mathpazo} \usepackage{helvet} % use Palatino et al.
+% \usepackage{booktabs} % prettier tables
 
-% The following package makes prettier tables.  We're all about the bling!
-% \usepackage{booktabs}
-% \usepackage{array,tabularx}
-% \usepackage{colortbl}
+\usepackage[]{xwatermark}
+\newwatermark*[
+    allpages,
+    color=red!30,angle=45,
+    scale=4,
+    xpos=-10, ypos=0
+]{%
+    \transparent{0.4}dhasan example%
+}
 
 \usepackage{dashundergaps} % for \gap
 \dashundergapssetup{
@@ -25,16 +37,6 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 \tcbuselibrary{raster}
-
-% use Palatino et al.
-\usepackage[slantedGreek]{mathpazo} \usepackage{helvet}
-
-% memoir commands to define the text block geometry
-\setulmarginsandblock{0.5in}{*}{*}
-\setlrmarginsandblock{0.75in}{*}{*}
-
-% If there's "extra" vertical space on this page, put it all at the bottom.
-\raggedbottom
 
 % ---------------------DOCUMENT------------------------------
 \begin{document}

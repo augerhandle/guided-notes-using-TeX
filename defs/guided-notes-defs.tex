@@ -1,13 +1,5 @@
 \copypagestyle{myPagestyle}{empty}
 
-\newwatermark*[
-    allpages,
-    color=red!30,angle=45,
-    scale=4,
-    xpos=-10, ypos=0
-]{%
-    \transparent{0.4}dhasan example%
-}
 
 %
 % Since we're using oneside, thee is only an ODD footer (no even one)
@@ -15,6 +7,10 @@
 \newcommand{\myFooterSize}{\footnotesize}
 \makeoddfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\thetitle}
 
+%
+% A command to change the appearance of the cognitive verb 
+% in the objectives.
+%
 \newcommand{\myCognitiveVerb}[1]{\textcolor{blue}{\textbf{#1}}}
 
 %
