@@ -1,15 +1,26 @@
 \documentclass[letterpaper,9pt]{memoir}
 \usepackage[]{xwatermark}
 \usepackage{transparent}
-
 \usepackage{amsmath}
 \usepackage{xparse} % for NewDocumentCommand et al.
+\usepackage{enumitem}
+
 % The following package makes prettier tables.  We're all about the bling!
 % \usepackage{booktabs}
 % \usepackage{array,tabularx}
 % \usepackage{colortbl}
-\usepackage{enumitem}
-\usepackage{calc} % for \widthof
+
+\usepackage{dashundergaps} % for \gap
+\dashundergapssetup{
+    teacher-mode=true, % set to true to show answers 
+    gap-format=underline,
+    teacher-gap-format=underline,
+    gap-font=\scshape\sffamily,
+    gap-numbers=true,
+    gap-widen=true,
+    gap-extend-percent=200,
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
 
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
@@ -21,6 +32,9 @@
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.75in}{*}{*}
+
+% If there's "extra" vertical space on this page, put it all at the bottom.
+\raggedbottom
 
 % ---------------------DOCUMENT------------------------------
 \begin{document}
@@ -40,9 +54,9 @@
 \begin{myKeyConcepts}[To factor a monomial into its ``prime'' factors\dots]
     \setlist{labelindent=\parindent,leftmargin=*,itemsep=1em}
     \begin{enumerate}
-    \item Factor the coefficient (number) into \myFillInBox{prime factors}
+    \item Factor the coefficient (number) into \myFillInBlank{prime factors}
     and write each of them down.
-    \item Write each variable down a number of times equal to its exponent.
+    \item Write each variable (letter) down a number of times equal to its \myFillInBlank{exponent}.
     \end{enumerate}
 \end{myKeyConcepts}
 

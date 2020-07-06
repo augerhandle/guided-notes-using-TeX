@@ -32,11 +32,12 @@
 
 %
 % #1 is the fill-in text
-% #2 is an INTEGER scale factor that makes the box wider than the text
 %
-\NewDocumentCommand{\myFillInBox}{m O{3} }{%
- \fbox{\makebox[\widthof{#1}*#2][c]{#1}}%
- }
+\NewDocumentCommand{\myFillInBlank}{m}{%
+    \,%
+    \gap[u]{#1}%
+    \,%
+}
 
 
 %
