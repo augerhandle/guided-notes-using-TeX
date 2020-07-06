@@ -55,21 +55,23 @@
     \end{enumerate}
 }
 
+
 %
-% #1 : a name to give to this set of concepts (empty by default)
+% #1 : the key concept (which appears as a tcolorbox title)
 %
-\newenvironment{myKeyConcepts}[1][{}]{
+\NewDocumentEnvironment{myKeyConcepts}{ O{Key Concepts:} }{
     \begin{tcolorbox}[
-        title=Key Concepts:, fonttitle=\myHeadingFont,
+        title=#1, fonttitle=\myHeadingFont,
         coltitle=black, 
         colbacktitle=black!25!yellow, 
         colframe=black!50!yellow,
         colback=white!70!yellow,
         boxrule=2pt, 
-        ]{#1}
+        ]
 }{
     \end{tcolorbox}
 }
+
 
 %
 % #1 A statement of the example problem.
