@@ -1,7 +1,7 @@
 \documentclass[letterpaper,12pt]{memoir}
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
-\setlrmarginsandblock{0.75in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
 % put "extra" vertical space at the bottom of a page
 \raggedbottom 
 
@@ -27,7 +27,7 @@
     teacher-mode=true, % set to true to show answers 
     gap-format=underline,
     teacher-gap-format=underline,
-    gap-font=\scshape\sffamily,
+    gap-font={\sffamily},
     gap-numbers=true,
     gap-widen=true,
     gap-extend-percent=150, % note: making this too big might create errors
@@ -78,13 +78,14 @@
   
 % ---------------------2------------------------------
 \begin{myKeyConcepts}[To find the GCF of several monomials\dots]
-    \begin{itemize}
-        \item Factor each term into its prime factors.
-        \item Write down each prime factor that occurs in every term. 
+    \setlist{labelindent=\parindent,leftmargin=*,itemsep=1em}
+    \begin{enumerate}
+        \item Factor \myFillInBlank{each term} into its prime factors.
+        \item Write down \myFillInBlank{each prime factor} that occurs in every term. 
         If a prime factor occurs multiple times \emph{in every term}, 
         write it down that many times.
-        \item Multiply all those prime factors together.
-    \end{itemize}
+        \item \myFillInBlank{Multiply} all those prime factors together.
+    \end{enumerate}
 \end{myKeyConcepts}
 
 \myExample{
@@ -99,11 +100,12 @@
 
   % ---------------------3------------------------------
 \begin{myKeyConcepts}[To factor the GCF out of a polynomial\dots]
-    \begin{itemize}
-        \item Factor each term into its prime factors.
-        \item Find the GCF of all the terms in the polynomial, 
-        \item Factor that GCF out of each term and write it in front.
-    \end{itemize}
+    \setlist{labelindent=\parindent,leftmargin=*,itemsep=1em}
+    \begin{enumerate}
+        \item Factor \myFillInBlank{each term} into its prime factors.
+        \item Find the GCF of \myFillInBlank{all the terms} in the polynomial, 
+        \item Factor that GCF out of each term and \myFillInBlank{write it in front}.
+    \end{enumerate}
 \end{myKeyConcepts}
 
 \myExample{
