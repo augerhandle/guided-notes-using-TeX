@@ -103,10 +103,11 @@
 
 
 %
-% #1 A statement of the example problem.
-% #2 How much empty vertical space to leave for the example box.
+% #1 Optional example number 
+% #2 A statement of the example problem.
+% #3 How much empty vertical space to leave for the example box.
 %
-\newcommand{\myExample}[2]{%
+\NewDocumentCommand{\myExample}{omm}{%
     \begin{tcolorbox}[
         enhanced,
         sharp corners, 
@@ -114,10 +115,10 @@
         boxrule=0pt,
         borderline={0.5pt}{0pt}{black,dashed},
         ]
-        {\myHeadingFont Example:}
-        #1
+        {\myHeadingFont Example\IfValueT{#1}{{ #1}}:}
+        #2
         \tcblower
-        \vspace{#2}
+        \vspace{#3}
     \end{tcolorbox}
 }
 
