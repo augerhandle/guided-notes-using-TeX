@@ -1,0 +1,95 @@
+\documentclass[letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\usepackage{amsmath}
+\usepackage{xparse} % for NewDocumentCommand et al.
+\usepackage{enumitem}
+\usepackage{transparent} % for \transparent, which I use in the watermark
+\usepackage[slantedGreek]{mathpazo} \usepackage{helvet} % use Palatino et al.
+\usepackage{booktabs} % prettier tables
+
+\usepackage[]{xwatermark}
+\newwatermark*[
+    allpages,
+    color=red!30,angle=45,
+    scale=4,
+    xpos=-10, ypos=0
+]{%
+    \transparent{0.4}dhasan example%
+}
+
+\usepackage{dashundergaps} % for \gap
+\dashundergapssetup{
+    teacher-mode=true, % set to true to show answers 
+    gap-format=underline,
+    teacher-gap-format=underline,
+    gap-font={\sffamily},
+    gap-numbers=true,
+    gap-widen=true,
+    gap-extend-percent=150, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{raster}
+
+% ---------------------DOCUMENT------------------------------
+\begin{document}
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+% ---------------------Notes------------------------------
+\begin{myNotesHeader}[Unit 1 : Introduction to Functions][1.13]{Verifying Inverses}
+    \item \myCognitiveVerb{verify} that two given functions are inverses of each other
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+    \myVocabularyWord{verify}
+        {
+            make sure something is true
+        }
+    \myVocabularyWord{compose functions}
+        {
+            call one function and then the other
+        }
+    \myVocabularyWord{inverse functions}
+        {
+            two functions that ``undo'' each other
+        }
+\end{myVocabulary}
+
+\vspace{1em}
+
+% ---------------------1------------------------------
+\begin{myKeyConcepts}[To verify that $f(x)$ and $g(x)$ are inverses\dots]
+    \setlist{labelindent=\parindent,leftmargin=*,itemsep=1em}
+    \begin{enumerate}
+        \item Compose $f$ with $g$: find $f \circ g = f(g(x))$.
+        \item Compose $g$ with $f$: find $g \circ f = g(f(x))$.
+        \item Verify that the results of {\bfseries both} compositions is $x$.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Factor this monomial term into its prime factors: 
+    \( 24 x^2yz^3 \)
+}{1.5in}
+
+\begin{myProblems2}%
+    {Factor the following monomials into prime factors.}%
+    {2in}%
+    %
+    {\( 32x^2 \)}
+    {\( 8 x^3y^2z \)}
+\end{myProblems2}
+  
+
+
+\end{document}
