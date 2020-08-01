@@ -1,11 +1,9 @@
 \copypagestyle{myPagestyle}{empty}
 
 
-%
-% Since we're using oneside, thee is only an ODD footer (no even one)
-%
 \newcommand{\myFooterSize}{\footnotesize}
 \makeoddfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\thetitle}
+\makeevenfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\thetitle}
 
 %
 % A command to change the appearance of the cognitive verb 
