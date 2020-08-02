@@ -34,6 +34,7 @@
 }
 
 
+% Definition for the LESSON HEADER + OBJECTIVES
 %
 % #1 : optional unit name
 % #2 : optional unit/section number
@@ -60,8 +61,8 @@
     \end{enumerate}
 }
 
-%
-% set up a 2-column tabular intended to hold vocabulary words
+
+% Definitions related to the VOCABULARY TABLE
 %
 \newenvironment{myVocabulary}{
     {\noindent{\myHeadingFont Vocabulary:}}\vspace{1em}
@@ -73,16 +74,26 @@
 }{
     \bottomrule
     \end{tabular}
+    \vspace{1em}
 }
 
-%
-% intended as a row in a 2-column tabular
-%
 \newcommand{\myVocabularyWord}[2]{%
 {\textcolor{blue}{\textbf{#1}}} & #2 \\
 }
 
 
+% Definitions related to an INTRODUCTION
+%
+\newenvironment{myIntroduction}{
+    {\noindent{\myHeadingFont Introduction:}}\vspace{1em}
+
+    \setlength{\leftskip}{3cm}
+}{
+    \setlength{\leftskip}{0pt}
+}
+
+
+% Definition related to KEY CONCEPTS
 %
 % #1 : the key concept (which appears as a tcolorbox title)
 %
@@ -100,6 +111,7 @@
 }
 
 
+% Definition related to EXAMPLES
 %
 % #1 Optional example number 
 % #2 A statement of the example problem.
@@ -120,13 +132,14 @@
     \end{tcolorbox}
 }
 
-%
+% Definitions related to PROBLEMS
+
 % A counter to number the problems in the guided notes.
-%
 \newcounter{MyProblemCounter}
 \setcounter{MyProblemCounter}{1}
 \newcommand{\useMyProblemCounter}{\theMyProblemCounter\stepcounter{MyProblemCounter}}
 
+% an environment for two adjacent problems
 %
 % #1 : directions for all the problems
 % #2 : vertical height of the problem boxes
@@ -162,6 +175,7 @@
     \end{tcbraster}
 }
 
+% an environment for 4 adjacent problems
 %
 % #1 : directions for all the problems
 % #2 : vertical height of the problem boxes
