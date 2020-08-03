@@ -57,7 +57,7 @@
 \checkandfixthelayout
 \setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
 
-% ---------------------LESSON------------------------------
+% ---------------------HEADER------------------------------
 \begin{myNotesHeader}
     \item \myCognitiveVerb{sketch} the graph of the inverse of a function
 \end{myNotesHeader}
@@ -67,9 +67,18 @@
         {
             draw something quickly without being perfect
         }
-    \myVocabularyWord{inverse functions}
+        \myVocabularyWord{inverse functions}
         {
             two functions that ``undo'' each other
+        }
+        \myVocabularyWord{diagonal line}
+        {
+            a line that goes between opposite corners
+        }
+        \myVocabularyWord{mirror image}
+        {
+            in 2-D, this is 
+            two things that are \emph{reflected} across a line
         }
 \end{myVocabulary}
 
@@ -77,18 +86,19 @@
 \begin{myLesson}
     In lesson 1.9 you learned how to find the inverse $f^{-1}$ 
     for a function $f$.
-    It was a lot of ``algebra''.
-    The key part of those \emph{algebraic} steps was {\bfseries swapping} 
+    It was a lot of \emph{algebra}.
+    The key part of those steps was {\bfseries swapping} 
     the $x$ and $y$ variables. 
-    What does that mean \emph{geometrically} (visually)?
+    What does that mean \emph{geometrically}? 
+    (What does that mean visually?)
     In this lesson, we will graph some inverses to find out.
 
-    You should learn two things:
+    You will learn two things:
 
     \begin{myLessonBox}
         Graphing the inverse of $f$ is really just a matter 
         of figuring out what $f^{-1}$ first. 
-        Then you just sketch it.
+        Then you just sketch $y = f^{-1}(x)$.
     \end{myLessonBox}
 
     \begin{myLessonBox}
@@ -110,17 +120,17 @@
     \end{enumerate}
 \end{myKeyConcepts}
 
-\myExample[1]{
+\myExample{
     Sketch the graph of the inverse of
     \( f(x) = 3x \)
 }{2.75in}
 
-\myExample[2]{
+\myExample{
     Sketch the graph of the inverse of
     \( v(t) = 2t-7 \)
 }{2.75in}
 
-\myExample[3]{
+\myExample{
     Sketch the graph of the inverse of
     \( f(x) = \frac{2}{5}x- \frac{1}{5} \)
 }{2.75in}
@@ -139,14 +149,14 @@
     \end{enumerate}
 \end{myKeyConcepts}
 
-\begin{myExampleForTikzGraphs}*[4]{
+\begin{myExampleForTikzGraphs}*{
     Let's consider the function 
     \( f(x) = x^5 \).
     It turns out (we will learn this later in the year)
     that the inverse of this function its
-    \( f^{-1}(x) = \sqrt[5](x) \).
+    \( f^{-1}(x) = \sqrt[5]{x} \).
 }
-    We could (but you don't need to) use a graphing calculator or Desmos to graph $f$ and $f^{-1}$:
+    We could (but you {\bfseries\itshape do not} need to) use a graphing calculator or Desmos to graph $f$ and $f^{-1}$:
 
     \begin{center}
     \begin{tikzpicture}
@@ -166,7 +176,7 @@
     \end{tikzpicture}
     \end{center}
     
-    \noindent Notice how the two graphs are {\bfseries mirror image reflections} of each other 
+    \noindent Notice how the two graphs are {\bfseries\itshape mirror images} of each other 
     across the diagonal line.
 \end{myExampleForTikzGraphs}
 
