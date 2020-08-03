@@ -1,0 +1,103 @@
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\usepackage{amsmath}
+\usepackage{xparse} % for NewDocumentCommand et al.
+\usepackage{enumitem}
+\usepackage{transparent} % for \transparent, which I use in the watermark
+\usepackage[slantedGreek]{mathpazo} \usepackage{helvet} % use Palatino et al.
+\usepackage{booktabs} % prettier tables
+
+\usepackage[]{xwatermark}
+\newwatermark*[
+    allpages,
+    color=red!30,angle=45,
+    scale=4,
+    xpos=-10, ypos=0
+]{%
+    \transparent{0.4}dhasan example%
+}
+
+\usepackage{dashundergaps} % for \gap
+\dashundergapssetup{
+    teacher-mode=true, % set to true to show answers 
+    gap-format=underline,
+    teacher-gap-format=underline,
+    gap-font={\sffamily},
+    gap-numbers=true,
+    gap-widen=true,
+    gap-extend-percent=150, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{raster}
+
+% ---------------------DOCUMENT------------------------------
+\begin{document}
+
+\newcommand{\myClassName}{Pre-AP Algebra 2}
+\newcommand{\myUnitNumber}{1}
+\newcommand{\myUnitTitle}{Introduction to Functions}
+\newcommand{\myLessonNumber}{10}
+\newcommand{\myLessonTitle}{Sketching Inverses}
+
+
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+
+% ---------------------LESSON------------------------------
+\begin{myNotesHeader}
+    \item \myCognitiveVerb{sketch} the graph of the inverse of a function
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+    \myVocabularyWord{sketch}
+        {
+            quickly draw something
+        }
+    \myVocabularyWord{inverse functions}
+        {
+            two functions that ``undo'' each other
+        }
+\end{myVocabulary}
+
+% ---------------------CONCEPT 1------------------------------
+\begin{myKeyConcepts}[To sketch the inverse of $f(x)$\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,itemsep=0.4em}
+    \begin{enumerate}
+        \item Find the inverse function $f^{-1}(x)$ using what you learned in Lesson 1.9.
+        \item Sketch the graph of that inverse function.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample[1]{
+    Sketch the graph of (TODO: fixme)
+    \( f(x) = 2x-7 \)
+}{3in}
+
+\myExample[2]{
+    Sketch the graph of (TODO:fixme)
+    \( f(x) = 2x-7 \)
+}{3in}
+
+% \begin{myProblems2}%
+%     {Factor the following monomials into prime factors.}%
+%     {2in}%
+%     %
+%     {\( 32x^2 \)}
+%     {\( 8 x^3y^2z \)}
+% \end{myProblems2}
+  
+
+
+\end{document}
