@@ -1,4 +1,4 @@
-\documentclass[fleqn,letterpaper,12pt,printwatermark=true]{memoir}
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
@@ -38,6 +38,9 @@
 \tcbuselibrary{skins}
 \tcbuselibrary{raster}
 
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
 % ---------------------DOCUMENT------------------------------
 \begin{document}
 
@@ -62,7 +65,7 @@
 \begin{myVocabulary}
     \myVocabularyWord{sketch}
         {
-            quickly draw something
+            draw something quickly without being perfect
         }
     \myVocabularyWord{inverse functions}
         {
@@ -70,25 +73,102 @@
         }
 \end{myVocabulary}
 
+% ---------------------LESSON------------------------------
+\begin{myLesson}
+    In lesson 1.9 you learned how to find the inverse $f^{-1}$ 
+    for a function $f$.
+    It was a lot of ``algebra''.
+    The key part of those \emph{algebraic} steps was {\bfseries swapping} 
+    the $x$ and $y$ variables. 
+    What does that mean \emph{geometrically} (visually)?
+    In this lesson, we will graph some inverses to find out.
+
+    You should learn two things:
+
+    \begin{myLessonBox}
+        Graphing the inverse of $f$ is really just a matter 
+        of figuring out what $f^{-1}$ first. 
+        Then you just sketch it.
+    \end{myLessonBox}
+
+    \begin{myLessonBox}
+        If you visually compare the graph of a function
+        to the graph of its inverse,
+        you will see that they are \emph{mirror images} (reflections)
+        across the diagonal line, $y=x$.
+    \end{myLessonBox}
+\end{myLesson}
+
 % ---------------------CONCEPT 1------------------------------
 \begin{myKeyConcepts}[To sketch the inverse of $f(x)$\dots]
     Follow these steps:
     \setlist{labelindent=\parindent,itemsep=0.4em}
     \begin{enumerate}
         \item Find the inverse function $f^{-1}(x)$ using what you learned in Lesson 1.9.
-        \item Sketch the graph of that inverse function.
+        \item Sketch the graph of that inverse function 
+        (by hand if you know how to graph it or using a graphing calculator or Desmos to help you if you don't).
     \end{enumerate}
 \end{myKeyConcepts}
 
 \myExample[1]{
-    Sketch the graph of (TODO: fixme)
-    \( f(x) = 2x-7 \)
-}{3in}
+    Sketch the graph of the inverse of
+    \( f(x) = 3x \)
+}{2.75in}
 
 \myExample[2]{
-    Sketch the graph of (TODO:fixme)
-    \( f(x) = 2x-7 \)
-}{3in}
+    Sketch the graph of the inverse of
+    \( v(t) = 2t-7 \)
+}{2.75in}
+
+\myExample[3]{
+    Sketch the graph of the inverse of
+    \( f(x) = \frac{2}{5}x- \frac{1}{5} \)
+}{2.75in}
+
+% ---------------------CONCEPT 2------------------------------
+\begin{myKeyConcepts}[To see the visual relationship between a function and its inverse\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,itemsep=0.4em}
+    \begin{enumerate}
+        \item Sketch the graph of the original function $y = f(x)$.
+        \item Sketch the graph of the inverse function $y = f^{-1}(x)$.
+        \item Lightly sketch the graph of the diagonal line, $y=x$ (or draw it as a dotted line).
+        \item Notice that the graph of the inverse function 
+        is the mirror image (reflection) of the original function 
+        across that diagonal line.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\begin{myExampleForTikzGraphs}*[4]{
+    Let's consider the function 
+    \( f(x) = x^5 \).
+    It turns out (we will learn this later in the year)
+    that the inverse of this function its
+    \( f^{-1}(x) = \sqrt[5](x) \).
+}
+    We could (but you don't need to) use a graphing calculator or Desmos to graph $f$ and $f^{-1}$:
+
+    \begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=3in,
+        grid=both,
+        axis x line = middle,axis y line = middle,
+        % axis equal image,
+        xtick distance = 1, ytick distance = 1,
+        minor tick num=10,
+        ]
+        \addplot[no marks,densely dotted,thick,domain=-1.1:1.1]{x};
+        \addplot[no marks,solid,red,ultra thick,domain=-1:1]{x^3};
+        % cube root, see: https://tex.stackexchange.com/questions/69411/pgfplots-cant-plot-some-usual-mathematical-functions
+        \addplot[no marks,solid,blue,dashed,ultra thick,domain=-1:1,samples=100]{x/abs(x)*abs(x)^(1/3)};
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+    
+    \noindent Notice how the two graphs are {\bfseries mirror image reflections} of each other 
+    across the diagonal line.
+\end{myExampleForTikzGraphs}
 
 % \begin{myProblems2}%
 %     {Factor the following monomials into prime factors.}%

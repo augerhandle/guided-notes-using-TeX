@@ -126,10 +126,11 @@
     \end{tcolorbox}
 }
 
-% #1 Optional example number 
-% #2 A statement of the example problem.
+% #1 optional star. It's presence means DO NOT CENTER
+% #2 Optional example number 
+% #3 A statement of the example problem.
 %
-\NewDocumentEnvironment{myExampleForTikzGraphs}{om}{%
+\NewDocumentEnvironment{myExampleForTikzGraphs}{som}{%
     \begin{tcolorbox}[
         enhanced,
         sharp corners, 
@@ -137,15 +138,18 @@
         boxrule=0pt,
         borderline={0.5pt}{0pt}{black,dashed},
         ]
-        {\myHeadingFont Example\IfValueT{#1}{{ #1}}:}
-        #2
+        {\myHeadingFont Example\IfValueT{#2}{{ #2}}:}#3
         \tcblower
-        \begin{center}
+        \IfBooleanTF{#1}
+            {}
+            {\begin{center}}
 }
 % user would insert 
 % \begin{tikzpicture}\begin{axis}...\end{axis}\end{tikzpicture}
 {
-        \end{center}
+        \IfBooleanTF{#1}
+            {}
+            {\end{center}}
     \end{tcolorbox}
 }
 
