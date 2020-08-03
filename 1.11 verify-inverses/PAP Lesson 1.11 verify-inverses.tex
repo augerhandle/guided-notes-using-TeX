@@ -1,4 +1,4 @@
-\documentclass[fleqn,letterpaper,12pt,printwatermark=true]{memoir}
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
@@ -56,7 +56,7 @@
 
 % ---------------------LESSON------------------------------
 \begin{myNotesHeader}
-    \item \myCognitiveVerb{verify} that two given functions are inverses of each other
+    \item \myCognitiveVerb{determine} if two given functions are inverses of each other
 \end{myNotesHeader}
 
 \begin{myVocabulary}
@@ -75,19 +75,62 @@
 \end{myVocabulary}
 
 % ---------------------CONCEPT 1------------------------------
-\begin{myKeyConcepts}[To verify that $f(x)$ and $g(x)$ are inverses\dots]
+\begin{myLesson}
+    Inverse functions \emph{undo} each other.
+    That means that if you pass $x$ as the input into one function,
+    and then you pass the output of that function to a second function,
+    the output of that second function is $x$.
+    In other words,
+    when you \emph{compose} the two functions,
+    you get back what you started with.
+    (If you start with $x$, you get $x$ back.)
+
+    \begin{myLessonBox}
+        When two functions are inverses,
+        if you compose them 
+        {\bfseries\itshape in both directions},
+        you get $x$ as an output.
+    \end{myLessonBox}
+
+    This is true 
+    \emph{no matter which order} you pass the original input $x$
+    to the two functions.
+    We can draw it like this:
+    \[
+        x \Longrightarrow f \Longrightarrow g \Longrightarrow x
+    \]
+    \[
+        x \Longrightarrow g \Longrightarrow f \Longrightarrow x.
+    \]
+    Algebraically, this means:
+    \[
+        (f \circ g)(x) = x
+    \]
+    \[
+        (g \circ f)(x) = x,
+    \]
+    which can be rewritten like this:
+    \[
+        f(g(x)) = x
+    \]
+    \[
+        g(f(x)) = x.
+    \]
+\end{myLesson}
+
+\begin{myKeyConcepts}[To determine if $f(x)$ and $g(x)$ are inverses\dots]
     Follow these steps:
     \setlist{labelindent=\parindent,itemsep=0.4em}
     \begin{enumerate}
-        \item Verify that ($f \circ g)(x) = x$.
-        \item Verify that ($g \circ f)(x) = x$.
+        \item Verify that ($f \circ g)(x) \equiv f(g(x)) = x$.
+        \item Verify that ($g \circ f)(x) \equiv g(f(x)) = x$.
     \end{enumerate}
-    (They must \emph{both} equal $x$ in order to be inverses of each other.
-    If either one does not equal $x$, then they are not inverses.)
+    They must \emph{both} equal $x$ in order to be inverses of each other.
+    If either one does not equal $x$, then they are not inverses.
 \end{myKeyConcepts}
 
 \myExample[1]{
-    Verify that $f$ and $g$ are inverse functions, where
+    Determine if $f$ and $g$ are inverse functions, where
     \( f(x) = 2x-7 \)
     and
     \( {     g(x) = \frac{1}{2}(x+7)     } \) % use braces to prevent wrapping
@@ -97,8 +140,16 @@
     Verify that $f$ and $g$ are inverse functions, where
     \( f(x) = 4x-\frac{1}{3} \)
     and
-    \( {     g(x) = \frac{1}{4}x - 3     } \) % use braces to prevent wrapping
+    \( {     g(x) = \frac{1}{4}x - 3     } \). % use braces to prevent wrapping
 }{3in}
+
+\myExample[3]{
+    Verify that $f$ and $g$ are inverse functions, where
+    \( f(x) = \frac{1}{x-1} \)
+    and
+    \( g(x) = \frac{x+1}{x} \).
+}{4in}
+
 
 % \begin{myProblems2}%
 %     {Factor the following monomials into prime factors.}%

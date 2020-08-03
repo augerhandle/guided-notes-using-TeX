@@ -2,8 +2,8 @@
 
 
 \newcommand{\myFooterSize}{\footnotesize}
-\makeoddfoot{myPagestyle}{\myFooterSize\myClassName}{\myFooterSize\thepage\,of\,\pageref*{xwmlastpage}}{\myFooterSize\myLessonTitle}
-\makeevenfoot{myPagestyle}{\myFooterSize\myLessonTitle}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\myClassName}
+\makeoddfoot{myPagestyle}{\myFooterSize\myClassName}{\myFooterSize\thepage\,of\,\pageref*{xwmlastpage}}{\myFooterSize\myUnitNumber.\myLessonNumber\,\,\myLessonTitle}
+\makeevenfoot{myPagestyle}{\myFooterSize\myUnitNumber.\myLessonNumber\,\,\myLessonTitle}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\myClassName}
 
 %
 % A command to change the appearance of the cognitive verb 
@@ -71,27 +71,31 @@
 }
 
 
-% Definitions related to an INTRODUCTION
+% Definitions related to an LESSON
 %
 \newenvironment{myLesson}{
-    {\noindent{\myHeadingFont Lesson:}}\vspace{1em}
-
-    \begin{adjustwidth}{2em}{0pt}
-    \begin{itemize}
+    {\noindent{\myHeadingFont Lesson:}}\par
 }{
-    \end{itemize}
-    \end{adjustwidth}
     \vspace{1em}
 }
 
-
-% Definition related to KEY CONCEPTS
+% #1 width of the centered box
 %
+\NewDocumentEnvironment{myLessonBox}{ O{6in} }{
+    \begin{center}
+        \begin{tcolorbox}[width=#1,]
+}{
+        \end{tcolorbox}
+    \end{center}
+}
+
+
 % #1 : the key concept (which appears as a tcolorbox title)
 %
-\NewDocumentEnvironment{myKeyConcepts}{ O{Key Concepts:} }{
+\NewDocumentEnvironment{myKeyConcepts}{ O{Key Concept:} }{
+    \begin{samepage}
     \begin{tcolorbox}[
-        title=#1, fonttitle=\myHeadingFont,
+        title={Key Concept: #1}, fonttitle=\myHeadingFont,
         coltitle=black, 
         colbacktitle=black!25!yellow, 
         colframe=black!50!yellow,
@@ -100,10 +104,8 @@
         ]
 }{
     \end{tcolorbox}
+    \end{samepage}
 }
-
-
-% Definition related to EXAMPLES
 
 % #1 Optional example number 
 % #2 A statement of the example problem.
