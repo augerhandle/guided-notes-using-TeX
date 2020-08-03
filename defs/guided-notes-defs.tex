@@ -2,8 +2,8 @@
 
 
 \newcommand{\myFooterSize}{\footnotesize}
-\makeoddfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\thetitle}
-\makeevenfoot{myPagestyle}{{}}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\thetitle}
+\makeoddfoot{myPagestyle}{\myFooterSize\myClassName}{\myFooterSize\thepage\,of\,\pageref*{xwmlastpage}}{\myFooterSize\myLessonTitle}
+\makeevenfoot{myPagestyle}{\myFooterSize\myLessonTitle}{\myFooterSize{\thepage{}~of~\pageref*{xwmlastpage}}}{\myFooterSize\myClassName}
 
 %
 % A command to change the appearance of the cognitive verb 
@@ -12,15 +12,11 @@
 \newcommand{\myCognitiveVerb}[1]{\textcolor{blue}{\textbf{#1}}}
 
 %
-% Terminology explanation:
+% Font styling commands (so I can change them in a single place)
 %
-% "unit" refers to the Algebra 2 unit being taught.
-% "section" refers to the section within the unit being taught.
-% "heading" refers to the headings in this document (Objectives, Example, ...)
-%
-\NewDocumentCommand{\myUnitSectionNumberFont}{}{\sffamily\bfseries\HUGE}
-\NewDocumentCommand{\myUnitNameFont}{}{\sffamily\large}
-\NewDocumentCommand{\mySectionNameFont}{}{\sffamily\bfseries\huge}
+\NewDocumentCommand{\myUnitLessonNumberFont}{}{\sffamily\bfseries\HUGE}
+\NewDocumentCommand{\myUnitTitleFont}{}{\sffamily\large}
+\NewDocumentCommand{\myLessonTitleFont}{}{\sffamily\bfseries\huge}
 \NewDocumentCommand{\myHeadingFont}{}{\sffamily\bfseries\Large}
 
 
@@ -36,21 +32,14 @@
 
 % Definition for the LESSON HEADER + OBJECTIVES
 %
-% #1 : optional unit name
-% #2 : optional unit/section number
-% #3 : mandatory title
-%
-\NewDocumentEnvironment{myNotesHeader}{oom}{
-    \title{#3}
+\newenvironment{myNotesHeader}{
     \begin{flushleft}
-        \IfValueT{#2}{{\myUnitSectionNumberFont#2}}
+        {\myUnitLessonNumberFont{\myUnitNumber.\myLessonNumber}}
         \hfill\;\;
         \begin{minipage}[b]{0.75\textwidth}
             \begin{flushright}
-                \IfValueT{#1}{
-                    {\myUnitNameFont#1}\\ \vspace{0.75em}
-                }
-                {\mySectionNameFont#3}
+                {\myUnitTitleFont{}Unit \myUnitNumber\,\,\,\myUnitTitle}\\ \vspace{0.75em}
+                {\myLessonTitleFont\myLessonTitle}
             \end{flushright}
         \end{minipage}
         \hrule
@@ -84,12 +73,15 @@
 
 % Definitions related to an INTRODUCTION
 %
-\newenvironment{myIntroduction}{
-    {\noindent{\myHeadingFont Introduction:}}\vspace{1em}
+\newenvironment{myLesson}{
+    {\noindent{\myHeadingFont Lesson:}}\vspace{1em}
 
-    \setlength{\leftskip}{3cm}
+    \begin{adjustwidth}{2em}{0pt}
+    \begin{itemize}
 }{
-    \setlength{\leftskip}{0pt}
+    \end{itemize}
+    \end{adjustwidth}
+    \vspace{1em}
 }
 
 
@@ -112,7 +104,7 @@
 
 
 % Definition related to EXAMPLES
-%
+
 % #1 Optional example number 
 % #2 A statement of the example problem.
 % #3 How much empty vertical space to leave for the example box.
@@ -131,6 +123,30 @@
         \vspace{#3}
     \end{tcolorbox}
 }
+
+% #1 Optional example number 
+% #2 A statement of the example problem.
+%
+\NewDocumentEnvironment{myExampleForTikzGraphs}{om}{%
+    \begin{tcolorbox}[
+        enhanced,
+        sharp corners, 
+        colback=white,
+        boxrule=0pt,
+        borderline={0.5pt}{0pt}{black,dashed},
+        ]
+        {\myHeadingFont Example\IfValueT{#1}{{ #1}}:}
+        #2
+        \tcblower
+        \begin{center}
+}
+% user would insert 
+% \begin{tikzpicture}\begin{axis}...\end{axis}\end{tikzpicture}
+{
+        \end{center}
+    \end{tcolorbox}
+}
+
 
 % Definitions related to PROBLEMS
 
