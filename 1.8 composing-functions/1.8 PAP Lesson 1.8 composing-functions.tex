@@ -1,4 +1,4 @@
-\documentclass[fleqn,letterpaper,12pt,printwatermark=true]{memoir}
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
@@ -6,8 +6,6 @@
 \raggedbottom 
 
 \input{../defs/standard-packages}
-
-% ---------------------DOCUMENT------------------------------
 \begin{document}
 
 \newcommand{\myClassName}{Pre-AP Algebra 2}
@@ -25,7 +23,7 @@
 
 % ---------------------HEADER------------------------------
 \begin{myNotesHeader}
-    \item \myCognitiveVerb{evaluate} a composite fuction with a numbers
+    \item \myCognitiveVerb{evaluate} a composite fuction with a number
     \item \myCognitiveVerb{compose} two functions
 \end{myNotesHeader}
 
@@ -47,13 +45,23 @@
 % ---------------------LESSON 1------------------------------
 \begin{myLesson}[Functions as Meat Grinders]
     A function can be thought of as a \emph{meat grinder}.\footnote{
-        My sincere apologies to you vegetarians and vegans.
+        My apologies to vegetarians and vegans.
     }
     You put chunks of beef into a meat grinder (the \emph{input}),
     and ground hamburger comes out (the \emph{output}). 
 
     \begin{center}
-    \includegraphics[width=2in]{meat-grinder.png} 
+    \includegraphics[width=1.5in]{meat-grinder.png} 
+    \end{center}
+
+    \begin{center}
+    \(
+        \text{chunks of beef}
+        \Longrightarrow
+        \text{meat-grinder}
+        \Longrightarrow
+        \text{ground hamburger}
+    \)
     \end{center}
 
     Similarly,
@@ -63,13 +71,15 @@
     and $y$'s come out.
     Think of the $x$'s as the chunks of beef
     and the $y$'s as the ground hamburger.
-    \[
+    \begin{center}
+    \(
         x
         \Longrightarrow
         f
         \Longrightarrow
         y
-    \]
+    \)
+    \end{center}
 
     You could ``daisy chain'' two meat grinders---when 
     you take the output of one function and put it into
@@ -86,15 +96,15 @@
             \includegraphics[width=1.5in]{meat-grinder.png} 
         }
     \end{center}
-    which we could also draw like this
+    To emphasize that the two grinders work together, 
+    we could draw it like this
     \begin{center}
         \fbox{
             \includegraphics[width=1.5in]{composite-meat-grinder.png} 
         }
     \end{center}
-    to emphasize that the two grinders work together.
     This is called ``composing''. 
-    We have composed two grinders together.
+    We have composed two meat grinders.
     The single, bigger grinder in the box is called 
     a ``composite'' grinder.
 
@@ -122,7 +132,7 @@
     \)
     \vspace{2em}
     \end{center}
-    Today you'rll learn about what 
+    Today you'll learn about what 
     \fbox{
         \(
             f
@@ -134,78 +144,141 @@
 \end{myLesson}
 
 \begin{myLesson}[][1]
-Consider the following functions.
-\begin{align*}
-    f(x) &= 2x + 3 \\
-    g(x) &= -x^2 + 5
-\end{align*}
-You already know how to evaluate them using a numerical value.
-For example, evaluate them at $x=1$:
-\begin{align*}
-    f(1) &= 2(1) + 3 = 2+3 = 5\\
-    g(1) &= -(1)^2 + 5 = -1 + 5 = 4
-\end{align*}
-When we \emph{compose} functions, 
-we evaluate one of them and take the {\bfseries\itshape output} and pass it 
-into the other one.
+    Consider the following functions.
+    \begin{align*}
+        f(x) &= 2x + 3 \\
+        g(x) &= -x^2 + 5
+    \end{align*}
+    You already know how to evaluate them at (say) $x=1$:
+    \begin{align*}
+        f(1) &= 2(1) + 3   = 2+3    = 5\\
+        g(1) &= -(1)^2 + 5 = -1 + 5 = 4
+    \end{align*}
+    When we \emph{compose} functions, 
+    we evaluate one of them and take the {\bfseries\itshape output} and pass it 
+    into the other one.
 
-The math notation for function composition looks like this:
-$f \circ g$,
-which you pronounce as ``$f$ compose with $g$''. 
-But there's something confusing about this notation.
-What you need to know is this.
-
-\begin{myLessonBox}
-    Beware of the order of the composed functions!
-
-    $(f \circ g)(1)$ 
-\end{myLessonBox}
-
-
-
+    The math notation for function composition looks like this:
+    $f \circ g$,
+    which you pronounce as ``$f$ compose with $g$''. 
+    But be careful.
+    The order of the functions matters.
+    \begin{myLessonBox}
+        The composite function $(f \circ g)$ 
+        and
+        the composite function $(g \circ f)$ 
+        (with the order reversed)
+        {\bfseries\itshape are not the same thing}!
+    \end{myLessonBox}
 \end{myLesson}
+
 % ---------------------CONCEPT 1------------------------------
-\begin{myKeyConcepts}[To evaluate a composite function $f \circ g$ at a number\dots]
+\begin{myKeyConcepts}[To evaluate a composite function at a number\dots]
     Follow these steps:
-    \setlist{labelindent=\parindent,itemsep=0.4em}
+    \setlist{labelindent=\parindent,}
     \begin{enumerate}
-        \item xxx
-        \item xxx
+        \item {\bfseries\itshape Pass} the number input to the nearest function to the left.
+        \item {\bfseries\itshape Evaluate} that nearest function. (You will get a number.)
+        \item {\bfseries\itshape Pass} that value to the next function to the left. 
+        \item {\bfseries\itshape Evaluate} the that next function. (You will get a number.)
     \end{enumerate}
-    The order is important here. (TODO: more detail)xxxxxxxxxxxxx
+    When the functions are $f$ and $g$ and the number is $2$,
+    \begin{align*}
+        (f \circ g)(2) &= f(g(2)) \\
+        (g \circ f)(2) &= g(f(2))
+    \end{align*}
 \end{myKeyConcepts}
 
-\myExample[1]{
-    Find the inverse of (TODO: fixme)
+\myExample{
+    Evaluate the composite functions 
+    $(f \circ g)(2)$ and $(g \circ f)(2)$ where
+    \begin{align*}
+        f(x) &= x + 2 \\
+        g(x) &= 3x - 4
+    \end{align*}
 }{3in}
 
-\myExample[2]{
-    Find the inverse of (TODO:fixme)
-}{3in}
+% \myExample{
+%     Evaluate the composite functions $(f \circ g)(2)$ and $(g \circ f)(2)$ where
+%     \begin{align*}
+%         f(x) &= 2x + 3 \\
+%         g(x) &= -x^2 + 5
+%     \end{align*}    
+% }{3in}
 
-% ---------------------LESSON 1------------------------------
-\begin{myLesson}[2]
-    foo
+\myExample{
+    Evaluate $(v \circ w)(3)$ and $(w \circ v)(3)$ where
+    \begin{align*}
+        v(t) &= t + 1 \\
+        w(t) &= t^2 + 2t + 3
+    \end{align*}    
+}{3.5in}
+
+You can compose a function with itself.
+
+\myExample{
+    Evaluate $(w \circ w)(-2)$ where
+    \begin{align*}
+        w(z) &= z^2 - z
+    \end{align*}    
+}{3.7in}
+
+% ---------------------LESSON 2------------------------------
+\begin{myLesson}[][2]
+    What would you do with
+    $(f \circ g)(x)$
+    where the input is a variable instead of a number?
+    It turns out that the ideas are the same as what you just learned.
 \end{myLesson}
 
 % ---------------------CONCEPT 2------------------------------
-\begin{myKeyConcepts}[To compose functions $f$ and $g$\dots]
+\begin{myKeyConcepts}[To compose two functions\dots]
     Follow these steps:
-    \setlist{labelindent=\parindent,itemsep=0.4em}
+    \setlist{labelindent=\parindent,}
     \begin{enumerate}
-        \item xxx
-        \item xxx
+        \item {\bfseries\itshape Pass} the variable input to the nearest function to the left.
+        \item {\bfseries\itshape Evaluate} that nearest function. (You will get an algebraic expression.)
+        \item {\bfseries\itshape Pass} that expression to the next function to the left. 
+        \item {\bfseries\itshape Evaluate} the that next function. (You will get an algebraic expression.)
     \end{enumerate}
-    The order is important here. (TODO: more detail)xxxxxxxxxxxxx
+    When the functions are $f$ and $g$ and the variable is $x$,
+    \begin{align*}
+        (f \circ g)(2) &= f(g(x)) \\
+        (g \circ f)(2) &= g(f(x))
+    \end{align*}
 \end{myKeyConcepts}
 
-\myExample[1]{
-    Find the inverse of (TODO: fixme)
-}{3in}
+\myExample{
+    Evaluate the composite functions 
+    $(f \circ g)(x)$ and $(g \circ f)(x)$ where
+    \begin{align*}
+        f(x) &= x + 2 \\
+        g(x) &= 3x - 4
+    \end{align*}
+}{4in}
 
-\myExample[2]{
-    Find the inverse of (TODO:fixme)
-}{3in}
+% \myExample{
+%     Evaluate the composite functions $(f \circ g)(x)$ and $(g \circ f)(x)$ where
+%     \begin{align*}
+%         f(x) &= 2x + 3 \\
+%         g(x) &= -x^2 + 5
+%     \end{align*}    
+% }{3in}
+
+\myExample{
+    Evaluate $(v \circ w)(t)$ and $(w \circ v)(t)$ where
+    \begin{align*}
+        u(t) &= t + 1 \\
+        v(t) &= t^2 + 2t + 3
+    \end{align*}    
+}{3.75in}
+
+\myExample{
+    Evaluate $(w \circ w)(z)$ where
+    \begin{align*}
+        w(z) &= z^2 - z
+    \end{align*}
+}{3.75in}
 
 % \begin{myProblems2}%
 %     {Factor the following monomials into prime factors.}%

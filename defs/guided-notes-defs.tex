@@ -112,6 +112,7 @@
 \NewDocumentEnvironment{myLessonBox}{ O{6in} }{
     \begin{center}
         \begin{tcolorbox}[width=#1,]
+        \parskip=0.75\baselineskip  % otherwise paragraphs don't have space between them in tcolorboxes
 }{
         \end{tcolorbox}
     \end{center}
