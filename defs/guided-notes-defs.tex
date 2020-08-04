@@ -42,6 +42,10 @@
                 {\myLessonTitleFont\myLessonTitle}
             \end{flushright}
         \end{minipage}
+        % TODO: This \hrule skims the bottom of the lowest character
+        %       in the header. It's only really visible when the characters
+        %       do not extend below the baseline. I probably need to redesign
+        %       how this header works. For now, it's good enough. :-)
         \hrule
     \end{flushleft}
     \noindent{\myHeadingFont Objectives:}
