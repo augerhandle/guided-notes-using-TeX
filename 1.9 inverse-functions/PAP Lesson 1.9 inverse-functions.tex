@@ -3,42 +3,10 @@
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
 % put "extra" vertical space at the bottom of a page
-\raggedbottom 
-
-\usepackage{amsmath}
-\usepackage{xparse} % for NewDocumentCommand et al.
-\usepackage{enumitem}
-\usepackage{transparent} % for \transparent, which I use in the watermark
-\usepackage[slantedGreek]{mathpazo} \usepackage{helvet} % use Palatino et al.
-\usepackage{booktabs} % prettier tables
-
-\usepackage[]{xwatermark}
-\newwatermark*[
-    allpages,
-    color=red!30,angle=45,
-    scale=4,
-    xpos=-10, ypos=0
-]{%
-    \transparent{0.4}dhasan example%
-}
-
-\usepackage{dashundergaps} % for \gap
-\dashundergapssetup{
-    teacher-mode=true, % set to true to show answers 
-    gap-format=underline,
-    teacher-gap-format=underline,
-    gap-font={\sffamily},
-    gap-numbers=true,
-    gap-widen=true,
-    gap-extend-percent=150, % note: making this too big might create errors
-    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
-}
-
-\usepackage{tcolorbox}
-\tcbuselibrary{skins}
-\tcbuselibrary{raster}
+\raggedbottom
 
 % ---------------------DOCUMENT------------------------------
+\input{../defs/standard-packages} 
 \begin{document}
 
 \newcommand{\myClassName}{Pre-AP Algebra 2}
@@ -48,7 +16,7 @@
 \newcommand{\myLessonTitle}{Inverse Functions}
 
 
-\input{../defs/guided-notes-defs}
+\input{../defs/guided-notes-defs} 
 \pagestyle{myPagestyle}
 
 \checkandfixthelayout
