@@ -1,4 +1,4 @@
-\documentclass[fleqn,letterpaper,12pt,printwatermark=true]{memoir}
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
@@ -54,41 +54,175 @@
 \checkandfixthelayout
 \setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
 
-% ---------------------LESSON------------------------------
+% ---------------------HEADER------------------------------
 \begin{myNotesHeader}
     \item \myCognitiveVerb{find} the inverse of a function
 \end{myNotesHeader}
 
 \begin{myVocabulary}
-    \myVocabularyWord{$f^{-1}(x)$}
-        {
-            the inverse function of $f(x)$
+    \myVocabularyWord{ordered pairs}{
+            two numbers in parentheses, eg, $(4,-3)$
         }
-    \myVocabularyWord{inverse functions}
-        {
+        \myVocabularyWord{inverse functions}{
             two functions that ``undo'' each other
+        }
+        \myVocabularyWord{$f^{-1}$}
+        {
+            math notation for the inverse of $f$
         }
 \end{myVocabulary}
 
+% ---------------------LESSON------------------------------
+
+\begin{myLesson} 
+    Remember that one way a relation can be represented
+    is as a set of ordered pairs that tell you
+    which value of $x$ is associated with 
+    which value of $y$.
+    We can think of that as a \emph{mapping}
+    from the inputs ($x$'s) to the outputs ($y$'s).
+    For example the following relation 
+    \[  
+        \{ (1,5), (2,-3), (3,3) \}
+    \]
+    can be represented by the following mappings
+    (one for each ordered pair)
+    \begin{align*}
+        1 &\Longrightarrow 5
+        \text{
+            \tiny\itshape\qquad
+            \dots With 1 as input we get 5 as output.
+            This is from the $(1,5)$ ordered pair.
+        }\\
+        %
+        2 &\Longrightarrow -3
+        \text{
+            \tiny\itshape\quad
+            \dots With 2 as input we get -3 as output.
+            This is from the $(2,-3)$ ordered pair.
+        } \\
+        %
+        3 &\Longrightarrow 3
+        \text{
+            \tiny\itshape\qquad
+            \dots With 3 as input we get 3 as output.
+            This is from the $(3,3)$ ordered pair.
+        }
+    \end{align*}
+
+    Inverse relations answer the question, 
+    ``How do we get back to the inputs if we know the outputs?''
+    They {\bfseries\itshape turn the mapping around}.
+    They ``undo'' what the relation did.
+    They take you back to where you started.
+    
+    In the example above,
+    the inverse mapping would be
+    \begin{align*} 
+        5 &\Longrightarrow 1
+        \text{
+            \tiny\itshape\quad
+            \dots With 5 we get back to 1.
+        }\\
+        %
+        -3 &\Longrightarrow 2
+        \text{
+            \tiny\itshape\quad
+            \dots With -3 we get back to 2.
+        } \\
+        %
+        3 &\Longrightarrow 3
+        \text{
+            \tiny\itshape\quad
+            \dots With 3 we get back to 3.
+        }
+    \end{align*}
+    And this is a new relation with the order of the numbers \emph{reversed}:
+    \[  
+        \{ (5,1), (-3,2), (3,3) \}
+    \]
+    %
+    So, this is what you should remember.
+    \begin{myLessonBox}
+        Given a relation (or a function),
+        you get the inverse by reversing (swapping, switching) 
+        the order of the inputs and outputs.
+        When the variables are $x$ and $y$, 
+        this is {\bfseries\itshape swapping $x$ and $y$}.
+    \end{myLessonBox}
+\end{myLesson}
+
 % ---------------------CONCEPT 1------------------------------
-\begin{myKeyConcepts}[To find the inverse of $f(x)$\dots]
+\begin{myKeyConcepts}[To find the inverse of a relation given as a bunch of points\dots]
     Follow these steps:
     \setlist{labelindent=\parindent,itemsep=0.4em}
     \begin{enumerate}
-        \item xxx
-        \item xxx
+        \item Count the number of ordered pairs in the original relation.
+        \item Write a \emph{new set} of empty ordered pairs with the 
+        same number of pairs as the original relations.
+        \item Fill in the empty ordered pairs in the new set
+        by \emph{reversing the $x$ and $y$ values} in each of the
+        original pairs.
+    \end{enumerate}
+    This new set of ordered pairs is the inverse relation.
+\end{myKeyConcepts}
+
+\myExample{
+    Find the inverse of 
+    \[ 
+        \{
+            (1,10), (2,8), (5,-3), (5,7)
+        \}
+    \]
+}{0.75in}
+
+\myExample{
+    Find the inverse of 
+    \[ 
+        \{
+            (2,10), (2,8), (2,0), (2,-1), (2,-4)
+        \}
+    \]
+}{0.75in}
+
+% ---------------------CONCEPT 2------------------------------
+\begin{myKeyConcepts}[To find the inverse of a function specified by a rule, $f(x)$\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,itemsep=0.4em}
+    \begin{enumerate}
+        \item {\bfseries\itshape Rewrite.}
+        Rewrite the $f(x) = \cdots$ rule as $y=\cdots$.
+        \item {\bfseries\itshape Swap.}
+        Replace the original $y$ by $x$.
+        Replace all of the original $x$'s by $y$.
+        \item {\bfseries\itshape Solve.}
+        Solve the new equation for $y$.
+        \item {\bfseries\itshape Inverse Notation.}
+        Replace the $y$ by $f^{-1}(x)$.
     \end{enumerate}
 \end{myKeyConcepts}
 
-\myExample[1]{
-    Find the inverse of (TODO: fixme)
-    \( f(x) = 2x-7 \)
-}{3in}
+\myExample{
+    Find $f^{-1}$, the inverse of the function,
+    \( f(x) = x-8 \).
+}{4in}
 
-\myExample[2]{
-    Find the inverse of (TODO:fixme)
-    \( f(x) = 2x-7 \)
-}{3in}
+\myExample{
+    Find the inverse of 
+    \( g(z) = 3z \).
+    (Don't forget to write is as $g^{-1}(z) = \cdots$.)
+}{4in}
+
+\myExample{
+    Find the inverse of 
+    \( h(t) = 4t + 6 \).
+}{4in}
+
+\myExample{
+    Find the inverse of 
+    \( s(z) = \frac{1}{z-1} \).
+}{4in}
+
 
 % \begin{myProblems2}%
 %     {Factor the following monomials into prime factors.}%
