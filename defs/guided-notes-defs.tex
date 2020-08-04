@@ -92,9 +92,17 @@
 
 
 % -----------------LESSON / CONCEPT -related stuff----------------
+
 %
-\newenvironment{myLesson}{
-    {\noindent{\myHeadingFont Lesson:}}\par
+% #1 name (defaults to "Lesson")
+% #2 optional Lesson number
+%
+\NewDocumentEnvironment{myLesson}{ O{} O{} }{
+    {
+        \noindent{
+            \myHeadingFont \ifblank{#1}{Lesson}{#1}\ifblank{#2}{}{ #2}:
+        }
+    }\par
 }{
     \vspace{1em}
 }
