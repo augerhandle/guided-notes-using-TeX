@@ -1,0 +1,253 @@
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\input{../defs/standard-packages}
+\begin{document} 
+
+\newcommand{\myClassName}{Pre-AP Algebra 2}
+\newcommand{\myUnitNumber}{1}
+\newcommand{\myUnitTitle}{Introduction to Functions}
+\newcommand{\myLessonNumber}{5}
+\newcommand{\myLessonTitle}{Solving Linear Equations and Formulas}
+
+
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+
+% ---------------------HEADER------------------------------
+\begin{myNotesHeader}
+    \item \myCognitiveVerb{solve} one-step linear equations
+    \item \myCognitiveVerb{solve} multi-step linear equations
+    \item \myCognitiveVerb{solve} formulas for one variable given the value of all the other variables
+    \item \myCognitiveVerb{solve} formulas for one variable in terms of the other variables
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+    \myVocabularyWord{equation}
+    {
+        algebraic expressions connected with an $=$ sign 
+    }
+    \myVocabularyWord{formula}
+    {
+        an equation with more than one variable
+    }
+    \myVocabularyWord{inverse operation}
+    {
+        two operations that do \emph{opposite} things
+        (They \emph{undo} each other.)
+    }
+    \myVocabularyWord{solve}
+    {
+        find the value of a variable that makes an equation a true statement
+    }
+\end{myVocabulary}
+
+% ---------------------LESSON 2------------------------------
+\begin{myLesson}[][]
+    The key to success when solving equations is to get the unknown variable \emph{by itself}
+    on one side of the equation.
+    \begin{myLessonBox}
+        It is not really important whether the variable is on the left or right.
+        In this class, I will assume that you understand that
+        $x=55$ means the exact same thing as $55=x$.
+    \end{myLessonBox}
+\end{myLesson}
+
+% ---------------------CONCEPT 1------------------------------
+\begin{myKeyConcepts}[To solve one-step equations\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Identify} the one operation in the equation.
+        \item \myEmph{Find} the corresponding inverse operation.
+        \item \myEmph{Apply} the inverse operation to \emph{both sides of the equation}.
+        \item \myEmph{Solve} for the variable. 
+    \end{enumerate}
+\end{myKeyConcepts}
+
+One-step equations are crazy-simple.
+We will not be spending much time on them.
+Here are two examples.
+
+\myExample{
+    Solve this equation:
+    \(
+        p - 6 = 4
+    \)
+}{1.25in}
+
+\myExample{
+    Solve this equation:
+    \(
+        -3p = 5
+    \)
+}{1.25in}
+
+% ---------------------CONCEPT 2------------------------------
+\begin{myKeyConcepts}[To solve multi-step equations\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Distribute} wherever it is possible.
+        \item \myEmph{Combine} like terms on each side of the equation.
+        \item \myEmph{Move} all terms with the variable to one side of the equation
+        and all numbers to the other side using addition and subtraction as inverse operations.
+        \item \myEmph{Combine} like terms again. This will give you a one-step equation.
+        \item \myEmph{Solve} the one-step equation using multiplication and division as inverse operations.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Solve this equation:
+    \(
+        2(x+5) = -11
+    \)
+}{1.75in}
+
+\myExample{
+    Solve this equation:
+    \(
+        -13 = 5 + 4x -6x
+    \)
+}{2in}
+
+\myExample{
+    Solve this equation:
+    \(
+        3x + 20 = x-8
+    \)
+}{2in}
+
+\myExample{
+    Solve this equation:
+    \(
+        2(3-x) + 3 - 4x = 8 + 9x - 2(x-1)
+    \)
+}{3.75in}
+
+% ---------------------LESSON 2------------------------------
+\begin{myLesson}[][]
+    A formula is just a fancy kind of equation that has more than one variable.
+    For example, here is the quadratic formula:
+    \[
+        x = 
+        \frac{
+            - b 
+            \pm
+            b^2 - 4ac
+        }
+        {
+            2a
+        }
+    \]
+    where there are four variables $x$, $a$, $b$, $c$.
+    If I tell you the values of three of those variables,
+    in theory, you should be able to rewrite the equation 
+    in order to solve for the remaining variable.
+    We use the words \emph{solve} or \emph{evaluate} for this.
+\end{myLesson}
+
+% ---------------------CONCEPT 3------------------------------
+\begin{myKeyConcepts}[To solve a formula for one variable given all the other variables\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Substitute} the values of the other variables into the formula.
+        This will give you an equation with only one variable left.
+        \item \myEmph{Simplify} that equation, which will often involve combining like terms.
+        \item \myEmph{Solve} that equation. This means rewriting the equation to get that variable by itself.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    The formula for the perimeter, $P$, of a $h \times w$ rectangle is
+    \[
+        P = 2h + 2w
+    \]
+    Solve this formula for $h$ given that $P=256$ and $w=64$.
+}{2in}
+
+\myExample{
+    The formula for the area, $A$, of a triangle is
+    \[
+        A = \frac{1}{2}bh
+    \]
+    where $b$ is the base and $h$ is the height of the triangle.
+    A triangle has an area of 40 square feet 
+    and a base of 10 feet.
+    Solve this formula for the height, $h$.
+}{2in}
+
+% ---------------------LESSON 3------------------------------
+\begin{myLesson}[][]
+    In science,
+    we often want to solve a formula for one of the variables
+    \myEmph{without} knowing the value of the other variables.
+    This freaks algebra students out. 
+    It shouldn't. 
+    Here's why.
+
+    Suppose I give you a formula like $F = 2a + 3b$.
+    And then I tell you to solve it for $b$ given $F=1000$ and $a=10$.
+    You could do that using what you just learned above.
+    But then I change my mind and say $F=2000$ and $a=25$.
+    You could do it again using what you just learned above.
+    But then I change my mind again and say $F=900$ and $a=2.1$.
+    You could do it yet again. And again. And again.
+    
+    Eventually you'll get tired of this game,
+    since each time I change my mind, you'd end up doing the exact same thing 
+    just with different numbers.
+    How many times to you have to do it, before you ask, ``Isn't there a better way?''
+    There is a better way: \myEmph{solve the formula first}, before you plug in numbers.
+\end{myLesson}
+
+% ---------------------CONCEPT 3------------------------------
+\begin{myKeyConcepts}[To solve a formula for one variable in terms of all the other variables\dots]
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Rewrite} the equation so that you get the variable by itself.
+        This process is virtually identical to how you solve the equation,
+        except when you apply inverse operations, you will be writing algebra instead of doing arithmetic.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+These examples illustrate this idea.
+
+\myExample{
+    Solve the perimeter equation for $h$:
+    \[
+        P = 2h + 2w
+    \]
+}{3in}
+
+\myExample{
+    Solve this formula for $b$: 
+    \[
+        Q = 5a^2 + 2b -c
+    \]
+}{2in}
+
+\myExample{
+    Einstein's relativity equation is, $E = mc^2$.
+    Solve this formula for $m$.
+}{2in}
+
+% \begin{myProblems2}%
+%     {Factor the following monomials into prime factors.}%
+%     {2in}%
+%     %
+%     {\( 32x^2 \)}
+%     {\( 8 x^3y^2z \)}
+% \end{myProblems2}
+  
+
+
+\end{document}
