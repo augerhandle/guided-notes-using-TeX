@@ -1,0 +1,156 @@
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\input{../defs/standard-packages}
+\begin{document}
+
+\newcommand{\myClassName}{Pre-AP Algebra 2}
+\newcommand{\myUnitNumber}{1}
+\newcommand{\myUnitTitle}{Introduction to Functions}
+\newcommand{\myLessonNumber}{3}
+\newcommand{\myLessonTitle}{Distributing Polynomials}
+
+
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+
+% ---------------------HEADER------------------------------
+\begin{myNotesHeader}
+    \item \myCognitiveVerb{find} the domain and range of a function
+    \item \myCognitiveVerb{identify} the maximum and minimum points on a graph
+    \item \myCognitiveVerb{identify} $x$- and $y$-intercepts on a graph
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+    \myVocabularyWord{mono-}{one}
+    \myVocabularyWord{bi-}{two}
+    \myVocabularyWord{poly-}{many}
+    \myVocabularyWord{term}
+    {
+        numbers and variables multiplied or divided together
+    }
+    \myVocabularyWord{coefficient}
+    {
+        the number in front of a term, 
+        eg, the coefficient of $5x^2$ is 5
+    }
+    \myVocabularyWord{monomial}
+    {
+        a single term by itself, eg, $5x^2$
+    }
+    \myVocabularyWord{binomial}
+        {
+            two terms added or subtracted,
+            eg, $8x-5$
+        }
+    \myVocabularyWord{polynomial}
+        {
+            many terms added or subtracted,
+            eg, $2x^2 - 3x + 5$
+        }
+\end{myVocabulary}
+
+% ---------------------LESSON 1------------------------------
+\begin{myLesson}[][]
+    When we ``distribute'' polynomials, we are \emph{multiplying} them together.
+    The only challenge in doing this
+    is being neat so you don't lose or forget some of the terms.
+    The key to success is giving yourself lots of space on your paper.
+
+    The basic idea is this.
+    \begin{myLessonBox}
+        Multiply each of the terms in the first polynomial 
+        into each of the terms in the second polynomial.
+        Then combine like terms (if there are any).
+    \end{myLessonBox}
+
+    Remember that when you multiply two terms together,
+    you multiply the coefficients, and you add the exponents on the variables.
+
+\end{myLesson}
+
+% ---------------------CONCEPT 1------------------------------
+\begin{myKeyConcepts}[To multiply a monomial and a binomial\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\bfseries\itshape Multiply} the monomial
+        into each of the two terms in the binomial. 
+        That will give you 2 terms.
+        \item {\bfseries\itshape Combine} like terms if there are any.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Multiply these two polynomials: $-3x ( 1-x)$.
+}{1.75in}
+
+\myExample{
+    Multiply these two polynomials: $5x^3 (2x-3)$.
+}{1.75in}
+
+% ---------------------CONCEPT 2------------------------------
+\begin{myKeyConcepts}[To multiply a binomial and a binomial\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\bfseries\itshape Multiply} each of the two terms in the first polynomial
+        into each of the two terms in the binomial. That will give you $2 \times 2=4$ terms.
+        \item {\bfseries\itshape Combine} like terms if there are any.
+    \end{enumerate}
+    You learned this as FOIL in Algebra 1.
+\end{myKeyConcepts}
+
+\myExample{
+    Multiply these two polynomials: $(x-2)(x+5)$.
+}{1.75in}
+
+\myExample{
+    Multiply these two polynomials: $(3x-4)(2x-3)$.
+}{2in}
+
+\myExample{
+    Multiply these two polynomials: $(1-x)(1+x)$.
+}{2in}
+
+% ---------------------CONCEPT 3------------------------------
+\begin{myKeyConcepts}[To multiply a binomial and a trinomial\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\bfseries\itshape Multiply} each of the two terms in the first polynomial
+        into each of the three terms in the binomial. That will give you $2 \times 3=6$ terms.
+        \item {\bfseries\itshape Combine} like terms if there are any.
+    \end{enumerate}
+    I call this \emph{FOIL on steroids},
+    and when I do these problems, I always use arrows to make sure 
+    I'm getting all the term-to-term multiplications correct.
+\end{myKeyConcepts}
+
+\myExample{
+    Multiply these two polynomials: $(x+1)(x^2+x+2)$.
+}{3.5in}
+
+\myExample{
+    Multiply these two polynomials: $(2x-2)(3x^2-2x+5)$.
+}{3.5in}
+
+
+% \begin{myProblems2}%
+%     {Factor the following monomials into prime factors.}%
+%     {2in}%
+%     %
+%     {\( 32x^2 \)}
+%     {\( 8 x^3y^2z \)}
+% \end{myProblems2}
+  
+
+
+\end{document}
