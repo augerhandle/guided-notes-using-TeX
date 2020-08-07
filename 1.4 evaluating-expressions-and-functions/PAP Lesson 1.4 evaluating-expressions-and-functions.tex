@@ -1,0 +1,224 @@
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\input{../defs/standard-packages}
+\begin{document}
+
+\newcommand{\myClassName}{Pre-AP Algebra 2}
+\newcommand{\myUnitNumber}{1}
+\newcommand{\myUnitTitle}{Introduction to Functions}
+\newcommand{\myLessonNumber}{4}
+\newcommand{\myLessonTitle}{Evaluating Expressions and Functions}
+
+
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+
+% ---------------------HEADER------------------------------
+\begin{myNotesHeader}
+    \item \myCognitiveVerb{simplify} expressions using the \emph{order of operations}
+    \item \myCognitiveVerb{evaluate} expressions given the value of all the variables
+    \item \myCognitiveVerb{evaluate} a function given the value of its input variable
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+    \myVocabularyWord{operation}
+    {
+        some kind of mathematical calculation
+        ($+$, $-$, multiply, $\sqrt{\,\,}$, etc...)
+
+    }
+    \myVocabularyWord{expression}
+    {
+        numbers and variables combined using various \emph{operations}
+    }
+    \myVocabularyWord{order of operations}
+    {
+        which operations should be done before the others
+    }
+    \myVocabularyWord{evaluate}
+    {
+        apply the \emph{order of operations} 
+        to an expression to get a \myEmph{number}
+    }
+    \myVocabularyWord{simplify}
+    {
+        apply \emph{order of operations} 
+        to an expression to get a \myEmph{simpler expression}
+    }
+\end{myVocabulary}
+
+% ---------------------LESSON 1------------------------------
+\begin{myLesson}[][]
+    You learned the \emph{order of operations} in Algebra 1.
+    It's often called PEMDAS or GEMDAS.
+\end{myLesson}
+
+% ---------------------CONCEPT 1------------------------------
+\begin{myKeyConcepts}[To apply the order of operations\dots]
+    Follow these GEMDAS steps in this order:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\Large\slshape G:} simplify \myEmph{grouping} symbols (), [], \{\} 
+        \item {\Large\slshape E:} simplify terms that have \myEmph{exponents}
+        \item {\Large\slshape MD:} apply \myEmph{multiplication and division} going from \emph{left to right}
+        \item {\Large\slshape AS:} apply \myEmph{addition and subtraction} going from \emph{left to right}
+    \end{enumerate}
+    The words \emph{evaluate} and \emph{simplify} are confusing. 
+    They mean almost the same thing.
+    I use the word ``evaluate'' when you should end up with a \myEmph{number} after you apply the order of operations.
+    I use the word ``simplify'' when you should end up with a \myEmph{number} after you apply the order of operations.
+\end{myKeyConcepts}
+
+\myExample{
+    Evaluate this expression:
+    \(
+        2 + 3\cdot5^2
+    \)
+}{1.25in}
+
+\myExample{
+    Evaluate this expression:
+    \(
+        16 - 3(8-3)^2 + 9
+    \)
+}{1.5in}
+
+\myExample{
+    Simplify this expression:
+    \(
+        2 + 3(x-2)^2
+    \)
+}{1.25in}
+
+\myExample{
+    Simplify this expression:
+    \(
+        16 - 3(2x-1)^2 + 9
+    \)
+}{1.5in}
+
+In those examples
+when we were asked to \emph{evaluate} expressions,
+the expressions were just numbers, 
+so it was obvious that results were numbers.
+And 
+when we were asked to \emph{simplify} expressions,
+since we didn't know the value of $x$ ,
+it was obvious that results were expressions.
+
+However, some problems might ask you to \emph{evaluate} and expression
+with variables in it 
+by telling you the values of all the variables.
+Again, the word ``evaluate'' is a hint to you that your answer should be a \myEmph{number}.
+
+\myExample{
+    Evaluate this expression:
+    \(
+        16 - 3(2x-1)^2 + 9
+    \),
+    where $x=2$.
+}{1.5in}
+
+\myExample{
+    Evaluate this expression:
+    \(
+        1 - \sqrt{b^2 - 4ac}
+    \),
+    where $a=-1$, $b=4$, $c=-3$.
+}{2in}
+
+
+% ---------------------LESSON 2------------------------------
+\begin{myLesson}[][]
+    \emph{Function notation}
+    is how we write down a function on paper.
+    It is a precise way to specify
+    \begin{itemize}
+        \item the \myEmph{name} of the function,
+        \item the \myEmph{rule} that tells you how to calculate the output of the function,
+        \item the names of the \myEmph{input variable}, which is often $x$.
+    \end{itemize}
+
+    \begin{myLessonBox}
+    The most common notation is $f(x)$.
+    This tells you that the function is named $f$ 
+    and that the name of the input variable is $x$.
+    But it's missing the rule; 
+    it does not tell us how to calculate the output.
+
+    To fully specify a function, including the rule, we write $f(x) = \cdots$,
+    where the stuff on the right is an algebraic expression involving $x$.
+    That expression tells you how to calculate the output of the function.
+    \end{myLessonBox}
+
+    In math,
+    function names are usually (but not always\footnote{
+        An example of a function name that is not one letter 
+        is $log(x)$, which we will study later in the year.
+        In pre-calculus, you will use trigonometric functions,
+        $sin(x)$ and $cos(x)$.
+        In the software world, function and variable names almost always 
+        are words that describe what they do, for example,
+        \texttt{send\_email(my\_message)}.
+    }) a single letter,
+    and the input variable is often (but not always) $x$.
+    for example, $f(x)$, $g(z)$, $v(t)$.
+
+\end{myLesson}
+
+% ---------------------CONCEPT 2------------------------------
+\begin{myKeyConcepts}[To evaluate a function given the value of its input variable\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Substitute} the value of the input variable whereever it appears in the rule.
+    \end{enumerate}
+    The words \emph{evaluate} and \emph{simplify} are confusing. 
+    They mean almost the same thing.
+    I use the word ``evaluate'' when you should end up with a \myEmph{number} after you apply the order of operations.
+    I use the word ``simplify'' when you should end up with a \myEmph{number} after you apply the order of operations.
+\end{myKeyConcepts}
+
+\myExample{
+    Given the function
+    \(
+        f(x) = 3x-5
+    \)
+    evaluate $f(4)$.
+}{1in}
+
+\myExample{
+    Given the function
+    \(
+        g(z) = 3z^2 - 2z + 1
+    \)
+    evaluate $g(-3)$.
+}{1.5in}
+
+\myExample{
+    Given the function
+    \(
+        v(t) = \frac{1}{2}t^2 + 4t + 3
+    \)
+    evaluate $f(-4)$.
+}{2.75in}
+
+% \begin{myProblems2}%
+%     {Factor the following monomials into prime factors.}%
+%     {2in}%
+%     %
+%     {\( 32x^2 \)}
+%     {\( 8 x^3y^2z \)}
+% \end{myProblems2}
+  
+
+
+\end{document}
