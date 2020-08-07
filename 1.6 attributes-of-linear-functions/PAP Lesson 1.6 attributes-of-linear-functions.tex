@@ -1,0 +1,373 @@
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\input{../defs/standard-packages}
+\begin{document} 
+
+\newcommand{\myClassName}{Pre-AP Algebra 2}
+\newcommand{\myUnitNumber}{1}
+\newcommand{\myUnitTitle}{Introduction to Functions}
+\newcommand{\myLessonNumber}{6}
+\newcommand{\myLessonTitle}{Attributes of Linear Functions}
+
+
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+
+% ---------------------HEADER------------------------------
+\begin{myNotesHeader}
+    \item \myCognitiveVerb{find} the slope and intercept of a line from its graph
+    \item \myCognitiveVerb{find} the $x$- and $y$-intercepts of a line from its graph
+    \item \myCognitiveVerb{find} the slope and intercept of a line from its function, $f(x) = mx+b$.
+    \item \myCognitiveVerb{find} the $x$- and $y$-intercepts of a line from its equation
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+    \myVocabularyWord{slope}
+    {
+        rate of change, ``rise over run'', change in $y$ divided by change in $x$
+    }
+    \myVocabularyWord{$x$-intercept}
+    {
+        the point where the graph crosses the $x$-axis
+    }
+    \myVocabularyWord{$y$-intercept}
+    {
+        the point where the graph crosses the $y$-axis
+    }
+    \myVocabularyWord{linear function}
+    {
+        a function $f(x)$ with a rule that only has $x$ terms and numbers
+    }
+    \myVocabularyWord{slope-intercept form}
+    {
+        a linear function with the rule written as $f(x) = mx+b$
+    }
+\end{myVocabulary}
+
+% ---------------------CONCEPT 1------------------------------
+\begin{myKeyConcepts}[To find $y$-intecept of a line from its graph\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Plot}the point where the line crosses the $y$-axis. 
+        \item \myEmph{Find}the coordinates of that point. (Let's call them $(x_1,y_1)$.)
+        \item $y_1$ is the\myEmph{$y$-coordinate} of the line.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Find the $y$-intercept of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[dashed,style={line width=1.2pt},no marks, samples=3, domain=-3:4, ] expression { -3*x -3 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.25in}
+
+It's possible that the line won't cross the $y$-axis exactly at a grid point. 
+In that case, if all you have is a graph of the line,
+the best you can do is \emph{estimate} the value.
+
+\myExample{
+    Find the $y$-intercept of this line. If you need to, estimate its value.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 1, 
+                % minor tick num = 1,
+                xmin = -3, xmax=3,
+                ymin = -2, ymax=4,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[dashed,style={line width=1.2pt},no marks, samples=3, domain=-3:4, ] expression { 1.2*x + 2.45 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{2in}
+
+\begin{myKeyConcepts}[To find the slope of a line from its graph\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Plot}two points that are on the line. 
+        \item \myEmph{Find}the coordinates of both points. Let's call them $(x_1,y_1)$ and $(x_2,y_2)$.
+        (Which point is 1 and which is 2 does not matter.)
+        \item \myEmph{Calculate} the slope as\myEmph{rise over run}:
+        $m = (y_2-y_1)/(x_2-x_1)$.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Find the slope of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[dashed,style={line width=1.2pt}, no marks, samples=3, domain=-5:5, ] expression { 2 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1in}
+
+\myExample{
+    Find the slope of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.5in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 1, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot +[mark=none,dashed,style={line width=1.2pt}, black] coordinates {(2, -5) (2, 5)};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.25in}
+
+\myExample{
+    Find the slope of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.5in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 1, 
+                minor x tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[dashed,style={line width=1.2pt},no marks, samples=3, domain=-3:4, ] expression { -2*x + 1 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.5in}
+
+\begin{myKeyConcepts}[To find the $x$- and $y$-intercepts of a line from its graph\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Plot}the points where the line crosses the $x$- and $y$-axes. 
+        \item \myEmph{Find}the coordinates of both points. 
+        \item The point on the $x$-axis has a $y$-coordinate of 0,
+        so its coordinates are $(x,0)$. You may write the\myEmph{$x$-intercept} either as 
+        the point $(x,0)$ or just its $x$-coordinate, $x$ as a number.
+        \item The point on the $y$-axis has an $x$-coordinate of 0,
+        so its coordinates are $(0,y)$. You may write the\myEmph{$y$-intercept} either as 
+        the point $(0,y)$ or just its $y$-coordinate, $y$ as a number.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Find $x$- and $y$-intecepts of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.5in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 1, 
+                minor x tick num = 1,
+                xmin = -2, xmax=8,
+                ymin = -5, ymax=2,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[dashed,style={line width=1.2pt},no marks, samples=3, domain=-3:10 ] expression { (2/3)*x -4 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.5in}
+
+\myExample{
+    Find $x$- and $y$-intecepts of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[dashed,style={line width=1.2pt}, no marks, samples=100, domain=-5:5, ] expression { 2 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.2in}
+
+\myExample{
+    Find $x$- and $y$-intecepts of this line.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.5in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 1, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot +[mark=none,dashed,style={line width=1.2pt}, black] coordinates {(2, -5) (2, 5)};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.25in}
+
+
+\begin{myKeyConcepts}[To find the slope and $y$-intercept of a line from the slope-intercept form of its equation\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Write down}the slope-intercept form of the equation, $y = mx+b$,
+        where $m$ and $b$ are known numbers (not variables).
+        \item The \myEmph{slope}is the coefficient ($m$) in front of $x$ in that equation. 
+        \item The \myEmph{$y$-intercept}is the number ($b$) in that equation. 
+    \end{enumerate}
+\end{myKeyConcepts}
+
+It is possible that you know this so well from Algebra 1
+that you are wondering why we're talking about it.
+If you feel that way, 
+make sure that you understand all of the following (yes, simple) examples.
+Some of these can be confusing to some students.
+Make sure that's not you!
+
+\myExample{
+    Find the slope and $y$-intercept of the line corresponding to this function:
+    $y = -2x + 4$.
+}{1in}
+
+\myExample{
+    Find the slope and $y$-intercept of the line corresponding to this function:
+    $y = -\frac{3}{7}x - \frac{8}{7}$.
+}{1in}
+
+\myExample{
+    Find the slope and $y$-intercept of the line corresponding to this function:
+    $y = 6.02x$.
+}{1in}
+
+\myExample{
+    Find the slope and $y$-intercept of the line corresponding to this function:
+    $y = x$.
+}{1in}
+
+\myExample{
+    Find the slope and $y$-intercept of the line corresponding to this function:
+    $y = 8$.
+}{1in}
+
+
+
+\begin{myKeyConcepts}[To find the intercepts of a line from from its equation\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item \myEmph{Rewrite}the original equation by substituting $y=0$.
+        That will give you and equation involving only $x$.
+        \item \myEmph{Solve}that equation for $x$. That solution is the $x$-intercept.
+        \item \myEmph{Rewrite}the original equation by substituting $x=0$.
+        That will give you and equation involving only $y$.
+        \item \myEmph{Solve}that equation for $y$. That solution is the $y$-intercept.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+It turns out that this method of finding the intercepts\myEmph{works for any equation},
+but we're only worried about linear equations for now.
+\begin{myLessonBox}[3.5in]
+    Find the $x$-intercept by setting $y$ to zero.\par
+    Find the $y$-intercept by setting $x$ to zero.
+\end{myLessonBox}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $2x + 3y = 1$.
+}{1.5in}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $2x + 3y = y - 8x + 5$.
+}{2in}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $25y = y + 5$.
+}{1.25in}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $5y = -y$.
+}{1.25in}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $30x = 3x$.
+}{1.25in}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $7x = 3x$.
+}{1.25in}
+
+\myExample{
+    Find the intercepts of the line corresponding to this equation:
+    $5x = 5y$.
+}{1.25in}
+
+% \begin{myProblems2}%
+%     {Factor the following monomials into prime factors.}%
+%     {2in}%
+%     %
+%     {\( 32x^2 \)}
+%     {\( 8 x^3y^2z \)}
+% \end{myProblems2}
+\end{document}
