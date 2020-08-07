@@ -1,0 +1,272 @@
+\documentclass[fleqn,letterpaper,12pt,printwatermark=false]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+% put "extra" vertical space at the bottom of a page
+\raggedbottom 
+
+\input{../defs/standard-packages}
+\begin{document}
+
+\newcommand{\myClassName}{Pre-AP Algebra 2}
+\newcommand{\myUnitNumber}{1}
+\newcommand{\myUnitTitle}{Introduction to Functions}
+\newcommand{\myLessonNumber}{2}
+\newcommand{\myLessonTitle}{Attributes of Relations and Functions}
+
+
+\input{../defs/guided-notes-defs}
+\pagestyle{myPagestyle}
+
+\checkandfixthelayout
+\setlist{labelindent=\parindent,leftmargin=*,itemsep=0.025em,label=$\circ$}
+
+% ---------------------HEADER------------------------------
+\begin{myNotesHeader}
+    \item \myCognitiveVerb{find} the domain and range of a function
+    \item \myCognitiveVerb{identify} the maximum and minimum points on a graph
+    \item \myCognitiveVerb{identify} $x$- and $y$-intercepts on a graph
+\end{myNotesHeader}
+
+\begin{myVocabulary}
+        \myVocabularyWord{domain}
+        {
+            the set of all the inputs in a relation 
+            (usually $x$'s)
+        }
+        \myVocabularyWord{range}
+        {
+            the set of all the outputs in a relation 
+            (usually $y$'s)
+        }
+        \myVocabularyWord{discrete relation}
+        {
+            a relation that is a bunch of separate points
+        }
+        \myVocabularyWord{continuous}
+        {
+            a relation that can be graphed as a smooth line or curve
+        }
+        \myVocabularyWord{intercept}
+        {
+            where a curve crosses the $x$- or $y$-axis
+        }
+        \myVocabularyWord{minimum}
+        {
+            the smallest $y$ value of a relation (the $y$ coordinate of the lowest point)
+        }
+        \myVocabularyWord{maximum}
+        {
+            the largest $y$ value of a relation (the $y$ coordinate of the highest point)
+        }
+\end{myVocabulary}
+
+% ---------------------LESSON 1------------------------------
+\begin{myLesson}[][]
+    For continuous relations, there are \emph{infinitely many} points in the relation.
+    So it's impossible to describe the relation as a set of ordered pairs, since you would have 
+    to write down an infinite number of pairs.
+    Similarly, we cannot write the domain or range as sets of ordered pairs.
+    We need a different way to do it.
+\end{myLesson}
+
+% ---------------------CONCEPT 1------------------------------
+\begin{myKeyConcepts}[To find the domain of a continuous relation\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\bfseries\itshape Look} closely at the curve.
+        \item {\bfseries\itshape Ask yourself} \,``What are the $x$ coordinates of the points on the curve?''
+        \item {\bfseries\itshape Describe} those $x$ coordinates as you go from left to right.
+    \end{enumerate}
+    That description is the domain.
+    Mathematicians use \emph{inequalities} or \emph{interval notation} in their descriptions.
+    You will learn this in the examples.
+\end{myKeyConcepts}
+
+\myExample{
+    Find the domain of this relation.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[mark=*,mark size=0.125cm,] coordinates { (-3,-3) };
+                \addplot[mark=o,mark size=0.125cm,] coordinates { (4,4) };
+                \addplot[no marks, samples=100, domain=-3:4, ] expression { x };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1in}
+
+\myExample{
+    Find the domain of this relation. (The curve keeps on going forever off the grid.)
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -5, xmax=5,
+                ymin = -5, ymax=5,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[no marks, samples=100, domain=-3:4, ] expression { -x^2 + 3 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{2in}
+
+% ---------------------LESSON 2------------------------------
+\begin{myLesson}[][2]
+    You know what intercepts are.
+    They are where a graph of a function crosses the $x$- and $y$-axes.
+    So if you are given the graph of a function,
+    all you need to do to find the intercepts 
+    is look at the graph to see where the curve crosses the axes.
+    \begin{itemize}
+        \item In some cases, you can see {\bfseries\itshape exactly} where it crosses
+        if everything lines up nicely with the $x$-$y$ grid.
+        \item But even if the curve doesn't cross the axes 
+        an a point on the grid, you could still {\bfseries\itshape estimate} where 
+        the crossing points are.
+    \end{itemize}
+\end{myLesson}
+
+% ---------------------CONCEPT 2------------------------------
+\begin{myKeyConcepts}[To find the $x$- and $y$-intercepts given the graph of a relation\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\bfseries\itshape Draw} a dot everywhere the curve crosses either axis.
+        \item {\bfseries\itshape Find} the ($x$,$y$) coordinates of those dots.
+        \item The {\bfseries\itshape $x$-intercepts} are the dots on the $x$-axis.
+        You may write the intercept either as the point $(x,0)$ 
+        or just as the $x$ value.
+        \item The {\bfseries\itshape $y$-intercepts} are the dots on the $y$-axis.
+        You may write the intercept either as the point $(0,y)$ 
+        or just as the $y$ value.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Find the $x$- and $y$-intercepts of this relation.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -8, xmax=8,
+                ymin = -8, ymax=8,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[no marks, samples=3, domain=-8:8, ] expression { -(1/2)*x + 2 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{2in}
+
+\myExample{
+    Find the $x$- and $y$-intercepts of this relation.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -3, xmax=5,
+                ymin = -5, ymax=6,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[no marks, samples=100, domain=-3:5, ] expression { (x-1)^2 - 4 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{2in}
+
+% ---------------------LESSON 3------------------------------
+% ---------------------CONCEPT 3------------------------------
+\begin{myKeyConcepts}[To find the maximum and minimum given the graph of a relation\dots]
+    Follow these steps:
+    \setlist{labelindent=\parindent,}
+    \begin{enumerate}
+        \item {\bfseries\itshape Draw} dots on the highest and lowest points on the curve.
+        \item {\bfseries\itshape Find} the $y$ coordinates of those points.
+        \item The {\bfseries\itshape maximum} is the $y$ coordinate of the highest point.
+        \item The {\bfseries\itshape minimum} is the $y$ coordinate of the lowest point.
+    \end{enumerate}
+\end{myKeyConcepts}
+
+\myExample{
+    Find the maximum and minimum of this relation.
+    (The curve keeps on going forever off the top of the grid.)
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -3, xmax=5,
+                ymin = -5, ymax=6,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[no marks, samples=100, domain=-3:5, ] expression { (x-1)^2 - 4 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.5in}
+
+\myExample{
+    Find the maximum and minimum of this relation.
+    (The curve keeps on going forever off the bottom of the grid.)
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2, 
+                minor tick num = 1,
+                xmin = -3, xmax=5,
+                ymin = -5, ymax=6,
+                tick label style = {font=\tiny},
+                ]
+                \addplot[no marks, samples=100, domain=-3:5, ] expression { -abs(x-2) +3 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+}{1.5in}
+
+% \begin{myProblems2}%
+%     {Factor the following monomials into prime factors.}%
+%     {2in}%
+%     %
+%     {\( 32x^2 \)}
+%     {\( 8 x^3y^2z \)}
+% \end{myProblems2}
+  
+
+
+\end{document}
