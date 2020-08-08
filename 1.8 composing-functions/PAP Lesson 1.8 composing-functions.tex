@@ -23,7 +23,7 @@
 
 % ---------------------HEADER------------------------------
 \begin{myNotesHeader}
-    \item \myCognitiveVerb{evaluate} a composite fuction with a number
+    \item \myCognitiveVerb{evaluate} a composite function using a number as input
     \item \myCognitiveVerb{compose} two functions
 \end{myNotesHeader}
 
@@ -82,8 +82,8 @@
     \end{center}
 
     You could ``daisy chain'' two meat grinders---when 
-    you take the output of one function and put it into
-    another one.
+    you take the output of one and push it into
+    a second one.
     The two griders act as a  
     \emph{single, bigger meat grinder} which takes chunks of beef
     as an input and creates 
@@ -97,7 +97,7 @@
         }
     \end{center}
     To emphasize that the two grinders work together, 
-    we could draw it like this
+    we could draw it like this 
     \begin{center}
         \fbox{
             \includegraphics[width=1.5in]{composite-meat-grinder.png} 
@@ -132,8 +132,33 @@
     \)
     \vspace{1em}
     \end{center}
-    That thing in the box is a composite function,
-    which is what you will learn about next.
+
+    That thing in the box is a composite function.
+    The mathematical notion for a composite of two functions is a small circle,
+    so we could diagram it like this:
+
+    \begin{center}
+        \vspace{1em}
+        \(
+            x
+            \Longrightarrow
+        \)
+        \fbox{
+            \(
+                f
+                \circ
+                g
+            \)
+        }
+        \(
+            \Longrightarrow
+            y
+        \)
+        \vspace{1em}
+        \end{center}
+
+    $f\circ g$ is a single, bigger composite function. We will usually write it with parentheses around it:
+    $(f\circ g)$.
 \end{myLesson}
 
 \begin{myLesson}[][1]
@@ -260,7 +285,7 @@ You can compose a function with itself.
 \myExample{
     Evaluate $(v \circ w)(t)$ and $(w \circ v)(t)$ where
     \begin{align*}
-        u(t) &= t + 1 \\
+        w(t) &= t + 1 \\
         v(t) &= t^2 + 2t + 3
     \end{align*}    
 }{3.75in}
