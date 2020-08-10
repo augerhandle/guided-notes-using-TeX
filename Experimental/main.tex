@@ -1,0 +1,238 @@
+\documentclass[letterpaper]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{1in}{*}{*}
+\setlrmarginsandblock{1in}{*}{*}
+
+\usepackage{xparse}
+\usepackage{tcolorbox}
+\usepackage{blindtext}
+\usepackage{xwatermark}
+
+\newcommand{\myHeadFootStyle}{\footnotesize\sffamily}
+\copypagestyle{myPagestyle}{empty}
+\makeoddhead{myPagestyle}
+    {\myHeadFootStyle\,}
+    {\myHeadFootStyle\,}
+    {\myHeadFootStyle\chaptername\,\thechapter.\themyLessonCounter\,\,\myCurrentChapterTitle}
+\makeevenhead{myPagestyle}
+    {\myHeadFootStyle\,}
+    {\myHeadFootStyle\,}
+    {\myHeadFootStyle\chaptername\,\thechapter.\themyLessonCounter\,\,\myCurrentChapterTitle}
+\makeoddfoot{myPagestyle}
+    {\myHeadFootStyle\myCurrentBookTitle}
+    {\myHeadFootStyle\thepage\,of\,\pageref*{xwmlastpage}}
+    {\myHeadFootStyle\thechapter.\themyLessonCounter\,\,\myCurrentLessonTitle}
+\makeevenfoot{myPagestyle}
+    {\myHeadFootStyle\thechapter.\themyLessonCounter\,\,\myCurrentLessonTitle}
+    {\myHeadFootStyle{\thepage{}~of~\pageref*{xwmlastpage}}}
+    {\myHeadFootStyle\myCurrentBookTitle}
+
+\begin{document}
+\pagestyle{myPagestyle}
+\checkandfixthelayout
+
+%
+% I am piggy-backing off of the standard memoir document
+% divisions:
+%
+% book    -- is for the name of my class (eg, Alg2)
+% part    -- is for the semester 
+% chapter -- is for units
+% section -- is for the lessons in a unit
+%
+% To do this, I need to change the default value of various
+% division-related commands. That's what the following is for.
+
+%----- CLASS ---------
+\newcommand{\myCurrentBookTitle}{}
+\let\myOldBook\book
+\renewcommand{\book}[1]{
+    \renewcommand{\myCurrentBookTitle}{#1}
+    \myOldChapter{#1}
+}
+% I don't want roman numerals.
+\makeatletter
+\renewcommand*{\thebook}{\@arabic\c@book}
+\makeatother
+% I just want the title (not "Class 1 <title>")
+\renewcommand{\printbookname}{}
+\renewcommand{\booknamenum}{}
+\renewcommand{\printbooknum}{}
+%----- SEMESTER -------
+% I don't want roman numerals.
+\makeatletter
+\renewcommand*{\thepart}{\@arabic\c@part}
+\makeatother
+%----- UNIT -----------
+\renewcommand{\chaptername}{Unit}
+\newcommand{\myCurrentChapterTitle}{}
+\let\myOldChapter\chapter
+\renewcommand{\chapter}[1]{
+    \renewcommand{\myCurrentChapterTitle}{#1}
+    \myOldChapter{#1}
+}
+
+%-------- LESSONS --------------
+\newcounter{myLessonCounter}[chapter]
+\newcommand{\myCurrentLessonTitle}{}
+
+\newcommand{\myLesson}[1]{
+    \clearpage
+    \stepcounter{myLessonCounter}
+    \renewcommand{\myCurrentLessonTitle}{#1}
+    \noindent
+    \begin{minipage}[b]{0.25\textwidth}
+        {
+            \HUGE\bfseries\sffamily
+            \thechapter.\themyLessonCounter
+        }
+    \end{minipage}
+    \begin{minipage}[b]{0.74\textwidth}
+        \begin{flushright}
+            {
+                \hfill
+                \Huge\bfseries\sffamily
+                #1
+            }
+        \end{flushright}
+    \end{minipage}
+    \newline
+    \rule{0.99\textwidth}{0.75pt}
+    % \newline
+}
+
+%-------- ANNOTATIONS (in boxes) --------------
+% font and styling commands for
+% Objectives, Voculary, Key Concepts, etc...
+\newcommand{\myAnnotationStyling}{\bfseries\large}
+
+% #1 : name of the kind of annotation (Objectives, ...)
+% #2 : title text to go with the annotation
+\NewDocumentEnvironment{myAnnotate}{ m m }{
+    \begin{tcolorbox}[
+        colframe=black!15!yellow,
+        colback=white,
+        coltitle=black,
+        fonttitle={\myAnnotationStyling},
+        title={#1: },
+        after title={\normalfont\itshape#2},
+        ]
+}{
+    \end{tcolorbox}
+}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+\NewDocumentEnvironment{myTabularAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{tabular}{rl}
+}{
+    \end{tabular}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape #1}&#2\\}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+\NewDocumentEnvironment{myListAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{enumerate}
+}{
+    \end{enumerate}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+\NewDocumentCommand{\myItem}{mm}{{\item\bfseries\itshape #1} #2}
+
+
+
+%----------- OBJECTIVES , VOCABULARY, CONCEPTS ---------------
+\newenvironment{myObjectives}{
+    \begin{myListAnnotate}{Objectives}{}
+}{
+    \end{myListAnnotate}
+}
+\newcommand{\myObjective}[2]{
+    \myItem{#1}{#2}
+}
+
+\newenvironment{myVocabulary}{
+    \begin{myTabularAnnotate}{Vocabulary}{}
+}{
+    \end{myTabularAnnotate}
+}
+\newcommand{\myDefinition}[2]{
+    \myRow
+{#1}{#2}
+}
+
+\NewDocumentEnvironment{myConcept}{m}{
+    \begin{myAnnotate}{Key Concept}{#1}
+}{
+    \end{myAnnotate}
+}
+
+
+
+
+
+
+
+\book{Pre-AP Algebra 2}
+\part{Fall Semester}
+\chapter{Introduction to Relations and Functions}
+\chapterprecis{\blindtext}
+
+\myLesson{This is a lesson}
+
+\begin{myObjectives}
+    \myObjective{listen}{to the teacher}
+    \myObjective{take}{notes in my notebook}
+    \myObjective{see}{farther than anyone else}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{vertical}{up and down}
+    \myDefinition{horizontal}{left and right}
+    \myDefinition{foo}{an arbitrary name}
+\end{myVocabulary}
+
+\begin{myConcept}{To do this\dots}
+    then what you need to do is that.
+\end{myConcept}
+\begin{myConcept}{To do this\dots}
+    Follow these steps.
+    \begin{enumerate}
+        \item foo
+        \item bar
+        \item baz
+    \end{enumerate}
+\end{myConcept}
+
+\myLesson{This is another lesson}
+
+\vspace{2em}
+\begin{tabular}{ll}
+    \toprule
+    {\bfseries\itshape old division} & {\bfseries\itshape new division} \\
+    \midrule
+    book & class \\
+    part & semester \\
+    chapter & unit \\
+    section & lesson \\
+    subsection & concept \\
+    \bottomrule
+\end{tabular}
+\vspace{2em}
+
+
+\chapter{Another unit ggg}
+\myLesson{This is another lesson g}
+
+\blindtext
+
+
+\end{document}
