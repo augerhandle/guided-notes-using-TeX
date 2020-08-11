@@ -7,17 +7,26 @@
 \usepackage{tcolorbox}
 \usepackage{blindtext}
 \usepackage{xwatermark}
+\usepackage{enumitem}
 
 \newcommand{\myHeadFootStyle}{\footnotesize\sffamily}
 \copypagestyle{myPagestyle}{empty}
-\makeoddhead{myPagestyle}
-    {\myHeadFootStyle\,}
-    {\myHeadFootStyle\,}
-    {\myHeadFootStyle\chaptername\,\thechapter.\themyLessonCounter\,\,\myCurrentChapterTitle}
-\makeevenhead{myPagestyle}
-    {\myHeadFootStyle\,}
-    {\myHeadFootStyle\,}
-    {\myHeadFootStyle\chaptername\,\thechapter.\themyLessonCounter\,\,\myCurrentChapterTitle}
+%
+% FIXME
+% The following header definitions do NOT work right in all cases.
+% I have found that the chapter title sometimes gets picked up from
+% a chapter that begins on the NEXT PAGE. Not sure what's going on.
+% So I abandoned embedding the info in the header and instead updated
+% \myLesson to print it out, and that seems to work find.
+%
+% \makeoddhead{myPagestyle}
+%     {\,}
+%     {\,}
+%     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
+% \makeevenhead{myPagestyle}
+%     {\,}
+%     {\,}
+%     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
 \makeoddfoot{myPagestyle}
     {\myHeadFootStyle\myCurrentBookTitle}
     {\myHeadFootStyle\thepage\,of\,\pageref*{xwmlastpage}}
@@ -48,7 +57,7 @@
 \let\myOldBook\book
 \renewcommand{\book}[1]{
     \renewcommand{\myCurrentBookTitle}{#1}
-    \myOldChapter{#1}
+    \myOldBook{#1}
 }
 % I don't want roman numerals.
 \makeatletter
@@ -73,11 +82,11 @@
 }
 
 %-------- LESSONS --------------
-\newcounter{myLessonCounter}[chapter]
+\newcounter{myLessonCounter}[chapter] 
 \newcommand{\myCurrentLessonTitle}{}
 
 \newcommand{\myLesson}[1]{
-    \clearpage
+    \cleartorecto
     \stepcounter{myLessonCounter}
     \renewcommand{\myCurrentLessonTitle}{#1}
     \noindent
@@ -89,16 +98,14 @@
     \end{minipage}
     \begin{minipage}[b]{0.74\textwidth}
         \begin{flushright}
-            {
-                \hfill
-                \Huge\bfseries\sffamily
-                #1
-            }
+            {\sffamily\chaptername\,\thechapter\,\,\myCurrentChapterTitle}\\
+            \vspace{0.75\baselineskip}
+            {\Huge\bfseries\sffamily#1}
         \end{flushright}
     \end{minipage}
-    \newline
-    \rule{0.99\textwidth}{0.75pt}
-    % \newline
+    
+    \noindent\rule{\textwidth}{1.25pt}
+    \par
 }
 
 %-------- ANNOTATIONS (in boxes) --------------
@@ -125,27 +132,29 @@
 % #2 : title 
 \NewDocumentEnvironment{myTabularAnnotate}{ m m }{
     \begin{myAnnotate}{#1}{#2}
-    \begin{tabular}{rl}
+    \begin{tabular}{r|l}
 }{
     \end{tabular}
     \end{myAnnotate}
 }
 % #1 - column 1 text
 % #2 - column 2 text
-\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape #1}&#2\\}
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape #1}&#2\\[1ex]}
 
 % #1 : name of the kind of annotation 
 % #2 : title 
-\NewDocumentEnvironment{myListAnnotate}{ m m }{
+% #3 : text before the list starts
+\NewDocumentEnvironment{myListAnnotate}{ m m o }{
     \begin{myAnnotate}{#1}{#2}
-    \begin{enumerate}
+    \IfValueT{#3}{#3}
+    \begin{enumerate}[itemsep=0pt,]
 }{
     \end{enumerate}
     \end{myAnnotate}
 }
 % #1 - column 1 text
 % #2 - column 2 text
-\NewDocumentCommand{\myItem}{mm}{{\item\bfseries\itshape #1} #2}
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape #1} #2}
 
 
 
@@ -165,14 +174,22 @@
     \end{myTabularAnnotate}
 }
 \newcommand{\myDefinition}[2]{
-    \myRow
-{#1}{#2}
+    \myRow{#1}{#2}
 }
 
 \NewDocumentEnvironment{myConcept}{m}{
     \begin{myAnnotate}{Key Concept}{#1}
 }{
     \end{myAnnotate}
+}
+
+\NewDocumentEnvironment{myConceptSteps}{m}{
+    \begin{myListAnnotate}{Key Concept}{#1}[Follow these steps.]
+}{
+    \end{myListAnnotate}
+}
+\newcommand{\myStep}[2]{
+    \myItem{#1.}{#2}
 }
 
 
@@ -184,8 +201,6 @@
 \book{Pre-AP Algebra 2}
 \part{Fall Semester}
 \chapter{Introduction to Relations and Functions}
-\chapterprecis{\blindtext}
-
 \myLesson{This is a lesson}
 
 \begin{myObjectives}
@@ -203,30 +218,16 @@
 \begin{myConcept}{To do this\dots}
     then what you need to do is that.
 \end{myConcept}
-\begin{myConcept}{To do this\dots}
-    Follow these steps.
-    \begin{enumerate}
-        \item foo
-        \item bar
-        \item baz
-    \end{enumerate}
-\end{myConcept}
+
+\begin{myConceptSteps}{To do this\dots}
+    \myStep{foo}{First you foo.}
+    \myStep{bar}{Then you bar.}
+    \myStep{baz}{Finally you baz.}
+\end{myConceptSteps}
 
 \myLesson{This is another lesson}
 
-\vspace{2em}
-\begin{tabular}{ll}
-    \toprule
-    {\bfseries\itshape old division} & {\bfseries\itshape new division} \\
-    \midrule
-    book & class \\
-    part & semester \\
-    chapter & unit \\
-    section & lesson \\
-    subsection & concept \\
-    \bottomrule
-\end{tabular}
-\vspace{2em}
+foo bar baz
 
 
 \chapter{Another unit ggg}
@@ -234,5 +235,7 @@
 
 \blindtext
 
+\chapter{final unit yyy}
+\blindtext
 
 \end{document}
