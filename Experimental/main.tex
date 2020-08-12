@@ -26,17 +26,17 @@
 %     {\,}
 %     {\,}
 %     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
-% \makeevenhead{myPagestyle}
+% \makeevenhead{myPagestyle} 
 %     {\,}
 %     {\,}
 %     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
 \makeoddfoot{myPagestyle}
     {\myHeadFootStyle\myCurrentBookTitle}
-    {\myHeadFootStyle\thepage\,of\,\pageref*{xwmlastpage}}
+    {\myHeadFootStyle\thepage}
     {\myHeadFootStyle\thechapter.\themyLessonCounter\,\,\myCurrentLessonTitle}
 \makeevenfoot{myPagestyle}
     {\myHeadFootStyle\thechapter.\themyLessonCounter\,\,\myCurrentLessonTitle}
-    {\myHeadFootStyle{\thepage{}~of~\pageref*{xwmlastpage}}}
+    {\myHeadFootStyle\thepage}
     {\myHeadFootStyle\myCurrentBookTitle}
 
 \begin{document}
