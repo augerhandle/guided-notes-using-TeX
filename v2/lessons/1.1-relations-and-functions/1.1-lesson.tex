@@ -5,17 +5,15 @@
 
 \input{../../common/packages}
 \input{../../common/head-foot}
-    
+
 \begin{document}
 \pagestyle{myPagestyle}
 \checkandfixthelayout
+\raggedbottom
 
+\input{../../common/defs}
 \input{../../common/class-semester-unit}
 \input{../../common/lessons-et-al}
-
-%
-% A single lesson for the Algebra 2 class,
-%
 
 % Units are based on \chapter. But we're not doing chapters
 % in this one-lesson file. So we "fake out" the relevant 
@@ -23,66 +21,11 @@
 \renewcommand{\thechapter}{1} 
 \renewcommand{\myCurrentChapterTitle}{Relations and Functions}
 
-% \book{Pre-AP Algebra 2}
-% \part{Fall Semester}
-% \chapter{Introduction to Relations and Functions} 
+\myLesson{Introduction to Functions}
 
-\myLesson{This is a lesson}
-
-\begin{myObjectives}
-    \myObjective{listen}{to the teacher}
-    \myObjective{take}{notes in my notebook}
-    \myObjective{see}{farther than anyone else}
-\end{myObjectives}
-
-\begin{myVocabulary}
-    \myDefinition{vertical}{up and down}
-    \myDefinition{horizontal}{left and right}
-    \myDefinition{foo}{an arbitrary name}
-\end{myVocabulary}
-
-\begin{myConcept}{To do this\dots}
-    then what you need to do is that.
-\end{myConcept}
-
-\begin{myConceptSteps}{To do this\dots}
-    \myStep{foo}{First you foo.}
-    \myStep{bar}{Then you bar.}
-    \myStep{baz}{Finally you baz.}
-\end{myConceptSteps}
-
-
-
-
-\begin{myExample}{This is an example with some text that I write.}
-    \blindtext
-\end{myExample}
-
-\begin{myExample}{This is an example with some empty space in it.}
-    \vspace{.05in}
-\end{myExample}
-
-\begin{myExample}{This is an example with a graph in it.}
-    \begin{center}
-        \begin{tikzpicture}
-            \begin{axis}[
-                width=2.75in,
-                grid=both,
-                axis x line = middle,axis y line = middle,
-                axis equal image,
-                xtick distance = 2, ytick distance = 2,
-                xmin = -5, xmax = 5,
-                ymin = -5, ymax = 5,
-                minor tick num = 1,
-                ]
-                \addplot[
-                    only marks,
-                    mark=*,
-                    mark size = 0.1cm,
-                    ] coordinates { (0,-3) (-2,0) };
-            \end{axis}
-        \end{tikzpicture}
-    \end{center}
-\end{myExample}
+\input{./obj-and-vocab}
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
 
 \end{document}
