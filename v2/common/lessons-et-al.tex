@@ -3,7 +3,7 @@
 \newcounter{myLessonCounter}[chapter] 
 \newcommand{\myCurrentLessonTitle}{}
 
-\newcommand{\myLesson}[1]{
+\NewDocumentCommand{\myLesson}{mo}{
     \cleartorecto
     \stepcounter{myLessonCounter}
     \renewcommand{\myCurrentLessonTitle}{#1}
@@ -11,7 +11,7 @@
     \begin{minipage}[b]{0.25\textwidth}
         {
             \HUGE\bfseries\sffamily
-            \thechapter.\themyLessonCounter
+            \thechapter.\IfValueTF{#2}{#2}{\themyLessonCounter}
         }
     \end{minipage}
     \begin{minipage}[b]{0.74\textwidth}
