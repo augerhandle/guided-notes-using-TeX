@@ -1,0 +1,136 @@
+%-------- LESSONS --------------
+
+\newcounter{myLessonCounter}[chapter] 
+\newcommand{\myCurrentLessonTitle}{}
+
+\newcommand{\myLesson}[1]{
+    \cleartorecto
+    \stepcounter{myLessonCounter}
+    \renewcommand{\myCurrentLessonTitle}{#1}
+    \noindent
+    \begin{minipage}[b]{0.25\textwidth}
+        {
+            \HUGE\bfseries\sffamily
+            \thechapter.\themyLessonCounter
+        }
+    \end{minipage}
+    \begin{minipage}[b]{0.74\textwidth}
+        \begin{flushright}
+            {\sffamily\chaptername\,\thechapter\,\,\myCurrentChapterTitle}\\
+            \vspace{0.75\baselineskip}
+            {\Huge\bfseries\sffamily#1}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{1.25pt}
+    \par
+}
+
+%-------- ANNOTATIONS (in boxes) --------------
+%
+% I use the term "annotations" to capture the common
+% infrastructure I use to define Objectives, Vobabulary & Concepts.
+%
+
+% font and styling commands for
+% Objectives, Voculary, Key Concepts, etc...
+\newcommand{\myAnnotationStyling}{\bfseries\large}
+
+% #1 : name of the kind of annotation (Objectives, ...)
+% #2 : title text to go with the annotation
+\NewDocumentEnvironment{myAnnotate}{ m m }{
+    \begin{tcolorbox}[
+        colbacktitle=black!15!white,
+        colback=white,
+        coltitle=black,
+        fonttitle={\myAnnotationStyling},
+        title={#1: },
+        after title={\normalfont\itshape#2},
+        ]
+}{
+    \end{tcolorbox}
+}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+\NewDocumentEnvironment{myTabularAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{tabular}{r|l}
+}{
+    \end{tabular}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape #1}&#2\\[1ex]}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+% #3 : text before the list starts
+\NewDocumentEnvironment{myListAnnotate}{ m m o }{
+    \begin{myAnnotate}{#1}{#2}
+    \IfValueT{#3}{#3}
+    \begin{enumerate}[itemsep=0pt,]
+}{
+    \end{enumerate}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape #1} #2}
+
+
+
+%----------- OBJECTIVES , VOCABULARY, CONCEPTS ---------------
+\newenvironment{myObjectives}{
+    \begin{myListAnnotate}{Objectives}{}
+}{
+    \end{myListAnnotate}
+}
+\newcommand{\myObjective}[2]{
+    \myItem{#1}{#2}
+}
+
+\newenvironment{myVocabulary}{
+    \begin{myTabularAnnotate}{Vocabulary}{}
+}{
+    \end{myTabularAnnotate}
+}
+\newcommand{\myDefinition}[2]{
+    \myRow{#1}{#2}
+}
+
+\NewDocumentEnvironment{myConcept}{m}{
+    \begin{myAnnotate}{Key Concept}{#1}
+}{
+    \end{myAnnotate}
+}
+
+\NewDocumentEnvironment{myConceptSteps}{m}{
+    \begin{myListAnnotate}{Key Concept}{#1}[Follow these steps.]
+}{
+    \end{myListAnnotate}
+}
+\newcommand{\myStep}[2]{
+    \myItem{#1.}{#2}
+}
+
+%----------- EXAMPLEs ---------------
+\newcounter{myExampleCounter}[myLessonCounter] 
+
+% #1 A statement of the example problem.
+%
+\NewDocumentEnvironment{myExample}{m}{%
+    \begin{tcolorbox}[
+        enhanced,
+        sharp corners, 
+        colback=white,
+        boxrule=0pt,
+        borderline={0.5pt}{0pt}{black,dashed},
+        ]
+        \stepcounter{myExampleCounter}
+        {\myAnnotationStyling Example \themyExampleCounter:} #1
+        \tcblower
+}{
+    \end{tcolorbox}
+}

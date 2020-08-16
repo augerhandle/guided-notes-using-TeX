@@ -1,0 +1,26 @@
+\newcommand{\myHeadFootStyle}{\footnotesize\sffamily}
+\copypagestyle{myPagestyle}{empty}
+%
+% FIXME
+% The following header definitions do NOT work right in all cases.
+% I have found that the chapter title sometimes gets picked up from
+% a chapter that begins on the NEXT PAGE. Not sure what's going on.
+% So I abandoned embedding the info in the header and instead updated
+% \myLesson to print it out, and that seems to work find.
+%
+% \makeoddhead{myPagestyle}
+%     {\,}
+%     {\,}
+%     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
+% \makeevenhead{myPagestyle} 
+%     {\,}
+%     {\,}
+%     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
+\makeoddfoot{myPagestyle}
+    {\myHeadFootStyle\myCurrentBookTitle}
+    {\myHeadFootStyle\thepage}
+    {\myHeadFootStyle\thechapter.\themyLessonCounter\,\,\myCurrentLessonTitle}
+\makeevenfoot{myPagestyle}
+    {\myHeadFootStyle\thechapter.\themyLessonCounter\,\,\myCurrentLessonTitle}
+    {\myHeadFootStyle\thepage}
+    {\myHeadFootStyle\myCurrentBookTitle}

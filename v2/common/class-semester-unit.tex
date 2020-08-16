@@ -1,0 +1,43 @@
+%
+% I am piggy-backing off of the standard memoir document
+% divisions:
+%
+% book    -- is for the name of my class (eg, Alg2)
+% part    -- is for the semester 
+% chapter -- is for units
+%
+% To do this, I need to change the default value of various
+% division-related commands. That's what the following is for.
+
+%----- CLASS ---------
+\newcommand{\myCurrentBookTitle}{}
+\let\myOldBook\book
+\renewcommand{\book}[1]{
+    \renewcommand{\myCurrentBookTitle}{#1}
+    \myOldBook{#1}
+}
+% I don't want roman numerals.
+\makeatletter
+\renewcommand*{\thebook}{\@arabic\c@book}
+\makeatother
+% I just want the title (not "Class 1 <title>")
+\renewcommand{\printbookname}{}
+\renewcommand{\booknamenum}{}
+\renewcommand{\printbooknum}{}
+
+
+%----- SEMESTER -------
+% I don't want roman numerals.
+\makeatletter
+\renewcommand*{\thepart}{\@arabic\c@part}
+\makeatother
+
+
+%----- UNIT -----------
+\renewcommand{\chaptername}{Unit}
+\newcommand{\myCurrentChapterTitle}{}
+\let\myOldChapter\chapter
+\renewcommand{\chapter}[1]{
+    \renewcommand{\myCurrentChapterTitle}{#1}
+    \myOldChapter{#1}
+}
