@@ -134,3 +134,11 @@
 }{
     \end{tcolorbox}
 }
+
+% #1 amount of vspace for the blank space
+% #2 A statement of the example problem
+\NewDocumentCommand{\myBlankExample}{mm}{
+    \begin{myExample}{#2}
+        \vspace{#1}
+    \end{myExample}
+}
