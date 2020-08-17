@@ -40,7 +40,7 @@
 % #2 : title text to go with the annotation
 \NewDocumentEnvironment{myAnnotate}{ m m }{
     \begin{tcolorbox}[
-        colbacktitle=black!15!white,
+        colbacktitle=blue!15!white,
         colback=white,
         coltitle=black,
         fonttitle={\myAnnotationStyling},
@@ -62,7 +62,7 @@
 }
 % #1 - column 1 text
 % #2 - column 2 text
-\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape #1}&#2\\[1ex]}
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape \textcolor{blue}{#1}}&#2\\[1ex]}
 
 % #1 : name of the kind of annotation 
 % #2 : title 
@@ -77,7 +77,7 @@
 }
 % #1 - column 1 text
 % #2 - column 2 text
-\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape #1} #2}
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
 
 
 
