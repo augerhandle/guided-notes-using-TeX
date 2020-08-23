@@ -12,7 +12,8 @@
 %----- CLASS ---------
 \newcommand{\myCurrentBookTitle}{}
 \let\myOldBook\book
-\renewcommand{\book}[1]{
+
+\RenewDocumentCommand{\book}{m}{
     \renewcommand{\myCurrentBookTitle}{#1}
     \myOldBook{#1}
 }

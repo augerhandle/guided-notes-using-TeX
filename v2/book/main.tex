@@ -13,12 +13,18 @@
 \input{../common/class-semester-unit}
 \input{../common/lessons-et-al}
 
+\usetag{on-level}
+
 %
 % A book for an entire Algebra 2 class,
 % including all its units and their constituent lessons
 %
 
-\book{Pre-AP Algebra 2}
+\NewDocumentCommand{\myClassName}{}{
+    \iftagged{pre-AP}{pre-AP }{}Algebra 2
+}
+
+\book{\myClassName}
 \part{Fall Semester}
 \chapter{Introduction to Relations and Functions} 
 \myLesson{This is a lesson}
