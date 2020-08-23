@@ -1,21 +1,3 @@
-\documentclass[letterpaper]{memoir}
-% memoir commands to define the text block geometry
-\setulmarginsandblock{1in}{*}{*}
-\setlrmarginsandblock{1in}{*}{*}
-
-\input{../../common/packages}
-% ---------------------------------------------
-\usetag{PAPx}
-% ---------------------------------------------
-
-\input{../../common/head-foot}
-
-
-\begin{document}
-\pagestyle{myPagestyle}
-\checkandfixthelayout
-\raggedbottom
-
 \input{../../common/defs}
 \input{../../common/class-semester-unit}
 \input{../../common/lessons-et-al}
@@ -31,6 +13,7 @@
 \input{./obj-and-vocab}
 \input{./chunk-1}
 \input{./chunk-2}
-\input{./chunk-3}
 
-\end{document}
+\begin{taggedblock}{pre-AP}
+    \input{./chunk-3}
+\end{taggedblock}
