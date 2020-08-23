@@ -1,0 +1,21 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Solving Linear Equations and Formulas}[5]
+
+\input{./obj-and-vocab}
+
+\begin{taggedblock}{on-level}
+    \input{./chunk-1}
+\end{taggedblock}
+
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
