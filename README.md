@@ -11,5 +11,7 @@ I am using LaTeX to create them.
 
 ## Contents
 
-* the `defs/` directory contains files with various LaTeX definitions that may be input/included into .tex files. These are the core mechanism I'm using to build each guided notes .tex file.
-* other directories contain the guided notes .tex files (which are standalong LaTeX documents based on memoir)
+* `template with tikz graph` has a tikz example in it (just for reference)
+* `GCF-factoring` was my first foray into using LaTeX for guided notes (It's a relic.)
+* `v1 (paper packets)` is what I put together for the Algebra 2 paper packets for Fall 2020 (my initial effort for using memoir for guided notes)
+* `v2` is what I'm using for the remote/in-person notes for 2020-2021. It's a ``better version'' of using memoir (better factoring into files, cleaner implementation)
