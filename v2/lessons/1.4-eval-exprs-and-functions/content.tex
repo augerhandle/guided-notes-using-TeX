@@ -1,0 +1,18 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Evaluating Expressions and Functions}[4]
+
+\input{./obj-and-vocab}
+\input{./chunk-1}
+
+\begin{taggedblock}{pre-AP}
+    \input{./chunk-2}
+\end{taggedblock}
