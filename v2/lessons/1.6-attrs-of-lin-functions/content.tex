@@ -1,0 +1,34 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Attributes of Linear Functions}[6]
+
+\begin{myObjectives}
+    \myObjective{find}{the slope of a line from its graph}
+    \myObjective{find}{the $x$- and $y$-intercepts of a line from its graph}
+    \myObjective{find}{the slope and $y$-intercept of a line from its function in slope-intercept form}
+    \myObjective{find}{the $x$- and $y$-intercepts of a line from its equation}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{attribute}{a \emph{feature} or a \emph{fact} about something}
+    \myDefinition{coefficient}{the number in front of a variable ($5$ is the coefficient of $5x$.)}
+    \myDefinition{slope}{rate of change, ``rise over run'', change in $y$ divided by change in $x$}
+    \myDefinition{$x$-intercept}{where a graph crosses the $x$-axis}
+    \myDefinition{$y$-intercept}{where a graph crosses the $y$-axis}
+    \myDefinition{linear function}{a function with a rule that only has $x$ terms and numbers}
+    \myDefinition{slope-intercept form}{a linear function with the rule written as $f(x) = mx+b$}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
