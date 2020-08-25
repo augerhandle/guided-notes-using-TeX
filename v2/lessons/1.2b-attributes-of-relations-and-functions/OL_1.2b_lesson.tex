@@ -1,0 +1,35 @@
+\documentclass[letterpaper]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{1in}{*}{*}
+\setlrmarginsandblock{1in}{*}{*}
+
+\input{../../common/packages}
+\input{../../common/head-foot}
+
+\begin{document}
+\pagestyle{myPagestyle}
+\checkandfixthelayout
+\raggedbottom
+
+\usetag{on-level}
+
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Attributes of Relations and Functions}[2b]
+
+This is the second lesson on this topic.
+We will only talk about {\bfseries\itshape domain} and {\bfseries\itshape range} 
+of \emph{continuous relations}.
+
+\input{./obj-and-vocab}
+\input{./chunk-1}
+
+\end{document}
