@@ -1,83 +1,32 @@
-\emph{Function notation}
-is how we write down a function on paper.
-It is a precise way to specify
-\begin{itemize}
-    \item the {\bfseries\itshape name} of the function,
-    \item the {\bfseries\itshape rule} that tells you how to calculate the output of the function,
-    \item the name of the {\bfseries\itshape input variable}, which is often $x$.
-\end{itemize}
+Some problems might ask you to \emph{evaluate} an expression
+with variables in it 
+by telling you the values of all the variables.
+Again, the word ``evaluate'' is a hint to you that your answer should be a \emph{number}.
 
-\begin{tcolorbox}
-The most common notation is $f(x)$.
-This tells you that the function is named $f$ 
-and that the name of the input variable is $x$.
-But it's missing the rule; 
-it does not tell us how to calculate the output.
-
-To fully specify a function, including the rule, we write $f(x) = \cdots$,
-where the stuff on the right is the rule that says how to calculate the output.
-\end{tcolorbox}
-
-In math,
-function names are usually (but not always\footnote{
-    An example of a function name that is not one letter 
-    is $log(x)$, which we will study later in the year.
-    In pre-calculus, you will use trigonometric functions,
-    $sin(x)$ and $cos(x)$.
-    In the software world, function and variable names almost always 
-    are words that describe what they do, for example,
-    \texttt{send\_email(my\_message)}.
-}) a single letter,
-and the input variable is often (but not always) $x$.
-for example, $f(x)$, $g(z)$, $v(t)$.
-
-\begin{myConceptSteps}{To evaluate a function given the value of its input variable\dots}
+\begin{myConceptSteps}{To evaluate expressions given the value of all the variables\dots}
     \myStep{substitute}{
-        Substitute the value of the input variable wherever it appears in the rule.
-        When you substitute, it is a good idea to put \emph{parentheses} around the input value.
+        Substitute the value of each variable into the expression wherever that variable occurs
+        It is a good idea to use parentheses wrapped around the value.
+        This will give you an expression with no variables.
     }
-    \myStep{evaluate}{Evaluate the expression by using the \emph{order of operations}.}
+    \myStep{evaluate}{
+        Evaluate the expression using GEMDAS.
+    }
 \end{myConceptSteps}
 
-The words \emph{evaluate} and \emph{simplify} are confusing. 
-They mean almost the same thing.
-I use the word ``evaluate'' when you should end up with a {\bfseries\itshape number} 
-after you apply the order of operations.
-I usually use the word ``simplify'' when you should end up with an {\bfseries\itshape expression} with variables in it 
-after you apply the order of operations.
 
 \myBlankExample{2in}{
-    Given the function
+    Evaluate this expression:
     \(
-        f(x) = 3x-5
-    \)
-    evaluate $f(4)$.
+        16 - 3(2x-1)^2 + 9
+    \),
+    where $x=2$.
 }
 
-\begin{taggedblock}{on-level}
-    \myBlankExample{3in}{
-        Given the function
-        \(
-            g(z) = z^2 + 2z + 3
-        \)
-        evaluate $g(-2)$.
-    }
-\end{taggedblock}
-
-\myBlankExample{3in}{
-    Given the function
+\myBlankExample{2in}{
+    Evaluate this expression:
     \(
-        g(z) = 3z^2 - 2z + 1
-    \)
-    evaluate $g(-3)$.
+        1 - \sqrt{b^2 - 4ac}
+    \),
+    where $a=-1$, $b=4$, $c=-3$.
 }
-
-\begin{taggedblock}{pre-AP}
-    \myBlankExample{3in}{
-        Given the function
-        \(
-            v(t) = \frac{1}{2}t^2 + 4t + 3
-        \)
-        evaluate $f(-4)$.
-    }
-\end{taggedblock}
