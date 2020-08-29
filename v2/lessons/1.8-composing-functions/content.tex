@@ -1,0 +1,27 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Composing Functions}[8]
+
+\begin{myObjectives}
+    \myObjective{evaluate}{a composite function using a number as input}
+    \myObjective{compose}{two functions}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{to compose}{to construct something from smaller pieces}
+    \myDefinition{to compose two functions}{to construct a function from two smaller functions}
+    \myDefinition{a composite function}{a function composed from smaller functions}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
