@@ -1,0 +1,32 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Graphing Linear Equations}[7]
+
+\begin{myObjectives}
+    \myObjective{sketch}{the graph of a line from its \emph{intercepts}}
+    \myObjective{sketch}{the graph of a line from its equation in \emph{slope-intercept form}}
+    \myObjective{sketch}{the graph of a line from its equation in \emph{any form}}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{sketch}{quickly draw something without worrying about being perfect}
+    \myDefinition{graph}{a representation of a function on a 2-D $x$-$y$ grid}
+    \myDefinition{intercepts}{points where a line crosses the $x$- or $y$-axis}
+    \myDefinition{horizontal}{left and right}
+    \myDefinition{vertical}{up and down}
+\end{myVocabulary}
+
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
