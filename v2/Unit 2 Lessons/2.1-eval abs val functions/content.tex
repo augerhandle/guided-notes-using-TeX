@@ -1,0 +1,27 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{2} 
+\renewcommand{\myCurrentChapterTitle}{Absolute Value Functions}
+
+\myLesson{Evaluating Absolute Value Functions}[1]
+
+\begin{myObjectives}
+    \myObjective{evaluate}{an absolute value function $abs{x}$ given $x$}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{absolute}{viewed independently, not in relation to other things, not qualified or diminished in any way}
+    \myDefinition{algebraically}{using variables and equations}
+    \myDefinition{geometrically}{using drawings and diagrams}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
