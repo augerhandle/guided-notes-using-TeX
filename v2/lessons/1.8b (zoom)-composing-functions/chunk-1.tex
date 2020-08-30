@@ -1,0 +1,146 @@
+Yesterday we learned how to ``join'' two functions together ---
+taking the output of the first one and passing that as an input to the second one.
+This was called \emph{composing functions}.
+
+But yesterday, our input was a number.
+\begin{taggedblock}{on-level}
+    Today it will be a variable.
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    Today it will be a variable or an algebraic expression.
+\end{taggedblock}
+
+\begin{myConceptSteps}{To evaluate a composite function\dots}
+    \myStep{input}{Pass the input to the {\bfseries\itshape nearest function} on the left.}
+    \myStep{evaluate}{Evaluate that function. (You will get an algebraic expression.)}
+    \myStep{pass}{Pass that expression to the next function to the left.}
+    \myStep{evaluate}{Evaluate the that next function. (You will get another expression.) This is the output of the composite function.}
+\end{myConceptSteps}
+
+\begin{center}
+    \begin{tcolorbox}[width=3.5in]
+        \(   (f\circ g)(x) = f( g(x))    \)
+        \vskip1em
+        Pass the input to $g$ first (because $g$ is closest to $x$).
+        Then pass the result of $g(x)$ to $f$.
+    \end{tcolorbox}
+\end{center}
+
+\begin{center}
+    \begin{tcolorbox}[width=3.5in]
+        \(   (g\circ f)(x) = g( f(x))    \)
+        \vskip1em
+        Pass the input to $f$ first (because $f$ is closest to $x$).
+        Then pass the result of $f(x)$ to $g$.
+    \end{tcolorbox}
+\end{center}
+
+
+
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(f \circ g)(x)$ where
+    \begin{align*}
+        f(t) &= 3t  \\
+        g(t) &= t + 1
+    \end{align*}
+}
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(g \circ f)(x)$ where
+    \begin{align*}
+        f(t) &= 3t  \\
+        g(t) &= t + 1
+    \end{align*}
+}
+
+
+
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(a \circ b)(x)$ where
+    \begin{align*}
+        a(z) &= z - 1 \\
+        b(z) &= z + 2
+    \end{align*}
+}
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(b \circ a)(x)$ where
+    \begin{align*}
+        a(z) &= z - 1 \\
+        b(z) &= z + 2
+    \end{align*}
+}
+
+
+
+
+\begin{taggedblock}{on-level}
+    \myBlankExample{3in}{
+        Evaluate the composite functions 
+        $(u \circ v)(x)$ where
+        \begin{align*}
+            a(z) &= 2z - 1 \\
+            b(z) &= 3z + 4
+            \end{align*}
+    }
+
+    \myBlankExample{3in}{
+        Evaluate the composite functions 
+        $(v \circ u)(x)$ where
+        \begin{align*}
+            a(z) &= 2z - 1 \\
+            b(z) &= 3z + 4
+            \end{align*}
+    }
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \myBlankExample{4in}{
+        Evaluate the composite functions 
+        $(u \circ v)(x)$ where
+        \begin{align*}
+            u(z) &= z + 1  \\
+            v(z) &= z^2 + 3z -1
+        \end{align*}
+    }
+
+    \myBlankExample{4in}{
+        Evaluate the composite functions 
+        $(v \circ u)(x)$ where
+        \begin{align*}
+            u(z) &= z + 1  \\
+            v(z) &= z^2 + 3z -1
+        \end{align*}
+    }
+\end{taggedblock}
+
+
+
+
+\begin{taggedblock}{pre-AP}
+    \myBlankExample{4in}{
+        Evaluate the composite functions 
+        $(p \circ p)(x)$ where
+        \begin{align*}
+            p(z) &= 3z - 2  
+        \end{align*}
+    }
+\end{taggedblock}
+
+
+
+\begin{taggedblock}{pre-AP}
+    \myBlankExample{7in}{
+        Evaluate the composite functions 
+        $(c \circ d)(t+1)$ where
+        \begin{align*}
+            c(z) &= z + 1  \\
+            d(z) &= z^2 + 3z -1
+        \end{align*}
+    }
+\end{taggedblock}
