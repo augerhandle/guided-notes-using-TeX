@@ -1,0 +1,111 @@
+Today we are going to learn how to ``join'' two functions together ---
+taking the output of the first one and passing that as an input to the second one.
+This is called \emph{composing functions}.
+
+\begin{myConceptSteps}{To evaluate a composite function at a number\dots}
+    \myStep{input}{Pass the input (a number) to the {\bfseries\itshape nearest function} on the left.}
+    \myStep{evaluate}{Evaluate that function. (You will get a number.)}
+    \myStep{pass}{Pass that number to the next function to the left.}
+    \myStep{evaluate}{Evaluate the that next function. (You will get a number.) This is the output of the composite function.}
+\end{myConceptSteps}
+
+\begin{center}
+    \begin{tcolorbox}[width=3.5in]
+        \(   (f\circ g)(x) = f( g(x))    \)
+        \vskip1em
+        Pass the input to $g$ first (because $g$ is closest to $x$).
+        Then pass the result of $g(x)$ to $f$.
+    \end{tcolorbox}
+\end{center}
+
+\begin{center}
+    \begin{tcolorbox}[width=3.5in]
+        \(   (g\circ f)(x) = g( f(x))    \)
+        \vskip1em
+        Pass the input to $f$ first (because $f$ is closest to $x$).
+        Then pass the result of $f(x)$ to $g$.
+    \end{tcolorbox}
+\end{center}
+
+
+
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(f \circ g)(1)$ where
+    \begin{align*}
+        f(x) &= x + 2 \\
+        g(x) &= 3x - 4
+    \end{align*}
+}
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(g \circ f)(1)$ where
+    \begin{align*}
+        f(x) &= x + 2 \\
+        g(x) &= 3x - 4
+    \end{align*}
+}
+
+
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(a \circ b)(-3)$ where
+    \begin{align*}
+        a(x) &= 2x - 1 \\
+        b(x) &= x-3
+    \end{align*}
+}
+
+\myBlankExample{3in}{
+    Evaluate the composite functions 
+    $(b \circ a)(-3)$ where
+    \begin{align*}
+        a(x) &= 2x - 1 \\
+        b(x) &= x-3
+    \end{align*}
+}
+
+
+
+
+\begin{taggedblock}{on-level}
+    \myBlankExample{3in}{
+        Evaluate the composite functions 
+        $(u \circ v)(-2)$ where
+        \begin{align*}
+            u(x) &= 3x  \\
+            v(x) &= x^2 + 2x + 1
+        \end{align*}
+    }
+
+    \myBlankExample{3in}{
+        Evaluate the composite functions 
+        $(v \circ u)(-2)$ where
+        \begin{align*}
+            u(x) &= 3x  \\
+            v(x) &= x^2 + 2x + 1
+        \end{align*}
+    }
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \myBlankExample{3in}{
+        Evaluate the composite functions 
+        $(u \circ v)(-2)$ where
+        \begin{align*}
+            u(x) &= 2x^2-x  \\
+            v(x) &= x^3 + 2x^2 + 3x -1
+        \end{align*}
+    }
+
+    \myBlankExample{3in}{
+        Evaluate the composite functions 
+        $(v \circ u)(-2)$ where
+        \begin{align*}
+            u(x) &= 2x^2-x  \\
+            v(x) &= x^3 + 2x^2 + 3x -1
+        \end{align*}
+    }
+\end{taggedblock}
