@@ -2,16 +2,23 @@
 
 \newcounter{myLessonCounter}[chapter] 
 \newcommand{\myCurrentLessonTitle}{}
+\newcommand{\myFullLessonNumber}{}  % for example 2.3b
 
-\NewDocumentCommand{\myLesson}{mo}{
+% #1 - lesson title
+% #2 - optional lesson number (default increments from previous)
+% #3 - optional lesson number suffix (eg, 'a' or 'b')
+%
+\NewDocumentCommand{\myLesson}{ m o O{} }{
     \cleartorecto
-    \stepcounter{myLessonCounter}
     \renewcommand{\myCurrentLessonTitle}{#1}
+    \IfValueTF{#2}
+        {\setcounter{myLessonCounter}{#2}}
+        {\stepcounter{myLessonCounter}}
+    \renewcommand{\myFullLessonNumber}{\thechapter.\themyLessonCounter#3}
     \noindent
     \begin{minipage}[b]{0.25\textwidth}
         {
-            \HUGE\bfseries\sffamily
-            \thechapter.\IfValueTF{#2}{#2}{\themyLessonCounter}
+            \HUGE\bfseries\sffamily\myFullLessonNumber
         }
     \end{minipage}
     \begin{minipage}[b]{0.74\textwidth}
