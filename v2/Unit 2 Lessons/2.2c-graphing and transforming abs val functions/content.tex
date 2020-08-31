@@ -1,0 +1,32 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{2} 
+\renewcommand{\myCurrentChapterTitle}{Absolute Value Functions}
+
+\myLesson{Graphing and Transforming Absolute Value Functions}[2][c]
+
+\begin{myObjectives}
+    \myObjective{plot}{the 3 DOTS associated with the absolute value parent function}
+    \myObjective{write}{the $a$/$h$/$k$ form of a transformed absolute value function}
+    \myObjective{explain}{the effects of $a$/$h$/$k$ on the parent function}
+    \myObjective{sketch}{the graph of a transformed absolute value function given $a$/$h$/$k$ using the 3 DOTS}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{3 DOTS}{Three special points that we will use to help us transform parent functions all year.}
+    \myDefinition{$a$/$h$/$k$}{The 3 transformation parameters that we will use all year.}
+    \myDefinition{$a$}{The parameter the leads to reflections and vertical stretches/compressions.}
+    \myDefinition{$h$}{The parameter the leads horizontal shifts.}
+    \myDefinition{$k$}{The parameter the leads vertical shifts.}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}

@@ -1,0 +1,31 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{2} 
+\renewcommand{\myCurrentChapterTitle}{Absolute Value Functions}
+
+\myLesson{Graphing and Transforming Absolute Value Functions}[2][b]
+
+\begin{myObjectives}
+    \myObjective{list}{the four transformations}
+    \myObjective{explain}{the meaning of each of the transformations}
+    \myObjective{sketch}{the result of the four transformations applied to the graph of the absolute value parent function}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{horizontal shift}{a transformation where points move {\bfseries\itshape left or right}}
+    \myDefinition{reflection}{a transformation where points are reflected to the other side of a line}
+    \myDefinition{vertical stretch}{a transformation where $y$-coordinates {\bfseries\itshape increase}}
+    \myDefinition{vertical compression}{a transformation where $y$-coordinates {\bfseries\itshape decrease}}
+    \myDefinition{vertical shift}{a transformation where points move {\bfseries\itshape up or down}}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
