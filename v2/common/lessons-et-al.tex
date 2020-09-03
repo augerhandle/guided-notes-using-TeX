@@ -151,3 +151,25 @@
         \vspace{#1}
     \end{myExample}
 }
+
+% #1 optional horizontal width (defaults to text width)
+% #2 required vertical height
+% #3 text
+%
+% Note: This command does not increment the example counter.
+%
+\NewDocumentCommand{\myEmptyExampleBox}{ o m m}{
+    \begin{center}
+        \IfValueT{#1}{\tcbset{width=#1}} % for some reason, I am unable to conditionally insert in the properties list
+        \begin{tcolorbox}[
+            enhanced,
+            sharp corners, 
+            colback=white,
+            boxrule=0pt,
+            borderline={0.75pt}{0pt}{black,dotted},
+            ]
+            #3
+            \vspace{#2}
+        \end{tcolorbox}
+    \end{center}
+}
