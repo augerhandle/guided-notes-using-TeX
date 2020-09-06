@@ -1,0 +1,20 @@
+\documentclass[letterpaper]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{1in}{*}{*}
+\setlrmarginsandblock{1in}{*}{*}
+
+\input{../../common/packages}
+\input{../../common/head-foot}
+
+\dashundergapssetup{
+    teacher-mode=false, % set to true to show answers 
+}
+\begin{document}
+\pagestyle{myPagestyle}
+\checkandfixthelayout
+\raggedbottom
+
+\usetag{on-level}
+\input{content}
+
+\end{document}
