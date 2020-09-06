@@ -11,3 +11,23 @@
 \usepackage{pgfplots}
     \pgfplotsset{compat=newest}
 \usepackage{tagging}
+
+% Handwriting font (use \augiefamily similar to \sffamily)
+\usepackage[T1]{fontenc}
+\DeclareRobustCommand{\augiefamily}{%
+  \fontfamily{augie}\fontseries{m}\fontshape{n}\selectfont}
+\DeclareTextFontCommand{\textaugie}{\augiefamily}
+
+% For leaving blanks in guided notes
+\usepackage{dashundergaps} % for \gap
+\dashundergapssetup{
+    teacher-mode=true, % set to true to show answers 
+    gap-format=underline,
+    teacher-gap-format=underline,
+    gap-font={\augiefamily},
+    gap-numbers=true,
+    gap-widen=true,
+    gap-extend-percent=150, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
