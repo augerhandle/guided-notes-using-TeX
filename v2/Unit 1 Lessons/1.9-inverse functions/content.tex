@@ -1,0 +1,30 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Inverse Functions}[9]
+
+\begin{myObjectives}
+    \myObjective{find}{the inverse of a function}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{ordered pairs}{two numbers in parentheses, for example $(3,-2)$}
+    \myDefinition{discrete relation}{a relation represented as a bunch of disconnected ordered pairs}
+    \myDefinition{continuous relation}{
+        a relation represented as a line or curve 
+    }
+    \myDefinition{inverse functions}{two functions that ``undo'' each other}
+    \myDefinition{$f^{-1}$}{math notation for the inverse of the function $f$}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
