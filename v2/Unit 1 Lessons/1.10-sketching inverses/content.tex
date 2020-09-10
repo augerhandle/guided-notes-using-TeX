@@ -1,0 +1,31 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Sketching Inverses}[10]
+
+\begin{myObjectives}
+    \myObjective{sketch}{the graph of the inverse of a function}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{sketch}{draw something quickly without being perfect}
+    \myDefinition{inverse functions}{atwo functions that ``undo'' each other}
+    \myDefinition{diagonal line}{a line that goes between opposite corners}
+    \myDefinition{mirror image}{
+        in 2-D, this is 
+        two things that are \emph{reflected} across a line
+    }
+
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
