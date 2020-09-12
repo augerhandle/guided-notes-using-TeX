@@ -1,0 +1,71 @@
+\section*{Introduction}
+
+Inverse functions \emph{undo} each other.
+That means that if you pass $x$ as the input into one function,
+and then you pass that output to the inverse function,
+the output of that inverse function is the $x$.
+In other words,
+when you \emph{compose} the two functions,
+you get back what you started with.
+(If you start with $x$, you get $x$ back.)
+
+\begin{center}
+\begin{tcolorbox}[width=4in]
+    When two functions are inverses of each other,
+    if you compose them 
+    in {\bfseries\itshape both directions},
+    you get back the original input (usually $x$) as an output.
+\end{tcolorbox}
+\end{center}
+%
+This is true 
+\emph{no matter which order} you pass the original input $x$
+to $f$ and $g$.
+We can draw it like this:
+\[
+    x 
+    \Longrightarrow 
+    \fbox{g} 
+    \Longrightarrow 
+    \fbox{f}
+    \Longrightarrow 
+    x
+\]
+\[
+    x 
+    \Longrightarrow 
+    \fbox{f} 
+    \Longrightarrow 
+    \fbox{g} 
+    \Longrightarrow 
+    x
+\]
+Algebraically, this means:
+\[
+    (f \circ g)(x) = x
+\]
+\[
+    (g \circ f)(x) = x,
+\]
+which can be rewritten like this:
+\[
+    f(g(x)) = x
+\]
+\[
+    g(f(x)) = x.
+\]
+
+
+\begin{center}
+    \begin{tcolorbox}[width=3in]
+        When two functions are inverses of each other,
+        \[
+            f(g(x)) = x
+        \]
+        \[
+            g(f(x)) = x.
+        \]
+        
+    \end{tcolorbox}
+    \end{center}
+    

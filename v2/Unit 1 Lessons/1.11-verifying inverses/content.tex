@@ -1,0 +1,26 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{1} 
+\renewcommand{\myCurrentChapterTitle}{Introduction to Functions}
+
+\myLesson{Verifying Inverses}[11]
+
+\begin{myObjectives}
+    \myObjective{determine}{if two given functions are inverses of each other}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{determine if}{decide if something is true or not}
+    \myDefinition{verify}{make sure something is true}
+    \myDefinition{compose functions}{use the output of one function as the input of another function}
+    \myDefinition{inverse functions}{two functions that ``undo'' each other}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
