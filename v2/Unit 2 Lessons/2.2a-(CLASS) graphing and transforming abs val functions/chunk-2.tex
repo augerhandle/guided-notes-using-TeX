@@ -6,9 +6,9 @@ The attributes of absolute value functions that we are interested in are:
     \item domain
     \item range
     \item vertex
+    \item axis of symmetry
     \item maximum (if any)
     \item minimum (if any)
-    \item axis of symmetry
 \end{itemize}
 
 
@@ -54,49 +54,118 @@ The attributes of absolute value functions that we are interested in are:
 
 
 
-\begin{myConcept}{The vertex, minimum, and maximum of the absolute value parent function are:}
+\begin{myConcept}{The vertex and axis of symmetry (AOS) of the absolute value parent function are:}
     \begin{center}
         \large
-        \begin{tabular}{rll}
-            {\bfseries\itshape vertex} & $(0,0)$ & The vertex is located at the \gap{origin}. \\
-            {\bfseries\itshape minimum} & $y=0$  & The $y$-coordinate of the \gap{lowest} point (vertex). \\
+        \begin{tabular}{r|c|l}
+            {\bfseries\itshape vertex} & point & at the \gap{origin}. \\
+            {\bfseries\itshape AOS} & vertical line &  \gap{through the vertex}
+        \end{tabular}
+    \end{center}
+\end{myConcept}
+
+
+\myBlankExample{2in}{
+    Sketch the graph of the absolute value parent function
+    $f(x) = |x|$, 
+    and find its vertex and axis of symmetry (AOS).
+}
+
+
+
+\begin{myConcept}{The minimum and maximum of the absolute value parent function are:}
+    \begin{center}
+        \large
+        \begin{tabular}{r|c|l}
+            {\bfseries\itshape minimum} & $y=0$  & The $y$-coordinate of the \gap{lowest} point. \\
             {\bfseries\itshape maximum} & \emph{NONE} & There is \gap{no highest point}.
         \end{tabular}
     \end{center}
 \end{myConcept}
 
-\myBlankExample{3in}{
+\myBlankExample{2.5in}{
     Sketch the graph of the absolute value parent function
     $f(x) = |x|$, 
-    and find its vertex, minimum, and maximum.
+    and find its minimum and maximum.
 }
 
 \begin{taggedblock}{pre-AP}
     \begin{myExample}{
-        Find the vertex, minimum, and maximum
-        of the \gap{reflected} absolute value parent function
-        $f(x) = -|x|$, 
-        graphed below.
+        Find the 
+        \begin{itemize}[itemsep=0in]
+            \item vertex
+            \item axis of symmetry (AOS)
+            \item minimum
+            \item maximum
+        \end{itemize}
+        of the \gap{transformed} absolute value functions graphed below.
         }
-        \vskip1em
-        \begin{tikzpicture}
-            \begin{axis}[
-                width=3in,
-                grid=both,
-                axis x line = middle,axis y line = middle,
-                axis equal image,
-                % xtick distance = 2, ytick distance = 2,
-                xmin = -4, xmax = 4,
-                ymin = -4, ymax = 4,
-                minor tick num = 1,
-                yticklabels={,,},
-                xticklabels={,,},
-                ]
-                \addplot[
-                    no marks,
-                    mark size = 0.1cm, ultra thick,
-                    ] expression { -abs(x) };
-            \end{axis}
-        \end{tikzpicture}
+        \centering
+        \begin{minipage}{0.3\textwidth}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=2.5in,
+                    grid=both,
+                    axis x line = middle,axis y line = middle,
+                    axis equal image,
+                    % xtick distance = 2, ytick distance = 2,
+                    xmin = -4, xmax = 4,
+                    ymin = -4, ymax = 4,
+                    minor tick num = 1,
+                    yticklabels={,,},
+                    xticklabels={,,},
+                    ]
+                    \addplot[
+                        no marks,
+                        mark size = 0.1cm, ultra thick,
+                        ] expression { -abs(x) };
+                \end{axis}
+            \end{tikzpicture}
+        \end{minipage}
+        \begin{minipage}{0.3\textwidth}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=2.5in,
+                    grid=both,
+                    axis x line = middle,axis y line = middle,
+                    axis equal image,
+                    % xtick distance = 2, ytick distance = 2,
+                    xmin = -4, xmax = 4,
+                    ymin = -4, ymax = 4,
+                    minor tick num = 1,
+                    yticklabels={,,},
+                    xticklabels={,,},
+                    ]
+                    \addplot[
+                        no marks,
+                        mark size = 0.1cm, ultra thick,
+                        samples=100,
+                        ] expression { abs(x+1) };
+                \end{axis}
+            \end{tikzpicture}
+        \end{minipage}
+        \begin{minipage}{0.3\textwidth}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=2.5in,
+                    grid=both,
+                    axis x line = middle,axis y line = middle,
+                    axis equal image,
+                    % xtick distance = 2, ytick distance = 2,
+                    xmin = -4, xmax = 4,
+                    ymin = -4, ymax = 4,
+                    minor tick num = 1,
+                    yticklabels={,,},
+                    xticklabels={,,},
+                    ]
+                    \addplot[
+                        no marks,
+                        mark size = 0.1cm, ultra thick,
+                        samples=100,
+                        ] expression { abs(x-2)-2 };
+                \end{axis}
+            \end{tikzpicture}
+        \end{minipage}
+        \vspace{3in}
     \end{myExample}
 \end{taggedblock}
