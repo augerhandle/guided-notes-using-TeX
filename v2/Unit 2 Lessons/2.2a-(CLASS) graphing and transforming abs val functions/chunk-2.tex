@@ -1,0 +1,104 @@
+
+\section*{Attributes of the Absolute Value Parent Function}
+
+The attributes of absolute value functions that we are interested in are:
+\begin{itemize}[itemsep=0.1\baselineskip]
+    \item domain
+    \item range
+    \item vertex
+    \item maximum (if any)
+    \item minimum (if any)
+    \item axis of symmetry
+\end{itemize}
+
+
+
+
+\begin{myConceptSteps}{
+        To find the 
+        {\bfseries\itshape domain} and {\bfseries\itshape range} 
+        of the absolute value parent function\dots
+    }
+    \myStep{$x$-axis shadow}{Draw the ``shadow'' of the parent function onto the $x$-axis}
+    \myStep{domain}{The domain is this shadow.}
+    \myStep{$y$-axis shadow}{Draw the ``shadow'' of the parent function onto the $y$-axis}
+    \myStep{domain}{The range is this shadow.}
+\end{myConceptSteps}
+
+
+\myBlankExample{2in}{
+    Find the domain of the absolute value parent function, $f(x) = |x|$.
+}
+
+\begin{center}
+    \begin{tcolorbox}[width=4in]
+        The {\bfseries\itshape domain} of the absolute value parent function 
+        is always {\bfseries\itshape all real numbers}.
+    \end{tcolorbox}
+\end{center}
+
+
+\myBlankExample{2in}{
+    Find the range of the absolute value parent function, $f(x) = |x|$.
+}
+
+\begin{center}
+    \begin{tcolorbox}[width=4in]
+        The {\bfseries\itshape range} of the absolute value parent function 
+        is 
+        \[0 < y < -\infty \]
+        which can also be written as
+        \[(0,\infty)\]
+        or
+        \[y>0\]
+    \end{tcolorbox}
+\end{center}
+
+
+
+\begin{myConcept}{The vertex, minimum, and maximum of the absolute value parent function are:}
+    \begin{center}
+        \Large
+        \begin{tabular}{rll}
+            {\bfseries\itshape vertex} & $(0,0)$ & The vertex is located at the origin. \\
+            {\bfseries\itshape minimum} & $y=0$  & The $y$-coordinate of the lowest point (vertex). \\
+            {\bfseries\itshape maximum} & \emph{NONE} & There is no highest point.
+        \end{tabular}
+    \end{center}
+\end{myConcept}
+
+\myBlankExample{3in}{
+    Sketch the graph of the absolute value parent function
+    $f(x) = |x|$, 
+    and find its vertex, minimum, and maximum.
+}
+
+\begin{taggedblock}{pre-AP}
+    \begin{myExample}{
+        Find the vertex, minimum, and maximum
+        of the ``reflected'' absolute value parent function
+        $f(x) = -|x|$, 
+        graphed below.
+        }
+        \vskip1em
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=3in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                % xtick distance = 2, ytick distance = 2,
+                xmin = -4, xmax = 4,
+                ymin = -4, ymax = 4,
+                minor tick num = 1,
+                yticklabels={,,},
+                xticklabels={,,},
+                ]
+                \addplot[
+                    no marks,
+                    mark size = 0.1cm, ultra thick,
+                    ] expression { -abs(x) };
+            \end{axis}
+        \end{tikzpicture}
+    \end{myExample}
+\end{taggedblock}
