@@ -1,0 +1,36 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Standard and Vertex Form}[3][a]
+
+\begin{myObjectives}
+    \myObjective{find}{$\mathbf a$, $\mathbf b$, and $\mathbf c$ from a quadratic function in standard form}
+    \begin{taggedblock}{on-level}
+        \myObjective{find}{the vertex and axis of symmetry for a quadratic function in standard form}
+        \myObjective{find}{the domain, range, maximum, and minimum of quadratic functions in standard form}
+    \end{taggedblock}
+    \begin{taggedblock}{pre-AP}
+        \myObjective{find}{the attributes of a quadratic function in standard form}
+        \myObjective{convert}{quadratic functions in standard form to vertex form}
+    \end{taggedblock}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{attribute}{an important characteristic or feature}
+    \myDefinition{parabola}{the shape of the graph of a quadratic function}
+    \myDefinition{standard form}{$y = ax^2 + bx + c$}
+    \myDefinition{vertex form}{$y = a(x-h)^2 + k$}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
