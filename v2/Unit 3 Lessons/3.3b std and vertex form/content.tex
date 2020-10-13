@@ -1,0 +1,39 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Standard and Vertex Form}[3][b]
+
+\begin{myObjectives}
+    \begin{taggedblock}{on-level}
+        \myObjective{convert}{quadratic functions in standard form to vertex form}
+        \myObjective{find}{
+            attributes of quadratic functions in standard form by first converting to vertex form
+        }
+    \end{taggedblock}
+    \begin{taggedblock}{pre-AP}
+        \myObjective{convert}{
+            quadratic functions in standard form to vertex form by 
+            {\itshape completing the square}
+        }
+    \end{taggedblock}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{standard form}{$y = ax^2 + bx + c$}
+    \myDefinition{vertex form}{$y = a(x-h)^2 + k$}
+\end{myVocabulary}
+
+
+\input{./chunk-on-level-1}
+\input{./chunk-on-level-2}
+\input{./chunk-pre-AP-1}
+\input{./chunk-pre-AP-2}
+\input{./chunk-pre-AP-3}
+\input{./chunk-pre-AP-4}
