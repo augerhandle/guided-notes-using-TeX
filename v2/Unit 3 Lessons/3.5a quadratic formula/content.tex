@@ -1,0 +1,34 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Imaginary and Complex Numbers}[5][a]
+
+\begin{myObjectives}
+    \begin{taggedblock}{pre-AP}
+        \myObjective{derive}{the quadratic formula by completing the square}
+    \end{taggedblock}
+    \myObjective{calculate}{
+        the discriminant of a quadratic equation 
+        in standard form
+    }
+    \myObjective{state}{
+        the number and type of soluations of a quadratic equation 
+        based on the discriminant
+    }
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{discriminant}{ $b^2 - 4ac$ }
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-pre-AP-2}
+\input{./chunk-3}

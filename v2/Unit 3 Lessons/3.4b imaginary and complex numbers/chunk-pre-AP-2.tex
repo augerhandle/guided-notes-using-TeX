@@ -1,0 +1,101 @@
+\begin{taggedblock}{pre-AP}
+
+\section*{Complex numbers as vectors}
+
+Complex numbers can be interpreted as 2-D {\bfseries\itshape vectors}
+which can be drawn in the {\bfseries\itshape complex plane},
+where the $x$-axis is real numbers 
+and the $y$-axis is imaginary numbers. 
+
+\begin{center}
+\begin{tcolorbox}[width=5.5in]
+    Complex numbers $a + bi$ can be 
+    drawn as a points $(a,b)$ 
+    or arrows from the origin to $(a,b)$.
+\end{tcolorbox}
+\end{center}
+
+\begin{myExample}{
+    Draw the vectors corresponding to these complex numbers:
+    \begin{itemize}[itemsep=0in]
+        \item $(4 + 2i)$
+        \item $(-2 + 3i)$
+        \item $(3 -i)$
+    \end{itemize}
+}
+\begin{center}
+\resizebox{3.5in}{!}{%
+\begin{tikzpicture}
+    \begin{scope}[thick,font=\small]
+    % Axes:
+    % Are simply drawn using line with the `->` option to make them arrows:
+    % The main labels of the axes can be places using `node`s:
+    \draw [->] (-5,0) -- (5,0) node [above right]  {\large $\Re\{z\}$};
+    \draw [->] (0,-5) -- (0,5) node [above right] {\large $\Im\{z\}$};
+
+    % Axes labels:
+    % Are drawn using small lines and labeled with `node`s. The placement can be set using options
+    \iffalse% Single
+    % If you only want a single label per axis side:
+    \draw (1,-3pt) -- (1,3pt)   node [above] {$1$};
+    \draw (-1,-3pt) -- (-1,3pt) node [above] {$-1$};
+    \draw (-3pt,1) -- (3pt,1)   node [right] {$i$};
+    \draw (-3pt,-1) -- (3pt,-1) node [right] {$-i$};
+    \else% Multiple
+    % If you want labels at every unit step:
+    \foreach \n in {-4,...,-1,1,2,...,4}{%
+        \draw (\n,-3pt) -- (\n,3pt)   node [above] {$\n$};
+        \draw (-3pt,\n) -- (3pt,\n)   node [right] {$\n i$};
+    }
+    \fi
+    \end{scope}
+\end{tikzpicture}
+}
+\end{center}
+\end{myExample}
+
+\begin{myExample}{
+        Find the complex numbers corresponding to these points/vectors drawn below.
+    }
+    \begin{center}
+        \resizebox{3.5in}{!}{%
+        \begin{tikzpicture}
+            \begin{scope}[thick,font=\small]
+            % Axes:
+            % Are simply drawn using line with the `->` option to make them arrows:
+            % The main labels of the axes can be places using `node`s:
+            \draw [->] (-5,0) -- (5,0) node [above right]  {\large $\Re\{z\}$};
+            \draw [->] (0,-5) -- (0,5) node [above right] {\large $\Im\{z\}$};
+            %
+            % Axes labels:
+            % Are drawn using small lines and labeled with `node`s. The placement can be set using options
+            \iffalse% Single
+            % If you only want a single label per axis side:
+            \draw (1,-3pt) -- (1,3pt)   node [above] {$1$};
+            \draw (-1,-3pt) -- (-1,3pt) node [above] {$-1$};
+            \draw (-3pt,1) -- (3pt,1)   node [right] {$i$};
+            \draw (-3pt,-1) -- (3pt,-1) node [right] {$-i$};
+            \else% Multiple
+            % If you want labels at every unit step:
+            \foreach \n in {-4,...,-1,1,2,...,4}{%
+                \draw (\n,-3pt) -- (\n,3pt)   node [above] {$\n$};
+                \draw (-3pt,\n) -- (3pt,\n)   node [right] {$\n i$};
+            }
+            \fi
+            %
+            \node at (3,3)[circle,fill,inner sep=2pt]{};
+            \draw [-{>[scale=2.5,length=3,width=3]},line width=1.5pt] (0,0) -- (3,3);
+            %
+            \node at (-2,4)[circle,fill,inner sep=2pt]{};
+            \draw [-{>[scale=2.5,length=3,width=3]},line width=1.5pt] (0,0) -- (-2,4);
+            %
+            \node at (-1,-4)[circle,fill,inner sep=2pt]{};
+            \draw [-{>[scale=2.5,length=3,width=3]},line width=1.5pt] (0,0) -- (-1,-4);
+            \end{scope}
+        \end{tikzpicture}
+        }
+        \end{center}
+    \end{myExample}
+
+
+\end{taggedblock}

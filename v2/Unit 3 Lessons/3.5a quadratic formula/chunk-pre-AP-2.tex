@@ -1,0 +1,112 @@
+\begin{taggedblock}{pre-AP}
+
+\section*{Deriving the quadratic equation}
+
+The quadratic formulat can be derived by completing the square.
+You've done this before, but with numbers.
+Now, we will complete the squares with $a$, $b$, and $c$ not specified.
+
+{\Large
+\begin{align}
+    a x^2 + bx + c &= 0 
+    \\[1em]
+    %
+    a \left[ 
+        x^2 + \frac{b}{a}x + \frac{c}{a} 
+    \right] &= 0 
+    \\[1em]
+    %
+    %
+    a \left[ 
+        x^2 + \frac{b}{a}x    
+        + \left( \frac{b}{2a} \right)^2 
+        - \left( \frac{b}{2a} \right)^2 
+        +     \frac{c}{a} 
+    \right] &= 0 
+    \\[1em]
+    %
+    %
+    a \left[ 
+        \left(
+            x^2 
+            + \frac{b}{a}x    
+            + \left( \frac{b}{2a} \right)^2 
+        \right)
+        - \left( \frac{b}{2a} \right)^2 
+        +     \frac{c}{a} 
+    \right] &= 0 
+    \\[1em]
+    %
+    %
+    a \left[ 
+        \left(
+            x + \frac{b}{2a}
+        \right)^2
+        - \left( \frac{b}{2a} \right)^2 
+        +     \frac{c}{a} 
+    \right] &= 0 
+    \\[1em]
+    %
+    %
+    \left(
+        x + \frac{b}{2a}
+    \right)^2
+    - \left( \frac{b}{2a} \right)^2 
+    +     \frac{c}{a} 
+    &= 0 
+    \\[1em]
+    %
+    %
+    \left(
+        x + \frac{b}{2a}
+    \right)^2
+    &=
+     \left( \frac{b}{2a} \right)^2 
+         - \frac{c}{a} 
+         \\[1em]
+    %
+    %
+    \left(
+        x + \frac{b}{2a}
+    \right)^2
+    &=
+     \frac{b^2}{4a^2} - \frac{c}{a} 
+     \\[1em]
+    %
+    %
+    \left(
+        x + \frac{b}{2a}
+    \right)^2
+    &=
+     \frac{b^2}{4a^2} - \frac{4ac}{4a^2} 
+     \\[1em]
+    %
+    %
+    \left(
+        x + \frac{b}{2a}
+    \right)^2
+    &=
+     \frac{b^2-4ac}{4a^2} 
+     \\[1em]
+    %
+    %
+    x + \frac{b}{2a}
+    &=
+    \pm \sqrt{   \frac{b^2-4ac}{4a^2}   }
+    \\[1em]
+    %
+    %
+    x + \frac{b}{2a}
+    &=
+    \frac{\pm\sqrt{ \rule{0pt}{2.3ex} b^2-4ac}}{2a}
+    \\[1em]
+    %
+    %
+    \Aboxed{
+        x &= \frac{-b\pm\sqrt{ \rule{0pt}{2.3ex} b^2-4ac}}{2a}
+    }\qquad\blacksquare
+    %
+\end{align}
+}
+
+\end{taggedblock}

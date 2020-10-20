@@ -1,0 +1,32 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Imaginary and Complex Numbers}[4][b]
+
+\begin{myObjectives}
+    \myObjective{simplify}{powers of $i$}
+    \myObjective{sketch}{the graph of complex numbers in the complex plane}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{complex number}{
+        a ``number'' with a {\bfseries\itshape real part} and 
+        an {\bfseries\itshape imaginary part}
+        (e.g., $2 + 5i$)
+    }
+    \myDefinition{complex plane}{
+        a 2-D plane where the $x$-axis is reals 
+        and the $y$-axis is imaginaries.
+    }
+\end{myVocabulary}
+
+
+\input{./chunk-pre-AP-1}
+\input{./chunk-pre-AP-2}

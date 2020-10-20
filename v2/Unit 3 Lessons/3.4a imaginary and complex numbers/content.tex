@@ -1,0 +1,35 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Imaginary and Complex Numbers}[4][a]
+
+\begin{myObjectives}
+    \myObjective{simplify}{square roots of negative numbers}
+    \myObjective{add and subtract}{complex numbers}
+    \myObjective{multiply}{complex numbers}
+    \begin{taggedblock}{pre-AP}
+        \myObjective{simplify}{powers of $i$}
+    \end{taggedblock}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{imaginary number}{a number that is the square root of a negative real number}
+    \myDefinition{i}{the symbol used for imaginary numbers (e.g., $5i$)}
+    \myDefinition{complex number}{
+        a ``number'' with a {\bfseries\itshape real part} and 
+        an {\bfseries\itshape imaginary part}
+        (e.g., $2 + 5i$)
+    }
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
