@@ -1,0 +1,27 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Factoring out a GCF}[6][a]
+
+\begin{myObjectives}
+    \myObjective{find}{greatest common factors (GCFs)}
+    \myObjective{factor}{quadratic expressions by removing a GCF}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{terms}{ things that are \gap{added} or \gap{subtracted} together }
+    \myDefinition{factors}{ things that are \gap{multiplied} together }
+    \myDefinition{common factor}{ factors you find in \gap{every} term }
+    \myDefinition{GCF}{ the \gap{largest} common factor in every term }
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}

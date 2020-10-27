@@ -1,0 +1,29 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Solving Factored Quadratic Equations}[6][b]
+
+\begin{myObjectives}
+    \myObjective{solve}{
+        quadratic equations using the {\bfseries\itshape Zero Product Property}
+    }
+    \begin{taggedblock}{pre-AP}
+        \myObjective{solve}{perfect square trinomial equations}
+        \myObjective{solve}{difference of squares equations}
+    \end{taggedblock}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{factors}{ things that are \gap{multiplied} together }
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
