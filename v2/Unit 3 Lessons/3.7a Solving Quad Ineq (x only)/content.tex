@@ -1,0 +1,24 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{3} 
+\renewcommand{\myCurrentChapterTitle}{Quadratic Functions}
+
+\myLesson{Solving Quadratic Inequalities (one variable)}[7][a]
+
+\begin{myObjectives}
+    \myObjective{solve}{quadratic \gap{inequalities} with \gap{one} variable }
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{interval}{region, section, area, zone}
+    \myDefinition{satisfy an inequality}{make the inequality a true statement}
+    \myDefinition{solutions}{ roots, $x$-intercepts, zeros }
+\end{myVocabulary}
+
+
+\input{./chunk-1}
