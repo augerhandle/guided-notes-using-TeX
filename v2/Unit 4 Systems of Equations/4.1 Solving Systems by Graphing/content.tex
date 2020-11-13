@@ -1,0 +1,45 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{4} 
+\renewcommand{\myCurrentChapterTitle}{Systems of Equations}
+
+\myLesson{Solving Systems of Equations by Graphing}[1]
+
+\begin{myObjectives}
+    \myObjective{solve}{\gap{systems} of equations graphically }
+    \myObjective{identify}{the \gap{number} of solutions to a system based on graphs}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{intersection}{a crossing, where things come together}
+    \myDefinition{system of equations}{several equations with the same variables}
+    \myDefinition{solution of a system}{where all the equations are true}
+\end{myVocabulary}
+
+Here are some examples of systems of equations.
+\begin{equation*}
+    \begin{cases}
+        y &= x - 10 \\
+        y &= 2x + 2 \\
+    \end{cases}
+\end{equation*}
+\begin{equation*}
+    \begin{cases}
+        2x + 3y &= 10 \\
+        4x - 5y &= -2 \\
+    \end{cases}
+\end{equation*}
+\begin{equation*}
+    \begin{cases}
+       y &= x + 10 \\
+       y &= x^2 + 3x -2 \\
+    \end{cases}
+\end{equation*}
+
+\input{./chunk-1}
+\input{./chunk-2}
