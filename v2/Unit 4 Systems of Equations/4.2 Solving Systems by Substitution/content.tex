@@ -1,0 +1,46 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{4} 
+\renewcommand{\myCurrentChapterTitle}{Systems of Equations}
+
+\begin{taggedblock}{on-level}
+    \myLesson{Solving Systems of Equations by Substitution}[2]
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \myLesson{Solving Systems of Equations by Substitution}[2][a]
+\end{taggedblock}
+
+\begin{myObjectives}
+    \myObjective{solve}{systems of equations by \gap{substitution} }
+    \myObjective{recognize}{problems that have \gap{no} solution 
+        or have \gap{infinite} solutions
+    }
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{intersection}{a crossing, where things come together}
+    \myDefinition{system of equations}{several equations with the same variables}
+    \myDefinition{solution of a system}{where all the equations are true}
+    \myDefinition{substitution}{plug in the value of a variable}
+\end{myVocabulary}
+
+In the last lesson,
+you learned how to solve systems of equation by {\bfseries\itshape graphing}.
+
+\begin{myCenteredBox}{width=4in}
+    No one uses graphing
+    to solve systems of equation 
+    in the real world.
+\end{myCenteredBox}
+
+\noindent
+Today you will learn how to solve systems of equations by {\bfseries\itshape substitution}.
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}

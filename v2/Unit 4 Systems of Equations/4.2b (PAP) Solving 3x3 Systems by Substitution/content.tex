@@ -1,0 +1,50 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{4} 
+\renewcommand{\myCurrentChapterTitle}{Systems of Equations}
+
+\myLesson{Solving Systems of Equations by Substitution}[2][b]
+
+\begin{myObjectives}
+    \myObjective{solve}{$3\times3$ systems of equations by \gap{substitution} }
+\end{myObjectives}
+
+In the last two lessons,
+we learned how to solve systems of equations with two variables.
+Today we move up to {\bfseries\itshape three dimensions}: \gap{three} equations and \gap{three} unknowns.
+There is a geometric way to interpret this:
+
+\begin{center}
+\includegraphics[scale=0.75]{three-planes-2.png}
+\end{center}
+
+\begin{myVocabulary}
+    \myDefinition{intersection}{a crossing, where things come together}
+    \myDefinition{system of equations}{several equations with the same variables}
+    \myDefinition{solution of a system}{where all the equations are true}
+    \myDefinition{substitution}{plug in the value of a variable}
+\end{myVocabulary}
+
+\noindent
+Today we will learn how to solve systems of \gap{$3\times3$}
+equations by {\bfseries\itshape substitution}.
+
+\begin{myCenteredBox}{width=5in}
+    These problems are hard.
+    \vskip1em
+    If your work is messy, 
+    you are guarenteed to find them {\bfseries\itshape miserable}.
+    Be neat!
+    Number your equations and explain each of your steps 
+    as I do in the examples.
+    Trust me.
+\end{myCenteredBox}
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}

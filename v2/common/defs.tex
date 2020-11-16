@@ -1,2 +1,13 @@
 \newcommand{\myEmph}{\bfseries\itshape}
 \newcommand{\myClassName}{{\tagged{pre-AP}{pre-AP }}Algebra 2}
+
+%
+% #1 - options to pass to tcolorbox
+%
+\NewDocumentEnvironment{myCenteredBox}{m}{%
+    \begin{center}
+    \begin{tcolorbox}[#1]
+}{
+    \end{tcolorbox}
+    \end{center}
+}

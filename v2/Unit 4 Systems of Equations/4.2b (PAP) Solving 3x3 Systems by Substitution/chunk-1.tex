@@ -1,0 +1,111 @@
+
+\section*{Solving  $3\times3$ linear systems by substitution}
+
+
+\begin{myConceptSteps}{
+    To solve a $3\times3$ system of linear equations by substitution\dots
+}
+    \myStep{solve}{
+        Solve one the equations for one of the variables.
+        The result will often be an \gap{expression} in terms of the
+        remaining variables.
+        Put a dotted box around this equation. 
+        You will come back to it.
+    }
+    \myStep{substitute}{
+        Substitute the expression into both of the other equations.
+        This will result in two equations 
+        in the remaining two variables.
+    }
+    \myStep{solve}{
+        Solve those two equations for the two remaining variables
+        by substitution (using what know about $2\times2$ substitution).
+    }
+    \myStep{back-substitute}{
+        Substitute the solutions for those two remaining variables
+        into the equation for the first one and solve for the first variable.
+    }
+\end{myConceptSteps}
+
+
+\begin{myExample}{Solve this system of equations by substitution:}
+    \begin{equation*}
+        \begin{cases}
+            x + 2y - z &= 4 \\
+            2x + y + z &= -2 \\
+            x + 2y + z &= 2 \\
+        \end{cases}
+    \end{equation*}
+\end{myExample}
+
+\noindent
+First, number the equations.
+\begin{equation*}
+    \begin{cases}
+        x + 2y - z &= 4 \\ % eqn 1
+        2x + y + z &= -2 \\ % eqn 2
+        x + 2y + z &= 2 \\ % eqn 3
+    \end{cases}
+\end{equation*}
+Next, solve equation \gap{1} for $x$.
+Number the equation and put a dotted box around it.
+\[
+    x + 2y - z = 4
+\]
+\[
+    x = -2y + z + 4 \\ % eqn 1'
+\]
+Next, substitute $x$ from equation \gap{1'} into equations \gap{2} and \gap{3}.
+\begin{equation*}
+    \begin{cases}
+        2\left[  -2y + z + 4  \right] + y + z &= -2 \\
+         \left[  -2y + z + 4  \right] + 2y + z &= 2 \\
+    \end{cases}
+\end{equation*}
+This is two equations in the two remaining variables (\gap{$y$} and \gap{$z$}).
+Simplify the equations and number the results.
+\begin{equation*}
+    \begin{cases}
+        -4y + 2z + 8 + y + z &= -2 \\
+        -2y + z + 4 + 2y + z &= 2 \\
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    \begin{cases}
+        &-3y + 3z + 8 = -2 \\
+        &2z + 4 = 2 \\
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    \begin{cases}
+        &-3y + 3z = -10 \\
+        &2z = -2 \\
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    \begin{cases}
+        &-3y + 3z = -10 \\   % eqn 4
+        &z = -1 \\           % eqn 5
+    \end{cases}
+\end{equation*}
+%
+Substitute $z$ from equation \gap{5} into equation \gap{4} 
+and solve for $y$:
+\[- 3y + 3\left[-1\right] = -10\]
+\[-3y = -7\]
+\[y = \frac{7}{3}\] % eqn 6
+%
+Back-substitute $z$ and $y$ from equations \gap{5} and \gap{6} 
+into equation \gap{1'}
+and solve for $x$:
+\begin{align*}
+    x &= -2 \left[ \frac{7}{3} \right] + \left[-1\right]\\
+    x &= - \frac{14}{3} + 3\\
+    x &= - \frac{14}{3} + \frac{9}{3}\\
+    x &= - \frac{5}{3}\\
+\end{align*}
+%
+So the answer is \gap{$\left(  -\frac{5}{3}, \frac{7}{3}, -1  \right)$}
