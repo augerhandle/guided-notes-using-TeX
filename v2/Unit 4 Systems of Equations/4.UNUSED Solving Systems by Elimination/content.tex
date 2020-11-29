@@ -1,0 +1,40 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{4} 
+\renewcommand{\myCurrentChapterTitle}{Systems of Equations}
+
+\begin{taggedblock}{on-level}
+    \myLesson{Solving Systems of Equations by Elimination}[3]
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \myLesson{Solving Systems of Equations by Elimination}[3][a]
+\end{taggedblock}
+
+\begin{myObjectives}
+    \myObjective{solve}{systems of equations by \gap{elimination} }
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{system of equations}{several equations with the same variables}
+    \myDefinition{solution of a system}{where all the equations are true}
+    \myDefinition{elimination}{get rid of something, make it go away}
+\end{myVocabulary}
+
+In the last lesson,
+you learned how to solve systems of equation by {\bfseries\itshape substition}.
+
+\begin{myCenteredBox}{width=4.5in}
+    The substitution method requires to much human judgement.
+    It does not work well in computer software.
+\end{myCenteredBox}
+
+\noindent
+Today you will learn how to solve systems of equations by \gap{elimination}.
+
+\input{./chunk-1}
+\input{./chunk-2}
