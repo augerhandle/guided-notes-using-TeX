@@ -1,0 +1,160 @@
+\documentclass[10pt,letterpaper]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{1in}{*}{*}
+\setlrmarginsandblock{1in}{*}{*}
+
+\input{../../common/packages}
+\input{../../common/head-foot}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.75em}
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+% \raggedbottom
+\dashundergapssetup{teacher-mode=false,}
+
+\input{../../common/defs}
+
+{\small Pre-AP Algebra 2}\hfill Name: \rule{2in}{0.15mm}
+
+{\bfseries\Large PAP HW 4.4 (DAY 2) A Sneak Peak at Linear Regression}\hfill Period: \rule{0.5in}{0.15mm}
+
+
+
+\begin{tcolorbox}
+    \itshape\small
+    Work this problem if you have finished yesterday's sheet of problems.
+    This is a ``warm up'' to the topic of 
+    {\bfseries\itshape linear regression}, which we will discuss tomorrow.
+\end{tcolorbox}
+
+
+
+
+\section*{Four equations \& four unknown variables} 
+Here are four $x$-$y$ points:
+\begin{center}\begin{tabular}{cc}
+    \toprule
+    $x$ & $y$ \\
+    \midrule
+    -5 & 5 \\
+    0 & -2 \\
+    3 & 2 \\
+    5 & 0 \\
+    \bottomrule
+\end{tabular}\end{center}
+Using what you learned a few days ago,
+find the equation of the cubic  
+\[
+    y = a + bx + cx^2 + dx^3
+\]
+that goes through
+those four points.
+Remember,
+\begin{itemize}[itemsep=0in]
+    \item You have four unknown variables, $a$, $b$, $c$, $d$.
+    \item By evaluating the cubic at the four points, you get four equations
+    involving the four unknow variables.
+    \item Using the {\scshape Desmos Matrix Calculator}, 
+    you can calculate $A^{-1}B$ to find the unknown variables.
+\end{itemize}
+(You'll probably need some scratch paper.)\vspace{1em}
+
+\begin{minipage}{2in}
+    {\Large
+    $a$ = \gap{\hspace{1em}}\\[1em]
+    $b$ = \gap{\hspace{1em}}\\
+    }
+\end{minipage}
+\begin{minipage}{2in}
+    {\Large
+    $c$ = \gap{\hspace{1em}}\\[1em]
+    $d$ = \gap{\hspace{1em}}\\
+    }
+\end{minipage}
+\hrule
+
+
+
+
+
+\section*{Graph it!}
+Enter that function into the {\scshape Desmos Graphing Calculator}.
+Does the curve seem to pass exactly through the four points in the table?
+
+Answer yes or no: \gap{\hspace{3em}}
+
+Does the point $(2,1)$ seem to be ``near'' the graph of the cubic function?
+
+Answer yes or no: \gap{\hspace{3em}}\vspace{1em}
+\hrule
+
+
+
+
+
+\section*{Five equations \& four unknown variables?} 
+So let's consider {\bfseries\itshape five} $x$-$y$ points.
+\begin{center}\begin{tabular}{cc}
+    \toprule
+    $x$ & $y$ \\
+    \midrule
+    -5 & 5 \\
+    0 & -2 \\
+    3 & 2 \\
+    5 & 0 \\
+    2 & 1 \\
+    \bottomrule
+\end{tabular}\end{center}
+
+Using all {\bfseries\itshape five} of those points,
+formulate {\bfseries\itshape five} equations 
+and write out the new $A$ and $B$ matrices below:
+\par
+{\Large
+    \vspace{3em}
+    \hfill $A = $\hspace{1.5in} \hfill $B = $\hspace{1.5in} \hfill
+    \vspace{3em}
+}
+
+Use the {\scshape Desmos Graphing Calculator}
+to calculate $A^{-1}B$. 
+What happens? Explain what you think is going on.
+\vspace{2.5in}
+\hrule
+
+
+\section*{Sneak peak at linear regression}
+
+In a web browser (Safari, Chrome... on your phone), go to this URL:\\
+\url{https://www.desmos.com/calculator/nzz8zxtguy}.
+
+The graph there has a table of the same five data points that you used, above.
+And it uses something called 
+{\bfseries\itshape linear regression}
+to find a cubic equation passing through those points.
+
+This is something the $A^{-1}B$ matrix math was unable to do
+(as you found above).
+
+Linear regression uses more complicated matrix math 
+to do this. 
+So in fact it {\bfseries\itshape is} possible. 
+It's just that the curve won't go through all five points exactly.
+Linear regression is a method for finding the ``best'' curve that 
+passes through all the points.
+To see this, 
+play with the slider on the graph. It changes the
+$y$-coordinate of that fifth point. 
+
+As you slide the slider,
+you should be able to see that the curve no longer passes through 
+all the points exactly.
+Yet, it is possible to prove that the curve is the best one
+in the sense of being {\itshape as close as possible to all the points
+at the same time.}
+
+We will talk more about linear regression tomorrow.
+\end{document}
