@@ -1,0 +1,176 @@
+\documentclass[10pt,letterpaper]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.75in}{*}{*}
+\setlrmarginsandblock{0.75in}{*}{*}
+
+\input{../../common/packages}
+\input{../../common/head-foot}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.75em}
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+\input{../../common/defs}
+
+{\small Algebra 2}\hfill Name: \rule{2in}{0.15mm}
+
+{\bfseries\Large In-Class 4.4 Matrix Applications}\hfill Period: \rule{0.5in}{0.15mm}
+
+{\itshape
+For the following word problems, formulate a system of linear equations,
+and solve them using the Desmos matrix calculator at
+} 
+{\bfseries\ttfamily desmos.com/matrix}.
+\vspace{1.5em}
+
+
+
+
+{\bfseries\large 1)} 
+You find a jar of dimes and quarters.
+There is a total of 70 coins in the jar.
+When you take them to the bank (to the coin counting machine),
+you find that they added up to \$13.00.
+How many dimes and how many quarters were in the jar?
+
+\myWideMatrixTable[-0.1in]
+\vspace{0.5in}
+\hfill{\itshape (Ans: 30 dimes, 40 quarters)}
+\vspace{2em}
+
+
+
+
+{\bfseries\large 2)} 
+You find another jar of 120 pennies, nickles and dimes.
+You just happen to know that 
+the number of nickles is equal to the number of dimes minus 10.
+When you take them to the bank (to the coin counting machine),
+you find that they added up to \$6.00.
+How many pennies, nickles, and dimes were in the jar?
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: 50 pennies, 30 nickles, 40 dimes)}
+\vspace{2em}
+
+
+
+\newpage
+{\bfseries\large 3)} 
+Arly's Game Arcade uses three different kinds of tokens for their game machines.
+There are gold tokens.
+There are silver tokens.
+There are bronze tokens.
+For \$20.00, you can buy any of the following mixes of tokens:
+\begin{itemize}[itemsep=0in]
+    \item 14 gold, 20 silver, 24 bronze
+    \item 20 gold, 15 silver, 19 bronze
+    \item 30 gold, 5 silver, 13 bronze.
+\end{itemize}
+How much does each kind of token cost?
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: gold: \$0.50, silver: \$0.35, bronze: \$0.25)}
+\vspace{2em}
+
+
+
+
+
+{\bfseries\large 4)} 
+Last weekend, the Nostream Movie Theater sold a total of 8500 movie tickets.
+They earned \$64,600.00.
+Tickets are sold in one of three ways:
+\begin{itemize}
+    \item A matinee (early show) ticket costs \$5.00.
+    \item A student all-day ticket costs \$6.00.
+    \item Regular tickets cost \$8.50.
+\end{itemize}
+They sold twice as many student tickets as matinee tickets.
+How many of teach kind of ticket did they sell?
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: 900 matinee, 1800 student, 5800 regular)}
+\vspace{2em}
+
+
+
+
+\newpage
+{\bfseries\large 5)} 
+Rudy's Ripoff Tienda sells hats, T-shirts, and jackets. 
+You know the following three facts:
+\begin{itemize}[itemsep=0in]
+    \item 3 hats, 2 T-shirts, and 1 jacket cost \$140.00.
+    \item 2 hats, 2 T-shirts, and 2 jackets cost \$170.00.
+    \item 1 hat, 3 T-shirts, and 2 jackets cost \$180.00.
+\end{itemize}
+What is the cost of each of these three items?
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: hat: \$15.00, T-shirt: \$25.00, jacket: \$45.00)}
+\vspace{2em}
+
+
+
+{\bfseries\large 6)} 
+Guadalupe, Jennifer, and Karla work at Notear Jeans Company.
+One day, the three of them sold a combined \$1480.00 worth of jeans.
+Guadalupe sold \$120.00 more than Jennifer.
+Jennifer and Karla together sold \$280.00 more than Guadalupe.
+How much did each of them sell?
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: Guadalupe: \$600.00, Jennifer: \$480.00, Karla: \$400.00)}
+\vspace{2em}
+
+
+
+\newpage
+{\bfseries\large 7)} 
+Max, Jonathan, and Kevin work at Topnotch Boot Company.
+One day, the three of them sold a combined \$1550.00 worth of boots.
+Guadalupe sold \$150.00 more than Jonathan.
+Kevin sold \$250.00 less than Max.
+How much did each of them sell?
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: Max: \$650.00, Jonathan: \$500.00, Karla: \$400.00)}
+\vspace{2em}
+
+
+
+
+
+{\bfseries\large 8)} 
+Juanita is buying fruit at the Fructose Fruit Market.
+One week, she pays \$3.70 for 1 orange, 2 grapefruit, and 3 pears.
+Another week, she pays \$8.09 for 5 oranges, 6 grapefruit, and 2 pears.
+On the last week, she pays \$2.12 for 2 oranges, NO grapefruit, and 2 pears.
+Find the price per orange, price per grapefruit, and price per pear.
+
+
+\myWideMatrixTable[-0.1in]
+
+\vspace{0.5in}
+\hfill{\itshape (Ans: oranges: \$0.49 each, grapefruit: \$0.75 each, pears: \$0.57 each)}
+\vspace{2em}
+
+
+\end{document}

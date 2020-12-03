@@ -1,0 +1,28 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{4} 
+\renewcommand{\myCurrentChapterTitle}{Systems of Equations}
+
+\myLesson{Matrix Applications}[4]
+
+\begin{myObjectives}
+    \myObjective{formulate}{systems of equations from \gap{word problems} }
+    \myObjective{solve}{the word problems using \gap{matrices} }
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{formulate}{create, construct}
+    \myDefinition{matrix}{\gap{rows} and \gap{columns} of numbers}
+    \myDefinition{matrices}{more than one matrix}
+    \myDefinition{Desmos matrix calculator}{
+        Go to {\ttfamily https://desmos.com/matrix} in your {\bfseries\itshape browser}.
+    }
+\end{myVocabulary}
+
+
+\input{./chunk-1}
