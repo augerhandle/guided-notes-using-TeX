@@ -1,0 +1,50 @@
+
+\section*{Many equations, two unknowns}
+
+We can use a technique called linear \gap{regression} to find the ``best'' line 
+that \gap{almost} goes through many points.
+We will use the {\scshape Desmos graphing calculator} to do all the hard work for us.
+
+\begin{myConceptSteps}{
+    To the ``best fit'' line going through many points using regression\dots
+}
+    \myStep{table of points}{
+        Create a table of $x$-$y$ points in {\scshape Desmos}.
+        The two columns should be labelled $x_1$ and $y_1$
+        (notice the \gap{subscripts}.)
+    }
+    \myStep{regression}{
+        Enter the following in a new {\scshape Desmos} formula:
+        {\texttt{y1 $\sim$ m1 x1 + b1}}\\
+        {\scshape Desmos} will automatically create subscripts:
+        \(
+            y_1 \sim m x_1 + b
+        \)
+    }
+    \myStep{best fit}{
+        The ``best fit'' values for $m$ and $b$ are calculated for you by {\scshape Desmos}.
+    }
+\end{myConceptSteps}
+
+
+
+\myBlankExample{3in}{
+        Try to find the equation of the ``best'' line $y = mx + b$ that 
+        approximately passes through these {\bfseries three} points:
+        $(-5,5)$, $(0,-2)$, $(-2, 0)$.
+        Solve using {\bfseries\itshape regression}.\footnote{
+            I have saved this at \url{https://www.desmos.com/calculator/qm1nslhnxg}.
+        }
+}
+
+
+
+\myBlankExample{3in}{
+        Try to find the equation of the ``best'' line $y = mx + b$ that 
+        approximately passes through these {\bfseries three} points:
+        $(-5,5)$, $(0,-2)$, $(-2, 0)$, $(-3,1)$, $(-4,2)$.
+        Solve using {\bfseries\itshape regression}.\footnote{
+            I have saved this at \url{https://www.desmos.com/calculator/3slqualbyx}.
+        }
+}
+
