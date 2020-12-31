@@ -1,4 +1,4 @@
-\newcommand{\myHeadFootStyle}{\footnotesize\sffamily}
+\newcommand{\myHeadFootStyle}{\tiny\sffamily\itshape}
 \copypagestyle{myPagestyle}{empty}
 %
 % FIXME
@@ -6,7 +6,7 @@
 % I have found that the chapter title sometimes gets picked up from
 % a chapter that begins on the NEXT PAGE. Not sure what's going on.
 % So I abandoned embedding the info in the header and instead updated
-% \myLesson to print it out, and that seems to work find.
+% \myLesson to print it out, and that seems to work fine.
 %
 % \makeoddhead{myPagestyle}
 %     {\,}
@@ -16,6 +16,10 @@
 %     {\,}
 %     {\,}
 %     {\myHeadFootStyle\chaptername\,\thechapter\,\,\myCurrentChapterTitle}
+%
+% ----------------------------------------
+% header
+% ----------------------------------------
 \makeoddhead{myPagestyle}
     {\myHeadFootStyle\myClassName}
     {\,}
@@ -24,6 +28,10 @@
     {\,}
     {\,}
     {\myHeadFootStyle\myClassName}
+%
+% ----------------------------------------
+% footer
+% ----------------------------------------
 \makeoddfoot{myPagestyle}
     {\myHeadFootStyle\myClassName}
     {\myHeadFootStyle\thepage}
