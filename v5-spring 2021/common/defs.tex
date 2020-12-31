@@ -1,0 +1,105 @@
+\newcommand{\myEmph}{\bfseries\itshape}
+\newcommand{\myClassName}{{\tagged{pre-AP}{pre-AP }}Algebra 2}
+
+% So I can save/restore \fboxsep
+\newlength{\mySavedFboxsep}
+\newcommand{\mySaveFboxsep}{\setlength{\mySavedFboxsep}{\fboxsep}}
+\newcommand{\mySaveAndSetFboxsep}[1]{
+    \setlength{\mySavedFboxsep}{\fboxsep}
+    \setlength{\fboxsep}{#1}
+}
+\newcommand{\myRestoreFboxsep}{\setlength{\fboxsep}{\mySavedFboxsep}}
+
+% A centered tcolorbox
+%
+% #1 - options to pass to tcolorbox
+%
+\NewDocumentEnvironment{myCenteredBox}{m}{%
+    \begin{center}
+    \begin{tcolorbox}[#1]
+}{
+    \end{tcolorbox}
+    \end{center}
+}
+
+
+% A centered system of equations
+%
+\NewDocumentCommand{\myCenteredSysteme}{m}{%
+    \begin{center}\systeme{#1}\end{center}
+}
+
+%
+% This specialized command is my way of typesetting a table for
+% students to use when solving systems of equations using matrices.
+%
+% - I make it really wide, because I need horizontal space. The increase in margin width 
+%   is adjustable, but frankly, there are a lot of hard-coded dimensions in the table, so
+%   I'm not positive that generality works well.
+%
+% - I put the content in a tikz picture with an OPAQUE background, since I 
+%   plan to overlay this on top of Examples, which have dotted boxes around 
+%   them at the "normal" margins.
+%
+% - The table uses the multirow package so that I can have the "Solution" box span two cells.
+%
+\NewDocumentCommand{\myWideMatrixTable}{O{-0.7in}}{
+    \begin{adjustwidth}{#1}{#1}
+        \begin{tikzpicture}
+            \node
+            [
+                text width=1.25\textwidth, %I dinked with the multiplier to get balanced margins
+                fill=white!30, 
+                fill opacity=1,
+                text opacity=1,
+                inner sep=0pt,
+            ]
+            {%
+                \begin{tabular}{|l|m{1.8in}|m{1.8in}|m{2.1in}|}
+                    \hline
+                    {\scshape Variables:} & {\scshape Equations:} & {\scshape System:} & {\scshape Matrices:} \\
+                    % & & & \\
+                    & & & 
+                    \(
+                        A = 
+                        \begin{bmatrix}
+                            \phantom{99} & \phantom{99} & \phantom{99} \\
+                            \phantom{99} & \phantom{99} & \phantom{99} \\
+                            \phantom{99} & \phantom{99} & \phantom{99} \\
+                            \phantom{99} & \phantom{99} & \phantom{99} \\
+                        \end{bmatrix}
+                    \)
+                    \(
+                        B = 
+                        \begin{bmatrix}
+                            \phantom{999}\\
+                            \phantom{999}\\
+                            \phantom{999}\\
+                            \phantom{999}\\
+                    \end{bmatrix}
+                    \)
+                    \\
+                    & & &
+                    \(
+                        A^{-1}\cdot B = 
+                        \begin{bmatrix}
+                            \phantom{9999}\\
+                            \phantom{999}\\
+                            \phantom{999}\\
+                            \phantom{999}\\
+                    \end{bmatrix}
+                    \)
+                    \\
+                    & & & \\ \cline{3-4}
+                    & & 
+                    \multicolumn{2}{l|}{\scshape Solution:}
+                    \\ 
+                    & & 
+                    \multicolumn{2}{l|}{\,}
+                    \\ 
+                    \hline
+                \end{tabular}
+            };
+        \end{tikzpicture}
+    \end{adjustwidth}
+}

@@ -1,0 +1,41 @@
+\usepackage[T1]{fontenc}
+\usepackage{xparse}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amsmath,mathtools,amssymb}
+\usepackage{booktabs}
+\usepackage{systeme}
+\usepackage{changepage}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{lmodern}
+
+\usepackage{tcolorbox}
+    \tcbuselibrary{skins}
+    \tcbuselibrary{raster}
+\usepackage{tikz}
+    \usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+    \pgfplotsset{compat=newest}
+\usepackage{tagging}
+
+% For leaving blanks in guided notes
+\usepackage{dashundergaps} % for \gap
+\dashundergapssetup{
+    teacher-mode=true, % set to true to show answers 
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=150, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\usepackage{emerald}
+
+\usepackage[subdued]{mathastext}% no italic for Augie anyhow
+    \MTDeclareVersion[n]{lmvtt}{T1}{lmvtt}{m}{n}
+    \MTfamily{augie}
+    \Mathastext[augie]

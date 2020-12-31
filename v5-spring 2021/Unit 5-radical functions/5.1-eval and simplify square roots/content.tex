@@ -1,0 +1,29 @@
+\input{../../common/defs}
+\input{../../common/class-semester-unit}
+\input{../../common/lessons-et-al}
+
+% Units are based on \chapter. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{5} 
+\renewcommand{\myCurrentChapterTitle}{Radical Functions}
+
+\myLesson{Simplifying and Evaluating Square Roots}[1]
+
+\begin{myObjectives}
+    \myObjective{find}{the equation of a line going through \gap{two points} }
+    \myObjective{explain}{why you get an error when you try to solve more equations than unknowns }
+    \myObjective{find}{
+        the ``best fit'' line going through \gap{many} points
+        using {\scshape Desmos} and linear \gap{regression}. }
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{best fit line}{the line that goes through points with the \gap{least} error}
+    \myDefinition{regression}{a way to find \gap{best fit} equations}
+\end{myVocabulary}
+
+
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}

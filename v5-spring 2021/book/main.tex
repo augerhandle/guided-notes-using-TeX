@@ -1,0 +1,106 @@
+\documentclass[letterpaper]{memoir}
+% memoir commands to define the text block geometry
+\setulmarginsandblock{1in}{*}{*}
+\setlrmarginsandblock{1in}{*}{*}
+
+\input{../common/packages}
+\input{../common/head-foot}
+    
+\begin{document}
+\pagestyle{myPagestyle}
+\checkandfixthelayout
+
+\input{../common/class-semester-unit}
+\input{../common/lessons-et-al}
+
+\usetag{on-level}
+
+%
+% A book for an entire Algebra 2 class,
+% including all its units and their constituent lessons
+%
+
+\NewDocumentCommand{\myClassName}{}{
+    \iftagged{pre-AP}{pre-AP }{}Algebra 2
+}
+
+\book{\myClassName}
+\part{Fall Semester}
+\chapter{Introduction to Relations and Functions} 
+\myLesson{This is a lesson}
+
+\begin{myObjectives}
+    \myObjective{listen}{to the teacher}
+    \myObjective{take}{notes in my notebook}
+    \myObjective{see}{farther than anyone else}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{vertical}{up and down}
+    \myDefinition{horizontal}{left and right}
+    \myDefinition{foo}{an arbitrary name}
+\end{myVocabulary}
+
+\begin{myConcept}{To do this\dots}
+    then what you need to do is that.
+\end{myConcept}
+
+\begin{myConceptSteps}{To do this\dots}
+    \myStep{foo}{First you foo.}
+    \myStep{bar}{Then you bar.}
+    \myStep{baz}{Finally you baz.}
+\end{myConceptSteps}
+
+\begin{myExample}{Do something!}
+    foo
+\end{myExample}
+
+\begin{myExample}{Do something!}
+    \vspace{.05in}
+\end{myExample}
+
+\myLesson{This is another lesson}
+
+foo bar baz
+
+
+\chapter{Another unit ggg}
+\myLesson{This is another lesson g}
+
+\blindtext
+
+\begin{myExample}{Do something!}
+    foo
+\end{myExample}
+
+\begin{myExample}{Do something!}
+    \vspace{.05in}
+\end{myExample}
+
+\begin{myExample}{Do something!}
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=2.75in,
+                grid=both,
+                axis x line = middle,axis y line = middle,
+                axis equal image,
+                xtick distance = 2, ytick distance = 2,
+                xmin = -5, xmax = 5,
+                ymin = -5, ymax = 5,
+                minor tick num = 1,
+                ]
+                \addplot[
+                    only marks,
+                    mark=*,
+                    mark size = 0.1cm,
+                    ] coordinates { (0,-3) (-2,0) };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+\end{myExample}
+
+\chapter{final unit yyy}
+\blindtext
+
+\end{document}

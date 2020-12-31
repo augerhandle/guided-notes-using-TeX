@@ -1,0 +1,192 @@
+%-------- LESSONS --------------
+
+\newcounter{myLessonCounter}[chapter] 
+\newcommand{\myCurrentLessonTitle}{}
+\newcommand{\myFullLessonNumber}{}  % for example 2.3b
+
+% #1 - lesson title
+% #2 - optional lesson number (default increments from previous)
+% #3 - optional lesson number suffix (eg, 'a' or 'b')
+%
+\NewDocumentCommand{\myLesson}{ m o O{} }{
+    \cleartorecto
+    \renewcommand{\myCurrentLessonTitle}{#1}
+    \IfValueTF{#2}
+        {\setcounter{myLessonCounter}{#2}}
+        {\stepcounter{myLessonCounter}}
+    \renewcommand{\myFullLessonNumber}{\thechapter.\themyLessonCounter#3}
+    \noindent
+    \begin{minipage}[b]{0.25\textwidth}
+        {
+            \HUGE\bfseries\sffamily\myFullLessonNumber
+        }
+    \end{minipage}
+    \begin{minipage}[b]{0.74\textwidth}
+        \begin{flushright}
+            {\sffamily\chaptername\,\thechapter\,\,\myCurrentChapterTitle}\\
+            \vspace{0.75\baselineskip}
+            {\Huge\bfseries\sffamily#1}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{1.25pt}
+    \par
+}
+
+%-------- ANNOTATIONS (in boxes) --------------
+%
+% I use the term "annotations" to capture the common
+% infrastructure I use to define Objectives, Vobabulary & Concepts.
+%
+
+% font and styling commands for
+% Objectives, Voculary, Key Concepts, etc...
+\newcommand{\myAnnotationStyling}{\bfseries\large}
+
+% #1 : name of the kind of annotation (Objectives, ...)
+% #2 : title text to go with the annotation
+\NewDocumentEnvironment{myAnnotate}{ m m }{
+    \vspace{1.25em}
+    \begin{tcolorbox}[
+        colbacktitle=blue!10!white,
+        colback=white,
+        coltitle=black,
+        fonttitle={\myAnnotationStyling},
+        title={#1: },
+        after title={\normalfont\itshape#2},
+        ]
+}{
+    \end{tcolorbox}
+}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+\NewDocumentEnvironment{myTabularAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{tabular}{r|l}
+}{
+    \end{tabular}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape \textcolor{blue}{#1}}&#2\\[1ex]}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+% #3 : text before the list starts
+\NewDocumentEnvironment{myListAnnotate}{ m m o }{
+    \begin{myAnnotate}{#1}{#2}
+    \IfValueT{#3}{#3}
+    \begin{enumerate}[itemsep=0pt,]
+}{
+    \end{enumerate}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
+
+
+
+%----------- OBJECTIVES , VOCABULARY, CONCEPTS ---------------
+\newenvironment{myObjectives}{
+    \begin{myListAnnotate}{Objectives}{}
+}{
+    \end{myListAnnotate}
+}
+\newcommand{\myObjective}[2]{
+    \myItem{#1}{#2}
+}
+
+\newenvironment{myVocabulary}{
+    \begin{myTabularAnnotate}{Vocabulary}{}
+}{
+    \end{myTabularAnnotate}
+}
+\newcommand{\myDefinition}[2]{
+    \myRow{#1}{#2}
+}
+
+\NewDocumentEnvironment{myConcept}{m}{
+    \begin{myAnnotate}{Key Concept}{#1}
+}{
+    \end{myAnnotate}
+}
+
+\NewDocumentEnvironment{myConceptSteps}{m}{
+    \begin{myListAnnotate}{Key Concept}{#1}[Follow these steps.]
+}{
+    \end{myListAnnotate}
+}
+\newcommand{\myStep}[2]{
+    \myItem{#1.}{#2}
+}
+
+%----------- EXAMPLEs ---------------
+\newcounter{myExampleCounter}[myLessonCounter] 
+
+% #1 A statement of the example problem.
+% #2 borderline style (dashed, transparent, etc... )
+%
+\NewDocumentEnvironment{myExample}{sm}{%
+    \vspace{1.25em}
+    \IfBooleanTF{#1}%
+    {
+        \tcbset{
+        borderline east={0.5pt}{0pt}{white,dashed},
+        borderline west={0.5pt}{0pt}{white,dashed},
+        }
+    }
+    {
+        \tcbset{
+        borderline east={0.5pt}{0pt}{black,dashed},
+        borderline west={0.5pt}{0pt}{black,dashed},
+        }
+    }
+    \begin{tcolorbox}[
+        enhanced,
+        sharp corners, 
+        colback=white,
+        boxrule=0pt,
+        borderline north={0.5pt}{0pt}{black,dashed},
+        borderline south={0.5pt}{0pt}{black,dashed},
+        % borderline east={0.5pt}{0pt}{blue,thick},
+        % borderline west={0.5pt}{0pt}{blue,thick},
+        ]
+        \stepcounter{myExampleCounter}
+        {\myAnnotationStyling Example \themyExampleCounter:} {\large #2}
+        \tcblower
+}{
+    \end{tcolorbox}
+}
+
+% #1 amount of vspace for the blank space
+% #2 A statement of the example problem
+\NewDocumentCommand{\myBlankExample}{mm}{
+    \begin{myExample}{#2}
+        \vspace{#1}
+    \end{myExample}
+}
+
+% #1 optional horizontal width (defaults to text width)
+% #2 required vertical height
+% #3 text
+%
+% Note: This command does not increment the example counter.
+%
+\NewDocumentCommand{\myEmptyExampleBox}{ o m m}{
+    \begin{center}
+        \IfValueT{#1}{\tcbset{width=#1}} % for some reason, I am unable to conditionally insert in the properties list
+        \begin{tcolorbox}[
+            enhanced,
+            sharp corners, 
+            colback=white,
+            boxrule=0pt,
+            borderline={0.75pt}{0pt}{black,dotted},
+            ]
+            #3
+            \vspace{#2}
+        \end{tcolorbox}
+    \end{center}
+}
