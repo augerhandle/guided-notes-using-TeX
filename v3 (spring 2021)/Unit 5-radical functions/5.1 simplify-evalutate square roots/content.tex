@@ -1,5 +1,5 @@
 % Do I want to print the text on top of the guided notes blanks?
-\dashundergapssetup{teacher-mode=false,}
+\dashundergapssetup{teacher-mode=true,}
 
 % ----------------------------------------------------------------
 % Title, objectives, vocabulary
@@ -10,22 +10,44 @@
 \renewcommand{\thechapter}{5} 
 \renewcommand{\myCurrentChapterTitle}{Radical Functions}
 
-\myLesson{Simplifying and Evaluating Square Roots}[1]
+\myLesson{Simplifying and Evaluating Radicals}[1]
 
 \begin{myObjectives}
-    \myObjective{find}{the equation of a line going through \gap{two points} }
-    \myObjective{explain}{why you get an error when you try to solve more equations than unknowns }
-    \myObjective{find}{
-        the ``best fit'' line going through \gap{many} points
-        using {\scshape Desmos} and linear \gap{regression}. }
+    \myObjective{simplify}{radical \gap{expressions} }
+    \begin{taggedblock}{on-level}
+        \myObjective{evaluate}{radical \gap{functions} with numbers as inputs }
+    \end{taggedblock}
+    \begin{taggedblock}{pre-AP}
+        \myObjective{evaluate}{radical functions with \gap{numbers} as inputs }
+        \myObjective{evaluate}{radical functions with \gap{expressions} as inputs }
+    \end{taggedblock}
 \end{myObjectives}
-
+%
 \begin{myVocabulary}
-    \myDefinition{best fit line}{the line that goes through points with the \gap{least} error}
-    \myDefinition{regression}{a way to find \gap{best fit} equations}
+    % \myDefinition{term}{ a bunch of things \gap{multiplied} or \gap{divided} (no add/subtract)}
+    \myDefinition{square root}{
+        \raisebox{0.4em}{$\sqrt{\dots}$}
+        which is the \gap{same as} 
+        \raisebox{0.4em}{$\sqrt[\uproot{4}2]{\dots}$}
+    }
+    \myDefinition{cube root}{
+        \raisebox{0.4em}{$\sqrt[\uproot{4}3]{\dots}$}
+    }
+    \myDefinition{radical}{\gap{square} roots, \gap{cube} roots, etc\dots}
+    \myDefinition{radical symbol}{the thing that looks like a check: 
+        \raisebox{0.4em}{$\sqrt{\hspace{1em}}$}
+    }
+    \myDefinition{radicand}{what's \gap{under} the radical symbol}
+    \myDefinition{index}{
+        Square root index $=$ \gap{$2$} because \raisebox{0.4em}{$\sqrt[\uproot{4}2]{\dots}$}.
+        Cube root index $=$ \gap{$3$} because \raisebox{0.4em}{$\sqrt[\uproot{4}3]{\dots}$}.
+    }
+    \myDefinition{simplify}{rewrite something so it looks \gap{simpler}}
+    \myDefinition{evaluate}{substitute inputs and calculate a \gap{result}}
 \end{myVocabulary}
 
 % ----------------------------------------------------------------
 % Now the real content
 % ----------------------------------------------------------------
 \input{./chunk-1}
+\input{./chunk-2}

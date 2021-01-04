@@ -45,7 +45,9 @@
 
 % #1 : name of the kind of annotation (Objectives, ...)
 % #2 : title text to go with the annotation
-\NewDocumentEnvironment{myAnnotate}{ m m }{
+% #3 : extra tcolorbox options
+%
+\NewDocumentEnvironment{myAnnotate}{ m m O{}}{
     \begin{tcolorbox}[
         colbacktitle=blue!10!white,
         colback=white,
@@ -53,6 +55,7 @@
         fonttitle={\myAnnotationStyling},
         title={#1: },
         after title={\normalfont\itshape#2},
+        #3,
         ]
 }{
     \end{tcolorbox}
@@ -60,6 +63,7 @@
 
 % #1 : name of the kind of annotation 
 % #2 : title 
+%
 \NewDocumentEnvironment{myTabularAnnotate}{ m m }{
     \begin{myAnnotate}{#1}{#2}
     \begin{tabular}{r|l}
@@ -69,11 +73,13 @@
 }
 % #1 - column 1 text
 % #2 - column 2 text
+%
 \NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape \textcolor{blue}{#1}}&#2\\[1ex]}
 
 % #1 : name of the kind of annotation 
 % #2 : title 
 % #3 : text before the list starts
+%
 \NewDocumentEnvironment{myListAnnotate}{ m m o }{
     \begin{myAnnotate}{#1}{#2}
     \IfValueT{#3}{#3}
@@ -84,6 +90,7 @@
 }
 % #1 - column 1 text
 % #2 - column 2 text
+%
 \NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
 
 
@@ -122,70 +129,117 @@
     \myItem{#1.}{#2}
 }
 
-%----------- EXAMPLEs ---------------
-\newcounter{myExampleCounter}[myLessonCounter] 
 
-% #1 A statement of the example problem.
-% #2 borderline style (dashed, transparent, etc... )
-%
-\NewDocumentEnvironment{myExample}{sm}{%
-    \vspace{1.25em}
-    \IfBooleanTF{#1}%
-    {
-        \tcbset{
-        borderline east={0.5pt}{0pt}{white,dashed},
-        borderline west={0.5pt}{0pt}{white,dashed},
-        }
-    }
-    {
-        \tcbset{
-        borderline east={0.5pt}{0pt}{black,dashed},
-        borderline west={0.5pt}{0pt}{black,dashed},
-        }
-    }
-    \begin{tcolorbox}[
-        enhanced,
-        sharp corners, 
-        colback=white,
-        boxrule=0pt,
-        borderline north={0.5pt}{0pt}{black,dashed},
-        borderline south={0.5pt}{0pt}{black,dashed},
-        % borderline east={0.5pt}{0pt}{blue,thick},
-        % borderline west={0.5pt}{0pt}{blue,thick},
-        ]
-        \stepcounter{myExampleCounter}
-        {\myAnnotationStyling Example \themyExampleCounter:} {\large #2}
-        \tcblower
-}{
-    \end{tcolorbox}
+
+\newcounter{myCweRowCounter}
+
+% #1 width of column 1
+% #2 text in column 1
+% #3 text in column 2
+\newcommand{\myCweRow}[3]{
+    \begin{tcolorbox}[%
+        equal height group = \arabic{myCweRowCounter},%
+        toprule=0pt, leftrule=0pt,%
+        rightrule=1pt, bottomrule=1pt,%
+        title=row1col1, notitle,%
+        sharp corners,%
+        colback=white,%
+        width=#1,%
+        ]%
+        #2%
+    \end{tcolorbox}%
+    \begin{tcolorbox}[%
+        equal height group = \arabic{myCweRowCounter},%
+        toprule=0pt,leftrule=0pt,rightrule=0pt,%
+        bottomrule=1pt,%
+        title=row1col1, notitle,%
+        sharp corners,%
+        colback=white,%
+        ]%
+        #3%
+    \end{tcolorbox}%
+    \stepcounter{myCweRowCounter}%
 }
 
-% #1 amount of vspace for the blank space
-% #2 A statement of the example problem
-\NewDocumentCommand{\myBlankExample}{mm}{
-    \begin{myExample}{#2}
-        \vspace{#1}
-    \end{myExample}
+% #1 width of column 1
+% #2 text in column 1
+% #3 text in column 2
+\newcommand{\myCweBottomRow}[3]{
+    \begin{tcolorbox}[%
+        equal height group = \arabic{myCweRowCounter},%
+        bottomrule=0pt, leftrule=0pt, toprule=0pt,%
+        rightrule=1pt,%
+        title=row1col1, notitle,%
+        sharp corners,%
+        colback=white,%
+        width=#1,%
+        ]%
+        #2%
+    \end{tcolorbox}%
+    \begin{tcolorbox}[%
+        equal height group = \arabic{myCweRowCounter},%
+        bottomrule=0pt, leftrule=0pt, toprule=0pt, rightrule=0pt,%
+        title=row1col1, notitle,%
+        sharp corners,%
+        colback=white,%
+        ]%
+        #3%
+    \end{tcolorbox}%
+    \stepcounter{myCweRowCounter}%
 }
 
-% #1 optional horizontal width (defaults to text width)
-% #2 required vertical height
-% #3 text
+\newcolumntype{z}[2]{>{\columncolor{#1}\raggedleft\arraybackslash}p{#2}}
+% #1 title (eg, "Key Concepts")
+% #2 description of the concepts
+% #3 width of concept column
+% #4 row 1 concept
+% #5 row 1 example
+% #6 row 2 concept
+% #7 row 2 example
 %
-% Note: This command does not increment the example counter.
-%
-\NewDocumentCommand{\myEmptyExampleBox}{ o m m}{
-    \begin{center}
-        \IfValueT{#1}{\tcbset{width=#1}} % for some reason, I am unable to conditionally insert in the properties list
-        \begin{tcolorbox}[
-            enhanced,
-            sharp corners, 
-            colback=white,
-            boxrule=0pt,
-            borderline={0.75pt}{0pt}{black,dotted},
-            ]
-            #3
-            \vspace{#2}
+\NewDocumentEnvironment{myConceptWithExamples2}{ O{Key Concepts} mm mmmm}{
+    \begin{myAnnotate}{\hspace{5mm}#1}{\,#2}[%
+        left=0em,right=0em,%
+        top=0em,bottom=0em,%
+        boxsep=0em,%
+        toptitle=1mm, bottomtitle=1mm, % since we set boxsep to zero
+        ]%
+    \noindent
+    \begin{tabular}{>{\columncolor[gray]{0.95}}c!{\vrule width 1pt}c}
+        \begin{tcolorbox}[%
+            width=#3,
+            leftrule=0em,rightrule=0em,toprule=0em,bottomrule=0em,
+            colback=black!5, colframe=white,
+            ]%
+            #4
         \end{tcolorbox}
-    \end{center}
+        &
+        \begin{tcolorbox}[%
+            width=\linewidth-#3-10mm,
+            leftrule=0em,rightrule=0em,toprule=0em,bottomrule=0em,
+            colback=white, colframe=white,
+            ]%
+            #5
+        \end{tcolorbox}
+        \\
+        \hhline{=:=}
+        \begin{tcolorbox}[%
+            width=#3,
+            leftrule=0em,rightrule=0em,toprule=0em,bottomrule=0em,
+            colback=black!5, colframe=white,
+            ]%
+            #6
+        \end{tcolorbox}
+        &
+        \begin{tcolorbox}[%
+            width=\linewidth-#3-10mm,
+            leftrule=0em,rightrule=0em,toprule=0em,bottomrule=0em,
+            colback=white, colframe=white,
+            ]%
+            #7
+        \end{tcolorbox}
+        \\
+    \end{tabular}
+    }{
+    \end{myAnnotate}
 }

@@ -1,0 +1,68 @@
+
+%----------- EXAMPLEs ---------------
+\newcounter{myExampleCounter}[myLessonCounter] 
+
+% #1 A statement of the example problem.
+% #2 borderline style (dashed, transparent, etc... )
+%
+\NewDocumentEnvironment{myExample}{sm}{%
+    \vspace{1.25em}
+    \IfBooleanTF{#1}%
+    {
+        \tcbset{
+        borderline east={0.5pt}{0pt}{white,dashed},
+        borderline west={0.5pt}{0pt}{white,dashed},
+        }
+    }
+    {
+        \tcbset{
+        borderline east={0.5pt}{0pt}{black,dashed},
+        borderline west={0.5pt}{0pt}{black,dashed},
+        }
+    }
+    \begin{tcolorbox}[
+        enhanced,
+        sharp corners, 
+        colback=white,
+        boxrule=0pt,
+        borderline north={0.5pt}{0pt}{black,dashed},
+        borderline south={0.5pt}{0pt}{black,dashed},
+        % borderline east={0.5pt}{0pt}{blue,thick},
+        % borderline west={0.5pt}{0pt}{blue,thick},
+        ]
+        \stepcounter{myExampleCounter}
+        {\myAnnotationStyling Example \themyExampleCounter:} {\large #2}
+        \tcblower
+}{
+    \end{tcolorbox}
+}
+
+% #1 amount of vspace for the blank space
+% #2 A statement of the example problem
+\NewDocumentCommand{\myBlankExample}{mm}{
+    \begin{myExample}{#2}
+        \vspace{#1}
+    \end{myExample}
+}
+
+% #1 optional horizontal width (defaults to text width)
+% #2 required vertical height
+% #3 text
+%
+% Note: This command does not increment the example counter.
+%
+\NewDocumentCommand{\myEmptyExampleBox}{ o m m}{
+    \begin{center}
+        \IfValueT{#1}{\tcbset{width=#1}} % for some reason, I am unable to conditionally insert in the properties list
+        \begin{tcolorbox}[
+            enhanced,
+            sharp corners, 
+            colback=white,
+            boxrule=0pt,
+            borderline={0.75pt}{0pt}{black,dotted},
+            ]
+            #3
+            \vspace{#2}
+        \end{tcolorbox}
+    \end{center}
+}
