@@ -1,11 +1,5 @@
 % -----------------PROBLEM-related stuff------------------
 
-% A counter to number the problems in the guided notes.
-\newcounter{MyProblemCounter}
-\setcounter{MyProblemCounter}{1}
-\newcommand{\useMyProblemCounter}{\theMyProblemCounter\stepcounter{MyProblemCounter}}
-\newcommand{\myProblemFont}{\bfseries\itshape}
-
 % an environment for two adjacent problems
 %
 % #1 : directions for all the problems
@@ -26,7 +20,7 @@
             colback=white,%
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
-            title={\texttt\useMyProblemCounter},%
+            title={\texttt{\useMyProblemCounter}},%
             },%
         ]%
         \begin{tcolorbox}[attach boxed title to top left]
