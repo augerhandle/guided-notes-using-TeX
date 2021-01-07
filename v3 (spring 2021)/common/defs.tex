@@ -1,3 +1,8 @@
+% This is used on the headers and footers (for now)
+%
+\newcommand{\myClassName}{{\tagged{pre-AP}{pre-AP }}Algebra 2}
+
+
 \setlength\parindent{0pt} % sets indent to zero
 \setlength{\parskip}{\baselineskip} % changes vertical space between paragraphs
 
@@ -10,7 +15,16 @@
 
 
 \newcommand{\myEmph}{\bfseries\itshape}
-\newcommand{\myClassName}{{\tagged{pre-AP}{pre-AP }}Algebra 2}
+
+% A version of \sqrt 
+%
+% #1 index of the root
+% #2 uproot amount
+% #3 radicand
+%
+\NewDocumentCommand{\myRoot}{ o O{2} m  }{%
+    \IfNoValueTF{#1}{\sqrt{#3\,}}{\sqrt[\uproot{#2}#1]{#3\,}}
+}
 
 % So I can save/restore \fboxsep
 \newlength{\mySavedFboxsep}
