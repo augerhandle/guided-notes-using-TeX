@@ -1,37 +1,67 @@
 \section{Function families}
 
-A {\bfseries\itshape function family} is a set of functions \gap{look alike}. 
-You already know two:
-\begin{itemize}
-    \item \gap{linear} functions (Their graphs are \gap{lines}.)
-    \item \gap{quadratic} functions (Their graphs are \gap{parabolas}.)
-\end{itemize}
-
-In this unit, we are studing a \gap{third} function family.
-\begin{itemize}
-    \item \gap{square root} functions 
-\end{itemize}
-
-
+A {\bfseries\itshape function family} is a set of functions that look \gap{alike}. 
+You already know two.
 
 \fbox{
-    \begin{minipage}{0.3\textwidth}
-        \begin{center}{\bfseries\itshape Linear Functions}\end{center}
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            {\Large\bfseries\itshape Linear Function Family}
+            \begin{tikzpicture}[
+                    scale=0.75,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[
+                    xmax=6, xmin=-6, xstep=2,
+                    ymax=6, ymin=-6, ystep=2,
+                ]
+                \tkzGrid[
+                    sub, subxstep=1, subystep=1,
+                ]
+                \tkzDrawXY[label={},color=black,]
+                \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+            \end{tikzpicture}
+
+            {\bfseries\itshape Parent function: \\$f(x) = x$}
+
+            {\bfseries\itshape Transformed functions: \\$g(x) = mx + b$}
+        \end{center}
     \end{minipage}
 }
-%
 \hfill 
-%
 \fbox{
-    \begin{minipage}{0.3\textwidth}
-        \begin{center}{\bfseries\itshape Quadratic Functions}\end{center}
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            {\Large\bfseries\itshape Quadratic Function Family}
+            \begin{tikzpicture}[
+                    scale=0.75,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[
+                    xmax=6, xmin=-6, xstep=2,
+                    ymax=6, ymin=-6, ystep=2,
+                ]
+                \tkzGrid[
+                    sub, subxstep=1, subystep=1,
+                ]
+                \tkzDrawXY[label={},color=black,]
+                \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+            \end{tikzpicture}
+
+            {\bfseries\itshape Parent function: \\$f(x) = x^2$}
+
+            {\bfseries\itshape Transformed functions: \\$g(x) = a(x-h)^2 + k$}
+        \end{center}
     \end{minipage}
 }
-%
-\hfill 
-%
-\fbox{
-    \begin{minipage}{0.3\textwidth}
-        \begin{center}{\bfseries\itshape Square Root Functions}\end{center}
-    \end{minipage}
-}
+
+In this unit, we are studing a new function family: \gap{square root} functions.
+
+
+
