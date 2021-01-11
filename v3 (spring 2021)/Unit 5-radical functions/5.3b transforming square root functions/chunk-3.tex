@@ -1,4 +1,55 @@
 
+\begin{my2Problems}[\normalsize]{1in}[%
+    The parent function $f(x)=\myRoot{x}$ and a transformed function $g(x)$
+    are shown in the graph.
+    \vspace{-1em}
+    \begin{itemize}[nosep]
+        \item Describe the transformation of $f$ that results in $g$.
+        \item Write an equation for $g$.
+    \end{itemize}
+    ]
+    {
+        \begin{tikzpicture}[
+            scale=0.5,
+            xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+            yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+        ]
+        \scriptsize
+        \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+        \tkzGrid
+        \tkzDrawXY[label={},color=black,]
+        \tkzLabelX[orig=false,]
+        % \tkzLabelY[orig=false,]
+        \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+        \tkzText[right](6,2.5){\large $f$}
+        %
+        \tkzFct[domain = 0:6, thick, dashed]{sqrt(x) + 2}
+        \tkzText[right](6,4.5){\large $g$}
+    \end{tikzpicture}
+    }
+    {
+        \begin{tikzpicture}[
+            scale=0.5,
+            xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+            yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+        ]
+        \scriptsize
+        \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+        \tkzGrid
+        \tkzDrawXY[label={},color=black,]
+        \tkzLabelX[orig=false,]
+        % \tkzLabelY[orig=false,]
+        \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+        \tkzText[right](6,2.5){\large $f$}
+        %
+        \tkzFct[domain = 0:6, thick, dashed]{-sqrt(x)}
+        \tkzText[right](6,-2.5){\large$g$}
+    \end{tikzpicture}
+    }
+\end{my2Problems}
+
+
+
 \begin{my2Problems}[\normalsize]{0.5in}[%
     The parent function $f(x)=\myRoot{x}$ and a transformed function $g(x)$
     are shown in the graph.
@@ -10,29 +61,42 @@
     ]
     {
         \begin{tikzpicture}[
-            scale=0.75,
+            scale=0.5,
             xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
             yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
         ]
         \scriptsize
-        \tkzInit[
-            xmax=6, xmin=-6, xstep=2,
-            ymax=6, ymin=-6, ystep=2,
-        ]
-        \tkzGrid[
-            sub, subxstep=1, subystep=1,
-        ]
+        \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+        \tkzGrid
         \tkzDrawXY[label={},color=black,]
         \tkzLabelX[orig=false,]
         % \tkzLabelY[orig=false,]
         \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
-        \tkzText[above right](3,0){$f$}
+        \tkzText[right](6,2.5){\large $f$}
         %
-        \tkzFct[domain = 0:6, thick, dashed]{sqrt(x) + 2}
-        \tkzText[above left](3,3){$g$}
+        \tkzFct[domain = 0:10, thick, dashed]{2*sqrt(x)}
+        \tkzText[right](6,5){\large $g$}
     \end{tikzpicture}
     }
     {
-        put a graph here
+        \begin{tikzpicture}[
+            scale=0.5,
+            xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+            yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+        ]
+        \scriptsize
+        \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+        \tkzGrid
+        \tkzDrawXY[label={},color=black,]
+        \tkzLabelX[orig=false,]
+        % \tkzLabelY[orig=false,]
+        \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+        \tkzText[right](5.8,2){\large $f$}
+        %
+        \tkzFct[domain = -6:6, thick, dashed]{sqrt(x+3)}
+        \tkzText[right](5.8,3.5){\large$g$}
+    \end{tikzpicture}
     }
 \end{my2Problems}
+
+
