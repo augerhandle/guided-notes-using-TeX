@@ -1,14 +1,46 @@
 % -----------------PROBLEM-related stuff------------------
 
+% #1 : font style for box titles
+% #2 : vertical height of the problem boxes
+% #3 : optional directions for all the problems
+% #4 : details for problem 1
+%
+\NewDocumentEnvironment{myProblem}{ O{\large} m o m  }{%
+    \IfValueT{#3}{\noindent#3\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #1#4
+            \tcblower\vspace{#2}
+        \end{tcolorbox}
+        % an empty box to take up space
+        \begin{tcolorbox}[colback=white, colframe=white,]\end{tcolorbox}%
+}{%
+    \end{tcbraster}
+}
+
 % an environment for two adjacent problems
 %
-% #1 : vertical height of the problem boxes
-% #2 : optional directions for all the problems
-% #3 : details for problem 1
-% #4 : details for problem 2
+% #1 : font style for box titles
+% #2 : vertical height of the problem boxes
+% #3 : optional directions for all the problems
+% #4 : details for problem 1
+% #5 : details for problem 2
 %
-\NewDocumentEnvironment{my2Problems}{ m o mm }{%
-    \IfValueT{#2}{\noindent#2\nopagebreak}%
+\NewDocumentEnvironment{my2Problems}{ O{\large} m o mm }{%
+    \IfValueT{#3}{\noindent#3\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
@@ -24,11 +56,11 @@
             },%
         ]%
         \begin{tcolorbox}[attach boxed title to top left]
-            \large#3
-            \tcblower\vspace{#1}
+            #1#4
+            \tcblower\vspace{#2}
         \end{tcolorbox}
         \begin{tcolorbox}[attach boxed title to top right]
-            \large#4
+            #1#5
             \tcblower
         \end{tcolorbox}%
 }{%
