@@ -9,7 +9,28 @@
     \end{itemize}
     ]
     {
-        put a graph here
+        \begin{tikzpicture}[
+            scale=0.75,
+            xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+            yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+        ]
+        \scriptsize
+        \tkzInit[
+            xmax=6, xmin=-6, xstep=2,
+            ymax=6, ymin=-6, ystep=2,
+        ]
+        \tkzGrid[
+            sub, subxstep=1, subystep=1,
+        ]
+        \tkzDrawXY[label={},color=black,]
+        \tkzLabelX[orig=false,]
+        % \tkzLabelY[orig=false,]
+        \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+        \tkzText[above right](3,0){$f$}
+        %
+        \tkzFct[domain = 0:6, thick, dashed]{sqrt(x) + 2}
+        \tkzText[above left](3,3){$g$}
+    \end{tikzpicture}
     }
     {
         put a graph here
