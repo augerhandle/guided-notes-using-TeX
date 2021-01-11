@@ -1,3 +1,7 @@
+## tkz/gnuplot files:
+*.gnuplot
+*.tkzfonct.table
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
