@@ -5,19 +5,20 @@
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-    width=6.5in,
+    width=7in,
     ]
     \renewcommand{\arraystretch}{1.5}
     \begin{minipage}{0.35\linewidth}
         \centering{\Large   $g(x) = \myRoot{x} + k$   }
     \end{minipage}
     \begin{minipage}{0.64\linewidth}
-        \begin{tabular}{ c | c }
-            {\large $g(x) = \myRoot{x} + 3$ } & {\large $g(x) = \myRoot{x} - 2$ }\\ \hline
+        \setlength{\tabcolsep}{1em}
+        \begin{tabular}{ ll }
+            {\large $g(x) = \myRoot{x} + 3$ } & {\large $g(x) = \myRoot{x} - 2$ }\\
             %
-            $k=3$ & $k=-2$ \\ \hline
+            $k=$\gap{3} & $k=$\gap{-2} \\ 
             %
-            shift up by 3 & shift down by 2 \\ 
+            shift \gap{up} by \gap{3} & shift \gap{down} by \gap{2} \\ 
             %
             {
                 \begin{tikzpicture}[
@@ -34,8 +35,8 @@
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
                 \tkzText[right](5.5,2){\large $f$}
                 %
-                \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)+3}
-                \tkzText[right](2.5,4){\large$g$}
+                % \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)+3}
+                % \tkzText[right](2.5,4){\large$g$}
             \end{tikzpicture}
             } 
             &
@@ -54,8 +55,8 @@
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
                 \tkzText[right](6,3){\large $f$}
                 %
-                \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)-2}
-                \tkzText[right](6,1){\large$g$}
+                % \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)-2}
+                % \tkzText[right](6,1){\large$g$}
             \end{tikzpicture}
             } 
             \\
@@ -68,19 +69,20 @@
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-    width=6.5in,
+    width=7in,
     ]
     \renewcommand{\arraystretch}{1.5}
-    \begin{minipage}{0.35\linewidth}
+    \begin{minipage}{0.29\linewidth}
         \centering{\Large   $g(x) = \myRoot{x-h} $   }
     \end{minipage}
-    \begin{minipage}{0.64\linewidth}
-        \begin{tabular}{ c | c }
-            {\large $g(x) = \myRoot{x-5} $ } & {\large $g(x) = \myRoot{x+4} $ } \\ \hline
+    \begin{minipage}{0.7\linewidth}
+        \setlength{\tabcolsep}{1em}
+        \begin{tabular}{ ll }
+            {\large $g(x) = \myRoot{x-5} $ } & {\large $g(x) = \myRoot{x+4} $ } \\ 
             %
-            $h=5$ & $h=-4$ \\ \hline
+            $h=$\gap{5} & $h=-$\gap{4} \\ 
             %
-            shift right by 5  & shift left by 4 \\ 
+            shift \gap{right} by \gap{5}  & shift \gap{left} by \gap{4} \\ 
             {
                 \begin{tikzpicture}[
                     scale=0.25,
@@ -96,8 +98,8 @@
                 \tkzFct[domain = 0:10,thick, solid]{sqrt(x)}
                 \tkzText[right](0.25,2.25){\large $f$}
                 %
-                \tkzFct[domain = -6:10, thick, dashed]{sqrt(x-5)}
-                \tkzText[right](4,-1){\large$g$}
+                % \tkzFct[domain = -6:10, thick, dashed]{sqrt(x-5)}
+                % \tkzText[right](4,-1){\large$g$}
             \end{tikzpicture}
             } 
             &
@@ -116,8 +118,8 @@
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
                 \tkzText[right](5.5,2){\large $f$}
                 %
-                \tkzFct[domain = -6:6, thick, dashed]{sqrt(x+4)}
-                \tkzText[right](2.5,4){\large$g$}
+                % \tkzFct[domain = -6:6, thick, dashed]{sqrt(x+4)}
+                % \tkzText[right](2.5,4){\large$g$}
             \end{tikzpicture}
             } \\
         \end{tabular}
@@ -134,19 +136,20 @@
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-    width=6.5in,
+    width=7in,
 ]
     \renewcommand{\arraystretch}{1.5}
-    \begin{minipage}{0.35\linewidth}
+    \begin{minipage}{0.29\linewidth}
         \centering{   \Large $g(x) = a \myRoot{x} $   }
     \end{minipage}
-    \begin{minipage}{0.64\linewidth}
-    \begin{tabular}{ c | c }
-        {\large $g(x) = 2 \myRoot{x} $ } & {\large $g(x) = \frac{1}{2} \myRoot{x} $} \\ \hline
+    \begin{minipage}{0.7\linewidth}
+    \setlength{\tabcolsep}{1em}
+    \begin{tabular}{ ll }
+        {\large $g(x) = 2 \myRoot{x} $ } & {\large $g(x) = \frac{1}{2} \myRoot{x} $} \\
         %
-        $a=2$ & $a=1/2$ \\ 
+        $a=$\gap{2} & $a=$\gap{1/2} \\ 
         %
-        {\small stretch when $a>1$} & {\small compression when $0<a<1$} \\ \hline
+        {\small stretch when \gap{$a>1$}} & {\small compression when \gap{$0<a<1$}} \\
         %
         stretch by a factor of 5 & compress by a factor of $1/2$ \\ 
         {
@@ -164,8 +167,8 @@
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
                 \tkzText[right](5.8,2.5){\large $f$}
                 %
-                \tkzFct[domain = -6:6, thick, dashed]{2*sqrt(x)}
-                \tkzText[right](5.8,5){\large$g$}
+                % \tkzFct[domain = -6:6, thick, dashed]{2*sqrt(x)}
+                % \tkzText[right](5.8,5){\large$g$}
             \end{tikzpicture}
             } 
             &
@@ -184,8 +187,8 @@
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
                 \tkzText[right](5.8,3){\large $f$}
                 %
-                \tkzFct[domain = -6:6, thick, dashed]{0.5*sqrt(x)}
-                \tkzText[right](5.8,1){\large$g$}
+                % \tkzFct[domain = -6:6, thick, dashed]{0.5*sqrt(x)}
+                % \tkzText[right](5.8,1){\large$g$}
             \end{tikzpicture}
             } 
             \\
@@ -198,7 +201,7 @@
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-    width=6.5in,
+    width=7in,
     ]
     \renewcommand{\arraystretch}{1.5}
     \begin{minipage}{0.49\linewidth}
