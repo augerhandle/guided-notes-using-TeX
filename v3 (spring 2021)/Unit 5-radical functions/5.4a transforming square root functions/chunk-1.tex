@@ -1,25 +1,24 @@
 \section{Transformation Rules}
 
-\begin{tcolorbox}[
+\begin{myCenteredBox}[
     title={Vertical Shift Up/Down},
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-]
-\begin{center}
+    width=6.5in,
+    ]
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ r c | c }
-        \multirow{4}{*}{\Large   $g(x) = \myRoot{x} + k$   } 
-            & {\large $g(x) = \myRoot{x} + 3$ }
-            & {\large $g(x) = \myRoot{x} - 2$ }\\ \cline{2-3}
+    \begin{minipage}{0.35\linewidth}
+        \centering{\Large   $g(x) = \myRoot{x} + k$   }
+    \end{minipage}
+    \begin{minipage}{0.64\linewidth}
+        \begin{tabular}{ c | c }
+            {\large $g(x) = \myRoot{x} + 3$ } & {\large $g(x) = \myRoot{x} - 2$ }\\ \hline
             %
-            & $k=3$ 
-            & $k=-2$ \\ \cline{2-3}
+            $k=3$ & $k=-2$ \\ \hline
             %
-            & shift up by 3 
-            & shift down by 2 \\ 
+            shift up by 3 & shift down by 2 \\ 
             %
-            &
             {
                 \begin{tikzpicture}[
                     scale=0.25,
@@ -60,29 +59,28 @@
             \end{tikzpicture}
             } 
             \\
-    \end{tabular}
-\end{center}
-\end{tcolorbox}
+        \end{tabular}
+    \end{minipage}
+\end{myCenteredBox}
 
-\begin{tcolorbox}[
+\begin{myCenteredBox}[
     title={Horizontal Shift Left/Right},
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-]
-\begin{center}
+    width=6.5in,
+    ]
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ r c | c }
-        \multirow{4}{*}{\Large   $g(x) = \myRoot{x-h} $   } 
-            & {\large $g(x) = \myRoot{x-5} $ } 
-            & {\large $g(x) = \myRoot{x+4} $ } \\ \cline{2-3}
+    \begin{minipage}{0.35\linewidth}
+        \centering{\Large   $g(x) = \myRoot{x-h} $   }
+    \end{minipage}
+    \begin{minipage}{0.64\linewidth}
+        \begin{tabular}{ c | c }
+            {\large $g(x) = \myRoot{x-5} $ } & {\large $g(x) = \myRoot{x+4} $ } \\ \hline
             %
-            & $h=5$ 
-            & $h=-4$ \\ \cline{2-3}
+            $h=5$ & $h=-4$ \\ \hline
             %
-            & shift right by 5 
-            & shift left by 4 \\ 
-            &
+            shift right by 5  & shift left by 4 \\ 
             {
                 \begin{tikzpicture}[
                     scale=0.25,
@@ -122,39 +120,40 @@
                 \tkzText[right](2.5,4){\large$g$}
             \end{tikzpicture}
             } \\
-    \end{tabular}
-\end{center}
+        \end{tabular}
+    \end{minipage}
 
-Remember, $h$ is the \gap{opposite} of what you see.
-\end{tcolorbox}
+    \vspace{1em}
+    Remember, $h$ is the \gap{opposite} of what you see.
+\end{myCenteredBox}
 
-\begin{tcolorbox}[
+
+
+\begin{myCenteredBox}[
     title={Vertical Stretch/Compression},
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
+    width=6.5in,
 ]
-\begin{center}
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ r | l | l }
-        \multirow{4}{*}{   \Large $g(x) = a \myRoot{x} $   } 
-            & {\large $g(x) = 2 \myRoot{x} $ }
-            & {\large $g(x) = \frac{1}{2} \myRoot{x} $} \\ \cline{2-3}
-            %
-            & $a=2$ 
-            & $a=1/2$ \\ 
-            %
-            & {\small stretch when $a>1$}
-            & {\small compression when $0<a<1$} \\ \cline{2-3}
-            %
-            & stretch by a factor of 5 
-            & compress by a factor of $1/2$ \\ 
-            &
-            {
-                \begin{tikzpicture}[
-                    scale=0.25,
-                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
-                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+    \begin{minipage}{0.35\linewidth}
+        \centering{   \Large $g(x) = a \myRoot{x} $   }
+    \end{minipage}
+    \begin{minipage}{0.64\linewidth}
+    \begin{tabular}{ c | c }
+        {\large $g(x) = 2 \myRoot{x} $ } & {\large $g(x) = \frac{1}{2} \myRoot{x} $} \\ \hline
+        %
+        $a=2$ & $a=1/2$ \\ 
+        %
+        {\small stretch when $a>1$} & {\small compression when $0<a<1$} \\ \hline
+        %
+        stretch by a factor of 5 & compress by a factor of $1/2$ \\ 
+        {
+            \begin{tikzpicture}[
+                scale=0.25,
+                xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
                 ]
                 \scriptsize
                 \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
@@ -190,28 +189,31 @@ Remember, $h$ is the \gap{opposite} of what you see.
             \end{tikzpicture}
             } 
             \\
-    \end{tabular}
-\end{center}
-\end{tcolorbox}
+        \end{tabular}
+    \end{minipage}
+\end{myCenteredBox}
 
-\begin{tcolorbox}[
+\begin{myCenteredBox}[
     title={Reflection Across the $x$-axis},
     colbacktitle=black!10!white,
     colback=white,
     coltitle=black, fonttitle={\Large\scshape},
-]
-\begin{center}
+    width=6.5in,
+    ]
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ r | l }
-        \multirow{3}{*}{   \Large $g(x) = a \myRoot{x} $   } 
-            & {\large $g(x) = - \myRoot{x} $ }  \\ \cline{2-2}
-            & $a=-1$  \\ \cline{2-2}
-            & 
-            {
-                \begin{tikzpicture}[
-                    scale=0.25,
-                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
-                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+    \begin{minipage}{0.49\linewidth}
+        \centering{   \Large $g(x) = a \myRoot{x} $   }
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \begin{tabular}{c}
+            {\large $g(x) = - \myRoot{x} $ } 
+            \\ \hline
+            $a=-1$ 
+            \\ \hline
+            \begin{tikzpicture}[
+                scale=0.25,
+                xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
                 ]
                 \scriptsize
                 \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
@@ -225,10 +227,11 @@ Remember, $h$ is the \gap{opposite} of what you see.
                 \tkzFct[domain = -6:6, thick, dashed]{-sqrt(x)}
                 \tkzText[right](5.8,-2.5){\large$g$}
             \end{tikzpicture}
-            } \\
-    \end{tabular}
-\end{center}
+            \\
+        \end{tabular}
+    \end{minipage}
 
-Whenever $a$ is \gap{negative},
-there is a \gap{reflection} across the $x$-axis.
-\end{tcolorbox}
+    \vspace{1\baselineskip}
+    Whenever $a$ is \gap{negative}, there is a
+    \gap{reflection} across the $x$-axis.
+\end{myCenteredBox}
