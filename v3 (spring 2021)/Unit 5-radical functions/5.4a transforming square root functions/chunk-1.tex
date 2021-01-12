@@ -8,10 +8,10 @@
     width=7in,
     ]
     \renewcommand{\arraystretch}{1.5}
-    \begin{minipage}{0.35\linewidth}
+    \begin{minipage}{0.34\linewidth}
         \centering{\Large   $g(x) = \myRoot{x} + k$   }
     \end{minipage}
-    \begin{minipage}{0.64\linewidth}
+    \begin{minipage}{0.65\linewidth}
         \setlength{\tabcolsep}{1em}
         \begin{tabular}{ ll }
             {\large $g(x) = \myRoot{x} + 3$ } & {\large $g(x) = \myRoot{x} - 2$ }\\
@@ -33,7 +33,7 @@
                 % \tkzLabelX[orig=false,]
                 % \tkzLabelY[orig=false,]
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
-                \tkzText[right](5.5,2){\large $f$}
+                \tkzText[right](5.8,2.5){\large $f$}
                 %
                 % \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)+3}
                 % \tkzText[right](2.5,4){\large$g$}
@@ -53,7 +53,7 @@
                 % \tkzLabelX[orig=false,]
                 % \tkzLabelY[orig=false,]
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
-                \tkzText[right](6,3){\large $f$}
+                \tkzText[right](5.8,2.5){\large $f$}
                 %
                 % \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)-2}
                 % \tkzText[right](6,1){\large$g$}
@@ -96,7 +96,7 @@
                 % \tkzLabelX[orig=false,]
                 % \tkzLabelY[orig=false,]
                 \tkzFct[domain = 0:10,thick, solid]{sqrt(x)}
-                \tkzText[right](0.25,2.25){\large $f$}
+                \tkzText[right](5.8,2.5){\large $f$}
                 %
                 % \tkzFct[domain = -6:10, thick, dashed]{sqrt(x-5)}
                 % \tkzText[right](4,-1){\large$g$}
@@ -116,7 +116,7 @@
                 % \tkzLabelX[orig=false,]
                 % \tkzLabelY[orig=false,]
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
-                \tkzText[right](5.5,2){\large $f$}
+                \tkzText[right](5.8,2.5){\large $f$}
                 %
                 % \tkzFct[domain = -6:6, thick, dashed]{sqrt(x+4)}
                 % \tkzText[right](2.5,4){\large$g$}
@@ -185,7 +185,7 @@
                 % \tkzLabelX[orig=false,]
                 % \tkzLabelY[orig=false,]
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
-                \tkzText[right](5.8,3){\large $f$}
+                \tkzText[right](5.8,2.5){\large $f$}
                 %
                 % \tkzFct[domain = -6:6, thick, dashed]{0.5*sqrt(x)}
                 % \tkzText[right](5.8,1){\large$g$}
@@ -211,7 +211,7 @@
         \begin{tabular}{c}
             {\large $g(x) = - \myRoot{x} $ } 
             \\ \hline
-            $a=-1$ 
+            $a=$\gap{-1} 
             \\ \hline
             \begin{tikzpicture}[
                 scale=0.25,
@@ -227,8 +227,8 @@
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
                 \tkzText[right](5.8,2.5){\large $f$}
                 %
-                \tkzFct[domain = -6:6, thick, dashed]{-sqrt(x)}
-                \tkzText[right](5.8,-2.5){\large$g$}
+                % \tkzFct[domain = -6:6, thick, dashed]{-sqrt(x)}
+                % \tkzText[right](5.8,-2.5){\large$g$}
             \end{tikzpicture}
             \\
         \end{tabular}
