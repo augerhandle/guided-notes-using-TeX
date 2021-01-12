@@ -1,10 +1,14 @@
 \section{Transformation Rules}
 
+\begin{tcolorbox}[
+    title={Vertical Shift Up/Down},
+    colbacktitle=black!10!white,
+    colback=white,
+    coltitle=black, fonttitle={\Large\scshape},
+]
 \begin{center}
-    {\Large\scshape Vertical Shift Up/Down}\\[0.5em]
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ r | c | c }
-        \toprule
+    \begin{tabular}{ r c | c }
         \multirow{4}{*}{\Large   $g(x) = \myRoot{x} + k$   } 
             & {\large $g(x) = \myRoot{x} + 3$ }
             & {\large $g(x) = \myRoot{x} - 2$ }\\ \cline{2-3}
@@ -56,16 +60,19 @@
             \end{tikzpicture}
             } 
             \\
-        \bottomrule
     \end{tabular}
 \end{center}
+\end{tcolorbox}
 
+\begin{tcolorbox}[
+    title={Horizontal Shift Left/Right},
+    colbacktitle=black!10!white,
+    colback=white,
+    coltitle=black, fonttitle={\Large\scshape},
+]
 \begin{center}
-    {\Large\scshape Horizontal Shift Left/Right}\nopagebreak\\
-    {\small $h$ is the {\bfseries\itshape opposite} of what you see}\nopagebreak\\[0.5em]
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ r | c | c }
-        \toprule
+    \begin{tabular}{ r c | c }
         \multirow{4}{*}{\Large   $g(x) = \myRoot{x-h} $   } 
             & {\large $g(x) = \myRoot{x-5} $ } 
             & {\large $g(x) = \myRoot{x+4} $ } \\ \cline{2-3}
@@ -115,15 +122,21 @@
                 \tkzText[right](2.5,4){\large$g$}
             \end{tikzpicture}
             } \\
-        \bottomrule
     \end{tabular}
 \end{center}
 
+Remember, $h$ is the \gap{opposite} of what you see.
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    title={Vertical Stretch/Compression},
+    colbacktitle=black!10!white,
+    colback=white,
+    coltitle=black, fonttitle={\Large\scshape},
+]
 \begin{center}
-    {\Large\scshape Vertical Stretch/Compression}\nopagebreak\\[0.5em]
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ r | l | l }
-        \toprule
         \multirow{4}{*}{   \Large $g(x) = a \myRoot{x} $   } 
             & {\large $g(x) = 2 \myRoot{x} $ }
             & {\large $g(x) = \frac{1}{2} \myRoot{x} $} \\ \cline{2-3}
@@ -177,17 +190,19 @@
             \end{tikzpicture}
             } 
             \\
-        \bottomrule
     \end{tabular}
 \end{center}
+\end{tcolorbox}
 
-
+\begin{tcolorbox}[
+    title={Reflection Across the $x$-axis},
+    colbacktitle=black!10!white,
+    colback=white,
+    coltitle=black, fonttitle={\Large\scshape},
+]
 \begin{center}
-    {\Large\scshape Reflection Across the $x$-axis}\nopagebreak\\
-    {\small whenever $a$ is {\bfseries\itshape negative}}\nopagebreak\\[0.5em]
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ r | l }
-        \toprule
         \multirow{3}{*}{   \Large $g(x) = a \myRoot{x} $   } 
             & {\large $g(x) = - \myRoot{x} $ }  \\ \cline{2-2}
             & $a=-1$  \\ \cline{2-2}
@@ -211,6 +226,9 @@
                 \tkzText[right](5.8,-2.5){\large$g$}
             \end{tikzpicture}
             } \\
-        \bottomrule
     \end{tabular}
 \end{center}
+
+Whenever $a$ is \gap{negative},
+there is a \gap{reflection} across the $x$-axis.
+\end{tcolorbox}
