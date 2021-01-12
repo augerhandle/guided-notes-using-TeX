@@ -5,7 +5,7 @@
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ r | c | c }
         \toprule
-        \multirow{3}{*}{\Large   $g(x) = f(x) + k$   } 
+        \multirow{4}{*}{\Large   $g(x) = \myRoot{x} + k$   } 
             & {\large $g(x) = \myRoot{x} + 3$ }
             & {\large $g(x) = \myRoot{x} - 2$ }\\ \cline{2-3}
             %
@@ -14,25 +14,107 @@
             %
             & shift up by 3 
             & shift down by 2 \\ 
+            %
+            &
+            {
+                \begin{tikzpicture}[
+                    scale=0.25,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+                \tkzGrid
+                \tkzDrawXY[label={},color=black,]
+                % \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+                \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+                \tkzText[right](5.5,2){\large $f$}
+                %
+                \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)+3}
+                \tkzText[right](2.5,4){\large$g$}
+            \end{tikzpicture}
+            } 
+            &
+            {
+                \begin{tikzpicture}[
+                    scale=0.25,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+                \tkzGrid
+                \tkzDrawXY[label={},color=black,]
+                % \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+                \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+                \tkzText[right](6,3){\large $f$}
+                %
+                \tkzFct[domain = -6:6, thick, dashed]{sqrt(x)-2}
+                \tkzText[right](6,1){\large$g$}
+            \end{tikzpicture}
+            } 
+            \\
         \bottomrule
     \end{tabular}
 \end{center}
 
 \begin{center}
-    {\Large\scshape Horizontal Shift Left/Right} \\
-    {\small $h$ is the {\itshape opposite} of what you see}\\[0.5em]
+    {\Large\scshape Horizontal Shift Left/Right}\nopagebreak\\
+    {\small $h$ is the {\bfseries\itshape opposite} of what you see}\nopagebreak\\[0.5em]
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ r | c | c }
         \toprule
-        \multirow{3}{*}{\Large   $g(x) = f(x-h) $   } 
+        \multirow{4}{*}{\Large   $g(x) = \myRoot{x-h} $   } 
             & {\large $g(x) = \myRoot{x-5} $ } 
-            & {\large $g(x) = \myRoot{x+1} $ } \\ \cline{2-3}
+            & {\large $g(x) = \myRoot{x+4} $ } \\ \cline{2-3}
             %
             & $h=5$ 
-            & $h=-1$ \\ \cline{2-3}
+            & $h=-4$ \\ \cline{2-3}
             %
             & shift right by 5 
-            & shift left by 1 \\ 
+            & shift left by 4 \\ 
+            &
+            {
+                \begin{tikzpicture}[
+                    scale=0.25,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[ xmax=10, xmin=-2,  ymax=6, ymin=-6, ]
+                \tkzGrid
+                \tkzDrawXY[label={},color=black,]
+                % \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+                \tkzFct[domain = 0:10,thick, solid]{sqrt(x)}
+                \tkzText[right](0.25,2.25){\large $f$}
+                %
+                \tkzFct[domain = -6:10, thick, dashed]{sqrt(x-5)}
+                \tkzText[right](4,-1){\large$g$}
+            \end{tikzpicture}
+            } 
+            &
+            {
+                \begin{tikzpicture}[
+                    scale=0.25,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+                \tkzGrid
+                \tkzDrawXY[label={},color=black,]
+                % \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+                \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+                \tkzText[right](5.5,2){\large $f$}
+                %
+                \tkzFct[domain = -6:6, thick, dashed]{sqrt(x+4)}
+                \tkzText[right](2.5,4){\large$g$}
+            \end{tikzpicture}
+            } \\
         \bottomrule
     \end{tabular}
 \end{center}
@@ -42,7 +124,7 @@
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ r | l | l }
         \toprule
-        \multirow{4}{*}{   \Large $g(x) = a f(x) $   } 
+        \multirow{4}{*}{   \Large $g(x) = a \myRoot{x} $   } 
             & {\large $g(x) = 2 \myRoot{x} $ }
             & {\large $g(x) = \frac{1}{2} \myRoot{x} $} \\ \cline{2-3}
             %
@@ -54,17 +136,59 @@
             %
             & stretch by a factor of 5 
             & compress by a factor of $1/2$ \\ 
+            &
+            {
+                \begin{tikzpicture}[
+                    scale=0.25,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+                \tkzGrid
+                \tkzDrawXY[label={},color=black,]
+                % \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+                \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+                \tkzText[right](5.8,2.5){\large $f$}
+                %
+                \tkzFct[domain = -6:6, thick, dashed]{2*sqrt(x)}
+                \tkzText[right](5.8,5){\large$g$}
+            \end{tikzpicture}
+            } 
+            &
+            {
+                \begin{tikzpicture}[
+                    scale=0.25,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+                ]
+                \scriptsize
+                \tkzInit[ xmax=6, xmin=-6,  ymax=6, ymin=-6, ]
+                \tkzGrid
+                \tkzDrawXY[label={},color=black,]
+                % \tkzLabelX[orig=false,]
+                % \tkzLabelY[orig=false,]
+                \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
+                \tkzText[right](5.8,3){\large $f$}
+                %
+                \tkzFct[domain = -6:6, thick, dashed]{0.5*sqrt(x)}
+                \tkzText[right](5.8,1){\large$g$}
+            \end{tikzpicture}
+            } 
+            \\
         \bottomrule
     \end{tabular}
 \end{center}
 
 
 \begin{center}
-    {\Large\scshape Reflection Across the $x$-axis}\nopagebreak\\[0.5em]
+    {\Large\scshape Reflection Across the $x$-axis}\nopagebreak\\
+    {\small whenever $a$ is {\bfseries\itshape negative}}\nopagebreak\\[0.5em]
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{ r | l }
         \toprule
-        \multirow{3}{*}{   \Large $g(x) = - f(x) $   } 
+        \multirow{3}{*}{   \Large $g(x) = a \myRoot{x} $   } 
             & {\large $g(x) = - \myRoot{x} $ }  \\ \cline{2-2}
             & $a=-1$  \\ \cline{2-2}
             & 
@@ -81,7 +205,7 @@
                 % \tkzLabelX[orig=false,]
                 % \tkzLabelY[orig=false,]
                 \tkzFct[domain = 0:6,thick, solid]{sqrt(x)}
-                \tkzText[right](5.8,2){\large $f$}
+                \tkzText[right](5.8,2.5){\large $f$}
                 %
                 \tkzFct[domain = -6:6, thick, dashed]{-sqrt(x)}
                 \tkzText[right](5.8,-2.5){\large$g$}
