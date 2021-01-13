@@ -1,0 +1,89 @@
+\section{Single Transformations}
+
+Last time, 
+we talked about seven kinds of transformations.
+
+\begin{center}
+\begin{tabular}{r||c|l}
+    {\bfseries\itshape transformation} & {\bfseries\itshape example} & {\bfseries\itshape description}\\
+    \midrule
+    {\itshape shift right}          & $g(x) = \myRoot{x-1}$ & shift right by 1\\
+    {\itshape shift left}           & $g(x) = \myRoot{x+2}$ & shift left by 2\\
+    {\itshape shift up}             & $g(x) = \myRoot{x}+3$ & shift up by 3\\
+    {\itshape shift down}           & $g(x) = \myRoot{x}-4$ & shift down by 4\\
+    {\itshape vertical stretch}     & $g(x) = 5\myRoot{x}$  & stretch by a factor of 5\\
+    {\itshape vertical compression} & $g(x) = \frac{1}{6}\myRoot{x-1}$ & compress by a factor of $\frac{1}{6}$\\
+    {\itshape reflection}           & $g(x) = -\myRoot{x-1}$ & reflect across the $x$-axis\\
+\end{tabular}
+\end{center}
+
+\section{Composite Transformations}
+
+A \gap{composite} transformation involves two or more transformations of the parent function.
+
+\begin{myProblem}[\normalsize]{0.5in}[What two transformations are involved in $g(x)$?]{
+    $g(x) = 3 \myRoot{x} + 7$
+    }
+\end{myProblem}
+
+The general form of a composite transformation of a square root function is:
+
+{\centering
+\begin{tcolorbox}[width=3in]
+    \large%
+    \[   g(x) = {\boldsymbol a} \myRoot{x-{\boldsymbol h}} + {\boldsymbol k}   \]
+\end{tcolorbox}
+}
+
+\begin{my2Problems}[\normalsize]{0.5in}[Find the values of $a$, $h$, and $k$ in $g(x)$.]
+    {
+    $g(x) = 3 \myRoot{x-5} + 7$
+    }
+    {
+    $g(x) = -2 \myRoot{x+6} -8$
+    }
+\end{my2Problems}
+
+\begin{minipage}{0.49\linewidth}
+    \begin{center}
+        \begin{tcolorbox}[title={\centering\LARGE $h$},colback=white,coltitle=black,colbacktitle=black!10!white,]
+            \renewcommand{\arraystretch}{1.25}
+            \large
+            \begin{tabular}{r|l}
+                $h>0$   &   shift \gap{right} by $h$ \\
+                $h<0$   &   shift \gap{left} by $|h|$ \\
+            \end{tabular}
+        \end{tcolorbox}
+    \end{center}
+\end{minipage}
+%
+\hfill
+%
+\begin{minipage}{0.49\linewidth}
+    \begin{center}
+        \begin{tcolorbox}[title={\centering\LARGE $k$},colback=white,coltitle=black,colbacktitle=black!10!white,]
+            \renewcommand{\arraystretch}{1.25}
+            \large
+            \begin{tabular}{r|l}
+                $k>0$   &   shift \gap{up} by $k$ \\ 
+                $k<0$   &   shift \gap{down} by $|k|$ \\
+            \end{tabular}
+        \end{tcolorbox}
+    \end{center}
+\end{minipage}
+
+\hfill
+\begin{minipage}{0.75\linewidth}
+    \begin{center}
+        \begin{tcolorbox}[title={\centering\LARGE $a$},colback=white,coltitle=black,colbacktitle=black!10!white,]
+            \renewcommand{\arraystretch}{1.25}
+            \large
+            \begin{tabular}{r|l}
+                $a<0$       &   \gap{reflect} across the $x$-axis \\ 
+                $|a|>1$     &    \gap{stretch} by a factor of $|a|$ \\
+                $0<|a|<1$   &    \gap{compress} by a factor of $|a|$ \\
+            \end{tabular}
+        \end{tcolorbox}
+    \end{center}
+\end{minipage}
+\hfill
