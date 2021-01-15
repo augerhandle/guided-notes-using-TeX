@@ -31,6 +31,38 @@
     \end{tcbraster}
 }
 
+
+% #1 : font style for box titles
+% #2 : vertical height of the problem boxes
+% #3 : optional directions for all the problems
+% #4 : details for problem 1
+%
+\NewDocumentEnvironment{myWideProblem}{ O{\large} m o m  }{%
+    \IfValueT{#3}{\noindent#3\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=1,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #1#4
+            \tcblower\vspace{#2}
+        \end{tcolorbox}
+}{%
+    \end{tcbraster}
+}
+
+
+
 % an environment for two adjacent problems
 %
 % #1 : font style for box titles
