@@ -1,0 +1,40 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{5} 
+\renewcommand{\myCurrentChapterTitle}{Radical Functions}
+
+\myLesson{Cube and Cube Root Functions}[7]
+
+\begin{myObjectives}
+    \myObjective{sketch}{the graph of the \gap{cube} and \gap{cube root} parent functions}
+    %
+    \begin{taggedblock}{on-level}
+        \myObjective{find}{the \gap{domain} and \gap{range} of the square root parent function}
+    \end{taggedblock}
+    \begin{taggedblock}{pre-AP}
+        \myObjective{find}{\gap{attributes} of the square root parent function }
+    \end{taggedblock}
+    %
+    \myObjective{find}{the \gap{domain} of a \gap{general} square root function }
+\end{myObjectives}
+%
+\begin{myVocabulary}
+    \myDefinition{function family}{a \gap{group} of functions that look alike}
+    \myDefinition{parent function}{the \gap{simplest} function in a \gap{family}}
+    \myDefinition{domain}{all the \gap{$x$} (input) values for a function}
+    \myDefinition{range}{all the \gap{$y$} (output) values for a function}
+\end{myVocabulary}
+
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}

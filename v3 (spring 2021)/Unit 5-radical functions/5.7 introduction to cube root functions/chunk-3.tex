@@ -1,0 +1,85 @@
+\newpage
+
+\section{%
+    \texorpdfstring
+        {The cube root parent function: $f(x)=\myRoot[3]{x}$} % This will to into the document
+        {The cube root parent function} % This will go into the PDF Bookmarks
+}
+
+\gap{Cube root} functions are also called \gap{radical} functions 
+with an \gap{index} equal to \gap{3}.
+
+
+\begin{center}
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \begin{center}
+            \large
+            \renewcommand{\arraystretch}{1.25}
+            \begin{tabular}{r|l}
+                $x$ & $y=\myRoot[3]{x}$ \\
+                \midrule
+                \num{-1 000} &  \\
+                $-27$ &  \\
+                $-8$ &  \\
+                $-1$ &  \\
+                $0$ &  \\
+                $1$ &  \\
+                $8$ &  \\
+                $27$ &  \\
+                \num{1 000} &  \\
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+    %
+    % \hfill
+    %
+    \begin{minipage}{0.7\textwidth}
+        \begin{center}
+            \begin{tikzpicture}[
+                    scale=1,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={x}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={y}, },                 
+                ]
+                \small
+                \tkzInit[
+                    xmax=28, xmin=-28, xstep=5,
+                    ymax=10, ymin=-10, ystep=5,
+                ]
+                \tkzGrid[
+                    sub, subxstep=1, subystep=1,
+                ]
+                \tkzDrawXY[label={},color=black,]
+                \tkzLabelX[orig=false,]
+                \tkzLabelY[orig=false,]
+            \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \hfill
+
+    {
+    \vspace{2\baselineskip}
+    \large
+    \renewcommand{\arraystretch}{1.25}
+    \begin{taggedblock}{on-level}
+        \begin{tabular}{r|l}
+            {\sffamily\bfseries Domain} & all \gap{real} numbers\\
+            {\sffamily\bfseries Range}  & all \gap{real} numbers\\
+            {\sffamily\bfseries Inflection Point} & $(x,y) = $ \gap{$(0,0)$}\\
+            {\sffamily\bfseries $x$- and $y$-Intercepts} & $x = $ \gap{$0$}\,,\, $y = $ \gap{$0$}\\
+        \end{tabular}
+    \end{taggedblock}
+    \begin{taggedblock}{pre-AP}
+        \begin{tabular}{rl}
+            {\sffamily\bfseries Domain} & all \gap{real} numbers\\
+            {\sffamily\bfseries Range}  & all \gap{real} numbers\\
+            {\sffamily\bfseries Inflection Point} & $(x,y) = $ \gap{$(0,0)$}\\
+            {\sffamily\bfseries $x$- and $y$-Intercepts} & $x = $ \gap{$0$}\,,\, $y = $ \gap{$0$}\\
+            {\sffamily\bfseries Left End Behavior} 
+                & as $x \rightarrow -\infty $, \, $f(x) \rightarrow$ \gap{$-\infty$}\\
+            {\sffamily\bfseries Right End Behavior} 
+                & as $x \rightarrow +\infty $, \, $f(x) \rightarrow$ \gap{$+\infty$}\\
+        \end{tabular}
+    \end{taggedblock}
+    }
+\end{center}

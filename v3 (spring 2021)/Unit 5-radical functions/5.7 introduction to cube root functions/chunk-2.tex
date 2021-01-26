@@ -1,0 +1,81 @@
+\section{%
+    \texorpdfstring
+        {The cubic parent function: $f(x)=x^3$ } % This will to into the document
+        {The cubic parent function} % This will go into the PDF Bookmarks
+}
+
+\gap{Cubic} functions are also called \gap{power} functions 
+with an \gap{exponent} equal to \gap{3}.
+
+\begin{center}
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \begin{center}
+            \large
+            \renewcommand{\arraystretch}{1.25}
+            \begin{tabular}{r|l}
+                $x$ & $y={x^3}$ \\
+                \midrule
+                $-10$ &  \\
+                $-3$ &  \\
+                $-2$ &  \\
+                $-1$ &  \\
+                $0$ &  \\
+                $1$ &  \\
+                $2$ &  \\
+                $3$ &  \\
+                $10$ &  \\
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+    %
+    % \hfill
+    %
+    \begin{minipage}{0.7\textwidth}
+        \begin{center}
+            \begin{tikzpicture}[
+                    scale=1,
+                    xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={x}, },                 
+                    yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={y}, },                 
+                ]
+                \small
+                \tkzInit[
+                    xmax=10, xmin=-10, xstep=5,
+                    ymax=28, ymin=-28, ystep=5,
+                ]
+                \tkzGrid[
+                    sub, subxstep=1, subystep=1,
+                ]
+                \tkzDrawXY[label={},color=black,]
+                \tkzLabelX[orig=false,]
+                \tkzLabelY[orig=false,]
+            \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \hfill
+
+    {
+    \large
+    \renewcommand{\arraystretch}{1.25}
+    \begin{taggedblock}{on-level}
+        \begin{tabular}{r|l}
+            {\sffamily\bfseries Domain} & all \gap{real} numbers\\
+            {\sffamily\bfseries Range}  & all \gap{real} numbers\\
+            {\sffamily\bfseries Inflection Point} & $(x,y) = $ \gap{$(0,0)$}\\
+            {\sffamily\bfseries $x$- and $y$-Intercepts} & $x = $ \gap{$0$}\,,\, $y = $ \gap{$0$}\\
+        \end{tabular}
+    \end{taggedblock}
+    \begin{taggedblock}{pre-AP}
+        \begin{tabular}{rl}
+            {\sffamily\bfseries Domain} & all \gap{real} numbers\\
+            {\sffamily\bfseries Range}  & all \gap{real} numbers\\
+            {\sffamily\bfseries Inflection Point} & $(x,y) = $ \gap{$(0,0)$}\\
+            {\sffamily\bfseries $x$- and $y$-Intercepts} & $x = $ \gap{$0$}\,,\, $y = $ \gap{$0$}\\
+            {\sffamily\bfseries Left End Behavior} 
+                & as $x \rightarrow -\infty $, \, $f(x) \rightarrow$ \gap{$-\infty$}\\
+            {\sffamily\bfseries Right End Behavior} 
+                & as $x \rightarrow +\infty $, \, $f(x) \rightarrow$ \gap{$+\infty$}\\
+        \end{tabular}
+    \end{taggedblock}
+    }
+\end{center}
