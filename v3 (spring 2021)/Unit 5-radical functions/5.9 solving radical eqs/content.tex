@@ -1,0 +1,30 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{5} 
+\renewcommand{\myCurrentChapterTitle}{Radical Functions}
+
+\myLesson{Solving Radical Equations}[9]
+
+\begin{myObjectives}
+    \myObjective{solve}{square root equations---{\bfseries\itshape again}}
+    \myObjective{solve}{cube root equations}
+\end{myObjectives}
+
+%
+\begin{myVocabulary}
+    \myDefinition{extraneous solution}{a \gap{fake} solution}
+    \myDefinition{isolate}{get something \gap{by itself}}
+\end{myVocabulary}
+
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
+\input{./chunk-2}
