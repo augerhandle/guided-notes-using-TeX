@@ -1,0 +1,49 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{6} 
+\renewcommand{\myCurrentChapterTitle}{Polynomial Functions}
+
+
+\begin{taggedblock}{on-level}
+    \myLesson{Polynomial Basics}[1][a]
+    \begin{myObjectives}
+        \myObjective{identify}{polynomials and \gap{non-}polynomials}
+        \myObjective{classify}{\gap{types} of polynomials}
+        \myObjective{add/subtract/multiply}{polynomials}
+    \end{myObjectives}
+\end{taggedblock}
+
+\begin{taggedblock}{pre-AP}
+    \myLesson{Polynomial Basics}[1]
+    \begin{myObjectives}
+        \myObjective{classify}{polynomials}
+        \myObjective{add/subtract/multiply}{polynomials}
+        \myObjective{solve}{polynomial word problems}
+    \end{myObjectives}
+\end{taggedblock}
+    
+%
+\begin{myVocabulary}
+    \myDefinition{term}{numbers and variables multiplied or divided together }
+    \myDefinition{coefficient}{the number in front of a term}
+    \myDefinition{polynomial}{a bunch of \gap{terms} added or subtracted together}
+    \myDefinition{monomial, binomial, trinomial}{polynomials with \gap{1, 2, 3} terms }
+    \myDefinition{degree}{the largest \gap{exponent} on the variable in a polynomial}
+\end{myVocabulary}
+
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1-identify-OL}
+\input{./chunk-1-classify}
+\input{./chunk-2-ops-PAP}
+\input{./chunk-2-add-sub-OL}
+\input{./chunk-2-multiply-OL}
+\input{./chunk-3-word-probs-PAP}

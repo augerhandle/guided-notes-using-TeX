@@ -62,6 +62,29 @@
 }
 
 
+% #1 : number columns 
+% #2 : directions 
+%
+\NewDocumentEnvironment{myProblemsWithContent}{  mm  }{%
+    \IfValueT{#2}{\noindent#2\nopagebreak}%%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=#1,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        enhanced,%
+        sharp corners,%
+        colback=white,%
+        coltitle=black, colbacktitle=black!10!white,%
+        boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+        title={\texttt{\useMyProblemCounter}},%
+        attach boxed title to top left%
+        ]%
+}{%
+    \end{tcbraster}
+}
+
+
 
 % an environment for two adjacent problems
 %
