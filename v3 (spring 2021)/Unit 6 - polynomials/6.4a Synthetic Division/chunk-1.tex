@@ -1,0 +1,82 @@
+\begin{myCenteredBox}[width=5.25in,]
+    \gap{Synthetic} division is an alternative to \gap{long} division.
+    Use it when the {\bfseries\itshape divisor} is \gap{$(x-a)$}. 
+    \begin{itemize}[nosep]
+        \item It is fast.
+        \item It is short.
+    \end{itemize}
+\end{myCenteredBox}
+
+\begin{myConceptSteps}{~To divide polynomials using synthetic division\dots}
+    \myStep{setup}{%
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Draw an L-shaped frame for two rows of numbers.
+            \item Write the coefficients of the dividend.
+                \begin{itemize}[nosep,leftmargin=*]
+                    \item[$\circ$] in \gap{descending} exponent order
+                    \item[$\circ$] with \gap{zeros} for missing terms
+                \end{itemize}
+            \item Write $a$ from the divisor. 
+                \begin{itemize}[nosep,leftmargin=*]
+                    \item[$\circ$] $a$ is the \gap{opposite} of what you see.
+                \end{itemize}
+        \end{itemize}
+    }
+    \myStep{start}{Bring the \gap{leading} coefficient down.}
+    \myStep{multiply}{Multiply $a$ times the number at the bottom.}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item[$\circ$] Put it under the next coefficient.
+        \end{itemize} 
+    \myStep{add}{Add the numbers in the right column.}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item[$\circ$] Put the sum at the bottom.
+        \end{itemize} 
+    \myStep{repeat}{Repeat until done. (Goto step 3.)}
+    \myStep{identify}{Identify the {\scshape Quotient} and {\scshape Remainder}.}
+    \myStep{result}{%
+        The result is 
+        $ \text{\scshape Quotient} + \frac{\text{\scshape Remainder}}{(x-a)} $
+    }
+\end{myConceptSteps}
+
+\begin{taggedblock}{on-level}
+    \begin{my2Problems}[\large]{5.5in}[
+        Divide these polynomials using synthetic division.
+        ]
+        {
+            \begin{equation*}
+                \frac
+                    {2x^5 - 4x^4 -22x^3 + 19x^2 + 18x + 3}
+                    {(x-4)}
+            \end{equation*}
+        }
+        {
+            \begin{equation*}
+                \frac
+                    {9p^4 -2p + p^5 -24}
+                    {(p+9)}
+            \end{equation*}
+        }
+    \end{my2Problems}
+    \end{taggedblock}
+    
+\begin{taggedblock}{pre-AP}
+\begin{my2Problems}[\large]{5.5in}[
+    Divide these polynomials using synthetic division.
+    ]
+    {
+        \begin{equation*}
+            \frac
+                {2x^5 - 4x^4 -22x^3 + 19x^2 + 18x + 3}
+                {(x-4)}
+        \end{equation*}
+    }
+    {
+        \begin{equation*}
+            {(-24 + 9p^4 -2p + p^5)}
+            \div
+            {(9+p)}
+        \end{equation*}
+    }
+\end{my2Problems}
+\end{taggedblock}
