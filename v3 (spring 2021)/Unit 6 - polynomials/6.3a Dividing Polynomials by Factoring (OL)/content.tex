@@ -1,0 +1,32 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{6} 
+\renewcommand{\myCurrentChapterTitle}{Polynomial Functions}
+
+
+\myLesson{Dividing Polynomials by Factoring}[3][a]
+
+\begin{myObjectives}
+    \myObjective{divide}{polynomials by \gap{factoring}}
+\end{myObjectives}
+
+    
+%
+\begin{myVocabulary}
+    \myDefinition{dividend}{the \gap{numerator} in a division problem, on the top}
+    \myDefinition{divisor}{the \gap{denominator} in a division problem, on the bottom}
+    \myDefinition{quotient}{the \gap{main result} of dividing two polynomials}
+    \myDefinition{remainder}{what is \gap{left over} after you divide}
+\end{myVocabulary}
+
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
