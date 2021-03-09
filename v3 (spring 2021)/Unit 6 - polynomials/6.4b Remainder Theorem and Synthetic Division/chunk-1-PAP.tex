@@ -1,0 +1,75 @@
+\begin{taggedblock}{pre-AP}
+
+
+\section{The Division Algorithm}
+
+If $f(x)$ and $d(x)$ are two polynomials
+(and $d(x) \neq 0$),
+then there are two other polynomials 
+$Q(x)$ and $R(x)$ 
+so that
+{\large
+\begin{myCenteredBox}[width=2.5in]
+    \begin{equation*}
+        \frac{f(x)}{d(x)} = Q(x) + \frac{R(x)}{D(x)}
+    \end{equation*}
+\end{myCenteredBox}
+}
+\begin{minipage}{0.45\textwidth}
+    \vspace{-1em}
+    \begin{itemize}[nosep]
+        \item $f(x)$ is the \gap{quotient}.
+        \item $d(x)$ is the \gap{divisor}.
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    \vspace{-1em}
+    \begin{itemize}[nosep]
+        \item $Q(x)$ is the \gap{quotient}.
+        \item $R(x)$ is the \gap{remainder}.
+    \end{itemize}
+\end{minipage}
+
+
+\begin{myWideProblem}{1.5in}[%
+    Write the Division Algorithm for $f$ and $d$.
+    (This is how we've been doing division of polynomials!)
+    ]
+    {
+        $f(x) = x^3 + 2x^2 - 43x  -25 $, \qquad
+        $d(x) = (x-6) $
+    }
+\end{myWideProblem}
+
+
+
+
+
+\section{The Remainder Theorem}
+
+We can rewrite the division algorithm if we \gap{multiply} 
+by the \gap{divisor}:
+\begin{align*}
+    &\frac{f(x)}{d(x)}      = Q(x) + \frac{R(x)}{d(x)} \\
+\end{align*}
+\vspace{1in}
+
+What happens if we let the \gap{divisor} be \gap{$(x-a)$}?
+\vspace{1in}
+
+And now
+what happens if we let \gap{$x=a$}?
+\vspace{1in}
+
+We have just \gap{derived} the \gap{Remainder} Theorem:
+
+\begin{myCenteredBox}[width=4.75in]
+    To evaluate $f(a)$, calculate the \gap{remainder} of 
+    \large
+    \begin{equation*}
+        \frac{f(x)}{x-a}
+    \end{equation*}
+\end{myCenteredBox}
+
+
+\end{taggedblock}

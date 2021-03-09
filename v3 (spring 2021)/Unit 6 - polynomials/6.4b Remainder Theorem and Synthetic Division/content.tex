@@ -1,0 +1,46 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{6} 
+\renewcommand{\myCurrentChapterTitle}{Polynomial Functions}
+
+
+\myLesson{The Remainder Theorem and Synthetic Division}[4][b]
+
+\begin{taggedblock}{on-level}
+    \begin{myObjectives}
+        \myObjective{evaluate}{polynomials using \gap{synthetic} division}
+    \end{myObjectives}
+    \end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \begin{myObjectives}
+        \myObjective{derive}{the \gap{Remainder} Theorem given the \gap{Division} Algorithm}
+        \myObjective{evaluate}{polynomials using \gap{synthetic} division}
+    \end{myObjectives}
+\end{taggedblock}
+            
+    
+\begin{taggedblock}{on-level}
+    \begin{myVocabulary}
+        \myDefinition{synthetic}{imitation, made for special situations}
+    \end{myVocabulary}
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \begin{myVocabulary}
+        \myDefinition{synthetic}{imitation, made for special situations}
+        \myDefinition{derive}{to start with one thing and show that another thing is true}
+    \end{myVocabulary}
+\end{taggedblock}
+            
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1-PAP}
+\input{./chunk-1-OL}
+\input{./chunk-2}
