@@ -1,0 +1,47 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{6} 
+\renewcommand{\myCurrentChapterTitle}{Polynomial Functions}
+
+
+\myLesson{The Factor Theorem}[5]
+
+\begin{myObjectives}
+    \myObjective{understand}{%
+        the relationship between the following
+        \begin{itemize}[nosep]
+            \item \gap{factors} of $f(x)$
+            \item \gap{$x$-intercepts} or \gap{zeros} of $f(x)$
+            \item \gap{roots} or \gap{solutions} of the equation $f(x)=0$
+        \end{itemize}
+    }
+    \myObjective{determine}{%
+        if $(x-a)$ is a factor of a polynomial using \gap{synthetic} division
+        }
+\end{myObjectives}
+            
+\begin{myVocabulary}
+    \myDefinition{$x$-intercepts}{%
+        The points where a graph of a function
+        crosses the \gap{$x$-axis}.
+    }
+    \myDefinition{zeros}{%
+        The \gap{$x$}-coordinates of the $x$-intercepts of a function.
+    }
+    \myDefinition{roots, solutions}{%
+        The $x$ values that make $f(x)=0$.
+    }
+\end{myVocabulary}
+            
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
+\input{./chunk-2}
