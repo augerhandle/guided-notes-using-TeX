@@ -1,0 +1,75 @@
+\section{Direct Variation}
+%
+\begin{minipage}{0.75\textwidth}
+    \begin{itemize}
+        \item \gap{Direct} variation describes a relationship between two variables.
+        \item They are {\bfseries\itshape directly} \gap{proporational}.
+        \item When one variable \gap{decreases}, so does the other.
+        \item When one variable \gap{decreases}, so does the other.
+        \item Their \gap{ratio} is {\bfseries\itshape constant}.
+        \item This is a \gap{linear} function.
+    \end{itemize}
+    
+\end{minipage}
+\hfill
+\begin{minipage}{0.24\textwidth}
+    \begin{center}
+        \begin{tikzpicture}[
+            scale=0.34,
+            xaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+            yaxe style/.style = { very thick, arrows={-{Straight Barb}}, label={}, },                 
+        ]
+        \scriptsize
+        \tkzInit[ xmax=4, xmin=-4,  ymax=4, ymin=-4, ]
+        \tkzGrid
+        \tkzDrawXY[label={},color=black,]
+        % \tkzLabelX[orig=false,]
+        % \tkzLabelY[orig=false,]
+        \tkzFct[domain = -4:4,thick, solid]{2*x}
+        % \tkzText[left](-1.5,2){\Large$f$}
+        \end{tikzpicture}
+        \end{center}
+\end{minipage}
+
+
+
+
+\vspace{2em}
+\begin{tcbraster}[
+        raster columns=2,
+        raster equal height,
+        raster left skip = 2in, raster right skip = 2in,
+        colback=white,
+        width=3in,
+        ]
+    \begin{tcolorbox}
+        \Large\centering
+        $ y = kx $
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        \Large\centering
+        $ k = \frac{y}{x} $
+    \end{tcolorbox}
+\end{tcbraster}
+
+\vspace{1em}
+$k$ is called the constant of \gap{variation}.
+
+
+
+\begin{my2Problems}{2in}
+        {
+            The graph of a function passes through the point
+            $(-12,-9)$.
+            If $y$ is {\bfseries\itshape directly} proporational
+            to $x$.
+            Write an equation representing the relationship.
+            Use it to determine the value of $y$ when $x=32$.
+        }
+        {
+            If $x$ and $y$ vary {\bfseries\itshape directly},
+            and $y=52$ when $x=4$.
+            Write an equation representing the relationship.
+            Use it to determine the value of $y$ when $x=32$.
+        }
+\end{my2Problems}
