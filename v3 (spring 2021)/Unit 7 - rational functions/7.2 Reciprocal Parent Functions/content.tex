@@ -1,0 +1,54 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{7} 
+\renewcommand{\myCurrentChapterTitle}{Rational Functions}
+
+
+\begin{taggedblock}{on-level}
+    \myLesson{The Reciprocal Parent Function}[2]
+\end{taggedblock}
+\begin{taggedblock}{pre-AP}
+    \myLesson{The Reciprocal Parent Function}[2][a]
+\end{taggedblock}
+
+\begin{taggedblock}{on-level}
+    \begin{myObjectives}
+        \myObjective{write}{the equation of the reciprocal parent function}
+        \myObjective{sketch}{the graph of the reciprocal parent function}
+        \myObjective{find}{attributes of the reciprocal parent function}
+    \end{myObjectives}    
+\end{taggedblock}
+
+\begin{taggedblock}{pre-AP}
+    \begin{myObjectives}
+        \myObjective{write}{the equation of the reciprocal parent function}
+        \myObjective{sketch}{the graph of the reciprocal parent function}
+        \myObjective{find}{attributes of the reciprocal parent function}
+        \myObjective{write}{domain and range using several notations}
+    \end{myObjectives}
+\end{taggedblock}
+
+            
+\begin{myVocabulary}
+    \myDefinition{function family}{a bunch of functions that look \gap{alike}}
+    \myDefinition{parent function}{the \gap{simplest} function in a function family}
+    \myDefinition{attribute}{an interesting \gap{fact}}
+    \myDefinition{reciprocal}{flip a \gap{fraction}, $x \Longrightarrow \frac{1}{x}$}
+    \myDefinition{asymptote}{a \gap{line} that a curve gets very, very \gap{close to}}
+    \myDefinition{branches}{disconnected \gap{parts} of a curve}
+\end{myVocabulary}
+            
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-0}
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
