@@ -1,0 +1,55 @@
+\newpage
+\section{Single transformations cheat sheet}
+
+We won't go over this in class.
+But I'm including it in these notes just in case it's useful for you.
+
+\begin{myCenteredBox}[
+    colback=white,
+    title={\large seven kinds of transformations},
+    colbacktitle={black!10!white},
+    coltitle=black,
+    ]
+\begin{center}
+    % \large
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabular}{r|l||r|l}
+        {\bfseries\itshape transformation} 
+            & {\bfseries\itshape formula} 
+            & {\bfseries\itshape example} 
+            & {\bfseries\itshape description}\\
+        \hline
+        {\itshape shift right/left}          
+            & $g(x) = \frac{1}{x-{\boldsymbol h}} $  
+            & $g(x) = \frac{1}{x-1}$ 
+            & (${\boldsymbol h}=1$) shift right by \gap{1}\\
+        {}           
+            &                         
+            & $g(x) = \frac{1}{x+2}$ 
+            & (${\boldsymbol h}=-2$) shift left by \gap{2}\\ 
+        \hline
+        {\itshape shift up/down}             
+            & $g(x) = \frac{1}{x} + {\boldsymbol k}$ 
+            & $g(x) = \frac{1}{x}+3$ 
+            & (${\boldsymbol k}=3$) shift up by \gap{3}\\
+        {}           
+            &                         
+            & $g(x) = \frac{1}{x}-4$ 
+            & (${\boldsymbol k}=-4$) shift down by \gap{4}\\
+        \hline
+        {\itshape vertical stretch/compress}     
+            & $g(x) = \frac{\boldsymbol a}{x} $  
+            & $g(x) = \frac{5}{x}$  
+            & (${\boldsymbol a}=5$) stretch by a factor of \gap{5}\\
+        {} 
+            &                         
+            & $g(x) = \frac{1/6}{x} = \frac{1}{6x}$ 
+            & (${\boldsymbol a}=\frac{1}{6}$) compress by a factor of \gap{$\frac{1}{6}$}\\
+        \hline
+        {\itshape reflection}           
+            & $g(x) = \frac{\boldsymbol a}{x} $  
+            & $g(x) = \frac{-1}{x} = -\frac{1}{x}$ 
+            & (${\boldsymbol a}=-1$) reflect across the $x$-axis\\
+    \end{tabular}
+\end{center}
+\end{myCenteredBox}
