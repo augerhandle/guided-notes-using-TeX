@@ -1,0 +1,204 @@
+\documentclass[12pt,letterpaper]{memoir}
+\usepackage{blindtext}
+\usepackage{ifthen} 
+
+% ------------
+% GENERAL DEFS
+
+\newcommand{\myClassname}{Pre-AP Algebra 2}
+
+% ------------
+% Redefining sectioning commands
+
+\renewcommand{\thepart}{\arabic{part}}
+\renewcommand{\partname}{Unit}
+\renewcommand{\chaptername}{Lesson}
+
+% memoir mechanism to remove chapter numbers from section numbering
+\makeatletter
+\renewcommand\thesection{\@arabic\c@section}
+\makeatother
+
+% ------------
+
+% ------------
+% HEADERS AND FOOTERS
+% ------------
+% I want a rule on both my header and footer
+\setlength{\headwidth}{\textwidth}
+
+% I don't want the header/footers to uppercase everything
+\nouppercaseheads
+
+% This is the page style I will use.
+% I want this same style on the first page of chapters
+\copypagestyle{myPagestyle}{headings}
+\aliaspagestyle{chapter}{myPagestyle}
+
+% Ok, NOW I'm starting to modify headers and footers...
+\newcommand{\myHeaderFooterStyle}{\tiny\sffamily\itshape}
+
+\newcommand{\myHeaderLeft}  {\myHeaderFooterStyle\myClassname}
+\newcommand{\myHeaderCenter}{}
+\newcommand{\myHeaderRight} {\myHeaderFooterStyle\leftmark}
+\newcommand{\myFooterLeft}  {\myHeaderFooterStyle\myClassname}
+\newcommand{\myFooterCenter}{\myHeaderFooterStyle\thepage}
+\newcommand{\myFooterRight} {\myHeaderFooterStyle\rightmark}
+
+\makeevenhead{myPagestyle}{\myHeaderLeft}{\myHeaderCenter}{\myHeaderRight}
+\makeoddhead {myPagestyle}{\myHeaderLeft}{\myHeaderCenter}{\myHeaderRight}
+\makeevenfoot{myPagestyle}{\myFooterLeft}{\myFooterCenter}{\myFooterRight}
+\makeoddfoot {myPagestyle}{\myFooterLeft}{\myFooterCenter}{\myFooterRight}
+
+% Need to do this, otherwise they will invoke \markboth and thus
+% clobber what's getting set
+\clearmark{book}
+\clearmark{chapter}
+\clearmark{section}
+\clearmark{subsection}
+
+% \makepsmarks is the commmand that automates the creation of 
+% \leftmark and \rightmark by the various sectioning commands.
+% I am redefining it here (as discussed in the memman doc) 
+% to do what I want.
+%
+% \leftmark is set at the FIRST occurance of \markboth or \markright.
+% \rightmark is set at the LAST occurance of them.
+%
+\makeatletter
+\makepsmarks{headings}{%
+    \def\partmark##1{%
+        \markboth{%
+        % \ifnum\c@secnumdepth > \m@ne
+        %     \if@mainmatter
+              \partname\ \thepart\ % ie, "Unit 1"
+        %     \fi
+        % \fi
+        ##1}{}
+    }%
+    \def\chaptermark##1{%
+        \markright{%
+            % \ifnum\c@secnumdepth > \z@
+                \thepart.\thechapter \ % ie, "<unit#>.<lesson#>"
+            % \fi
+        ##1}%
+    }
+}
+\makeatother
+% ------------
+
+% ------------
+% My chapter style
+
+\makeatletter
+
+\newcommand{\myPrintLessonBanner}[1]{
+    \hrule\vskip0.3\onelineskip%
+    \begin{minipage}{0.3\textwidth}%
+        \huge\bfseries\sffamily%
+        \@chapapp\,\thepart.\thechapter%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}{0.69\textwidth}%
+        \raggedleft\huge\bfseries\sffamily%
+        #1%
+    \end{minipage}%
+    \vskip0.3\onelineskip%
+    \hrule%
+    \vskip2\onelineskip%
+}
+
+\makechapterstyle{myChapterStyle}{%
+    \chapterstyle{default}
+    \renewcommand*{\chapterheadstart}{}
+    \renewcommand*{\printchaptername}{}
+    \renewcommand*{\chapternamenum}{}
+    \renewcommand*{\printchapternum}{}
+    \renewcommand*{\printchaptertitle}[1]{\myPrintLessonBanner{##1}}
+    \renewcommand*{\afterchaptertitle}{}%
+}
+
+\makeatother
+% --------------
+% toggling between pre-AP and on-level output
+% --------------
+
+\RequirePackage{ifthen}
+\makeatletter
+\newboolean{dah@PreAPBoolean}
+\setboolean{dah@PreAPBoolean}{false}
+
+% commands to set PreAP vs. OnLevel
+\newcommand{\myProcessingForPreAP}{
+    \setboolean{dah@PreAPBoolean}{true}
+}
+\newcommand{\myProcessingForOnLevel}{
+    \setboolean{dah@PreAPBoolean}{false}
+}
+
+%
+% TODO: use NewDocumentCommand so that I can default the else clause to be empty.
+%
+\newcommand{\myWhenPreAP}[2]{%
+    \ifthenelse{\boolean{dah@PreAPBoolean}}{#1}{#2}
+}
+\newcommand{\myWhenOnLevel}[2]{%
+    \ifthenelse{\boolean{dah@PreAPBoolean}}{#2}{#1}
+}
+\makeatother
+
+% --------------
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.9in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*}
+
+\begin{document}
+\checkandfixthelayout
+
+\pagestyle{myPagestyle}
+\chapterstyle{myChapterStyle}
+
+\frontmatter
+\tableofcontents*
+
+\mainmatter
+\book{Fall Semester} 
+\part{Introduction to Functions}
+\part{Absolute Value Functions}
+\part{Quadratic Functions}
+\part{Systems of Equations}
+
+\book{Spring Semester}
+\part{Radical Functions}
+\part{Polynomial Functions}
+\part{Rational Functions}
+
+\chapter{Direct and Inverse Variation}
+\section{Introduction}
+This is lesson on direct and inverse variation.
+
+\section{something else}
+\Blindtext.
+
+\chapter{Reciprocal Functions and a few other things}
+
+\section{Introduction}
+This is another lesson. It is on reciprocal functions.
+
+\section{something else}
+\Blindtext
+\Blindtext
+\Blindtext
+
+\part{Exponential and Logarithmic Functions}
+
+\myProcessingForOnLevel
+\myWhenPreAP{PPP}{OOO}
+\myWhenOnLevel{ooo}{ppp}
+
+\myProcessingForPreAP
+\myWhenPreAP{PPP}{OOO}
+\myWhenOnLevel{ooo}{ppp}
+
+
+\end{document}
