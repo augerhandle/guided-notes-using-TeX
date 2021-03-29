@@ -1,0 +1,36 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{7} 
+\renewcommand{\myCurrentChapterTitle}{Rational Functions}
+
+
+\myLesson{Rational Function\\Domains and Holes}[3][a]
+
+\begin{myObjectives}
+    \myObjective{determine}{the \gap{domain} of rational functions}
+    \myObjective{determine}{the \gap{holes} of rational functions}
+    \myObjective{simplify}{rational functions using domain \gap{restrictions} }
+\end{myObjectives}    
+
+\begin{myVocabulary}
+    \myDefinition{domain}{the \gap{allowed} values of $x$}
+    \myDefinition{exclude}{leave something out, \gap{not allow} it}
+    \myDefinition{holes}{$(x,y)$ points where $x$ is \gap{excluded} from the domain}
+    \myDefinition{domain restrictions}{$x$ values that are \gap{excluded} from the domain due to holes}
+\end{myVocabulary}
+
+            
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
