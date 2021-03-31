@@ -120,8 +120,8 @@
     \end{myAnnotate}
 }
 
-\NewDocumentEnvironment{myConceptSteps}{m}{
-    \begin{myListAnnotate}{Key Concept}{#1}[Follow these steps.]
+\NewDocumentEnvironment{myConceptSteps}{m O{Follow these steps.}}{
+    \begin{myListAnnotate}{Key Concept}{#1}[#2]
 }{
     \end{myListAnnotate}
 }

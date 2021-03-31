@@ -1,0 +1,48 @@
+\section{Horizontal asymptotes of rational functions}
+
+Finding the horizontal asymptote of a rational function depend in the \gap{degree} 
+of the {\bfseries\itshape numerator} and {\bfseries\itshape denominator} polynomials.
+Suppose that the rational function is 
+\[ f(x) = \frac{N(x)}{D(x)} \]
+and
+\vspace{-0.5em}
+\begin{itemize}[nosep]
+    \item $d_N$ is the degree of the numerator, $N(x)$
+    \item $d_D$ is the degree of the denominator, $D(x)$.
+\end{itemize}
+\vspace{1em}
+
+\begin{myConceptSteps}{%
+        ~to find the {\bfseries\itshape horizontal asymptote} of a rational function\dots
+    }[%
+        Consider these scenarios.
+    ]
+    \myStep{top heavy}{%
+        If $d_N > d_D$, then there is \gap{no} horizontal asymptote.
+    }
+    \myStep{balanced}{%
+        If $d_N = d_D$, the horizontal asymptote is 
+        \[
+            y = \frac
+            {\text{\itshape leading coefficient of the numerator}}
+            {\text{\itshape leading coefficient of the denominator}}
+        \]
+    \myStep{bottom heavy}{%
+        If $d_N < d_D$, the horizontal asymptote is \[y=0\]
+    }
+    }
+\end{myConceptSteps}
+
+\begin{my2Problems}{3in}[Find the horizontal asymptote of each function.]
+    {
+        $f(x) = \frac{5x^5 + 3x -8}{3x^2-x+7}$
+    }
+    {
+        $g(x) = \frac{10x^3 - 12x - 11}{5x^3 + x^2  + 13}$
+    }
+\end{my2Problems}
+\begin{myProblem}{3in}
+    {
+        $h(x) = \frac{3x^2 + 2x + 1}{7x^5 + x^3-36}$
+    }
+\end{myProblem}
