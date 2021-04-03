@@ -1,5 +1,6 @@
 \documentclass[12pt,letterpaper]{memoir}
 \usepackage{blindtext}
+\usepackage{xparse}
 \usepackage{../common/papol}
 
 % ------------
@@ -63,15 +64,11 @@
 \makepsmarks{headings}{%
     \def\partmark##1{%
         \markboth{%
-        % \ifnum\c@secnumdepth > \m@ne
-        %     \if@mainmatter
               \partname\ \thepart\ % ie, "Unit 1"
-        %     \fi
-        % \fi
         ##1}{}
     }%
     \def\chaptermark##1{%
-        \markright{%
+        \markboth{\partname~\thepart~\myUnitTitle}{%
             \thepart.\thechapter \ % ie, "<unit#>.<lesson#>"
         ##1}%
     }
@@ -114,39 +111,66 @@
 }
 
 % --------------
+\newcommand{\myUnitTitle}{}
+
+\let\oldpart\part
+\renewcommand{\part}[1]{
+    \renewcommand{\myUnitTitle}{#1}
+    \oldpart{#1}
+}
+
+% if we want to actually typeset the unit
+% (We are "stashing" the title for use in the footer.)
+%
+% #1 - the unit title
+\newcommand{\myUnit}[1]{
+    \renewcommand{\myUnitTitle}{#1}
+    \part{#1}
+}
+% if we don't want to typeset the unit (ie, just its lessons)
+%
+% #1 - the "hard-coded" unit number
+% #2 - the unit title
+\NewDocumentCommand{\myDummyUnit}{ m m }{
+    \setcounter{part}{#1}
+    \renewcommand{\myUnitTitle}{#2}
+}
+
+% --------------
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.9in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
 
 \begin{document}
 \checkandfixthelayout
-\forPAP
+\forOL
 
 \pagestyle{myPagestyle}
 \chapterstyle{myChapterStyle}
 
 \frontmatter
-\tableofcontents*
+% \tableofcontents*
 
 \mainmatter
-\book{Fall Semester} 
-\part{Introduction to Functions}
-\part{Absolute Value Functions}
-\part{Quadratic Functions}
-\part{Systems of Equations}
+% \book{Fall Semester} 
+% \part{Introduction to Functions}
+% \part{Absolute Value Functions}
+% \part{Quadratic Functions}
+% \part{Systems of Equations}
 
-\book{Spring Semester}
-\part{Radical Functions}
-\part{Polynomial Functions}
-\part{Rational Functions}
+% \book{Spring Semester}
+% \part{Radical Functions}
+% \part{Polynomial Functions}
+%\part{Rational Functions}
 
-\chapter{Direct and Inverse Variation}
-\section{Introduction}
-This is lesson on direct and inverse variation.
+% \chapter{Direct and Inverse Variation}
+% \section{Introduction}
+% This is lesson on direct and inverse variation.
 
-\section{something else}
-\Blindtext.
+% \section{something else}
+% \Blindtext.
 
+\myDummyUnit{7}{Rational Functions}
 \chapter{Reciprocal Functions and a few other things}
 
 \section{Introduction}
@@ -154,16 +178,9 @@ This is another lesson. It is on reciprocal functions.
 
 \section{something else}
 \Blindtext
-\Blindtext
-\Blindtext
 
-\part{Exponential and Logarithmic Functions}
-
-\forOL
-\whenOL{OOO}
-
-\forPAP
-\whenPAP{PPP}
+\chapter{2nd lesson}
+foo
 
 
 \end{document}
