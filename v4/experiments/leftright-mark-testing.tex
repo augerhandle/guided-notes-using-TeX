@@ -1,6 +1,6 @@
 \documentclass[12pt,letterpaper]{memoir}
 \usepackage{blindtext}
-\usepackage{ifthen} 
+\usepackage{../common/papol}
 
 % ------------
 % GENERAL DEFS
@@ -14,7 +14,7 @@
 \renewcommand{\partname}{Unit}
 \renewcommand{\chaptername}{Lesson}
 
-% memoir mechanism to remove chapter numbers from section numbering
+% remove chapter numbers from section numbering
 \makeatletter
 \renewcommand\thesection{\@arabic\c@section}
 \makeatother
@@ -120,34 +120,6 @@
 
 \makeatother
 % --------------
-% toggling between pre-AP and on-level output
-% --------------
-
-\RequirePackage{ifthen}
-\makeatletter
-\newboolean{dah@PreAPBoolean}
-\setboolean{dah@PreAPBoolean}{false}
-
-% commands to set PreAP vs. OnLevel
-\newcommand{\myProcessingForPreAP}{
-    \setboolean{dah@PreAPBoolean}{true}
-}
-\newcommand{\myProcessingForOnLevel}{
-    \setboolean{dah@PreAPBoolean}{false}
-}
-
-%
-% TODO: use NewDocumentCommand so that I can default the else clause to be empty.
-%
-\newcommand{\myWhenPreAP}[2]{%
-    \ifthenelse{\boolean{dah@PreAPBoolean}}{#1}{#2}
-}
-\newcommand{\myWhenOnLevel}[2]{%
-    \ifthenelse{\boolean{dah@PreAPBoolean}}{#2}{#1}
-}
-\makeatother
-
-% --------------
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.9in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*}
@@ -192,13 +164,11 @@ This is another lesson. It is on reciprocal functions.
 
 \part{Exponential and Logarithmic Functions}
 
-\myProcessingForOnLevel
-\myWhenPreAP{PPP}{OOO}
-\myWhenOnLevel{ooo}{ppp}
+\forOL
+\whenOL{OOO}
 
-\myProcessingForPreAP
-\myWhenPreAP{PPP}{OOO}
-\myWhenOnLevel{ooo}{ppp}
+\forPAP
+\whenPAP{PPP}
 
 
 \end{document}

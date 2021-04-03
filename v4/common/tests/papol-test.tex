@@ -1,0 +1,19 @@
+\documentclass[12pt,letterpaper]{memoir}
+\usepackage{papol}
+
+\begin{document}
+\section{papol tests}
+    \subsection{default}
+    \whenPAP{FAILED - we should not see this output}
+    \whenOL{PASSED}
+
+    \subsection{forPAP}
+    \forPAP
+    \whenPAP{PASSED}
+    \whenOL{FAILED - we should not see this output}
+
+    \subsection{forOL}
+    \forOL
+    \whenPAP{FAILED - we should not see this output}
+    \whenOL{PASSED}
+\end{document}
