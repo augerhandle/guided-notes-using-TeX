@@ -5,7 +5,7 @@
 % ------------
 % GENERAL DEFS
 
-\newcommand{\myClassname}{Pre-AP Algebra 2}
+\newcommand{\myClassname}{Algebra 2}
 
 % ------------
 % Redefining sectioning commands
@@ -24,8 +24,7 @@
 % ------------
 % HEADERS AND FOOTERS
 % ------------
-% I want a rule on both my header and footer
-\setlength{\headwidth}{\textwidth}
+% \setlength{\headwidth}{\textwidth}
 
 % I don't want the header/footers to uppercase everything
 \nouppercaseheads
@@ -36,14 +35,16 @@
 \aliaspagestyle{chapter}{myPagestyle}
 
 % Ok, NOW I'm starting to modify headers and footers...
-\newcommand{\myHeaderFooterStyle}{\tiny\sffamily\itshape}
+\newcommand{\myHeaderFooterTextStyle}      {\tiny\scshape}
+\newcommand{\myHeaderFooterPagenumberStyle}{\tiny\sffamily\itshape}
 
-\newcommand{\myHeaderLeft}  {\myHeaderFooterStyle\myClassname}
+\newcommand{\myHeaderLeft}  {}
 \newcommand{\myHeaderCenter}{}
-\newcommand{\myHeaderRight} {\myHeaderFooterStyle\leftmark}
-\newcommand{\myFooterLeft}  {\myHeaderFooterStyle\myClassname}
-\newcommand{\myFooterCenter}{\myHeaderFooterStyle\thepage}
-\newcommand{\myFooterRight} {\myHeaderFooterStyle\rightmark}
+\newcommand{\myHeaderRight} {\myHeaderFooterTextStyle\whenPAP{Pre-AP~}\myClassname}
+
+\newcommand{\myFooterLeft}  {\myHeaderFooterTextStyle\leftmark}
+\newcommand{\myFooterCenter}{\myHeaderFooterPagenumberStyle\thepage}
+\newcommand{\myFooterRight} {\myHeaderFooterTextStyle\rightmark}
 
 \makeevenhead{myPagestyle}{\myHeaderLeft}{\myHeaderCenter}{\myHeaderRight}
 \makeoddhead {myPagestyle}{\myHeaderLeft}{\myHeaderCenter}{\myHeaderRight}
@@ -52,18 +53,11 @@
 
 % Need to do this, otherwise they will invoke \markboth and thus
 % clobber what's getting set
-\clearmark{book}
-\clearmark{chapter}
 \clearmark{section}
 \clearmark{subsection}
 
 % \makepsmarks is the commmand that automates the creation of 
 % \leftmark and \rightmark by the various sectioning commands.
-% I am redefining it here (as discussed in the memman doc) 
-% to do what I want.
-%
-% \leftmark is set at the FIRST occurance of \markboth or \markright.
-% \rightmark is set at the LAST occurance of them.
 %
 \makeatletter
 \makepsmarks{headings}{%
@@ -78,9 +72,7 @@
     }%
     \def\chaptermark##1{%
         \markright{%
-            % \ifnum\c@secnumdepth > \z@
-                \thepart.\thechapter \ % ie, "<unit#>.<lesson#>"
-            % \fi
+            \thepart.\thechapter \ % ie, "<unit#>.<lesson#>"
         ##1}%
     }
 }
@@ -91,22 +83,25 @@
 % My chapter style
 
 \makeatletter
-
 \newcommand{\myPrintLessonBanner}[1]{
-    \hrule\vskip0.3\onelineskip%
-    \begin{minipage}{0.3\textwidth}%
-        \huge\bfseries\sffamily%
-        \@chapapp\,\thepart.\thechapter%
+    \huge\bfseries\sffamily%
+    \begin{minipage}{0.175\textwidth}%
+        \@chapapp\\%
+        \thepart.\thechapter%
     \end{minipage}%
-    \hfill%
+    %
+    \rule[-1em]{0.5pt}{2.25em}
+    \hfill
+    %
     \begin{minipage}{0.69\textwidth}%
-        \raggedleft\huge\bfseries\sffamily%
-        #1%
+        \raggedleft#1%
     \end{minipage}%
-    \vskip0.3\onelineskip%
+    %
+    % \vskip0.3\onelineskip%
     \hrule%
     \vskip2\onelineskip%
 }
+\makeatother
 
 \makechapterstyle{myChapterStyle}{%
     \chapterstyle{default}
@@ -118,7 +113,6 @@
     \renewcommand*{\afterchaptertitle}{}%
 }
 
-\makeatother
 % --------------
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.9in}{*}{*}
@@ -126,6 +120,7 @@
 
 \begin{document}
 \checkandfixthelayout
+\forPAP
 
 \pagestyle{myPagestyle}
 \chapterstyle{myChapterStyle}
