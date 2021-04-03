@@ -1,7 +1,7 @@
 \documentclass[12pt,letterpaper]{memoir}
 \usepackage{blindtext}
 \usepackage{xparse}
-\usepackage{../common/papol}
+\usepackage{papol}
 
 % ------------
 % GENERAL DEFS
@@ -143,7 +143,6 @@
 
 \begin{document}
 \checkandfixthelayout
-\forOL
 
 \pagestyle{myPagestyle}
 \chapterstyle{myChapterStyle}
@@ -172,6 +171,8 @@
 
 \myDummyUnit{7}{Rational Functions}
 \chapter{Reciprocal Functions and a few other things}
+
+processing for \whenPAP{pre-AP}\whenOL{on-level}
 
 \section{Introduction}
 This is another lesson. It is on reciprocal functions.
