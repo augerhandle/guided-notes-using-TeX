@@ -2,6 +2,7 @@
 \usepackage{blindtext}
 \usepackage{xparse}
 \usepackage{papol}
+\usepackage[coursename=Algebra 2]{lessons}
 
 % ------------
 % GENERAL DEFS
@@ -19,6 +20,7 @@
 \makeatletter
 \renewcommand\thesection{\@arabic\c@section}
 \makeatother
+
 
 % ------------
 
@@ -142,6 +144,7 @@
 \setlrmarginsandblock{0.5in}{*}{*}
 
 \begin{document}
+
 \checkandfixthelayout
 
 \pagestyle{myPagestyle}
@@ -181,7 +184,8 @@ This is another lesson. It is on reciprocal functions.
 \Blindtext
 
 \chapter{2nd lesson}
-foo
+\forPAP
+\lsnPrintCourseName
 
 
 \end{document}

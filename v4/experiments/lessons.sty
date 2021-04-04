@@ -1,0 +1,111 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lessons}[2021/04/02 lessons package]
+
+\RequirePackage{papol}
+\RequirePackage{kvoptions}
+
+% ---------------------------------------------------------------------------
+% package options
+% ---------------------------------------------------------------------------
+\SetupKeyvalOptions{family=lsn,prefix=lsn@}
+\DeclareStringOption{coursename}
+\setkeys{lsn}{coursename=Undefined Course}
+\ProcessKeyvalOptions{lsn}
+
+% ---------------------------------------------------------------------------
+% changes to part/chapter/section
+% ---------------------------------------------------------------------------
+
+% Instead of "Part I" we want "Unit 1"
+\renewcommand{\thepart}{\arabic{part}}
+\renewcommand{\partname}{Unit} 
+
+% Instead of "Chapter 1" we want "Lesson 1"
+\renewcommand{\chaptername}{Lesson}
+
+% remove chapter numbers from section numbering
+\renewcommand\thesection{\@arabic\c@section}
+
+% simulate a part without typesetting one
+% 
+% #1 - the part (unit) number
+% #2 - the part (unit) title
+\newcommand{\dummypart}[2]{%
+    \setcounter{part}{#1}
+    \partmark{#2}
+}
+
+% ---------------------------------------------------------------------------
+% header / footer
+% ---------------------------------------------------------------------------
+\nouppercaseheads
+
+\copypagestyle{lsnPagestyle}{headings}
+\aliaspagestyle{chapter}{lsnPagestyle}
+
+\newcommand{\lsnHeaderLeft}  {}
+\newcommand{\lsnHeaderCenter}{}
+\newcommand{\lsnHeaderRight} {\tiny\scshape\lsnPrintCourseName}
+
+\newcommand{\lsnFooterLeft}  {\tiny\sffamily\itshape\leftmark}
+\newcommand{\lsnFooterCenter}{\tiny\sffamily\itshape\thepage}
+\newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\rightmark}
+
+\makeevenhead{lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
+\makeoddhead {lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
+
+\makeevenfoot{lsnPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
+\makeoddfoot {lsnPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
+
+% clear these out so they don't set any marks
+\clearmark{book}
+\clearmark{part}
+\clearmark{chapter}
+\clearmark{section}
+\clearmark{subsection}
+
+% Redefine partmark and chaptermark to put part(unit) and chapter(lesson) info
+% into \leftmark and \rightmark, respectively, for use in the header/footer.
+\makepsmarks{headings}{%
+    \createmark{part}{left}{shownumber}{\partname\ }{\ }
+    \createmark{chapter}{right}{shownumber}{\@chapapp\ \thepart.}{\ }
+}
+
+% ---------------------------------------------------------------------------
+% A chapter style
+% ---------------------------------------------------------------------------
+
+\newcommand{\lsn@printLessonBanner}[1]{
+    \huge\bfseries\sffamily%
+    \begin{minipage}{0.175\textwidth}%
+        \@chapapp\\%
+        \thepart.\thechapter%
+    \end{minipage}%
+    %
+    \rule[-1em]{0.5pt}{2.25em}
+    \hfill
+    %
+    \begin{minipage}{0.69\textwidth}%
+        \raggedleft#1%
+    \end{minipage}%
+    %
+    % \vskip0.3\onelineskip%
+    \hrule%
+    \vskip2\onelineskip%
+}
+
+\makechapterstyle{lsnChapterStyle}{%
+    \chapterstyle{default}
+    \renewcommand*{\chapterheadstart}{}
+    \renewcommand*{\printchaptername}{}
+    \renewcommand*{\chapternamenum}{}
+    \renewcommand*{\printchapternum}{}
+    \renewcommand*{\printchaptertitle}[1]{\lsn@printLessonBanner{##1}}
+    \renewcommand*{\afterchaptertitle}{}%
+}
+
+% ---------------------------------------------------------------------------
+% commands
+% ---------------------------------------------------------------------------
+\newcommand{\lsnPrintCourseName}{\whenPAP{Pre-AP~}\lsn@coursename}
+
