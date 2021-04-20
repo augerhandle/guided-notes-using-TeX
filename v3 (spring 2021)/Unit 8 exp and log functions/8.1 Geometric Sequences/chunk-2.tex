@@ -1,0 +1,100 @@
+\section{Explicit and Recursive Formulas}
+
+The terms in a sequence are often written like this:
+$ a_1, a_2, a_3, a_4, \dots$
+The integer subscript on each term is called the \gap{index}.
+\begin{itemize}[nosep]
+    \item The index of the \gap{first} term is always \gap{1}.
+    \item The index of the \gap{second} term is always \gap{2}.
+    \item \dots
+    \item The index of the $n$th term is \gap{$n$}.
+\end{itemize}
+
+\begin{center}
+\begin{tcolorbox}[width=4in]
+    \centering
+    {
+        \large
+        \begin{tabular}{r|l}
+            $a_1$ & the first (initial) term \\
+            $r$ & the common ratio \\
+            $a_{n}$ & the current ($n$th) term \\
+            $a_{n-1}$ & the previous term \\
+        \end{tabular}
+    }
+\end{tcolorbox}
+\end{center}
+
+
+\begin{tcolorbox}
+    \centering
+    {
+        \renewcommand{\arraystretch}{2}
+        \begin{tabular}{|r|p{3in}|c|}
+            \hline
+            {\large\bfseries\itshape common ratio}
+                & The ratio of any term to the previous one.
+                & {\large $r = \frac{a_n}{a_{n-1}}$ }
+                \\
+            {\large\bfseries\itshape explicit formula}
+                & Calculate a term from the {\bfseries\itshape first term} and {\bfseries\itshape common ratio}.
+                & {$a_n = a_1 \cdot r^{\,n-1}$ }
+                \\
+            {\large\bfseries\itshape recursive formula}
+                & Calculate a term from the {\bfseries\itshape previous term} and {\bfseries\itshape common ratio}.
+                & 
+                    $a_1 = $\underline{\phantom{99999}}
+                    \quad
+                    $a_n = r \cdot a_{n-1}$
+                \\
+            \hline
+        \end{tabular}
+    }
+\end{tcolorbox}
+
+\begin{myConceptSteps}{~To write explicit or recursive formulas
+        for a geometric sequence from a word problem \dots
+    }
+    \myStep{initial}{%
+        Find the initial term, \gap{$a_1$}, from the statement of the problem.
+    }
+    \myStep{ratio}{%
+        Find the common ratio, \gap{$r$}, from the statement of the problem.
+    }
+    \myStep{formula}{%
+        Write the formulas for \gap{$a_n$} according to the table above.
+    }
+\end{myConceptSteps}
+
+
+\begin{myWideProblem}{3in}[%
+        Write the explicit formula and the recursive formulas 
+        for the sequence representing the value of the car in the $n$th year
+        given the following information.
+    ]
+    {
+        A car initially worth \$35,000 
+        was worth \$29,750 in year two of ownership, 
+        \$25,288 in year three,
+        and \$21,495 in year four. 
+    }
+\end{myWideProblem}
+
+\newpage
+\begin{myWideProblem}{5in}[%
+    For the following geometric sequence problem,
+    \begin{enumerate}[nosep]
+        \item Write the explicit formula.
+        \item Write the recursive formula.
+        \item Make a table of $n$ and $a_n$ values for $n=1\dots5$.
+        \item Find the value of $a_n$ for $n=25$.
+        \item Explain which formula you used for the last part, and why.
+    \end{enumerate}
+]
+{
+    A biochemist has an experiment studying the bacteria population. 
+    At the beginning of the experiement there are six bacteria in the petrie dish.
+    The number of bacteria double every hour.
+    The biochemist counts the bacteria population every hour.
+}
+\end{myWideProblem}
