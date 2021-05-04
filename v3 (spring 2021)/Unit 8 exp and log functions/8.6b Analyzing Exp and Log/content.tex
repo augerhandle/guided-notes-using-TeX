@@ -1,0 +1,26 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{8} 
+\renewcommand{\myCurrentChapterTitle}{Exponential and Logarithmic Functions}
+
+
+\myLesson{Analyzing Exponential and Logarithmic Functions}[6][b]
+
+\begin{myObjectives}
+    \myObjective{analyze relationships}{between exponential and logarithmic functions and their inverses}
+\end{myObjectives}
+
+            
+
+            
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
