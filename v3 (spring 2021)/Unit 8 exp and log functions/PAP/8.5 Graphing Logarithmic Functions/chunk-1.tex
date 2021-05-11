@@ -1,0 +1,38 @@
+\section{Logarithm Functions As Inverse of Exponentials}
+
+Since we know\par 
+% \vspace{-\onelineskip}
+\begin{itemize}[nosep,topsep=-0.5\onelineskip]
+    \item what the graph of an exponential function looks like, and
+    \item logarithms are \gap{inverses} of exponentials, and
+    \item you get inverses by \gap{swapping} $x$ and $y$, and
+    \item when you swap $x$ and $y$, the graph is reflected across the \gap{diagonal}
+\end{itemize}
+then we can sketch the graph of a logarithmic function.
+{
+    \begin{center}
+        {\bfseries\itshape Exponential and Logarithmic Functions}\\
+        \begin{tikzpicture}[
+                scale=0.65,
+                xaxe style/.style = { thick, arrows={-{Straight Barb}}, label={}, },                 
+                yaxe style/.style = { thick, arrows={-{Straight Barb}}, label={}, },                 
+            ]
+            \scriptsize
+            \tkzInit[
+                xmax=6, xmin=-6, xstep=2,
+                ymax=6, ymin=-6, ystep=2,
+            ]
+            \tkzGrid[
+                sub, subxstep=1, subystep=1,
+            ]
+            \tkzDrawXY[label={},color=black,]
+            \tkzLabelX[orig=false,]
+            % \tkzLabelY[orig=false,]
+            \tkzFct[{-(},dashed,very thick,color=black,samples=50,domain =-6:6.5]{2**\x}
+            \tkzDefPointByFct(0)\tkzGetPoint{A}\tkzDrawPoint[size=4pt](A)
+            \tkzFct[{-(},solid,color=black,samples=50,domain =-6:6.5]{\x}
+            \tkzFct[{-},solid,very thick,color=black,samples=50,domain =0.002:6]{log(\x)/log(2)}
+            \tkzDefPointByFct(1)\tkzGetPoint{B}\tkzDrawPoint[size=4pt](B)
+        \end{tikzpicture}
+    \end{center}
+}

@@ -1,0 +1,40 @@
+% Do I want to print the text on top of the guided notes blanks?
+\dashundergapssetup{teacher-mode=false,}
+
+% ----------------------------------------------------------------
+% Title, objectives, vocabulary
+% ----------------------------------------------------------------
+% My class "units" are based on the LaTeX \chapter macros. But we're not doing chapters
+% in this one-lesson file. So we "fake out" the relevant 
+% chapter (unit) number and title.
+\renewcommand{\thechapter}{8} 
+\renewcommand{\myCurrentChapterTitle}{Exponential and Logarithmic Functions}
+
+
+\myLesson{Graphing Logarithmic Functions}[5]
+
+\begin{myObjectives}
+    \myObjective{sketch}{the graph of logarithmic parent functions}
+    \myObjective{find}{$a$/$h$/$k$ in the equations of transformed logarithmic functions}
+    \myObjective{sketch}{transformed logarithmic functions}
+    \myObjective{convert}{%
+        between {\bfseries\itshape equations} and {\bfseries\itshape descriptions}
+        of transformed logarithmic functions 
+    }
+    \myObjective{find}{attributes of transformed logarithmic functions}
+\end{myObjectives}
+
+            
+\begin{myVocabulary}
+    \myDefinition{exponential parent function}{$f(x) = b^x$}
+    \myDefinition{logarithmic parent function}{$f(x) = log_b(x)$, the \gap{inverse} of an exponential function}
+\end{myVocabulary}
+
+            
+% ----------------------------------------------------------------
+% Now the real content
+% ----------------------------------------------------------------
+\input{./chunk-1}
+\input{./chunk-2}
+\input{./chunk-3}
+\input{./chunk-4}
