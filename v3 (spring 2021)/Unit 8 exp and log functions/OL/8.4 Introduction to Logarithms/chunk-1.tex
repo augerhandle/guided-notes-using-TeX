@@ -1,0 +1,45 @@
+\section{Logarithmic Functions}
+
+The exponential function looks like this:
+{
+    \large
+    \[ y = b^x \]
+}
+Remember that you get the inverse of a function by \gap{swapping} $x$ and $y$. 
+So the inverse can be written like this:
+{
+    \large
+    \[ x = b^y \]
+}
+
+The inverse of an {\bfseries\itshape exponential function} is called 
+a \gap{logarithm}.
+Since they are inverses, they are \gap{mirror} images of each other:
+
+{
+    \begin{center}
+        \begin{tikzpicture}[
+                scale=0.65,
+                xaxe style/.style = { thick, arrows={-{Straight Barb}}, label={}, },                 
+                yaxe style/.style = { thick, arrows={-{Straight Barb}}, label={}, },                 
+            ]
+            \scriptsize
+            \tkzInit[
+                xmax=6, xmin=-6, xstep=2,
+                ymax=6, ymin=-6, ystep=2,
+            ]
+            \tkzGrid[
+                sub, subxstep=1, subystep=1,
+            ]
+            \tkzDrawXY[label={},color=black,]
+            \tkzLabelX[orig=false,]
+            % \tkzLabelY[orig=false,]
+            \tkzFct[{-(},dashed,very thick,color=black,samples=50,domain =-6:6.5]{2**\x}
+            \tkzDefPointByFct(0)\tkzGetPoint{A}\tkzDrawPoint[size=4pt](A)
+            \tkzFct[{-(},solid,color=black,samples=50,domain =-6:6.5]{\x}
+            \tkzFct[{-},solid,very thick,color=black,samples=50,domain =0.002:6]{log(\x)/log(2)}
+            \tkzDefPointByFct(1)\tkzGetPoint{B}\tkzDrawPoint[size=4pt](B)
+        \end{tikzpicture}
+    \end{center}
+}
+
