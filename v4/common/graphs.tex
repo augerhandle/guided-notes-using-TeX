@@ -26,3 +26,32 @@
         % \tkzFct[{-(},solid,very thick,color=black,samples=50,domain =-6:6.5]{\x}
     \end{tikzpicture}
 }
+
+% a simple number line
+%
+% #1 scale of the numberline
+% #2 max x
+% #3 min x (optional, if absent it defaults to negative of the max)
+% #4 label on the x-axis (optional, if absent there's no label)
+%
+\NewDocumentCommand{\myNumberLine}{ O{0.4} m o O{{}} }{
+    \begin{tikzpicture}[
+        scale=#1,
+        xaxe style/.style = { very thick, arrows={-{Straight Barb}}, },                 
+        ]
+        \tkzInit[ xmax=#2, xmin=\IfValueTF{#3}{#3}{-#2}, xstep=1, ]
+        \tkzDrawX[
+            % right=12pt,
+            label=#4,
+            noticks=false, % Yes, I want ticks!
+            tickup=1em, tickdn=1em,
+            right space=0.05cm, left space=0.05cm, % extend the line beyond the last ticks
+            ]
+        % \tkzLabelX[ 
+        %     % orig=false,
+        %     step=#4,
+        %     font=\small,
+        %     below left=2pt,
+        %  ]
+    \end{tikzpicture}
+}
