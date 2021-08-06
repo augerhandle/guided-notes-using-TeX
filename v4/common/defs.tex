@@ -41,3 +41,64 @@
     \setcounter{part}{#1}
     \partmark{#2}
 }
+
+% ---------------------------------------------------------------------------
+% These are "annotactions", the foundation of the blocked-in-text that I use.
+%
+% I use the term "annotations" to capture the common
+% infrastructure I use to define Objectives, Vobabulary & Concepts.
+% ---------------------------------------------------------------------------
+
+% font and styling commands for
+% Objectives, Voculary, Key Concepts, etc...
+\newcommand{\myAnnotationStyling}{\bfseries\large}
+
+% #1 : name of the kind of annotation (Objectives, ...)
+% #2 : title text to go with the annotation
+% #3 : extra tcolorbox options
+%
+\NewDocumentEnvironment{myAnnotate}{ m m O{}}{
+    \begin{tcolorbox}[
+        colbacktitle=blue!10!white,
+        colback=white,
+        coltitle=black,
+        fonttitle={\myAnnotationStyling},
+        title={#1: },
+        after title={\normalfont\itshape#2},
+        #3,
+        ]
+}{
+    \end{tcolorbox}
+}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+%
+\NewDocumentEnvironment{myTabularAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{tabular}{r|l}
+}{
+    \end{tabular}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+%
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape \textcolor{blue}{#1}}&#2\\[1ex]}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+% #3 : text before the list starts
+%
+\NewDocumentEnvironment{myListAnnotate}{ m m o }{
+    \begin{myAnnotate}{#1}{#2}
+    \IfValueT{#3}{#3}
+    \begin{enumerate}[itemsep=0pt,]
+}{
+    \end{enumerate}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+%
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
