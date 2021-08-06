@@ -1,0 +1,148 @@
+% A counter to number the problems in the guided notes.
+\newcounter{MyProblemCounter}
+\setcounter{MyProblemCounter}{1}
+\newcommand{\useMyProblemCounter}{\theMyProblemCounter\stepcounter{MyProblemCounter}}
+
+
+\newcommand{\myProblemFont}{\bfseries\itshape}
+
+
+
+% ---------------------------------------------------------------------------
+% These are the command I use to format the math problems.
+% ---------------------------------------------------------------------------
+
+% A single problem that takes half the page.
+%
+% #1 : optional directions for the problem(s)
+% #2 : details for problem 1
+% #3 : optional font style for box titles
+% #4 : vertical height of the problem boxes
+%
+\NewDocumentCommand{\myProblem}{ o m O{\large} m }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        % This is the first problem.
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #3#2
+            \tcblower\vspace{#4}
+        \end{tcolorbox}
+        %
+        % There IS no second problem. So make it empty space.
+        \begin{tcolorbox}[colback=white, colframe=white,]\end{tcolorbox}%
+    \end{tcbraster}
+}
+% A single problem that takes the full width of the page.
+%
+% #1 : optional directions for the problem(s)
+% #2 : details for problem 1
+% #3 : optional font style for box titles
+% #4 : vertical height of the problem boxes
+%
+\NewDocumentCommand{\myWideProblem}{ o m O{\large} m }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=1,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        % This is the first problem.
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #3#2
+            \tcblower\vspace{#4}
+        \end{tcolorbox}
+    \end{tcbraster}
+}
+
+% Two problems next to each other.
+%
+% #1 : optional directions for the problem(s)
+% #2 : details for problem 1
+% #3 : details for problem 2
+% #4 : optional font style for box titles
+% #5 : vertical height of the problem boxes
+%
+\NewDocumentCommand{\myProblems}{ o m m O{\large} m }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        % This is the first problem.
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #4#2
+            \tcblower\vspace{#5}
+        \end{tcolorbox}
+        % This is the second problem. 
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #4#3
+            \tcblower\vspace{#5}
+        \end{tcolorbox}
+    \end{tcbraster}
+}
+
+% A wide problem that can have any latex code in the content area of the box.
+%
+% #1 : directions 
+%
+\NewDocumentEnvironment{myProblemWithContent}{  m  }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=1,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]  
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]%
+}{%
+        \end{tcolorbox}
+    \end{tcbraster}
+}
