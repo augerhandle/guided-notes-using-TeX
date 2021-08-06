@@ -123,10 +123,10 @@
 
 % A wide problem that can have any latex code in the content area of the box.
 %
-% #1 : directions 
+% #1 : optional directions 
 %
-\NewDocumentEnvironment{myProblemWithContent}{  m  }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%%
+\NewDocumentEnvironment{myWideProblemWithContent}{  o  }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=1,%
