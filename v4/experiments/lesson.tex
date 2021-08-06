@@ -1,37 +1,20 @@
 \documentclass[12pt,letterpaper]{memoir}
-\usepackage{blindtext}
-\usepackage{papol}
-\usepackage[coursename={Algebra 2}]{lessons}
 
+\input{../common/defs}
+\input{../common/document-geometry}
+\input{../common/packages}
+\input{../common/header-footer}
+\input{../common/chapter-pagestyle}
 
-% memoir commands to define the text block geometry
-\setulmarginsandblock{0.9in}{*}{*}
-\setlrmarginsandblock{0.5in}{*}{*}
 
 \begin{document}
-\checkandfixthelayout
-
 \pagestyle{lsnPagestyle}
 \chapterstyle{lsnChapterStyle}
+\checkandfixthelayout
+\raggedbottom
 
-\dummypart{7}{Rational Functions}
-% \part{foo}
-\chapter{Reciprocal Functions and a few other things}
+\forHONORS
 
-processing for \whenPAP{pre-AP}\whenOL{on-level}
-
-\section{Introduction}
-This is another lesson. It is on reciprocal functions.
-
-\section{something else}
-\blindtext
-
-% \subsection{foo}
-% \Blindtext
-
-\chapter{2nd lesson}
-\forPAP
-\lsnPrintCourseName
-
+\input{content}
 
 \end{document}
