@@ -1,0 +1,28 @@
+% ---------------------------------------------------------------------------
+% x-y graphs using Tkz
+% ---------------------------------------------------------------------------
+
+% a simple "symmetric" x-y graph
+%
+% #1 scale of the full graph
+% #2 max/min x
+% #3 max/min y (optional, if absent it defaults to the x argument)
+%
+\NewDocumentCommand{\mySymmetricGraph}{ O{0.5} m o }{
+    \begin{tikzpicture}[
+        scale=#1,
+        xaxe style/.style = { very thick, arrows={-{Straight Barb}}, },                 
+        yaxe style/.style = { very thick, arrows={-{Straight Barb}}, },                 
+        ]
+        \tkzInit[
+            xmax=#2, xmin=-#2, xstep=1,
+            ymax=\IfValueTF{#3}{#3}{#2}, ymin=-\IfValueTF{#3}{#3}{#2}, ystep=1,
+            ]
+        \tkzGrid[ sub, subxstep=1, subystep=1, ]
+        \tkzDrawX[label={$x$},color=black, right=0.2em,]
+        \tkzDrawY[label={$y$},color=black, above=0.2em,]
+        % \tkzLabelX[orig=false,]
+        % \tkzLabelY[orig=false,]
+        % \tkzFct[{-(},solid,very thick,color=black,samples=50,domain =-6:6.5]{\x}
+    \end{tikzpicture}
+}
