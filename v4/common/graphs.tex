@@ -7,6 +7,7 @@
 % #1 scale of the full graph
 % #2 max/min x
 % #3 max/min y (optional, if absent it defaults to the x argument)
+% #4 optional function expressed compatibly with how Tkz functions are written (eg, "\x^2")
 %
 \NewDocumentCommand{\mySymmetricGraph}{ O{0.5} m o }{
     \begin{tikzpicture}[
@@ -23,7 +24,45 @@
         \tkzDrawY[label={$y$},color=black, above=0.2em,]
         % \tkzLabelX[orig=false,]
         % \tkzLabelY[orig=false,]
-        % \tkzFct[{-(},solid,very thick,color=black,samples=50,domain =-6:6.5]{\x}
+        % \tkzFct[{-(},solid,very thick,color=black,samples=50,domain =-6:6.5]{\x}%
+    \end{tikzpicture}
+}
+
+% a simple "symmetric" x-y graph
+%
+% #1 optional scale of the full graph
+% #2 function expressed compatibly with how Tkz functions are written (eg, "x**2")
+% #3 xmax
+% #4 optional xmin
+% #5 ymax 
+% #6 optional ymin 
+% #7 optional domain max    NOTE: if this is used, #6 and #7 MUST be specified
+% #8 optional domain min    NOTE: if this is used, #6        MUST be specified
+%
+\NewDocumentCommand{\myGraphWithFunction}{ O{0.5} m mo mo oo }{
+    \begin{tikzpicture}[
+        scale=#1,
+        xaxe style/.style = { thick, arrows={-{Straight Barb}}, },                 
+        yaxe style/.style = { thick, arrows={-{Straight Barb}}, },                 
+        ]
+        \tkzInit[
+            xmax=#3,
+            xmin=\IfValueTF{#4}{#4}{-#3},
+            xstep=1,
+            ymax=#5, 
+            ymin=\IfValueTF{#6}{#6}{-#5},
+            ystep=1,
+            ]
+        \tkzGrid[ sub, subxstep=1, subystep=1, ]
+        \tkzDrawX[label={$x$},color=black, right=0.2em,]
+        \tkzDrawY[label={$y$},color=black, above=0.2em,]
+        % \tkzLabelX[orig=false,] \tkzLabelY[orig=false,]
+        \tkzFct[
+            solid, ultra thick, %color=black,
+            samples=100,
+            domain = \IfValueTF{#4}{#4}{-#3} : #3,
+            ]
+            {#2}% This is the function to be graphed.
     \end{tikzpicture}
 }
 

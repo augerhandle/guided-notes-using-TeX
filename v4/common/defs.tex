@@ -12,6 +12,20 @@
 \newcommand{\whenHONORS}[1]  {\ifhol{#1}\else{}  \fi}
 \newcommand{\whenONLEVEL}[1] {\ifhol{}\else{#1}\fi}
 
+
+% ---------------------------------------------------------------------------
+% A centered tcolorbox
+% ---------------------------------------------------------------------------
+%
+% #1 - optional options to pass to tcolorbox
+% #2 - the contents to put in the box
+%
+\NewDocumentEnvironment{myCenteredBox}{ O{} m }{%
+    \begin{center}
+        \begin{tcolorbox}[#1]#2\end{tcolorbox}
+    \end{center}
+}
+
 % ---------------------------------------------------------------------------
 % changes to part/chapter/section
 % ---------------------------------------------------------------------------

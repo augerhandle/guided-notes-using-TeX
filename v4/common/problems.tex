@@ -9,7 +9,8 @@
 
 
 % ---------------------------------------------------------------------------
-% These are the command I use to format the math problems.
+% These are the commands I use to format the problems in the guided notes
+% that have an empty space where I will write during class.
 % ---------------------------------------------------------------------------
 
 % A single problem that takes half the page.
@@ -45,6 +46,7 @@
         \begin{tcolorbox}[colback=white, colframe=white,]\end{tcolorbox}%
     \end{tcbraster}
 }
+
 % A single problem that takes the full width of the page.
 %
 % #1 : optional directions for the problem(s)
@@ -121,11 +123,93 @@
     \end{tcbraster}
 }
 
+% ---------------------------------------------------------------------------
+% These are the commands I use to format the problems in the guided notes
+% that have an partially filled space where I will also write during class.
+%
+% I use the term "with content" to refer to this partially filled space.
+% ---------------------------------------------------------------------------
+
+% A single problem that takes half the page.
+%
+% #1 : optional directions
+% #2 : the problem contents
+%
+\NewDocumentCommand{\myProblemWithContent}{ o m }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        % This is the first problem.
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #2
+        \end{tcolorbox}
+        %
+        % There IS no second problem. So make it empty space.
+        \begin{tcolorbox}[colback=white, colframe=white,]\end{tcolorbox}%
+    \end{tcbraster}
+}
+
+
+% Two problems that that sit next to each other.
+%
+% #1 : optional directions
+% #2 : the 1st problem contents
+% #3 : the 2nd problem contents
+%
+\NewDocumentCommand{\myProblemsWithContent}{ o m m }{%
+    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \begin{tcbraster}[%
+        raster equal height,%
+        raster columns=2,%
+        raster column skip=0.5mm,%
+        raster row skip=0.5mm,%
+        ]%
+        % This is the first problem.
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #2
+        \end{tcolorbox}
+        % This is the second problem.
+        \begin{tcolorbox}[%
+            enhanced,%
+            sharp corners,%
+            colback=white,%
+            coltitle=black, colbacktitle=black!10!white,%
+            boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            title={\texttt{\useMyProblemCounter}},%
+            attach boxed title to top left%
+            ]
+            #3
+        \end{tcolorbox}
+    \end{tcbraster}
+}
+
+
 % A wide problem that can have any latex code in the content area of the box.
 %
 % #1 : optional directions 
+% #2 : the problem
 %
-\NewDocumentEnvironment{myWideProblemWithContent}{  o  }{%
+\NewDocumentCommand{\myWideProblemWithContent}{ o m }{%
     \IfValueT{#1}{\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
@@ -142,7 +226,7 @@
             title={\texttt{\useMyProblemCounter}},%
             attach boxed title to top left%
             ]%
-}{%
+            #2
         \end{tcolorbox}
     \end{tcbraster}
 }
