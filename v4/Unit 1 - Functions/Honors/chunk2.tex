@@ -22,22 +22,22 @@ You can find the coordinates of those points.
     \hfil 
     %
     \begin{minipage}{0.49\textwidth}
-        \myGraphWithFunction[0.5]{x**3 + 3*x**2}{2}[-5]{5}[-3]
+        \begin{myTikzpictureGrid}{0.5} [-5]{2}[-3]{5}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-5:2,]{x**3 + 3*x**2}
+        \end{myTikzpictureGrid}
     \end{minipage}
 }
 {
     \begin{minipage}{0.49\textwidth}
         \centering
-        $x$-coordinate: \texttt{-2}
+        $x$-coordinate: \texttt{4}
     \end{minipage}
     %
     \hfil 
     %
     \begin{minipage}{0.49\textwidth}
-        \myGraphWithFunction[0.4]
-            {-(x-4)**3 - 3*(x-4)**2 + 1}
-            {6}[-2]
-            {6}[-5]
-            [7][1]
+        \begin{myTikzpictureGrid}{0.5} [-2]{6}[-4]{4}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-3:7,]{-(x-4)**3 - 3*(x-4)**2 + 1}
+        \end{myTikzpictureGrid}
     \end{minipage}
 }
