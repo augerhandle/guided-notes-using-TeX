@@ -8,31 +8,46 @@
 \end{myConceptSteps}
 
 
-\myProblemsWithContent[Use the \textit{vertical line test} to decide if the graphed relation is a function. Explain.]
+\myProblemsWithContent[Are these relations functions? Explain.]
 {
-    \begin{myTikzpictureGrid}{0.4} [-5]{6}[-2]{6}
-        \tkzDefPoint(2,4){A} \tkzDrawPoint(A)
-        \tkzDefPoint(3,-2){A} \tkzDrawPoint(A)
+    \begin{myTikzpictureGrid}{0.4} [-4]{7}[-4]{4}
+        \tkzDefPoint(-3,-3){A} \myDrawPointA
+        \tkzDefPoint(-2,-2){A} \myDrawPointA
+        \tkzDefPoint(-1,-1){A} \myDrawPointA
+        \tkzDefPoint(0,0){A} \myDrawPointA
+        \tkzDefPoint(1,1){A} \myDrawPointA
+        \tkzDefPoint(2,2){A}\myDrawPointA
+        \tkzDefPoint(2,1){A}\myDrawPointA
+        \tkzDefPoint(2,0){A}\myDrawPointA
+        \tkzDefPoint(2,-1){A}\myDrawPointA
+        \tkzDefPoint(3,0){A}\myDrawPointA
+        \tkzDefPoint(4,1){A}\myDrawPointA
+        \tkzDefPoint(5,2){A}\myDrawPointA
+        \tkzDefPoint(6,3){A}\myDrawPointA
     \end{myTikzpictureGrid}
 }
 {
-    \begin{myTikzpictureGrid}{0.4} [-4]{5}[-2]{5}
-        \tkzDefPoint(-3,4){A} \tkzDrawPoint(A)
-        \tkzDefPoint(-2,2){A} \tkzDrawPoint(A)
-        \tkzDefPoint(0,0){A} \tkzDrawPoint(A)
-        \tkzDefPoint(1,1){A} \tkzDrawPoint(A)
-        \tkzDefPoint(2,4){A} \tkzDrawPoint(A)
-        \tkzDefPoint(3,4){A} \tkzDrawPoint(A)
-        \tkzDefPoint(4,4){A} \tkzDrawPoint(A)
+    \begin{myTikzpictureGrid}{0.4} [-4]{7}[-2]{5}
+        \tkzDefPoint(-3,3){A} \myDrawPointA
+        \tkzDefPoint(-2,2){A} \myDrawPointA
+        \tkzDefPoint(-1,1){A} \myDrawPointA
+        \tkzDefPoint(0,0){A} \myDrawPointA
+        \tkzDefPoint(1,1){A} \myDrawPointA
+        \tkzDefPoint(2,2){A} \myDrawPointA
+        \tkzDefPoint(3,2){A} \myDrawPointA
+        \tkzDefPoint(4,2){A} \myDrawPointA
+        \tkzDefPoint(5,2){A} \myDrawPointA
+        \tkzDefPoint(6,2){A} \myDrawPointA
     \end{myTikzpictureGrid}
 }
 
 \myProblemsWithContent
 {
-    \begin{myTikzpictureGrid}{0.4} [-5]{6}[-2]{6}
+    \begin{myTikzpictureGrid}{0.4} [-5]{6}[-2]{4}
         \tkzFct[ solid, ultra thick, samples=100, domain=-9:-1,]{x+4}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-1:10,]{0.5*(x+1)+3}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-1:10,]{3}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-1:0,]{3}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:4,]{-sqrt(x)+3}
+        \tkzFct[ solid, ultra thick, samples=100, domain=4:10,]{x-3}
     \end{myTikzpictureGrid}
 }
 {

@@ -62,3 +62,8 @@
 }{
     \end{tikzpicture}
 }
+
+
+\NewDocumentCommand{\myDrawPointA}{ O{circle} O{4pt}} {
+    \tkzDrawPoint[shape=#1, size=#2,](A)
+}
