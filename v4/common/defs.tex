@@ -42,6 +42,19 @@
 % Instead of "Chapter 1" we want "Lesson 1"
 \renewcommand{\chaptername}{Lesson}
 
+% A \chapter-based command to generate a lesson.
+% This is a thin wrapper around \chapter that allows me
+% to explicitly specify the lesson number. 
+%
+% #1 lesson name
+% #2 optional lesson number
+%
+\NewDocumentCommand{\myLesson}{ m O{1} }
+{
+    \setcounter{chapter}{#2-1}
+    \chapter{#1}
+}
+
 % remove chapter numbers from section numbering
 \makeatletter
 \renewcommand\thesection{\@arabic\c@section}
