@@ -1,59 +1,69 @@
-\section{Vertical Line Test}
+\section{The Vertical Line Test}
 
-\begin{myConceptSteps}{~to determine of a relation is a function\dots}
-    \myStep{graph}{\gap{Sketch} the graph of the relation. }
-    \myStep{vertical lines}{Consider a \gap{vertical line} at every $x$-value. }
-    \myStep{$y$-values}{Count the number of points where the lines \gap{intersect} the graph.}
-    \myStep{test}{For functions, the lines must intersect \gap{only once} (or not at all).}
+\begin{myConceptSteps}{~to determine if a relation is a function\dots}
+    \myStep{graph}{\gap{Graph} the relation. }
+    \myStep{vertical lines}{Imagine a \gap{vertical line} at every $x$-value. }
+    \myStep{$y$-values}{How many places does each line \gap{intersect} the graph?}
+    \myStep{test}{For functions, the lines must intersect \gap{only once}.}
 \end{myConceptSteps}
 
 
-\myProblemsWithContent[Are these relations functions? Explain.]
+\myProblemsWithContent[Are these relations functions? If not, why not?]
 {
-    \begin{myTikzpictureGrid}{0.4} [-4]{7}[-4]{4}
-        \tkzDefPoint(-3,-3){A} \myDrawPointA
-        \tkzDefPoint(-2,-2){A} \myDrawPointA
-        \tkzDefPoint(-1,-1){A} \myDrawPointA
-        \tkzDefPoint(0,0){A} \myDrawPointA
-        \tkzDefPoint(1,1){A} \myDrawPointA
-        \tkzDefPoint(2,2){A}\myDrawPointA
-        \tkzDefPoint(2,1){A}\myDrawPointA
-        \tkzDefPoint(2,0){A}\myDrawPointA
-        \tkzDefPoint(2,-1){A}\myDrawPointA
-        \tkzDefPoint(3,0){A}\myDrawPointA
-        \tkzDefPoint(4,1){A}\myDrawPointA
-        \tkzDefPoint(5,2){A}\myDrawPointA
-        \tkzDefPoint(6,3){A}\myDrawPointA
-    \end{myTikzpictureGrid}
+    \begin{tabular}{r|r}
+        $x$ & $y$ \\
+        \hline\hline
+        -1 &-1\\
+        0&0\\
+        1&1\\
+        2&2\\
+        3&1\\
+        4&0\\
+        5&-1\\
+    \end{tabular}
+    \vspace{0.75in}
+    % \begin{myTikzpictureGrid}{0.4} [-4]{7}[-4]{4}
+    %     \tkzDefPoint(-1,-1){A} \myDrawPointA
+    %     \tkzDefPoint(0,0){A} \myDrawPointA
+    %     \tkzDefPoint(1,1){A} \myDrawPointA
+    %     \tkzDefPoint(2,2){A}\myDrawPointA
+    %     \tkzDefPoint(3,1){A}\myDrawPointA
+    %     \tkzDefPoint(4,0){A}\myDrawPointA
+    %     \tkzDefPoint(5,-1){A}\myDrawPointA
+    % \end{myTikzpictureGrid}
 }
 {
-    \begin{myTikzpictureGrid}{0.4} [-4]{7}[-2]{5}
-        \tkzDefPoint(-3,3){A} \myDrawPointA
-        \tkzDefPoint(-2,2){A} \myDrawPointA
-        \tkzDefPoint(-1,1){A} \myDrawPointA
-        \tkzDefPoint(0,0){A} \myDrawPointA
-        \tkzDefPoint(1,1){A} \myDrawPointA
-        \tkzDefPoint(2,2){A} \myDrawPointA
-        \tkzDefPoint(3,2){A} \myDrawPointA
-        \tkzDefPoint(4,2){A} \myDrawPointA
-        \tkzDefPoint(5,2){A} \myDrawPointA
-        \tkzDefPoint(6,2){A} \myDrawPointA
-    \end{myTikzpictureGrid}
+    $
+    \left\{
+        (-1,-1), (0,0), (-1, 3), (1,2), (2,3) , (3,-2)
+    \right\}
+    $
+    % \begin{myTikzpictureGrid}{0.4} [-4]{7}[-2]{5}
+    %     \tkzDefPoint(-3,3){A} \myDrawPointA
+    %     \tkzDefPoint(-2,2){A} \myDrawPointA
+    %     \tkzDefPoint(-1,1){A} \myDrawPointA
+    %     \tkzDefPoint(0,0){A} \myDrawPointA
+    %     \tkzDefPoint(1,1){A} \myDrawPointA
+    %     \tkzDefPoint(2,2){A} \myDrawPointA
+    %     \tkzDefPoint(3,2){A} \myDrawPointA
+    %     \tkzDefPoint(4,2){A} \myDrawPointA
+    %     \tkzDefPoint(5,2){A} \myDrawPointA
+    %     \tkzDefPoint(6,2){A} \myDrawPointA
+    %     \tkzDefPoint(6,3){A} \myDrawPointA
+    %     \tkzDefPoint(6,4){A} \myDrawPointA
+    % \end{myTikzpictureGrid}
 }
 
 \myProblemsWithContent
 {
-    \begin{myTikzpictureGrid}{0.4} [-5]{6}[-2]{4}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-9:-1,]{x+4}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-1:0,]{3}
-        \tkzFct[ solid, ultra thick, samples=100, domain=0:4,]{-sqrt(x)+3}
-        \tkzFct[ solid, ultra thick, samples=100, domain=4:10,]{x-3}
+    \begin{myTikzpictureGrid}{0.45} [-5]{2}[-3]{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-5:2,]{x**3 + 3*x**2}
     \end{myTikzpictureGrid}
+    \vspace{0.75in}
 }
 {
-    \begin{myTikzpictureGrid}{0.4} [-5]{6}[-2]{7}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-10:-2,]{6}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-2:-1,]{-3*x}
+    \begin{myTikzpictureGrid}{0.4} [-4]{4}[-2]{7}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:-1,]{3}
         \tkzFct[ solid, ultra thick, samples=100, domain=-1:13,]{sqrt(x+1)+3}
         \tkzFct[ solid, ultra thick, samples=200, domain=-1:13,]{-sqrt(x+1)+3}
     \end{myTikzpictureGrid}
