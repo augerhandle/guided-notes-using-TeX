@@ -1,1 +1,49 @@
 \section{Domain and Range of Continuous Relations}
+
+
+\myCenteredBox{
+    If the relation is given as a \gap{graph}, 
+    \begin{itemize}
+        \item{
+            find the {\bfseries\itshape domain} 
+            by drawing the \gap{shadow} of the graph on the \gap{$x$}-axis.
+        }
+        \item{
+            find the {\bfseries\itshape range} 
+            by drawing the \gap{shadow} of the graph on the \gap{$y$}-axis.
+        }
+    \end{itemize}
+}
+
+
+\myProblemsWithContent[Find the domain and range of the following relations.]
+{
+    \begin{myTikzpictureGrid}{0.35} [-1]{7}[-3]{4}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-1:6, arrows={stealth-stealth}]{x-2}
+    \end{myTikzpictureGrid}
+    \vspace{0.75in}
+}
+{
+    \begin{myTikzpictureGrid}{0.35} [-1]{11}[-4]{4}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-1:11, arrows={-stealth}]{sqrt(x-2)}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-1:11, arrows={-stealth}]{-sqrt(x-2)}
+    \end{myTikzpictureGrid}
+}
+
+
+\myProblemsWithContent
+{
+    \begin{myTikzpictureGrid}{0.35} [-1]{12}[-1]{4}
+        \tkzDefPoint(2,0){A} 
+        \tkzDrawPoint[shape=circle, size=6pt, color=black, fill=white, line width=1.5pt, ](A)
+        \tkzFct[ solid, ultra thick, samples=100, domain=-1:11,, arrows={-stealth}]{sqrt(x-2)}
+    \end{myTikzpictureGrid}
+}
+{
+    \begin{myTikzpictureGrid}{0.35} [-1]{13}[-4]{4}
+        \tkzDefPoint(0,0){A} 
+        \tkzDrawPoint[shape=circle, size=6pt, color=black, fill=white, line width=1.5pt, ](A)
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:12, arrows={-stealth}]{3*sin(x)}
+    \end{myTikzpictureGrid}
+    \vspace{0.75in}
+}
