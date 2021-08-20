@@ -1,0 +1,52 @@
+\begin{center}
+    \sffamily
+    {
+        \huge
+        \bfseries
+        1.1 Exit Ticket\\
+    }
+    {
+        \Large
+        \itshape
+        (...from what we did yesterday)
+    }
+\end{center}
+
+\noindent
+\begin{center}
+    \Large
+    Write your {\bfseries\itshape name} and the {\bfseries\itshape period} on the top of your paper!
+    \vspace{0.25in}
+\end{center}
+
+\myProblemsWithContent[%
+    Use the 
+    {\scshape Vertical Line Test}.\\
+    Are these relations functions?\\
+    Explain why or why not. %{\itshape Puedes escribir en español.}\\
+]
+{
+    Graph this relation before you answer the question.\\\\
+    \begin{tabular}{r|r}
+        $x$ & $y$ \\
+        \hline\hline
+        -3&-1\\
+        -2&-1\\
+        -1 &-1\\
+        0&-1\\
+        1&-1\\
+        2&-1\\
+        3&-1\\
+    \end{tabular}
+    \vspace{0.75in}
+}
+{
+    \begin{myTikzpictureGrid}{0.5} [-5]{2}[-2]{3}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-5:-4,]{-4-x}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-4:-2,]{4+x}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-2:0,]{-x}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:2,]{x}
+    \end{myTikzpictureGrid}
+    \vspace{0.75in}
+}
+
