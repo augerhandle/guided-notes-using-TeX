@@ -1,11 +1,11 @@
 \NewDocumentEnvironment{myConcept}{m}{
-    \begin{myAnnotate}{Key Concept}{\,#1}
+    \begin{myAnnotate}{Key Concept}{~#1}
 }{
     \end{myAnnotate}
 }
 
 \NewDocumentEnvironment{myConceptSteps}{m O{Follow these steps.}}{
-    \begin{myListAnnotate}{Key Concept}{#1}[#2]
+    \begin{myListAnnotate}{Key Concept}{~#1}[#2]
 }{
     \end{myListAnnotate}
 }
@@ -84,7 +84,7 @@
 % #7 row 2 example
 %
 \NewDocumentEnvironment{myConceptWithExamples2}{ O{Key Concepts} mm mmmm}{
-    \begin{myAnnotate}{\hspace{5mm}#1}{\,#2}[%
+    \begin{myAnnotate}{~#1}{\,#2}[%
         left=0em,right=0em,%
         top=0em,bottom=0em,%
         boxsep=0em,%
