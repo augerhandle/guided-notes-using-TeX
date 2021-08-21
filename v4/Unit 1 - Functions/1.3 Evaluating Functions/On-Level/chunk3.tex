@@ -1,0 +1,44 @@
+\section{Evaluating a Function From Its Graph}
+
+\begin{myConceptSteps}{To \gap{evaluate} a function given its input\dots} 
+    \myStep{input}{Find the \gap{input} value on the $x$-axis.}
+    \myStep{first arrow}{Draw a \gap{vertical} arrow from the $x$-axis to the curve.}
+    \myStep{dot}{Draw a \gap{dot} where the arrow \gap{intersects} the graph.}
+    \myStep{second arrow}{Draw a \gap{horizontal} arrow over to the $y$-axis.}
+    \myStep{output}{Find the $y$-value where the arrow \gap{intersects} $y$-axis.}
+\end{myConceptSteps}
+
+\myProblemsWithContent[Evaluate these functions at the given input values.]
+{
+    \begin{myTikzpictureGrid}{0.6} {3}{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-5:5,]{0.125*x**5}
+        \tkzText(1,1){$f$}
+    \end{myTikzpictureGrid}
+    \\
+    $f(2) = $ \gap{4}
+    \hfill 
+    $f(-2) = $ \gap{-4}
+}
+{
+    \begin{myTikzpictureGrid}{0.6} [-1]{5}[-2]{6}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-5:5,]{2*x-3}
+        \tkzText(1,1){$g$}
+    \end{myTikzpictureGrid}
+    \\
+    $g(3) = $ \gap{3}
+    \hfill 
+    $g(4) = $ \gap{5}
+}
+
+
+\myProblemWithContent
+{
+    \begin{myTikzpictureGrid}{0.6} {3}[-3]{5}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-5:5,]{abs(2*x+2)-2}
+        \tkzText(1,1){$Q$}
+    \end{myTikzpictureGrid}
+    \\
+    $Q(-1) = $ \gap{-2}
+    \hfill 
+    $Q(2) = $ \gap{4}
+}
