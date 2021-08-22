@@ -26,6 +26,23 @@
     \end{center}
 }
 
+% ---------------------------------------------------------------------------
+% Split the output into two (roughly) equally sized side-by-side minipages.
+% ---------------------------------------------------------------------------
+%
+% #1 - content of first minipage
+% #2 - content of second minipage
+%
+\NewDocumentCommand{\myTwoMinipages}{mm}{
+    \begin{minipage}{0.49\textwidth}
+        #1
+    \end{minipage}
+    % \hfill 
+    \begin{minipage}{0.49\textwidth}
+        #2
+    \end{minipage}
+}
+
 
 % ---------------------------------------------------------------------------
 % A version of \sqrt 
