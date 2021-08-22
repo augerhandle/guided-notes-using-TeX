@@ -1,49 +1,59 @@
-\section{Domain and Range of Continuous Relations}
+\section{Evaluating a Function From Its Expression}
+
+\begin{myConceptSteps}{To \gap{evaluate} a function given its expression\dots} 
+    \myStep{substitute}{replace the \gap{variable} with the input}
+    \myStep{simplify}{simplify the expression (Remember \gap{PEMDAS}.)}
+\end{myConceptSteps}
+
+\subsection{Evaluating functions given a number as input}
+
+\myProblemsWithContent[Evaluate these functions {\bfseries without} a calculator.]
+    {
+        function: $f(x) = -2x^3 -x^2 - x - 5$ \\
+        input: $-5$
+        \vspace{1in}\\
+        $f(-5) =$ \gap{225} % -2*-125 -25 + 5 - 5 = 250-25 = 225
+    }
+    {
+        function: $s(x) = x(3x^2 - 1)$ \\
+        input: $-2$
+        \vspace{1in}\\
+        $s(-2) =$ \gap{14} % -2(3.4-1) = -2(12-1) = -2.11 = -22
+    }
+
+
+
+\myCenteredBox[width=6in]{
+    When you do use a calculator to evaluate a function,
+    {\bfseries\itshape always, always}
+    use \gap{parentheses} when you enter the input value.
+}
 
 
 \myCenteredBox{
-    If the relation is given as a \gap{graph}, 
-    \begin{itemize}
-        \item{
-            find the {\bfseries\itshape domain} 
-            by drawing the \gap{shadow} of the graph on the \gap{$x$}-axis.
-        }
-        \item{
-            find the {\bfseries\itshape range} 
-            by drawing the \gap{shadow} of the graph on the \gap{$y$}-axis.
-        }
-    \end{itemize}
+    {\bfseries\itshape Warning when you use calculators:}
+    I can't see work on a calculator. 
+    If you make a mistake, you'll get the problem {\itshape wrong}.
+    So, {\bfseries\itshape do it twice when you use a calculator!}
 }
 
 
-\myProblemsWithContent[Find the domain and range of the following relations.]
-{
-    \begin{myTikzpictureGrid}{0.35} [-1]{7}[-3]{4}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-1:6, arrows={stealth-stealth}]{x-2}
-    \end{myTikzpictureGrid}
-    \vspace{0.75in}
-}
-{
-    \begin{myTikzpictureGrid}{0.35} [-1]{11}[-4]{4}
-        \tkzFct[ solid, ultra thick, samples=200, domain=-1:11, arrows={-stealth}]{sqrt(x-2)}
-        \tkzFct[ solid, ultra thick, samples=200, domain=-1:11, arrows={-stealth}]{-sqrt(x-2)}
-    \end{myTikzpictureGrid}
-}
+
+\subsection{Evaluating functions given an expression as input}
+
+Sometimes we evaluate functions by passing \gap{expressions} (not numbers) as inputs.
 
 
-\myProblemsWithContent
-{
-    \begin{myTikzpictureGrid}{0.35} [-1]{12}[-1]{4}
-        \tkzDefPoint(2,0){A} 
-        \tkzDrawPoint[shape=circle, size=6pt, color=black, fill=white, line width=1.5pt, ](A)
-        \tkzFct[ solid, ultra thick, samples=100, domain=-1:11,, arrows={-stealth}]{sqrt(x-2)}
-    \end{myTikzpictureGrid}
-}
-{
-    \begin{myTikzpictureGrid}{0.35} [-1]{13}[-4]{4}
-        \tkzDefPoint(0,0){A} 
-        \tkzDrawPoint[shape=circle, size=6pt, color=black, fill=white, line width=1.5pt, ](A)
-        \tkzFct[ solid, ultra thick, samples=100, domain=0:12, arrows={-stealth}]{3*sin(x)}
-    \end{myTikzpictureGrid}
-    \vspace{0.75in}
-}
+\myProblemsWithContent[Evaluate these functions with the given expressions as input.]
+    {
+        function: $f(x) = 5x - 3$ \\
+        input: $z+1$
+        \vspace{1in}\\
+        $f(z+1) =$ \gap{$15z+2$} % 5(z+1) - 3 = 15z + 5 - 3 = 15z + 2
+    }
+    {
+        function: $R(x) = x^2 - x$ \\
+        input: $-2t$
+        \vspace{1in}\\
+        $s(2t) =$ \gap{$4t^2 + 2t$} % (-2t)^2 - (-2t) = 4t^2 + 2t
+    }

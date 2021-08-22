@@ -1,64 +1,52 @@
-\section{Domain and Range of Discrete Relations}
+\section{Function Notation}
 
 \myCenteredBox{
-    For {\bfseries\itshape discrete} relations (\gap{tables} or sets of \gap{points}), 
+    {\bfseries\itshape Function notation} tells you two things:
+    \begin{enumerate}
+        \item{the function's \gap{name} (often \gap{$f$})}
+        \item{how to \gap{calculate} the \gap{output} if you know the \gap{input}}
+    \end{enumerate}
+}
+
+\myProblemsWithContent[%
+    What is the expression for the function that has the name specified?]
+{
+    {\small
+        Function name: $\gamma$. \\
+        Expression: \gap{$4x^3 -2x^2 + \pi$}
+    }
     \begin{itemize}
-        \item{
-            find the \gap{domain} by listing the $x$-values (no repeats!)
-        }
-        \item{
-            find the \gap{range} by listing the $y$-values (no repeats!)
-        }
+        \item{$ \alpha(x) = \myRoot{5x - 6}$}
+        \item{$ \beta(x) = 3x^2 + x - 8$}
+        \item{$ \delta(x) = 10 - 3x$}
+        \item{$ \gamma(x) = 4x^3 -2x^2 + \pi$}
+    \end{itemize}
+}
+{
+    {\small
+        Function name: $Q$. \\
+        Expression: \gap{$\myRoot[3]{x-2}$}
+    }
+    \begin{itemize}
+        \item{$ f(x) = x^3 + 5x$}
+        \item{$ g(x) = 5x^2$}
+        \item{$ Q(x) = \myRoot[3]{x-2}$}
+        \item{$ \text{\ttfamily foo}(x) = 9x - 1$}
     \end{itemize}
 }
 
-\myProblemsWithContent[Find the domain and range of these relations.]
-{
-    $
-    \left\{
-        (-1,-1), (0,0), (-1, 3), (1,2), (2,3) , (3,-2)
-    \right\}
-    $
-}
-{
-    \begin{tabular}{r|r}
-        $x$ & $y$ \\
-        \hline\hline
-        -1 &-1\\
-        0&0\\
-        1&1\\
-        2&2\\
-        3&1\\
-        4&0\\
-        5&-1\\
-    \end{tabular}
-    \vspace{0.75in}
-}
 
-
-
-\myWideProblemWithContent
-{
-    \begin{myTikzpictureGrid}{0.35} {7}{5}
-        \tkzDefPoint(0,4){A} \myDrawPointA
-        \tkzDefPoint(0,-4){A} \myDrawPointA
-        \tkzDefPoint(1,3){A} \myDrawPointA
-        \tkzDefPoint(-1,3){A} \myDrawPointA
-        \tkzDefPoint(1,-3){A} \myDrawPointA
-        \tkzDefPoint(-1,-3){A} \myDrawPointA
-        \tkzDefPoint(2,2){A} \myDrawPointA
-        \tkzDefPoint(-2,2){A} \myDrawPointA
-        \tkzDefPoint(2,-2){A} \myDrawPointA
-        \tkzDefPoint(-2,-2){A} \myDrawPointA
-        \tkzDefPoint(3,1){A} \myDrawPointA
-        \tkzDefPoint(-3,1){A} \myDrawPointA
-        \tkzDefPoint(3,-1){A} \myDrawPointA
-        \tkzDefPoint(-3,-1){A} \myDrawPointA
-        \tkzDefPoint(4,0){A} \myDrawPointA
-        \tkzDefPoint(-4,0){A} \myDrawPointA
-        \tkzDefPoint(5,0){A} \myDrawPointA
-        \tkzDefPoint(-5,0){A} \myDrawPointA
-        \tkzDefPoint(6,0){A} \myDrawPointA
-        \tkzDefPoint(-6,0){A} \myDrawPointA
-    \end{myTikzpictureGrid}
+\myCenteredBox[width=5.75in, colback=white, sharp corners, boxrule=0.5pt, ]{
+    \small
+    There is a style of programming called {\itshape functional programming.}
+    It uses fuctions for almost everything.
+    Here's an example of the function notation used in {\scshape Scala}.
+    \\[1\baselineskip]
+    %
+    {
+        \sffamily
+        def {\bfseries foo}( x : Double ) : Double = \{\\
+            \phantom{xxxx}9*x - 1.0;\\
+        \}    
+    }
 }
