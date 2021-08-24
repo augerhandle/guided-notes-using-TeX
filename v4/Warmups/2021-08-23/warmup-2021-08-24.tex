@@ -1,0 +1,56 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/header-footer}
+\input{../../common/chapter-pagestyle}
+\input{../../common/objectives}
+\input{../../common/vocabulary}
+\input{../../common/concepts}
+\input{../../common/problems}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\sffamily
+\begin{center}
+    {
+        \huge
+        \bfseries
+        Warmup\\
+    }
+    {
+        \Large
+        \itshape
+        Tuesday, 24 Aug 2021
+    }
+\end{center}
+
+\noindent
+\large
+% \begin{itemize}
+%     \item Show your work.
+%     \item Put a \fbox{box} around your answer.
+% \end{itemize}
+% \vspace{0.25in}
+
+\myWideProblemWithContent[Find the domain of this function. Show your sketch of the "shadow" on the $x$-axis.]
+{
+    \centering
+    \begin{myTikzpictureGrid}{0.6} [-1]{5}[-1]{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:4,]{sqrt(x)+2}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:4,]{-sqrt(x)+2}
+        \tkzDefPoint(4,0){A} 
+        \tkzDrawPoint[shape=circle, size=6pt, color=black, fill=black, line width=1.5pt, ](A)
+        \tkzDefPoint(4,4){A} 
+        \tkzDrawPoint[shape=circle, size=6pt, color=black, fill=black, line width=1.5pt, ](A)
+    \end{myTikzpictureGrid}
+}
+
+\end{document}

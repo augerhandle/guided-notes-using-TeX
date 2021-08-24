@@ -1,0 +1,52 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/header-footer}
+\input{../../common/chapter-pagestyle}
+\input{../../common/objectives}
+\input{../../common/vocabulary}
+\input{../../common/concepts}
+\input{../../common/problems}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\sffamily
+\begin{center}
+    {
+        \huge
+        \bfseries
+        Warmup\\
+    }
+    {
+        \Large
+        \itshape
+        Monday, 23 Aug 2021
+    }
+\end{center}
+
+\noindent
+\large
+% \begin{itemize}
+%     \item Show your work.
+%     \item Put a \fbox{box} around your answer.
+% \end{itemize}
+% \vspace{0.25in}
+
+\myWideProblemWithContent[Is this relation a function? Explain why or why not.]
+{
+    \centering
+    \begin{myTikzpictureGrid}{0.6} [-1]{6}[-1]{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:6,]{sqrt(x)+2}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:6,]{-sqrt(x)+2}
+    \end{myTikzpictureGrid}
+}
+
+\end{document}
