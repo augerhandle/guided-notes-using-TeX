@@ -73,16 +73,21 @@
 % Instead of "Chapter 1" we want "Lesson 1"
 \renewcommand{\chaptername}{Lesson}
 
+% lesson suffix (eg, the 'a' in Lesson 5.2a)
+\newcommand{\myLessonSuffix}{}
+
 % A \chapter-based command to generate a lesson.
 % This is a thin wrapper around \chapter that allows me
 % to explicitly specify the lesson number. 
 %
 % #1 lesson name
-% #2 optional lesson number
+% #2 optional lesson number (eg, the '2' in Lesson 5.2)
+% #3 optional lesson suffix (eg, the 'a' in Lesson 5.2a)
 %
-\NewDocumentCommand{\myLesson}{ m O{1} }
+\NewDocumentCommand{\myLesson}{ m O{1} O{} }
 {
     \setcounter{chapter}{#2-1}
+    \renewcommand{\myLessonSuffix}{#3}
     \chapter{#1}
 }
 

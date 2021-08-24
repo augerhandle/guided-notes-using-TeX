@@ -17,7 +17,7 @@
 % (first page of the first chapter?) it doesn't get generated. Instead I'm 
 % "hardcoding" the footer right to be what I'd like it to be.
 % \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\rightmark}
-\newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\@chapapp\ \thepart.\thechapter}
+\newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\@chapapp\ \thepart.\thechapter\myLessonSuffix}
 \makeatother
 
 \makeevenhead{lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
