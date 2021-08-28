@@ -13,6 +13,42 @@
 \newcommand{\whenONLEVEL}[1] {\ifhol{}\else{#1}\fi}
 
 
+
+% ---------------------------------------------------------------------------
+% command for creating a 1- or 2-question warmup problem
+%
+% #1 date
+% #2 optional general directions
+%
+% ---------------------------------------------------------------------------
+\NewDocumentEnvironment{myWarmupProblems}{ 
+        O{
+            \begin{itemize}
+                \item Show your work.
+                \item Put a \fbox{box} around your answer.
+            \end{itemize}
+            \vspace{0.5em}
+        } 
+    }
+{
+    \newpage
+    {
+        \sffamily
+        \begin{center}
+            {
+                \huge\bfseries%
+                \whenHONORS{Honors~}Algebra 2 Warmup
+            }%
+            \\[0.5em]
+            {\Large\itshape\printdate}
+        \end{center}
+        \noindent{\Large#1}
+    }
+    \large
+}{
+}
+
+
 % ---------------------------------------------------------------------------
 % A centered tcolorbox
 % ---------------------------------------------------------------------------
