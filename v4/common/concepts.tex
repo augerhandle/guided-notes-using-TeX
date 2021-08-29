@@ -1,9 +1,14 @@
+% #1 description
+%
 \NewDocumentEnvironment{myConcept}{m}{
     \begin{myAnnotate}{Key Concept}{~#1}
 }{
     \end{myAnnotate}
 }
 
+% #1 description
+% #2 Text preceding the enumerated steps
+%
 \NewDocumentEnvironment{myConceptSteps}{m O{Follow these steps.}}{
     \begin{myListAnnotate}{Key Concept}{~#1}[#2]
 }{
