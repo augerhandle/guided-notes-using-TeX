@@ -1,0 +1,72 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forONLEVEL
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\initdate{2021}{8}{30}
+
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Evaluate this function at $x=2$.]
+    {
+        $f(x) = 3x +1 $\\[1\baselineskip]
+        $f(2) =$ \gap{X}
+    }{3in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Solve this linear equation.]
+    {
+        \centering
+        $2x + 1 = 11$
+    }{3in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Evaluate this function at $x=-2$.]
+    {
+        $f(x) = 3x +1 $\\[1\baselineskip]
+        $f(-2) =$ \gap{X}
+    }{3in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Solve this linear equation.]
+    {
+        \centering
+        $2x + 1 = 11 + x $
+    }{3in}
+\end{myWarmupProblems}
+
+\end{document}
