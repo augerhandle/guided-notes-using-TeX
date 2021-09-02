@@ -1,77 +1,17 @@
-\section{Systems of Equations}
+\section{Simple Systems of Equations}
 
-We can look at systems
-\gap{algebraically} or \gap{geometrically}:
+The systems in this lesson will always have an \gap{$x$} or \gap{$y$} with 
+no coefficient (or at most a negative).
+For example:
+\begin{align*}
+    &3x+y = -8 \\
+    &3x - 5y = 22
+\end{align*}
 
-\vspace{1\baselineskip}
-\noindent
-\begin{minipage}{0.45\textwidth}
-    \begin{center}
-        \large
-        \begin{align*}
-            x - y &= 0 \\
-            x + 2y &= 6 
-            % 2y = -x + 6
-            % y = -0.5x + 3
-        \end{align*}
-    \end{center}
-\end{minipage}
+\myCenteredBox[width=6in]{
+    This system is \gap{``simple''} in the sense that we don't need to 
+    do much work before we substitute.
+}
 %
-\hfil 
-%
-\begin{minipage}{0.45\textwidth}
-    \begin{center}
-        \begin{myTikzpictureGrid}{0.25} {5}{5}
-            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x}
-            % \tkzText(13,8){$x - y = 0$}
-            \tkzFct[ dotted, ultra thick, samples=100, domain=-10:10,]{-x/2 + 3}
-            % \tkzText(-13,7.25){$x + 2y = 6$}
-            \end{myTikzpictureGrid}
-    \end{center}
-\end{minipage}
-
-\vspace{1\baselineskip}
-\noindent 
-The geometric way of looking at things can tell you \gap{how many} solutions 
-a system has. 
-For example, here are three different systems.
-
-\vspace{1\baselineskip}
-\noindent
-\begin{minipage}{0.3\textwidth}
-    {\bfseries\itshape one solution}
-    \begin{center}
-        \begin{myTikzpictureGrid}{0.25} {5}{5}
-            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x}
-            \tkzFct[ dotted, ultra thick, samples=100, domain=-10:10,]{-x/2 + 3}
-        \end{myTikzpictureGrid}
-    \end{center}
-\end{minipage}
-%
-\hfil 
-%
-\begin{minipage}{0.3\textwidth}
-    {\bfseries\itshape no solutions}
-    \begin{center}
-        \begin{myTikzpictureGrid}{0.25} {5}{5}
-            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x-2}
-            \tkzFct[ dotted, ultra thick, samples=100, domain=-10:10,]{x+3}
-        \end{myTikzpictureGrid}
-    \end{center}
-\end{minipage}
-%
-\hfil 
-%
-\begin{minipage}{0.3\textwidth}
-    {\bfseries\itshape infinitely many solutions}
-    \begin{center}
-        \begin{myTikzpictureGrid}{0.25} {5}{5}
-            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x+0.1}
-            \tkzFct[ dotted, ultra thick, samples=100, domain=-10:10,]{x-0.1}
-        \end{myTikzpictureGrid}
-    \end{center}
-\end{minipage}
-
-\myCenteredBox[width=5in]{
-    In this lesson,
-    you will learn to solve systems {\bfseries\itshape geometrically}.}
+Today we solve this system completely
+\gap{algebraically} (no graphing).
