@@ -1,0 +1,71 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forONLEVEL
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\initdate{2021}{9}{08}
+
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Rewrite this equation in {\bfseries\itshape slope-intercept form}, $y=mx+b$.]
+    {
+        \centering
+        $6x - 3y = 12$
+    }[\LARGE]{2in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[%
+        Find the slope, $m$, and $y$-intercept, $b$ for this equation.\\[1em]
+        Hint: Rewrite it in {\bfseries\itshape slope-intercept form}, $y=mx+b$, first.
+        ]
+    {
+        \centering
+        $3x - 5y = 10$ \hfil $m =$ \gap{99} \hfil $b=$ \gap{99}
+    }[\LARGE]{2in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        Sketch the graph of the line for this equation.\\[1em]
+        Hint: Rewrite it in {\bfseries\itshape slope-intercept form}, $y=mx+b$, first.
+        Then use and $b$ (the $y$-intercept) and $m$ ({\itshape rise} over {\itshape run}) 
+        to sketch the line.
+        ]
+    {
+        \centering
+        $6x + 2y = 4$ \hfil $m=$ \gap{99} \hfil $b=$ \gap{99} \\[2em]
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\initdate{2021}{9}{08}
+\def\setdateformat{A,\ d\ B\ Y}
+
+
+
+
+
+\sffamily
+\Large
+\noindent
+\begin{center}
+    {Warmups for~}%
+    {
+        \bfseries
+        \printfdate{d} \printfdate{b} -- %
+        \advancebydays{2}\printfdate{d} \printfdate{b} \printfdate{Y}
+    }
+\end{center}
+Name : \fbox{\phantom{Xxxxxxxxxxxx Xxxxxxxxxxx-Xxxxxxxxxxxxxxx}}
+\hfill 
+Period : \fbox{\phantom{9999}}
+\vspace{1em}
+
+\huge
+{
+    \hrule
+    \noindent {\bfseries Wednesday}
+}
+\vfil 
+{
+    \hrule
+    \noindent {\bfseries Thursday}
+}
+
+\newpage
+
+{
+    \hrule
+    \noindent {\bfseries Friday}
+}
+
+\end{document}

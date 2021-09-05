@@ -1,0 +1,79 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forHONORS
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\initdate{2021}{9}{08}
+
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        Suppose $\alpha$ is any number.
+        Then the equation $y = \alpha x$ is a {\bfseries\itshape family} of lines.
+        Choose several numbers and sketch graph of the lines for those values of $\alpha$.
+        Based on your sketches, why do you think it's called a ``family''?
+        ]
+    {
+        \centering
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        Suppose $\beta$ is any number.
+        Consider the family of functions described by $y = x + \beta$.
+        Each member (line) in this family has some things in common the others,
+        and each is different in some way.\\[1em]
+        Describe in words what things are similar for the members of this family 
+        and what things are different.
+        It might be useful to pick several values of $\beta$ and graph the line for each of them.
+        ]
+    {
+        \centering
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[
+        Expand this expression.
+        In other words, what do you get when you multiply $(x+1)$ times itself three times?
+        ]
+    {
+        \centering
+        $(x+1)^3$
+    }[\LARGE]{3in}
+\end{myWarmupProblems}
+
+\end{document}
