@@ -1,0 +1,17 @@
+
+% An easy way to use \systeme
+%
+% #1 optional before-system vertical space
+% #2 comma-delimited equations
+% #3 optional left alignment (l, c, r)
+% #4 optional right alignment (l, c, r)
+%
+\NewDocumentCommand{\myAlignedSystem}{ O{-1\baselineskip} m O{l} O{r} }
+{
+    \vspace{#1}
+    \sysalign{#3,#4}
+    \sysdelim..
+    \begin{center}
+        \systeme{#2}
+    \end{center}
+}
