@@ -2,16 +2,17 @@
 % An easy way to use \systeme
 %
 % #1 optional before-system vertical space
-% #2 comma-delimited equations
-% #3 optional left alignment (l, c, r)
-% #4 optional right alignment (l, c, r)
+% #2 optional environment that wraps the system
+% #3 comma-delimited equations
+% #4 optional left alignment (l, c, r)
+% #5 optional right alignment (l, c, r)
 %
-\NewDocumentCommand{\myAlignedSystem}{ O{-1\baselineskip} m O{l} O{r} }
+\NewDocumentCommand{\myAlignedSystem}{ O{-1\baselineskip} o m O{r} O{r} }
 {
     \vspace{#1}
-    \sysalign{#3,#4}
+    \sysalign{#4,#5}
     \sysdelim..
-    \begin{center}
-        \systeme{#2}
-    \end{center}
+    \IfValueT{#2}{\begin{#2}}
+        \systeme{#3}
+    \IfValueT{#2}{\end{#2}}
 }
