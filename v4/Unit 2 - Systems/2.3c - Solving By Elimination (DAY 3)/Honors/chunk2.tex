@@ -1,0 +1,50 @@
+\section{Elimination using Matrices}
+
+In this lesson,
+you will learn how matrices can be used to
+solve systems of equations by elimination.
+We will do it with an example.
+
+\myWideProblemWithContent[
+    Solve this system of equations.
+]
+{
+    \begin{center}
+        % \sysdelim..
+        \systeme{
+            2x+3y=4,
+            5x-7y=-19
+        }
+    \end{center}
+    \[
+        \begin{bmatrix}[cc|c]
+          2 & 3 & 4\\
+          5 & -7 & -19
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[cc|c]
+          10 & 15 & 20\\
+          -10 & 14 & 38
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[cc|c]
+          10 & 15 & 20\\
+          0 & 29 & 58
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[cc|c]
+          10 & 15 & 20\\
+          0 & 1 & 2
+        \end{bmatrix}
+    \]
+    \[ 0x + 1y = 2 \]
+    \[ y = 2 \]
+    \[ 2x + 3y = 4 \] 
+    \[ 2x + 3(2) = 4 \] 
+    \[ 2x + 6 = 4 \] 
+    \[ 2x = -2 \] 
+    \[ x = -1 \] 
+}[\Large]

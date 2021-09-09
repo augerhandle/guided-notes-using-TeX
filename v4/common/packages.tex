@@ -2,7 +2,25 @@
 \usepackage{blindtext}
 \usepackage{enumitem}
 \usepackage{graphicx}
+
 \usepackage{amsmath,mathtools,amssymb}
+% See https://texblog.net/latex-archive/maths/amsmath-matrix/ 
+% for an explanation of this extention of the amsmath matrix commands.
+% It's a way to enable "augmented matrices" using a new optional argument:
+%
+% \begin{pmatrix}[cc|c]
+%     1 & 2 & 3\\
+%     4 & 5 & 9
+%   \end{pmatrix}
+%
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{hyperref}
