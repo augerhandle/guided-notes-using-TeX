@@ -1,0 +1,89 @@
+\section{Gaussian Elimination}
+
+\begin{myConceptSteps}{To transform a system to row echelon form\dots}
+  \myStep{left-to-right}{%
+      Transform each \gap{column} starting from the
+      \gap{left} and moving to the \gap{right}.
+      }
+  \myStep{ones}{%
+      Use {\bfseries\itshape row operations} to get $1$s \gap{on the diagonal}.
+      }
+  \myStep{zeros}{%
+      Use {\bfseries\itshape row operations} to get $0$s \gap{below the diagonal}.
+    }
+  \myStep{column-by-column}{%
+    Finish the {\bfseries\itshape ones} and {\bfseries\itshape zeros} 
+    \gap{before} you move to the next column.
+}
+\end{myConceptSteps}
+
+
+% \myCenteredBox[width=3.75in]{
+%   Finish all the {\bfseries\itshape ones} and {\bfseries\itshape zeros} 
+%   for each column
+%   \gap{before} you move to the next column.
+% }
+
+\myWideProblemWithContent[%
+    Reduce this system into 
+    {row echelon} form.
+]
+{
+    \begin{center}
+        % \sysdelim..
+        \systeme{
+            2x+12y + 17z=-32,
+            -3x-7y-8z=6,
+            x + 4y + 6z = -7
+        }
+    \end{center}
+    \[
+        \begin{bmatrix}[ccc|c]
+           2 &  12 & 17 & -32\\
+          -3 & -7  & -8 & 6\\
+          1 &  4 & 6 & -7
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          -3 & -7  & -8 & 6\\
+          2 &  12 & 17 & -32
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 5  & 10 & -15\\
+          2 &  12 & 17 & -32
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 5  & 10 & -15\\
+          0 &  4 & 5 & -18
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 1  & 2 & -3\\
+          0 &  4 & 5 & -18
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 1  & 2 & -3\\
+          0 &  0 & -3 & -6
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 1  & 2 & -3\\
+          0 &  0 & 1 & 2
+        \end{bmatrix}
+    \]
+}[\normalsize]
