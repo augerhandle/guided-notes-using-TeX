@@ -1,0 +1,83 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forHONORS
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\initdate{2021}{9}{13}
+
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        What is the slope of the lines corresponding to these equations?
+        ]
+    {
+        $y = -4$  \hfil $m = $\gap{00} \\[1\baselineskip]
+        $x = -4$  \hfil $m = $\gap{00} \\[1\baselineskip]
+        $y - x = 0$\hfil $m = $\gap{00} 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        Sketch the graph of a line with $m=-1$, $b=\pi$, 
+        where $\pi \approx 3.14\dots$.
+        ]
+    {
+        \centering
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[
+        Expand this expression.
+        ]
+    {
+        \centering
+        $(t+2)^3$
+    }[\LARGE]{3in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[
+        Expand this expression.
+        ]
+    {
+        \centering
+        $(2z-1)^3$
+    }[\LARGE]{3in}
+\end{myWarmupProblems}
+
+\end{document}

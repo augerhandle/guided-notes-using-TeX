@@ -1,0 +1,89 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forONLEVEL
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\initdate{2021}{9}{13}
+
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Rewrite this equation in {\bfseries\itshape slope-intercept form}, $y=mx+b$.]
+    {
+        \centering
+        $2y - 4x - 12 = 0$
+    }[\LARGE]{2in}
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        What are the $x$- and $y$-coordinates of the point shown on this graph.
+        ]
+    {
+        \centering
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+            \tkzDefPoint(-2,-4){A}
+            \tkzDrawPoint[shape=circle, size=6pt,](A)
+        \end{myTikzpictureGrid}   
+        \\[\baselineskip]
+        $x = $ \gap{999} \\[\baselineskip]
+        $y = $ \gap{999}
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        What is the $y$-intercept of the line shown below? 
+        ]
+    {
+        \centering\vspace{1em}
+        $b=$ \gap{99} \\[2em]
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{-x/2 + 3}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[
+        Sketch the graph of a line with slope $m=-1$ and $y$-intercept $b=2$.
+        ]
+    {
+        \centering\vspace{1em}
+        \begin{myTikzpictureGrid}{0.5} {5}{5}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{-x/2 + 3}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\end{document}
