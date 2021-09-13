@@ -1,0 +1,30 @@
+\section{Solving Systems with Augmented Matrices}
+
+\begin{myConceptSteps}{To solve a system using a TI-84 calculator\dots}
+  \myStep{augmented matrix}{%
+    \begin{itemize}
+      \item enter the matrix dimensions (\gap{$3\times4$})
+      \item enter the matrix entries (\gap{numbers})
+    \end{itemize}
+  }
+  \myStep{RREF}{%
+    Use the {\ttfamily rref()} function to convert the matrix to {\bfseries\itshape reduced row echelon form}
+  }
+  \myStep{solution}{Read the \gap{values} for the solution from the \gap{last} column of the result.}
+\end{myConceptSteps}
+
+\myWideProblem[
+    Solve this system using a TI-84.
+]
+{
+  $x = 1 + 4z$\\
+  $-4x + 3y - 3z = 0$ \\
+  $5x - 2y + 3z = -8$
+}{5in}[%
+  \begin{flushright}
+    \large
+    $x = $ \gap{-3}\\[0.5\baselineskip]
+    $y = $ \gap{-5}\\[0.5\baselineskip]
+    $z = $ \gap{-1}
+  \end{flushright}
+  ]
