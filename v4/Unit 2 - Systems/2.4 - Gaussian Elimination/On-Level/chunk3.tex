@@ -10,7 +10,10 @@
   \myStep{RREF}{%
     Use the {\ttfamily rref()} function to convert the matrix to {\bfseries\itshape reduced row echelon form}
   }
-  \myStep{solution}{Read the \gap{values} for the solution from the \gap{last} column of the result.}
+  \myStep{solution}{%
+    Read the \gap{values} for the solution from the \gap{last} column of the result.
+    Make sure to recognize \gap{no solution} and \gap{infinite solutions} cases.
+    }
 \end{myConceptSteps}
 
 \myWideProblem[
@@ -20,7 +23,7 @@
   $x = 1 + 4z$\\
   $-4x + 3y - 3z = 0$ \\
   $5x - 2y + 3z = -8$
-}{5in}[%
+}{2.25in}[%
   \begin{flushright}
     \large
     $x = $ \gap{-3}\\[0.5\baselineskip]
@@ -28,3 +31,18 @@
     $z = $ \gap{-1}
   \end{flushright}
   ]
+
+
+\myWideProblem
+{
+$3x + y + z = 10$\\
+$-3x = 9 + 3z$ \\
+$3x + 4y -5z = -1$
+}{2.25in}[%
+\begin{flushright}
+  \large
+  $x = $ \gap{-3}\\[0.5\baselineskip]
+  $y = $ \gap{-5}\\[0.5\baselineskip]
+  $z = $ \gap{-1}
+\end{flushright}
+]
