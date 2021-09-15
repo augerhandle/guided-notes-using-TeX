@@ -1,8 +1,6 @@
 \section{Solving Systems with a TI-84}
 
-Once you have the word problem 
-written as a \gap{system of equations},
-you can solve that system using a TI-84.
+You can solve a \gap{system of equations} using a TI-84.
 
 \begin{myConceptSteps}{To solve a system of equations using a TI-84\dots}
   [
@@ -22,6 +20,7 @@ you can solve that system using a TI-84.
   \myStep{RREF}{%
       Use the {\ttfamily rref} function to convert to \gap{reduced} row echelon form,
       which looks like this:
+      {\footnotesize
       \[
         \begin{bmatrix}[ccc|c]
             \boldsymbol{1} & 0 & 0 & \blacksquare \\
@@ -29,6 +28,7 @@ you can solve that system using a TI-84.
             0 & 0 & \boldsymbol{1} & \blacksquare
         \end{bmatrix}
     \]
+      }
     }
   \myStep{solution}{%
     Get the variable values from the rightmost column.
@@ -39,14 +39,23 @@ you can solve that system using a TI-84.
 \myWideProblem
 {
   Solve the system of equations in problem \#1.
-}[\normalsize]{3.75in}[
+}[\normalsize]{3.5in}[
   \footnotesize
   The reduced row echelon form looks like
+  {\normalsize
   \(
     \begin{bmatrix}[cc|c]
         \boldsymbol{1} & 0  & \blacksquare \\
         0 & \boldsymbol{1}  & \blacksquare 
     \end{bmatrix}
 \),
+  }
  because there are only two equations in this problem.
 ]
+
+
+
+\myWideProblem
+{
+  Solve the system of equations in problem \#2.
+}[\normalsize]{3.5in}
