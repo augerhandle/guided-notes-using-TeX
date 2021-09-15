@@ -201,3 +201,21 @@
 % #2 - column 2 text
 %
 \NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
+
+
+% ---------------------------------------------------------------------------
+% A table for systems of equations word problems.
+%
+% #1 scale factor
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\mySystemTable}{O{8}}{
+    \begin{center}
+        \begin{tabular}{|m{5em}|m{2in}|m{2in}|m{1.5in}|}
+            \hline
+            {\bfseries\itshape variables} & {\bfseries\itshape equations} & {\bfseries\itshape system} & {\bfseries\itshape augmented matrix} \\
+            \hline\hline
+            \scalebox{#1}{\fontsize{32pt}{0pt}\selectfont \phantom{\textbf{I}}} & \phantom{X} & \phantom{X} & \phantom{X}\\
+            \hline
+        \end{tabular}
+    \end{center}
+}
