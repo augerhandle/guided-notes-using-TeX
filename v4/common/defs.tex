@@ -219,3 +219,17 @@
         \end{tabular}
     \end{center}
 }
+
+\NewDocumentCommand{\myBetterSystemTable}{O{4}}{
+    \begin{center}
+        \begin{tabular}{|m{3.25in}|m{3.25in}|}
+            \hline
+            \underline{\bfseries\itshape variables:} & \underline{\bfseries\itshape system of equations:}  \\
+            \scalebox{#1}{\fontsize{32pt}{0pt}\selectfont \phantom{\textbf{I}}} & \phantom{X} \\
+            \hline
+            \underline{\bfseries\itshape augmented matrix:} & \underline{\bfseries\itshape RREF matrix:} \\
+            \scalebox{#1}{\fontsize{32pt}{0pt}\selectfont \phantom{\textbf{I}}} & \phantom{X} \\
+            \hline
+        \end{tabular}
+    \end{center}
+}
