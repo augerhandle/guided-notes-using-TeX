@@ -1,0 +1,229 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+\forHONORS 
+\newcommand{\myCourse}{\whenHONORS{Honors~}Algebra 2}
+\newcommand{\myAssignmentName}{\whenHONORS{H-}2.5 CW -- Applications of Systems of Equations}
+
+
+
+\noindent
+\myCourse
+\hfill 
+Name : \fbox{\phantom{\large Xxxxxx Xxxxxx-Xxxxxx}}
+
+\vspace{0.5em}
+
+\noindent
+{\LARGE\sffamily\myAssignmentName}
+\hfill 
+Period : \fbox{\phantom{\large 9999}}
+
+\hrule\hspace{\baselineskip}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent[Solve these word problems.]
+{
+    Jesse, Maria and Charles went to the store 
+    to buy decorations for a dance at the high school. 
+    Jesse purchased three sheets of craft paper, 
+    four boxes of markers 
+    and five glue sticks. 
+    He paid \$24.40. 
+    Maria paid \$30.40 when she bought six sheets of craft
+    paper, five boxes of markers and two glue sticks. 
+    Charles paid \$13.40 for three
+    sheets of craft paper, two boxes of markers and one glue stick. 
+    What is the unit cost of each item?
+    %
+    \mySystemTable
+    \small
+    craft paper per sheet : \$\gap{999.99}
+    \hfill 
+    markers per box : \$\gap{999.99}
+    \hfill 
+    glue sticks : \$\gap{999.99}
+}[\small]
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Rafael, an exchange student from Brazil, made phone calls 
+    within Canada, to the United States, and to Brazil. 
+    The rates per minute for these calls vary for the three countries. 
+    Use the 
+    following table to determine the rates.
+    \begin{center}
+        \begin{tabular}{lcccc}
+            Month & minutes within Canada & minutes to the US & minutes to Brazil & Cost \\
+            \toprule
+            September & 90 & 120 & 180 & \$252.00  \\
+            October   & 70 & 100 & 120 & \$184.00  \\
+            November  & 50 & 110 & 150 & \$206.00  \\
+        \end{tabular}
+    \end{center}
+    %
+    \mySystemTable
+    \small
+    Canadian rate : \$\gap{99.99} per minute \\
+    US rate : \$\gap{99.99} per minute \\
+    Brazilian rate : \$\gap{99.99} per minute
+    }[\small]
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Itzel, Danielle and Sharissa bought snacks for a party. 
+    They each bought the items shown in the
+    following table at a local  store:
+    \begin{center}
+        \begin{tabular}{ccccc}
+            bags of chips & bottle of soda & chocolate bars & Cost \\
+            \toprule
+            4 & 4 & 6  & \$21.00  \\
+            3 & 2 & 10 & \$20.88  \\
+            2 & 3 &  4 & \$13.17  \\
+        \end{tabular}
+    \end{center}
+    Find the cost of each item.
+    %
+    \mySystemTable
+    \small
+    each bag of chips: \$\gap{9.99}
+    \hfill 
+    each bottle of soda: \$\gap{9.99}
+    \hfill 
+    each chocolate bar: \$\gap{9.99}
+    }[\small]
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    A local computer company sells three types of laptop computers 
+    to three nearby stores. 
+    The number of laptops ordered by each store and the amount owed to the
+    company for the order is shown in the following table:
+    \begin{center}
+        \begin{tabular}{lcccc}
+            store & Laptop-A & Laptop-B & Laptop-C & amount owed \\
+            \toprule
+            Wal-Mart & 10 & 8 & 6 & \$21,200.00  \\
+            Sears    & 7  & 9 & 5 & \$18,700.00  \\
+            Target   & 8  & 4 & 3 & \$13,000.00  \\
+        \end{tabular}
+    \end{center}
+    Find the price of each kind of laptop.
+    %
+    \mySystemTable
+    \small
+    Laptop-A: \$\gap{9.99}
+    \hfil 
+    Laptop-B: \$\gap{9.99}
+    \hfil 
+    Laptop-C: \$\gap{9.99}
+    }[\small]
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Carlos, Josh and Dan went shopping for Halloween treats. 
+    Carlos bought 3 chocolate pumpkins, 4 masks and 8 candy witches. 
+    He spent \$36.65. 
+    Josh bought 5 chocolate pumpkins, 3 masks and 10 candy witches. 
+    He spent \$37.50. 
+    Dan bought 4 chocolate pumpkins, 5 masks and 6 candy witches. 
+    He spent \$43.45. 
+    Find the price of each of the three kinds of treats.
+    %
+    \mySystemTable
+    \small
+    chocolate pumpkin: \$\gap{9.99}
+    \hfill 
+    mask: \$\gap{9.99}
+    \hfill 
+    chocolate witch: \$\gap{9.99}
+    }[\small]
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Juanita, Larry and Zara all went to the same store.
+    They each bought decorations for a
+    Christmas party. 
+    The number of items bought by each person is given in the table
+    along with the total cost of each purchase. 
+    Find the unit price of each item. 
+    \begin{center}
+        \begin{tabular}{lcccc}
+            person & \# rolls of garland & \# wreaths & \# poinsettias & amount owed \\
+            \toprule
+            Juanita  & 2  & 4 & 2 & \$49.50  \\
+            Larry    & 3  & 2 & 4 & \$57.75  \\
+            Zara     & 3  & 3 & 1 & \$38.50  \\
+        \end{tabular}
+    \end{center}
+    \mySystemTable
+    \small
+    Laptop-A: \$\gap{9.99}
+    \hfill 
+    Laptop-B: \$\gap{9.99}
+    \hfill 
+    Laptop-C: \$\gap{9.99}
+}[\small]
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    We are given the coordinates of four points: 
+    $(-1,0)$, $(1,0)$, $(3,0)$, $(2.16,-3.08)$.
+    Find the equations of a function, 
+    $y = \alpha x^3 + \beta x^2 + \gamma x + \delta $, 
+    that passes exactly through these points.
+    ({\bfseries Note:} 
+    for this problem, the unknown variables are 
+    $\alpha$, $\beta$, $\gamma$, and $\delta$.)
+    \vspace{2in}
+    \mySystemTable
+    \small
+    $\alpha = $ \gap{9999999}
+    \hfill 
+    $\beta = $ \gap{9999999}
+    \hfill 
+    $\gamma = $ \gap{9999999}
+    \hfill 
+    $\delta = $ \gap{9999999}
+}[\small]
+
+\end{document}
