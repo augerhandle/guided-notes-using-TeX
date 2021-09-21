@@ -1,0 +1,32 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/document-geometry}
+\input{../../../common/header-footer}
+\input{../../../common/chapter-pagestyle}
+\input{../../../common/objectives}
+\input{../../../common/vocabulary}
+\input{../../../common/concepts}
+\input{../../../common/problems}
+\input{../../../common/align-systems}
+
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+
+
+\begin{document}
+\pagestyle{lsnPagestyle}
+\chapterstyle{lsnChapterStyle}
+\checkandfixthelayout
+\raggedbottom
+
+\forHONORS
+% \dashundergapssetup{
+%     teacher-mode=true, % set to true to show answers 
+% }
+
+\input{content}
+
+\end{document}

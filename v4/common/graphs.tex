@@ -44,12 +44,13 @@
 % #3 xmax
 % #4 optional ymin (defaults to negative of ymax)
 % #5 ymax
+% #6 drawing style of x/y axes (solid, dashed, etc...)
 %
-\NewDocumentEnvironment{myTikzpictureGrid}{ m omom }{
+\NewDocumentEnvironment{myTikzpictureGrid}{ m omom O{dashed} }{
     \begin{tikzpicture}[
         scale=#1,
-        xaxe style/.style = { dashed, very thick, arrows={-{Straight Barb}}, },                 
-        yaxe style/.style = { dashed, very thick, arrows={-{Straight Barb}}, },                 
+        xaxe style/.style = { #6, very thick, arrows={-{Straight Barb}}, },                 
+        yaxe style/.style = { #6, very thick, arrows={-{Straight Barb}}, },                 
         ]
         \tkzInit[
             xmin={\IfValueTF{#2}{#2}{-#3}}, xmax=#3, xstep=1,

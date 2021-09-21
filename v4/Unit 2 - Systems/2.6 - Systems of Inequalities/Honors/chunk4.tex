@@ -1,0 +1,43 @@
+\section{Writing a system of 2-variable inequalities from graphs}
+
+\begin{myConceptSteps}{To write the system of inequalities given the graph of its solution\dots}
+  [Follow these steps for \gap{each line} in the graph.]
+  \myStep{equations}{%
+    Look at the line, and write its equation.
+  }
+  \myStep{inequalities}{%
+    Write the inequality for the line based on shading.
+    \begin{itemize}[fullwidth]
+      \item Use {\Large $>$} or {\Large $\ge$} if the shading is \gap{above} the line.
+      \item Use {\Large $<$} or {\Large $\le$} if the shading is \gap{below} the line.
+      \item {\itshape For vertical lines,}
+      \begin{itemize}
+        \item Use {\Large $>$} or {\Large $\ge$} if the shading is to the \gap{right}.
+        \item Use {\Large $<$} or {\Large $\le$} if the shading is to the \gap{left}.
+      \end{itemize}
+    \end{itemize}
+  }
+  \myStep{equals or not}{
+    \begin{itemize}[fullwidth]
+      \item Use {\Large $\ge$} or {\Large $\le$} for \gap{solid} lines.
+      \item Use {\Large $>$} or {\Large $<$} for \gap{dashed} lines.
+    \end{itemize}
+  }
+\end{myConceptSteps}
+
+
+
+\myWideProblemWithContent[%
+  Write the system of inequalities 
+  whose solution is shown in this graph.]
+{
+  \begin{myTikzpictureGrid}{0.75} [-6]{5}{5} [dotted]
+    \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x-1}
+    \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x+3}
+    \tkzFct[ loosely dashed, ultra thick, samples=100, domain=-10:10,]{3}
+    \tkzFct[ loosely dashed, ultra thick, samples=100, domain=-10:10,]{-2}
+    \tkzDrawAreafg[between= b and d,color=gray,domain = -5:-1]
+    \tkzDrawAreafg[between= b and a,color=gray,domain = -1:0]
+    \tkzDrawAreafg[between= c and a,color=gray,domain = 0:4]
+  \end{myTikzpictureGrid}
+}
