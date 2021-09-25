@@ -1,0 +1,88 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\forONLEVEL
+\input{init-date}
+
+% --------------------------------------------------------------------------
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Sketch the graph of this line. (It's just a line. No dashed/solid. No shading. Just a line!)]
+    {
+        \centering
+        \Large
+        $y = \frac{5}{3}x - 4$\\[1\baselineskip]
+        \begin{myTikzpictureGrid}{0.5} {5}{5} [solid]
+        \end{myTikzpictureGrid}   
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Solve this equation for $x$.
+        ]
+    {
+        \centering
+        $25 = 5 - 2x$
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Rewrite this equation in {\bfseries\itshape slope-intercept form}, $y=mx+b$.
+        ]
+    {
+        \centering
+        $2y - 4x = 6$
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        The graph below shows where the {\bfseries\itshape boundary line} for 
+        the given inequality is.
+        Add the shading where it belongs.
+        ]
+    {
+        \centering
+        $y > -x -3$\\[1.5\baselineskip]
+        \begin{myTikzpictureGrid}{0.5} {5}{5} [solid]
+            \tkzFct[ loosely dashed, ultra thick, samples=100, domain=-10:10,]{-x - 3}
+        \end{myTikzpictureGrid}    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\end{document}

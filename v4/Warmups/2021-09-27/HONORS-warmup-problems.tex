@@ -1,0 +1,88 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\forHONORS
+\input{init-date}
+
+% --------------------------------------------------------------------------
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        On last Friday,
+        I introduced you to these three ``symbols'' in the notes.
+        What do they mean?
+        ]
+    {
+        \vspace{2em}
+        \hfill 
+        $\equiv$ \hfill 
+        $\therefore$ \hfill 
+        {\slshape QED} \hfill 
+        {}
+        \vspace{2em}
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Simplify this expression.]
+    {
+        \centering
+        $2 x^3y \, 4x^2y^2 \, 6xy^3$ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Sketch the graph of this linear inequality.]
+    {
+        \centering
+        $2y+5x < 6$\\[1\baselineskip]
+        \begin{myTikzpictureGrid}{0.5} {5}{5} [solid]
+        \end{myTikzpictureGrid}
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblem[Explain {\bfseries\itshape in words} the first few steps 
+        in solving this system of equations {\bfseries\itshape by elimination}.
+        You do {\bfseries\itshape not} need to solve it! Just describe how to get started.]
+    {
+        \centering
+        $-4x -5y = -18$\\[1em]
+        $6x - 15y = -18$
+    }[\LARGE]{3in}
+\end{myWarmupProblems}
+
+\end{document}
