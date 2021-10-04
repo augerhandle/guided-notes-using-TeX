@@ -1,0 +1,82 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\forHONORS
+\input{init-date}
+
+% --------------------------------------------------------------------------
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Subtract these polynomials]
+    {
+        \centering
+        \Large
+        $ (x^3 + 2xy + 1) - (-3xy -3x^3 - 3)$ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Multiply these two polynomials using the {\bfseries\itshape Box Method}.
+        ]
+    {
+        \centering
+        $ (x+11)(x-11)$
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Multiply these two polynomials using the {\bfseries\itshape Box Method}.
+        ]
+    {
+        \centering
+        $ (11z+7)(11z-7)$
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Factor this polynomial by removing the greatest common factor (GCF).
+        ]
+    {
+        \centering
+        $ 5x^2yz^5 + 10xyz^5 + 15yz^5$    
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\end{document}
