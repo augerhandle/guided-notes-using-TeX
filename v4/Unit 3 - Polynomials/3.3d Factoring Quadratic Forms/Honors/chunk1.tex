@@ -1,0 +1,84 @@
+% \myCenteredBox[width=5.5in]{
+% % When you factor,
+% % you should {\bfseries\itshape always} try to \gap{GCF} first.
+% % Today, 
+% % we assume you have already done this. 
+% % But not in the future.
+% % }
+\myCenteredBox[width=2.5in]{
+    \centering
+    This is very like Lesson 3.3b.
+}
+
+\begin{myConceptSteps}{To factor a 4th degree quadratic form polynomial\dots}[%
+    \begin{center}
+        % \large
+        \renewcommand{\arraystretch}{1.5}
+        \setlength{\fboxsep}{4pt}
+        \setlength{\fboxrule}{0.9pt}
+        \begin{tabular}{r|c|c|}
+            {} & {\normalsize\itshape GCF} & {\normalsize\itshape GCF} \\
+            \hline
+            {\normalsize\itshape GCF \#1} & \gap{$a$}$x^4$ & \gap{?} $x^2$ \\
+            \hline
+            {\normalsize\itshape GCF} & \gap{?} $x^2$ & \gap{$c$} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    Follow these steps:]
+    \myStep{descending order}{%
+        Rewrite as
+        \gap{$ax^4+bx^2+c$}.
+    }
+    \myStep{constants}{Write down $a$, $b$, $c$. Calculate \gap{$ac$}.}
+    \myStep{factors of $ac$}{Find \gap{factors} of $ac$ that add to $b$.}
+    \myStep{fill in}{Fill in the blanks.
+        \begin{itemize}[nosep]
+            \item put \gap{$a$} in the {\bfseries\itshape top-left} blank.
+            \item put \gap{$c$} in the {\bfseries\itshape bottom-right} blank.
+            \item put the \gap{factors} into the other blanks.
+        \end{itemize}
+    }
+    \myStep{GCF \#1}{%
+        Find the GCF of the \gap{top} \gap{row}. Write it outside on the left.
+    }
+    \myStep{other GCFs}{%
+        Find the other GCFs using the area model: 
+        $ \text{\itshape height} \times \text{\itshape width} = \text{\itshape area}$.
+    }
+    \myStep{result}{%
+        The result is the product of 
+        \begin{itemize}[nosep]
+            \item the \gap{left} {\itshape GCF} column and 
+            \item the \gap{top} {\itshape GCF} row.
+        \end{itemize}
+    }
+\end{myConceptSteps}
+
+
+
+\myProblems[%
+    Factor these quadratic trinomials.
+    \vspace{-0.75\baselineskip}
+    \begin{itemize}[nosep]
+        \item Always check for a {\bfseries\itshape GCF}, first.
+        \item Make sure to {\bfseries\itshape completely} factor the answer.
+    \end{itemize}
+    ]
+    {
+        $ 2x^4 - x^2 - 15 $
+    }
+    {
+        $ 3z^4 - 26z^2 + 16 $
+    }
+    {3.25in}
+
+\myProblems
+    {
+        $ 5\beta^4 - 25\beta^2 + 30  $
+    }
+    {
+        $ 4t^4 - 56t^2 + 180  $
+    }
+    {3.25in}
+
