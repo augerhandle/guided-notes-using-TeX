@@ -1,0 +1,82 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\forONLEVEL
+\input{init-date}
+
+% --------------------------------------------------------------------------
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Add these polynomials]
+    {
+        \centering
+        \Large
+        $ (x^2 + 2x + 1) + (2x^2 -2x + 1)$ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Multiply these two polynomials using the {\bfseries\itshape Box Method}.
+        ]
+    {
+        \centering
+        $ (3x-5)(3x+5)$
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Solve this linear equation for $x$.
+        ]
+    {
+        \centering
+        $ 5x - 2 = 8 $
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+% \advancebydays{1}
+
+% \begin{myWarmupProblems}[]
+%     \setcounter{MyProblemCounter}{1}
+%     \myWideProblemWithContent[%
+%         Factor this polynomial by removing the greatest common factor (GCF).
+%         ]
+%     {
+%         \centering
+%         $ 5x^3 + 10x^2 + 15x$    
+%     }[\LARGE]
+% \end{myWarmupProblems}
+
+\end{document}
