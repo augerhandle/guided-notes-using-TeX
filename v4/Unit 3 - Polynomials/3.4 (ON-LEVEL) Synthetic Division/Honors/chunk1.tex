@@ -1,0 +1,66 @@
+% \section{Quick Polynomial Division Using Synethetic Division}
+
+% % \begin{myCenteredBox}[width=5.25in,]
+%     \gap{Synthetic} division is an alternative to \gap{long} division.
+%     Use it when the {\bfseries\itshape divisor} is a \gap{linear} \gap{binomial}. 
+%     \begin{itemize}[nosep]
+%         \item It is fast.
+%         \item It is short.
+%     \end{itemize}
+% % \end{myCenteredBox}
+
+
+\begin{myConceptSteps}{~To divide polynomials using synthetic division\dots}
+    \myStep{setup}{%
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Draw an L-shaped frame for two rows of numbers.
+            \item Write the coefficients of the {\bfseries\scshape Dividend}.
+                \begin{itemize}[nosep,leftmargin=*]
+                    \item[$\circ$] in \gap{descending} exponent order
+                    \item[$\circ$] with \gap{zeros} for missing terms
+                \end{itemize}
+            \item Write $a$ from the {\bfseries\scshape Divisor}. 
+                \begin{itemize}[nosep,leftmargin=*]
+                    \item[$\circ$] $a$ is the \gap{opposite} of what you see.
+                \end{itemize}
+        \end{itemize}
+    }
+    \myStep{start}{Bring the \gap{leading} coefficient down.}
+    \myStep{multiply}{Multiply $a$ times the number at the bottom.}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Put it under the next coefficient.
+        \end{itemize} 
+    \myStep{add}{Add the numbers in the right column.}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Put the sum at the bottom.
+        \end{itemize} 
+    \myStep{repeat}{Repeat until done. (Goto step 3.)}
+    \myStep{identify}{Identify the {\bfseries\scshape Quotient} and {\bfseries\scshape Remainder}.}
+    \myStep{result}{%
+        The result is 
+        {
+            $ 
+                \text{\bfseries\scshape Quotient} 
+                + 
+                \frac{\text{\bfseries\scshape Remainder}}{\text{\bfseries\scshape Divisor}} 
+            $
+        }
+    }
+\end{myConceptSteps}
+
+\myProblems[Divide these polynomials.]
+    {
+        $
+            (x^3 + 18x^2 + 71x -74) 
+            \div
+            (x+8)
+        $
+    }
+    {
+        \Large
+        $\frac
+            {t^3 - 49t -8} 
+            {t - 7}
+        $
+    }
+    {2.5in}
