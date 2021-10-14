@@ -1,0 +1,74 @@
+\section{The Division Algorithm}
+
+If $P(x)$ and $d(x)$ are two polynomials (with $d(x) \ne 0$),
+the {\bfseries\itshape Division Algorithm} states:
+
+\myCenteredBox[width=3.5in,valign=center]{
+    \Large
+    \vspace{-\baselineskip}
+    \[ P(x) = Q(x) d(x) + R(x) \]
+}
+
+There is another way to write this.
+
+\myCenteredBox[width=3.5in,valign=center]{
+    \Large
+    % \vspace{-\baselineskip}
+    \[ \frac{P(x)}{d(x)} = Q(x) + \frac{R(x)}{d(x)} \]
+}
+
+which I like to write as 
+
+{
+    \Large
+    \begin{center}
+    $ 
+    \frac{\text{\scshape Dividend}}{\text{\scshape Divisor}} 
+    =
+    \text{\scshape Quotient} 
+        + 
+        \frac{\text{\scshape Remainder}}{\text{\scshape Divisor}} 
+    $
+    \end{center}
+}
+
+
+
+\newpage
+
+
+
+
+\section{The Remainder Theorem}
+
+Start with the Division Algorithm.
+
+\vspace{2.5in}
+
+What this means is:
+
+\myCenteredBox[]{
+    The remainder of 
+    $ \frac{P(x)}{(x-a)} $,
+    is equal to $P(a)$.
+    (You can evaluate $P$ at $x=a$ by doing synthetic division and using $R$ as the answer!)
+}
+
+
+
+\section{The Factor Theorem}
+
+Start with the Division Algorithm.
+
+\vspace{2.5in}
+
+What this means is:
+
+\myCenteredBox[]{
+    If you get a remainder of \gap{zero} 
+    when you divide 
+    $ \frac{P(x)}{(x-a)} $,
+    then 
+    $(x-a)$ 
+    is a {\bfseries\itshape factor} of $P(x)$.
+}
