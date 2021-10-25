@@ -14,8 +14,13 @@
 }{
     \end{myListAnnotate}
 }
-\newcommand{\myStep}[2]{
-    \myItem{#1.}{#2}
+
+% #1 bold label for the step
+% #2 punctuation mark after the label
+% #3 text describing the step
+%
+\NewDocumentCommand{\myStep}{m O{.} m}{
+    \myItem{#1#2}{#3}
 }
 
 
