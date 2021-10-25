@@ -1,0 +1,78 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\forONLEVEL
+\input{init-date}
+
+% --------------------------------------------------------------------------
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Factor this polynomial.]
+    {
+        \centering
+        \Large
+        $ x^2 + 2x - 15 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Factor this polynomial.]
+    {
+        \centering
+        \Large
+        $ x^2 - 2x - 15 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Factor this polynomial.]
+    {
+        \centering
+        \Large
+        $ x^2 + 8x + 15 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+% \advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Factor this polynomial.]
+    {
+        \centering
+        \Large
+        $ x^2 - 8x + 15 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\end{document}
