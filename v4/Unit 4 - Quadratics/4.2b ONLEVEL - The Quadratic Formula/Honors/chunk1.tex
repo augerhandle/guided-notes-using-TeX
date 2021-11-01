@@ -1,0 +1,52 @@
+\section{The Quadratic Formula}
+
+Solve quadratic equations in {\bfseries\itshape standard form} 
+\gap{$ax^2 + bx + c = 0$}
+using this formula:
+
+\myCenteredBox[
+    width=6.5in,
+    title={The Quadratic Formula},
+    colbacktitle=blue!10!white,
+    coltitle=black,
+    ]{
+    {
+    \large
+    \[
+        x = \frac 
+                {-b \pm \myRoot{b^2 - 4ac}}
+                {2a}
+    \]
+    {\normalsize which is really \gap{two} solutions:}
+    \begin{align*} 
+        x &= \frac 
+        {-b \bm{+} \myRoot{b^2 - 4ac}}
+        {2a}
+        &
+        x &= \frac 
+        {-b \bm{-} \myRoot{b^2 - 4ac}}
+        {2a}
+    \end{align*}
+    }
+}
+
+\hfill 
+\begin{minipage}{0.4\textwidth}
+The expression $b^2-4ac$ determines {how many} solutions there are.
+\end{minipage}
+\hfill 
+\begin{minipage}{0.55\textwidth}
+\begin{center}
+    % \small
+    \begin{tabular}{cl}
+        \toprule
+        $D = b^2-4ac$ & \# solutions \\
+        \midrule
+        $D > 0$ & two solutions \\
+        $D = 0$ & one solution \\
+        $D < 0$ & no {\bfseries\itshape real} solutions \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+\end{minipage}
+\hfill{}
