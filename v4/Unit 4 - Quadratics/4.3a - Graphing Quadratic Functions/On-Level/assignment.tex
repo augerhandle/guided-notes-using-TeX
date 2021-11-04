@@ -1,0 +1,201 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+\forONLEVEL
+\newcommand{\myCourse}{\whenHONORS{Honors~}Algebra 2}
+\newcommand{\myAssignmentName}{\whenHONORS{H-}4.3a CW -- Graphing Quadratic Functions}
+
+
+
+\noindent
+\myCourse
+\hfill 
+Name : \fbox{\phantom{\large Xxxxxx Xxxxxx-Xxxxxx}}
+
+\vspace{0.5em}
+
+\noindent
+{\Large\bfseries\sffamily\myAssignmentName}
+\hfill 
+Period : \fbox{\phantom{\large 9999}}
+
+\hrule\hspace{\baselineskip}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent[Graph these quadratic functions.]
+{
+    \small
+    \begin{center}
+    $f(x) = \bm{\frac{1}{2}x^2}$
+    \end{center}
+    %
+    \begin{minipage}{0.6\textwidth}
+        \renewcommand{\arraystretch}{1.75}
+        % \begin{tabular}{c|>{\raggedleft\arraybackslash}p{2in}}
+        \begin{tabular}{c|p{2in}}
+                \hline
+            $x$ & $y = f(x)$ \\
+            \hline\hline 
+            $-3$ & $f(-3) =$ \\\hline
+            $-2$ & $f(-2) =$ \\\hline
+            $0$  & $f(0) =$ \\\hline
+            $2$  & $f(2) =$ \\\hline
+            $3$  & $f(3) =$ \\\hline
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {6}[-2]{10}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{(x**2)/2}
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    \small
+    \begin{center}
+    $f(x) = \bm{-x^2 + 4}$
+    \end{center}
+    %
+    \begin{minipage}{0.6\textwidth}
+        \renewcommand{\arraystretch}{1.75}
+        % \begin{tabular}{c|>{\raggedleft\arraybackslash}p{2in}}
+        \begin{tabular}{c|p{2.5in}}
+                \hline
+            $x$ & $y = f(x)$ \\
+            \hline\hline 
+            % $-3$ & $f(-3) =$ \\\hline
+            $-2$ & $f(-2) =$ \\\hline
+            $-1$ & $f(-1) =$ \\\hline
+            $0$  & $f(0) =$ \\\hline
+            $1$  & $f(1) =$ \\\hline 
+            $2$  & $f(2) =$ \\\hline
+            $3$  & $f(3) =$ \\\hline
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {6}{6}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-(x**2) + 4}
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    \small
+    \begin{center}
+    $f(x) = \bm{x^2 + 2x - 3}$
+    \end{center}
+    %
+    \begin{minipage}{0.6\textwidth}
+        \renewcommand{\arraystretch}{1.75}
+        % \begin{tabular}{c|>{\raggedleft\arraybackslash}p{2in}}
+        \begin{tabular}{c|p{3in}}
+                \hline
+            $x$ & $y = f(x)$ \\
+            \hline\hline 
+            $-3$ & $f(-3) =$ \\\hline
+            $-2$ & $f(-2) =$ \\\hline
+            $-1$ & $f(-1) =$ \\\hline
+            $0$  & $f(0) =$ \\\hline
+            $1$  & $f(1) =$ \\\hline 
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {6}{6}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{x**2 + 2*x - 3}
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    \small
+    \begin{center}
+    $f(x) = \bm{-2x^2}$
+    \end{center}
+    %
+    \begin{minipage}{0.6\textwidth}
+        \renewcommand{\arraystretch}{1.75}
+        % \begin{tabular}{c|>{\raggedleft\arraybackslash}p{2in}}
+        \begin{tabular}{c|p{3in}}
+                \hline
+            $x$ & $y = f(x)$ \\
+            \hline\hline 
+            $-2$ & $f(-2) =$ \\\hline
+            $-1$ & $f(-1) =$ \\\hline
+            $0$  & $f(0) =$ \\\hline
+            $1$  & $f(1) =$ \\\hline 
+            $2$  & $f(2) =$ \\\hline
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {6}[-10]{2}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-2*x**2}
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    \small
+    \begin{center}
+    $f(x) = \bm{x^2 - 4}$
+    \end{center}
+    %
+    \begin{minipage}{0.6\textwidth}
+        \renewcommand{\arraystretch}{1.75}
+        % \begin{tabular}{c|>{\raggedleft\arraybackslash}p{2in}}
+        \begin{tabular}{c|p{3in}}
+                \hline
+            $x$ & $y = f(x)$ \\
+            \hline\hline 
+            $-3$ & $f(-3) =$ \\\hline
+            $-1$ & $f(-1) =$ \\\hline
+            $0$  & $f(0) =$ \\\hline
+            $1$  & $f(1) =$ \\\hline 
+            $3$  & $f(3) =$ \\\hline
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {6}{6}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{x**2 - 4}
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+}
+
+
+\end{document}
