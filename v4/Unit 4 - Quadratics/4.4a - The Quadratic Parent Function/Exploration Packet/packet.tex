@@ -1,0 +1,47 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+\newcommand{\myCourse}{Algebra 2}
+\newcommand{\myAssignmentName}{4.4 CW -- Tranformations
+ of Quadratic Functions}
+
+
+
+\noindent
+\myCourse
+\hfill 
+Name : \fbox{\phantom{\large Xxxxxx Xxxxxx-Xxxxxx}}
+
+\vspace{0.5em}
+
+\noindent
+{\Large\bfseries\sffamily\myAssignmentName}
+\hfill 
+Period : \fbox{\phantom{\large 9999}}
+
+\hrule\hspace{\baselineskip}
+
+
+
+% \dashundergapssetup{
+%     teacher-mode=true, % set to true to show answers 
+% }
+
+\setlength{\parindent}{0in}
+\input{content}
+
+\end{document}

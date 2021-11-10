@@ -1,0 +1,164 @@
+\section*{Part 1 (the effects of $\bm{k}$)}
+
+{
+\small
+For each of the following functions,
+\begin{enumerate}[nosep]
+    \item Sketch the {\bfseries\itshape graph} of the new function. (Draw it on top of the parent function.)
+    \item Find the following attributes of the transformed function.
+    \begin{itemize}[nosep]
+        \item the $(x,y)$ coordinates of the {\bfseries\itshape vertex}
+        \item the equation of the {\bfseries\itshape axis of symmetry} (AOS)
+        \item the {\bfseries\itshape domain} and {\bfseries\itshape range}
+    \end{itemize}
+    \item Circle one of: {\bfseries\itshape max} or {\bfseries\itshape min}.
+    \item Circle one of: {\bfseries\itshape opens up} or {\bfseries\itshape opens down}.
+    \item Describe {\bfseries\itshape what changed} in going from the parent function to the transformed function.
+        (Hint: What happens to the location of the vertex?)
+\end{enumerate}
+}
+\vspace{\baselineskip}
+
+\begin{tcbposter}[
+        poster = {
+            rows=7,
+            columns=2,
+            height=10cm,
+            spacing=1mm,
+            % showframe,
+            },
+        boxes = {colbacktitle=black!15,coltitle=black,colback=white,sharp corners}
+    ]
+\posterbox[]{name=A,column=1,row=1,span=1}{
+    \Large
+    $y = x^2 + 5$
+    \hfill 
+    \large
+        ($\bm{k}=5$)
+    } 
+\posterbox[adjusted title=What changed?] {name=Z,column=1,span=2,row=6,rowspan=2}{}
+\posterbox[adjusted title=graph] {name=B,row=2,between=A and Z}{
+    \centering
+    \begin{myTikzpictureGrid}{0.2} {10}{10}
+        % \tkzText(13,8){$x - y = 0$}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x**2}
+        % \tkzText(-13,7.25){$x + 2y = 6$}
+    \end{myTikzpictureGrid}
+} 
+\posterbox[adjusted title=attributes] {row=2,column=2,between=A and Z}{
+    vertex: \gap{$(0,5)$} 
+
+    AOS: \gap{$x=0$}
+
+    domain: \gap{all real numbers}
+    
+    range: \gap{$y \ge 5$}\\[1\baselineskip]
+    circle one: MAX or MIN \\[1\baselineskip]
+    circle one: opens UP or DOWN
+}
+\end{tcbposter}
+
+
+
+
+\begin{tcbposter}[
+    poster = {
+        rows=7,
+        columns=2,
+        height=10cm,
+        spacing=1mm,
+        % showframe,
+        },
+    boxes = {colbacktitle=black!15,coltitle=black,colback=white,sharp corners}
+]
+\posterbox[]{name=A,column=1,row=1,span=1}{
+\Large
+$y = x^2 - 7$
+\hfill 
+\large
+($\bm{k}=-7$)
+} 
+\posterbox[adjusted title=What changed?] {name=Z,column=1,span=2,row=6,rowspan=2}{}
+\posterbox[adjusted title=graph] {name=B,row=2,between=A and Z}{
+\centering
+\begin{myTikzpictureGrid}{0.2} {10}{10}
+    % \tkzText(13,8){$x - y = 0$}
+    \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x**2}
+    % \tkzText(-13,7.25){$x + 2y = 6$}
+\end{myTikzpictureGrid}
+} 
+\posterbox[adjusted title=attributes] {row=2,column=2,between=A and Z}{
+vertex: \gap{$(0,-7)$} 
+
+AOS: \gap{$x=0$}
+
+domain: \gap{all real numbers}
+
+range: \gap{$y \ge -7$}\\[1\baselineskip]
+circle one: MAX or MIN \\[1\baselineskip]
+circle one: opens UP or DOWN
+}
+\end{tcbposter}
+
+
+
+\vspace{1.5\baselineskip}
+
+\begin{tcbposter}[
+    poster = {
+        rows=7,
+        columns=2,
+        height=10cm,
+        spacing=1mm,
+        % showframe,
+        },
+    boxes = {colbacktitle=black!15,coltitle=black,colback=white,sharp corners}
+]
+\posterbox[]{name=A,column=1,row=1,span=1}{
+\Large
+$y = x^2 +3$
+\hfill 
+\large
+($\bm{k}=3$)
+} 
+\posterbox[adjusted title=What changed?] {name=Z,column=1,span=2,row=6,rowspan=2}{}
+\posterbox[adjusted title=graph] {name=B,row=2,between=A and Z}{
+\centering
+\begin{myTikzpictureGrid}{0.2} {10}{10}
+    % \tkzText(13,8){$x - y = 0$}
+    \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x**2}
+    % \tkzText(-13,7.25){$x + 2y = 6$}
+\end{myTikzpictureGrid}
+} 
+\posterbox[adjusted title=attributes] {row=2,column=2,between=A and Z}{
+vertex: \gap{$(0,3)$} 
+
+AOS: \gap{$x=0$}
+
+domain: \gap{all real numbers}
+
+range: \gap{$y \ge 3$}\\[1\baselineskip]
+circle one: MAX or MIN \\[1\baselineskip]
+circle one: opens UP or DOWN
+}
+\end{tcbposter}
+
+
+
+What is the {\bfseries\itshape effect} of $\bm{k}$ on the parent function?
+
+\rule{\textwidth}{0.15mm}
+
+\rule{\textwidth}{0.15mm}
+
+\rule{\textwidth}{0.15mm}
+
+\rule{\textwidth}{0.15mm}
+
+\rule{\textwidth}{0.15mm}
+
+\vfill 
+
+The {\bfseries\itshape up/down} movement of the parent function is called 
+\gap{vertical} \gap{translation}. 
+The \gap{shape} of the curve does not change.
