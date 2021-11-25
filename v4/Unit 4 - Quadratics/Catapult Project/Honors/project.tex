@@ -1,0 +1,56 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/vocabulary}
+
+\input{../../../common/assignment-header}
+
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+% memoir command to control subsection numbering
+\setsecnumdepth{subsection}
+
+\newcommand{\mymm}{{\bfseries\itshape m\&m}}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1ex}
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+\forHONORS
+\myAssignmentHeader[\whenHONORS{Honors~}Algebra 2][\whenHONORS{H-}Catapult Project]
+
+
+\begin{myVocabulary}
+    \myDefinition{catapult}{a machine that throws things in the air}
+    \myDefinition{trajectory}{the path followed by something moving through space}
+    \myDefinition{model}{a function that helps you predict things}
+    \myDefinition{predict}{saying what you think will happen before it actually happens}
+    \myDefinition{parabolic}{shaped like a parabola, like the graph of a quadratic function}
+\end{myVocabulary}
+
+
+\section*{Introduction}
+
+This is a {\bfseries\itshape three--day project} in which you will:
+\begin{itemize}[nosep,label=\checkmark]
+    \item build a catapult, 
+    \item launch \mymm{}s using the catapult,
+    \item collect data about the \mymm~trajectories,
+    \item explore parabolic models for the \mymm~trajectories.
+\end{itemize}
+
+\input{day1}
+\input{day2}
+\input{day3}
+
+\end{document}
