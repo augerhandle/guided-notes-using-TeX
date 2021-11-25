@@ -1,6 +1,6 @@
 \section{A Quadratic Trajectory Function (Day 2)}
 
-\myCenteredBox[width=5in]{
+\myCenteredBox[width=5in,colback=white,sharp corners,]{
     Today you will 
     \begin{itemize}[nosep,label=\checkmark]
         \item Launch \mymm{}s from your catapult.
@@ -9,12 +9,233 @@
     \end{itemize}
 }
 
-Here is the general idea.
+
+
+
+
+\subsection{The General Idea}
+
+The trajectories you tested yesterday are called {\bfseries\itshape parabolic},
+which means that they can be modeled as a quadratic function:
+\begin{equation}\label{parabolic-model}
+    y = \bm{a}(x-\bm{h})^2 + \bm{k}
+\end{equation} 
+where 
 \begin{itemize}[nosep]
-    \item You will launch your \mymm{}s from your catapult.
-    \item The candy will fly across the room following a parabolic trajectory.
+    \item $y$ is the vertical height of the \mymm~trajectory, 
+    \item $x$ is the horizontal distance of the \mymm{}s from the catapult, and
+    \item {\bfseries\itshape you will find} the values of $\bm{a}$, $\bm{h}$, $\bm{k}$.
 \end{itemize}
 
-\begin{center}
-\includegraphics[width=3in]{../launch-and-landing.jpg}
-\end{center}
+Once you know the values of $\bm{a}$, $\bm{h}$, $\bm{k}$, 
+you can substitute them into Equation (\ref{parabolic-model}) to get a 
+quadratic function that models your \mymm~trajectories.
+
+
+
+
+
+\subsection{The Trajectory Geometry}
+
+There are three points on the parabolic trajectory that are important.
+\begin{itemize}[nosep]
+    \item $\bm{A}$, the launch point (where the catapult is located),
+    \item $\bm{V}$, the highest point in the trajectory, and
+    \item $\bm{B}$, the landing point (where the \mymm{}s land). 
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=3in]{../AVB.jpg}
+\label{fig:AVB}
+\end{figure}
+
+You can find the $(x, y)$ coordinates of each of these points, 
+if you know $d$ and $e$.
+
+
+
+
+
+\subsection{Launch Data Collection}
+
+Launch your catapult three times.
+For each launch,
+\begin{itemize}[nosep]
+    \item Your group's {\bfseries\itshape timer} person should 
+        measure the {\itshape flight time} 
+        in seconds using a phone timer.
+    \item Your group's {\bfseries\itshape measuring} person should 
+        measure {\itshape downrange distance} 
+        in centimeters using a yardstick.
+    \item Your group's {\bfseries\itshape recording} person should 
+        write down the flight time and downrange distance.
+\end{itemize}
+\myCenteredBox[colback=\myFillinColor]{
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{c|p{2in}|p{2in}}
+        \toprule
+        {\itshape launch \#} & {\itshape fight time (sec)} & {\itshape downrange distance (cm)} \\
+        \toprule
+        1 & & \\
+        \midrule
+        2 & & \\
+        \midrule
+        3 & & \\
+        \bottomrule
+    \end{tabular}
+}
+
+Average your measurements.
+
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    \text{\itshape average downrange distance} = 
+    ( 
+        \text{\gap{???}} +  \text{\gap{???}} + \text{\gap{???}}
+    ) / 3 
+    = \text{\gap{???}}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    \text{\itshape average flight time} 
+    = 
+    ( \text{\gap{???}} +  \text{\gap{???}} + \text{\gap{???}}) / 3 
+    = \text{\gap{???}}
+\end{tcolorbox}
+    
+
+
+\subsection{Finding $d$ and $e$}
+
+$d$ is the average downrange distance.
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    d 
+    = \text{\itshape average downrange distance} 
+    = \text{\gap{???}}
+\end{tcolorbox}
+
+
+
+
+The time to reach the highest point is one-half the average flight time,
+because the highest point occurs in the middle of the trajectory.
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    t_{peak} 
+    = \frac{1}{2} (\text{\itshape average flight time})
+    = \text{\gap{???}}
+\end{tcolorbox}
+
+$e$ comes from phyics: $e = \frac{1}{2}gt^2$, 
+where 
+$g = 980~cm/s^2$.
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    e & = \frac{1}{2} \cdot g \cdot t^2_{peak} \\
+      & = \frac{1}{2} \cdot 980 \cdot (\text{\gap{?????}})^2\\
+      & = \text{\gap{?????}}
+\end{tcolorbox}
+
+
+
+\subsection{Finding the coordinates of $\bm{A}$, $\bm{V}$, and $\bm{B}$}
+
+The launch point $\bm{A}$ is at the origin of the coordinate system.
+So its coordinates are
+\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{A-coords}
+    (x, y)^{}_{\bm{A}} = ( \text{\gap{0}}, \text{\gap{0}})
+\end{tcolorbox}
+    
+The landing point $\bm{B}$ is an $x$-intercept located 
+a horizontal distance $d$ from the origin.
+So,
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    (x, y)^{}_{\bm{B}} = ( \text{\gap{d}}, \text{\gap{0}})
+\end{tcolorbox}
+
+The point $\bm{V}$ is located
+\begin{itemize}[nosep]
+    \item horizontally halfway from $\bm{A}$ to $\bm{B}$,
+        which is $\frac{1}{2}d$, and
+    \item vertically $e$ units above the $x$-axis.
+\end{itemize}
+So,
+\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{vertex-coords}
+    (x, y)^{}_{\bm{V}} = ( \text{\gap{d/2}}, \text{\gap{e}})
+\end{tcolorbox}
+
+
+
+
+
+\subsection{Finding the quadratic trajectory model}
+
+The quadratic function that models your trajectory 
+was mentioned in Equation \ref{parabolic-model} on page~\pageref{parabolic-model}.
+We need to find the values of $\bm{a}$, $\bm{h}$, and $\bm{k}$.
+
+The point $\bm{V}$ is the {\bfseries\itshape vertex} of the parabola.
+So you know that it's coordinates are $(h, k)$.
+But you already calculated the coordinates of $\bm{V}$!
+(See Equation~\ref{vertex-coords}.)
+So $h$ is the $x$-coordinate
+and $k$ is the $y$-coordinate 
+of $\bm{V}$:
+%
+\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{h-value}
+    h &= \text{\gap{???}}\\
+    \label{k-value}
+    k &= \text{\gap{???}}
+\end{tcolorbox}
+%
+which means that the quadratic trajectory model (so far) is 
+%
+\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{model-with-hk}
+    y = \bm{a}(x-\text{\gap{h}})^2 + \text{\gap{k}}
+\end{tcolorbox}
+%
+To find the value of $a$, 
+substitute the coordinates of either $\bm{A}$ or $\bm{B}$  
+into this equation.
+That will give you and equation that you can solve for $a$.
+
+\myCenteredBox[colback=white,width=3in]{
+    Hint: The coordinates of $\bm{A}$ are easiest.
+    So use them!
+}
+
+The values of $x$ and $y$ at the point $\bm{A}$ 
+from Equation~\ref{A-coords} 
+are 
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    x_{\bm{A}} &= \text{\gap{0}} \\
+    y_{\bm{A}} &= \text{\gap{0}}
+\end{tcolorbox}
+%
+Substitute those two values into Equation~\ref{model-with-hk}.
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    y_{\bm{A}}     &= \bm{a}(x_{\bm{A}}-\text{\gap{h}})^2 + \text{\gap{k}} \\
+    \text{\gap{0}} &= \bm{a}(\text{\gap{0}}-\text{\gap{h}})^2 + \text{\gap{k}} \\
+    \text{\gap{0}} &= \bm{a}(-\text{\gap{h}})^2 + \text{\gap{k}} \\
+    \text{\gap{0}} &= \bm{a} \cdot \text{\gap{???}} + \text{\gap{k}} 
+\end{tcolorbox}
+%
+You can easily solve this for $\bm{a}$.
+\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{a-value}
+    \bm{a} = \text{\gap{???}}
+\end{tcolorbox}
+
+Your quadratic trajectory model is Equation~\ref{parabolic-model}.
+\begin{equation*}
+y = \bm{a}(x-\bm{h})^2 + \bm{k}
+\end{equation*}
+
+Substituting your values of $\bm{a}$ in Equation~\ref{a-value} 
+and $\bm{h}$ and $\bm{k}$ in 
+Equation~\ref{h-value} 
+and
+Equation~\ref{k-value},
+gives you your quadratic model 
+for the catapult trajectories:
+%
+\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{model-with-ahk}
+    y = \text{\gap{a}}(x-\text{\gap{h}})^2 + \text{\gap{k}}
+\end{tcolorbox}

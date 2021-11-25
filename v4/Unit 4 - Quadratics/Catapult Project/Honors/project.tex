@@ -5,16 +5,26 @@
 \input{../../../common/graphs}
 \input{../../../common/problems}
 \input{../../../common/vocabulary}
-
 \input{../../../common/assignment-header}
 
 
 % memoir commands to define the text block geometry
 \setulmarginsandblock{0.5in}{*}{*}
 \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
-
-% memoir command to control subsection numbering
+% memoir command to enable subsection numbering
 \setsecnumdepth{subsection}
+
+
+% logic to reduce subscript size 
+% See: https://tex.stackexchange.com/questions/262295/make-subscript-size-smaller-always 
+%
+\catcode`_=\active
+\newcommand_[1]{\ensuremath{\sb{\scriptscriptstyle #1}}}
+
+
+% the background color for student-fill-in tcolorboxes
+\newcommand{\myFillinColor}{black!25}
+
 
 \newcommand{\mymm}{{\bfseries\itshape m\&m}}
 \setlength{\parindent}{0em}
@@ -27,8 +37,18 @@
 \raggedbottom
 
 \forHONORS
+\dashundergapssetup{
+    teacher-mode=true, % set to true to show answers 
+}
 \myAssignmentHeader[\whenHONORS{Honors~}Algebra 2][\whenHONORS{H-}Catapult Project]
 
+This is a {\bfseries\itshape three--day project} in which you will:
+\begin{itemize}[nosep,]
+    \item build a catapult, 
+    \item launch \mymm{}s using the catapult,
+    \item collect data about the \mymm~trajectories,
+    \item explore parabolic models for the \mymm~trajectories.
+\end{itemize}
 
 \begin{myVocabulary}
     \myDefinition{catapult}{a machine that throws things in the air}
@@ -37,17 +57,6 @@
     \myDefinition{predict}{saying what you think will happen before it actually happens}
     \myDefinition{parabolic}{shaped like a parabola, like the graph of a quadratic function}
 \end{myVocabulary}
-
-
-\section*{Introduction}
-
-This is a {\bfseries\itshape three--day project} in which you will:
-\begin{itemize}[nosep,label=\checkmark]
-    \item build a catapult, 
-    \item launch \mymm{}s using the catapult,
-    \item collect data about the \mymm~trajectories,
-    \item explore parabolic models for the \mymm~trajectories.
-\end{itemize}
 
 \input{day1}
 \input{day2}
