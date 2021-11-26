@@ -1,3 +1,4 @@
+\newpage 
 \section{A Quadratic Trajectory Function (Day 2)}
 
 \myCenteredBox[width=5in,colback=white,sharp corners,]{
@@ -5,7 +6,7 @@
     \begin{itemize}[nosep,label=\checkmark]
         \item Launch \mymm{}s from your catapult.
         \item Time and measure the \mymm~trajectories.
-        \item Find a quadratic function that describes the trajectories.
+        \item Find a quadratic model that describes the trajectories.
     \end{itemize}
 }
 
@@ -35,7 +36,7 @@ quadratic function that models your \mymm~trajectories.
 
 
 
-\subsection{The Trajectory Geometry}
+\subsection{DAY 2 Geometry}
 
 There are three points on the parabolic trajectory that are important.
 \begin{itemize}[nosep]
@@ -44,11 +45,9 @@ There are three points on the parabolic trajectory that are important.
     \item $\bm{B}$, the landing point (where the \mymm{}s land). 
 \end{itemize}
 
-\begin{figure}
-\centering
-\includegraphics[width=3in]{../AVB.jpg}
-\label{fig:AVB}
-\end{figure}
+\begin{center}
+    \includegraphics[width=3in]{../AVB.jpg}
+\end{center}
 
 You can find the $(x, y)$ coordinates of each of these points, 
 if you know $d$ and $e$.
@@ -114,9 +113,6 @@ $d$ is the average downrange distance.
     = \text{\gap{???}}
 \end{tcolorbox}
 
-
-
-
 The time to reach the highest point is one-half the average flight time,
 because the highest point occurs in the middle of the trajectory.
 \begin{tcolorbox}[colback=\myFillinColor,ams align]
@@ -136,17 +132,21 @@ $g = 980~cm/s^2$.
 
 
 
-\subsection{Finding the coordinates of $\bm{A}$, $\bm{V}$, and $\bm{B}$}
+
+
+\subsection{The Coordinates of $\bm{A}$, $\bm{V}$, and $\bm{B}$}
 
 The launch point $\bm{A}$ is at the origin of the coordinate system.
-So its coordinates are
+You know the coordinates of the origin.
+So $\bm{A}$'s coordinates are
 \begin{tcolorbox}[colback=\myFillinColor,ams align]\label{A-coords}
     (x, y)^{}_{\bm{A}} = ( \text{\gap{0}}, \text{\gap{0}})
 \end{tcolorbox}
     
 The landing point $\bm{B}$ is an $x$-intercept located 
 a horizontal distance $d$ from the origin.
-So,
+But you just found $d$.
+So $\bm{B}$'s coordinates are
 \begin{tcolorbox}[colback=\myFillinColor,ams align]
     (x, y)^{}_{\bm{B}} = ( \text{\gap{d}}, \text{\gap{0}})
 \end{tcolorbox}
@@ -157,7 +157,7 @@ The point $\bm{V}$ is located
         which is $\frac{1}{2}d$, and
     \item vertically $e$ units above the $x$-axis.
 \end{itemize}
-So,
+You already found $d$ and $e$ above, so $\bm{V}$'s coordinates are 
 \begin{tcolorbox}[colback=\myFillinColor,ams align]\label{vertex-coords}
     (x, y)^{}_{\bm{V}} = ( \text{\gap{d/2}}, \text{\gap{e}})
 \end{tcolorbox}
@@ -166,7 +166,7 @@ So,
 
 
 
-\subsection{Finding the quadratic trajectory model}
+\subsection{The Quadratic Trajectory Model}
 
 The quadratic function that models your trajectory 
 was mentioned in Equation \ref{parabolic-model} on page~\pageref{parabolic-model}.
@@ -206,13 +206,13 @@ The values of $x$ and $y$ at the point $\bm{A}$
 from Equation~\ref{A-coords} 
 are 
 \begin{tcolorbox}[colback=\myFillinColor,ams align]
-    x_{\bm{A}} &= \text{\gap{0}} \\
-    y_{\bm{A}} &= \text{\gap{0}}
+    x_{\bm{A}} &= \text{\gap{0}} \label{xa}\\
+    y_{\bm{A}} &= \text{\gap{0}} \label{ya}
 \end{tcolorbox}
 %
 Substitute those two values into Equation~\ref{model-with-hk}.
 \begin{tcolorbox}[colback=\myFillinColor,ams align]
-    y_{\bm{A}}     &= \bm{a}(x_{\bm{A}}-\text{\gap{h}})^2 + \text{\gap{k}} \\
+    y_{\bm{A}}     &= \bm{a}(x_{\bm{A}}-\text{\gap{h}})^2 + \text{\gap{k}} \label{solve-this-for-a}\\
     \text{\gap{0}} &= \bm{a}(\text{\gap{0}}-\text{\gap{h}})^2 + \text{\gap{k}} \\
     \text{\gap{0}} &= \bm{a}(-\text{\gap{h}})^2 + \text{\gap{k}} \\
     \text{\gap{0}} &= \bm{a} \cdot \text{\gap{???}} + \text{\gap{k}} 
@@ -239,3 +239,40 @@ for the catapult trajectories:
 \begin{tcolorbox}[colback=\myFillinColor,ams align]\label{model-with-ahk}
     y = \text{\gap{a}}(x-\text{\gap{h}})^2 + \text{\gap{k}}
 \end{tcolorbox}
+
+
+
+
+\whenHONORS{
+\subsection{What About Point $\bm{B}$?}
+
+When you solved Equation~(\ref{solve-this-for-a}) for $\bm{a}$ above, 
+you substituted the coordinates of point $\bm{A}$ 
+from Equations~(\ref{xa}) and (\ref{xb}).
+
+Redo the calculation using the coordinates of point $\bm{B}$ instead. 
+Is this solution for $\bm{a}$ the same as the one above?
+\myCenteredBox[colback=\myFillinColor]{
+    \centering 
+    \qquad
+    {\scshape Yes}
+    \qquad
+    {\scshape No}
+    \qquad
+    (circle one)
+}
+
+Explain why you think this does (or does not) make sense.
+
+\myCenteredBox[colback=\myFillinColor]{
+    \vspace{1em}
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\
+}
+}
