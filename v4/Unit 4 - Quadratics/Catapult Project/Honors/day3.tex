@@ -1,5 +1,5 @@
 \newpage 
-\section{A Vertical Translation Upward (Day 3)}
+\section{Shifting Up (Day 3)}
 
 
 \myCenteredBox[width=6in,colback=white,sharp corners,]{
@@ -32,7 +32,7 @@ Write down the values of $\bm{a}$, $\bm{h}$, and $\bm{k}$ that you found yesterd
 Today, you will use the same catapult, but you will launch 
 the \mymm{}s from the a new spot located {\bfseries\itshape above} 
 the floor
-(one top of a desk, or a chair, or some books, or something)..
+(one top of a desk, or a chair, or some books, or something).
 This is the {\bfseries\itshape exact same catapult} 
 but shifted {\bfseries\itshape vertically upward}. 
 
@@ -50,8 +50,6 @@ Here is a picture of the situation.
 As you can tell from the diagram, 
 since your catapult with be higher than yesterday,
 the \mymm{}s will go further.
-Today's trajectory extends to the right of where yesterday's \mymm{}s landed.
-
 Here is a detailed diagram of the geometry.
 \begin{center}
     \includegraphics[width=2.5in]{../day3-geometry.jpg}
@@ -61,6 +59,8 @@ Your job will be to predict where your \mymm{}s will land
 (to find the value of $x$).
 
 Pick a new launch site that is above the ground.
+Measure its height which is $c$.
+Record that value here.
 % Your group's {\bfseries\itshape measuring} person should measure how high your launch site is. 
 % This is $\bm{c}$.
 % The group's {\bfseries\itshape recorder} should write down your measured value.
@@ -79,6 +79,7 @@ Pick a new launch site that is above the ground.
 The quadratic model for today's trajectory 
 is {\itshape almost} the same as yesterday.
 It's the same except for a {\bfseries\itshape vertical shift} that is added onto yesterday's equation.
+$\bm{c}$ is the vertical shift.
 
 \begin{equation}\label{shifted-model}
     y = \left[\bm{a}(x-\bm{h})^2 + \bm{k}\right] + \bm{c}
@@ -87,7 +88,6 @@ It's the same except for a {\bfseries\itshape vertical shift} that is added onto
 Since you know the values of $\bm{a}, \bm{h}, \bm{k}$ and $\bm{c}$,
 this is an equation with two unknown variables, 
 $x$ and $y$.
-
 Evaluate this equation at the coordinates of the landing site.
 Since the site is on the $x$-axis, 
 it is an $x$ intercept. 
@@ -130,7 +130,7 @@ This is your {\bfseries\itshape prediction} of where the \mymm{}s will land
 when you launch from the higher launch site.
 
 \begin{tcolorbox}[colback=\myFillinColor,ams align]
-    x &= \text{\gap{???}}
+    x &= \text{\gap{???}} \label{x-predicted}
 \end{tcolorbox}
 
 
@@ -138,3 +138,40 @@ when you launch from the higher launch site.
 
 
 \subsection{Testing Your Prediction}
+
+Launch \mymm{}s from you catapult three times from the higher launch site. 
+Record the downrange distance for each launch.
+Calculate the {\bfseries\itshape error} in your predictions 
+for each launch
+by subtracting your predicted value of $x$ in Equation~(\ref{x-predicted}) 
+from your measured downrange distances for each launch.
+\myCenteredBox[colback=\myFillinColor]{
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{c|p{2in}|p{2in}}
+        \toprule
+        {\itshape launch \#} & {\itshape downrange distance (cm)}& {\itshape error (cm)} \\
+        \toprule
+        1 & &\\
+        \midrule
+        2 & &\\
+        \midrule
+        3 & &\\
+        \bottomrule
+    \end{tabular}
+}
+
+Explain whether you think your prediction was a good one or not. 
+If it was, why do you think so?
+If it was not, what do you think might explain the problem?
+
+\myCenteredBox[colback=\myFillinColor]{
+    \vspace{1em}
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\[0.5\baselineskip]
+    \underline{\hspace{\textwidth}}\\
+}
