@@ -16,8 +16,8 @@
 
 \subsection{The General Idea}
 
-The trajectories you tested yesterday are called {\bfseries\itshape parabolic},
-which means that they can be modeled as a quadratic function:
+The trajectories you tested yesterday are {\bfseries\itshape parabolic}---%
+they can be modeled as a quadratic function:
 \begin{equation}\label{parabolic-model}
     y = \bm{a}(x-\bm{h})^2 + \bm{k}
 \end{equation} 
@@ -25,12 +25,13 @@ where
 \begin{itemize}[nosep]
     \item $y$ is the vertical height of the \mymm~trajectory, 
     \item $x$ is the horizontal distance of the \mymm{}s from the catapult, and
-    \item {\bfseries\itshape you will find} the values of $\bm{a}$, $\bm{h}$, $\bm{k}$.
 \end{itemize}
 
-Once you know the values of $\bm{a}$, $\bm{h}$, $\bm{k}$, 
-you can substitute them into Equation (\ref{parabolic-model}) to get a 
-quadratic function that models your \mymm~trajectories.
+Today 
+{\bfseries\itshape you will find} the values of $\bm{a}$, $\bm{h}$, $\bm{k}$.
+Once you find the them, 
+you may substitute them into Equation (\ref{parabolic-model}) to get a 
+quadratic model of your \mymm~trajectories.
 
 
 
@@ -40,9 +41,9 @@ quadratic function that models your \mymm~trajectories.
 
 There are three points on the parabolic trajectory that are important.
 \begin{itemize}[nosep]
-    \item $\bm{A}$, the launch point (where the catapult is located),
-    \item $\bm{V}$, the highest point in the trajectory, and
-    \item $\bm{B}$, the landing point (where the \mymm{}s land). 
+    \item $\bm{A}$, the launch point (the $x$-intercept where the catapult is),
+    \item $\bm{V}$, the highest point (vertex) of the trajectory, and
+    \item $\bm{B}$, the landing point (the $x$-intercept where the \mymm{}s land). 
 \end{itemize}
 
 \begin{center}
@@ -50,7 +51,7 @@ There are three points on the parabolic trajectory that are important.
 \end{center}
 
 You can find the $(x, y)$ coordinates of each of these points, 
-if you know $d$ and $e$.
+once you calculate $d$ and $e$.
 
 
 
@@ -62,8 +63,7 @@ Launch your catapult three times.
 For each launch,
 \begin{itemize}[nosep]
     \item Your group's {\bfseries\itshape timer} person should 
-        measure the {\itshape flight time} 
-        in seconds using a phone timer.
+        measure the {\itshape flight time} in seconds using a phone timer.
     \item Your group's {\bfseries\itshape measuring} person should 
         measure {\itshape downrange distance} 
         in centimeters using a yardstick.
@@ -114,7 +114,7 @@ $d$ is the average downrange distance.
 \end{tcolorbox}
 
 The time to reach the highest point is one-half the average flight time,
-because the highest point occurs in the middle of the trajectory.
+since it occurs in the middle.
 \begin{tcolorbox}[colback=\myFillinColor,ams align]
     t_{peak} 
     = \frac{1}{2} (\text{\itshape average flight time})
@@ -136,8 +136,8 @@ $g = 980~cm/s^2$.
 
 \subsection{The Coordinates of $\bm{A}$, $\bm{V}$, and $\bm{B}$}
 
-The launch point $\bm{A}$ is at the origin of the coordinate system.
-You know the coordinates of the origin.
+The launch point is at the origin.
+You know its coordinates.
 So $\bm{A}$'s coordinates are
 \begin{tcolorbox}[colback=\myFillinColor,ams align]\label{A-coords}
     (x, y)^{}_{\bm{A}} = ( \text{\gap{0}}, \text{\gap{0}})
@@ -157,9 +157,10 @@ The point $\bm{V}$ is located
         which is $\frac{1}{2}d$, and
     \item vertically $e$ units above the $x$-axis.
 \end{itemize}
-You already found $d$ and $e$ above, so $\bm{V}$'s coordinates are 
-\begin{tcolorbox}[colback=\myFillinColor,ams align]\label{vertex-coords}
-    (x, y)^{}_{\bm{V}} = ( \text{\gap{d/2}}, \text{\gap{e}})
+You found $d$ and $e$ above, so $\bm{V}$'s coordinates are 
+\begin{tcolorbox}[colback=\myFillinColor,ams align]
+    (x, y)^{}_{\bm{V}} &= ( d/2, e)\\ \label{vertex-coords}
+    (x, y)^{}_{\bm{V}} &= ( \text{\gap{d/2}}, \text{\gap{e}})
 \end{tcolorbox}
 
 
@@ -172,8 +173,7 @@ The quadratic function that models your trajectory
 was mentioned in Equation \ref{parabolic-model} on page~\pageref{parabolic-model}.
 We need to find the values of $\bm{a}$, $\bm{h}$, and $\bm{k}$.
 
-The point $\bm{V}$ is the {\bfseries\itshape vertex} of the parabola.
-So you know that it's coordinates are $(h, k)$.
+The point $\bm{V}$ is the {\bfseries\itshape vertex} with coordinates $(h, k)$.
 But you already calculated the coordinates of $\bm{V}$!
 (See Equation~\ref{vertex-coords}.)
 So $h$ is the $x$-coordinate
@@ -192,7 +192,7 @@ which means that the quadratic trajectory model (so far) is
     y = \bm{a}(x-\text{\gap{h}})^2 + \text{\gap{k}}
 \end{tcolorbox}
 %
-To find the value of $a$, 
+To find the value of $\bm{a}$, 
 substitute the coordinates of either $\bm{A}$ or $\bm{B}$  
 into this equation.
 That will give you and equation that you can solve for $a$.
@@ -218,7 +218,12 @@ Substitute those two values into Equation~\ref{model-with-hk}.
     \text{\gap{0}} &= \bm{a} \cdot \text{\gap{???}} + \text{\gap{k}} 
 \end{tcolorbox}
 %
-You can easily solve this for $\bm{a}$.
+You can easily solve this for $\bm{a}$. 
+Show your work here.
+\begin{tcolorbox}[colback=\myFillinColor]
+    \vspace{1in}
+\end{tcolorbox}
+And write your solution here.
 \begin{tcolorbox}[colback=\myFillinColor,ams align]\label{a-value}
     \bm{a} = \text{\gap{???}}
 \end{tcolorbox}
@@ -230,9 +235,7 @@ y = \bm{a}(x-\bm{h})^2 + \bm{k}
 
 Substituting your values of $\bm{a}$ in Equation~\ref{a-value} 
 and $\bm{h}$ and $\bm{k}$ in 
-Equation~\ref{h-value} 
-and
-Equation~\ref{k-value},
+Equation~\ref{model-with-hk},
 gives you your quadratic model 
 for the catapult trajectories:
 %
@@ -247,10 +250,8 @@ for the catapult trajectories:
 \subsection{What About Point $\bm{B}$?}
 
 When you solved Equation~(\ref{solve-this-for-a}) for $\bm{a}$ above, 
-you substituted the coordinates of point $\bm{A}$ 
-from Equations~(\ref{xa}) and (\ref{xb}).
-
-Redo the calculation using the coordinates of point $\bm{B}$ instead. 
+you substituted the coordinates of the launch point $\bm{A}$.
+Redo the calculation using the coordinates of landing point $\bm{B}$ instead. 
 Is this solution for $\bm{a}$ the same as the one above?
 \myCenteredBox[colback=\myFillinColor]{
     \centering 
