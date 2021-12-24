@@ -32,6 +32,69 @@
 }
 
 
+% a numberline 
+% (Must be inside a tikzpicture.)
+%
+% #1 lower number line limit 
+% #2 upper number line limit
+% #3 label font commands
+%
+\NewDocumentCommand{\myDrawNumberline}{ o m O{\ttfamily\tiny} }
+{
+        %
+        % Draw the line.
+        \draw (\IfValueTF{#1}{#1}{-#2},0) -- (#2,0);
+        %
+        % Draw tickmarks and labels.
+        \foreach \i in {\IfValueTF{#1}{#1}{-#2},...,#2} {
+            \draw (\i,0.1) -- + (0,-0.2); 
+            \draw[node font=#3] (\i,-0.2) node[below]{\i};
+        }
+        %
+}
+
+
+% numberline labels
+% (Must be inside a tikzpicture.)
+%
+% #1 list of x-coordinates for plain labels
+% #3 plain label font commands
+%
+\NewDocumentCommand{\myDrawNumberlineLabels}{ m O{\ttfamily\tiny} }
+{
+    \foreach \i in {#1} {
+        \draw[node font=#2,] (\i,-0.1) node[below] {\i}; 
+        % \draw (-9,-5) node{x};
+    }
+}
+
+
+% numberline point and label
+% (Must be inside a tikzpicture.)
+%
+% #1 x-coordinates for the point
+% #2 point circle fill color
+%
+\NewDocumentCommand{\myDrawNumberlineCircle}{ m m }
+{
+        \draw[black,thick,fill=#2] (#1,0) circle (0.175 cm);
+}
+
+
+% numberline point and label
+% (Must be inside a tikzpicture.)
+%
+% #1 x-coordinates for the point
+% #2 point circle fill color
+%
+\NewDocumentCommand{\myDrawNumberlineCircleAndLabel}{ m m }
+{
+        \draw[black,thick,fill=#2] (#1,0) circle (0.175 cm);
+        \draw[node font=\sffamily\bfseries] (#1,-0.2) node[below]{#1};
+}
+
+
+
 % ---------------------------------------------------------------------------
 % x-y graphs using Tkz
 % ---------------------------------------------------------------------------
