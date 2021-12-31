@@ -1,19 +1,52 @@
 \section{Absolute Values of Numbers}
 
+A number and its negative are the \gap{same} \gap{distance} from the origin.
+\begin{tcbraster}[
+    raster columns=2,
+    raster before skip = 1em, raster after skip = 1em,
+    ]
+    \begin{tcolorbox}[colback=white,]
+        \vspace{2\baselineskip}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberlineCircle{2}{black}
+            \myDrawNumberlineCircle{-2}{black}
+            \myDrawNumberline{5}
+        \end{tikzpicture}
+        \begin{align*}
+            |2| &= 2\\
+            |-2| &= 2
+        \end{align*}
+    \end{tcolorbox}
+    \begin{tcolorbox}[colback=white,]
+        \vspace{2\baselineskip}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberlineCircle{4}{black}
+            \myDrawNumberlineCircle{-4}{black}
+            \myDrawNumberline{5}
+        \end{tikzpicture}
+        \begin{align*}
+            |4| &= 4\\
+            |-4| &= 4
+        \end{align*}
+    \end{tcolorbox}
+\end{tcbraster}
+
+So\dots
 
 \begin{myConcept}{To find the absolute value of a number\dots}
     \begin{itemize}
         \item \gap{Drop} the negative sign (if any) in front of the number.
+        \item The result will \gap{never} be negative.
     \end{itemize}
-    \begin{tcolorbox}[center,width=5in,]
-        Absolute values are \gap{positive} or \gap{zero}.\\[0.25\baselineskip]
-        Absolute values are {\bfseries\itshape never} \gap{negative}.
-    \end{tcolorbox}
-    \begin{tcolorbox}[center,width=5in,]
-        This only works with numbers.
-        This \gap{never} works with \gap{variables}.
+    \begin{tcolorbox}[center,width=5.5in,]
+        \centering
+        This only works with numbers, \gap{not} with \gap{variables}.
     \end{tcolorbox}
 \end{myConcept}
+
+\vspace{1\baselineskip}
 
 \myProblemsWithContent[Find the following absolute values.]
 {
@@ -23,6 +56,8 @@
     $|-8|=$   \gap{$8$}
 }
 
+\vspace{2\baselineskip}
+
 \myProblemsWithContent
 {
     $|\frac{28}{257}|=$   \gap{$\frac{28}{257}$}
@@ -30,6 +65,8 @@
 {
     $|-\frac{8}{3}|=$   \gap{$\frac{8}{3}$}
 }
+
+\vspace{2\baselineskip}
 
 \myProblemsWithContent
 {
