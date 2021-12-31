@@ -10,7 +10,10 @@
 
 \myProblemsWithContent[Find the {\bfseries\itshape distance} of the black point from the origin.]
 {
+    \vspace{1\baselineskip}
+    {
     \small
+    \vspace{0.75\baselineskip}
     \begin{center}
         \begin{tikzpicture}[scale=0.75]
             \myDrawNumberlineCircle{0}{white}
@@ -18,10 +21,14 @@
             \myDrawNumberline{5}
         \end{tikzpicture}
     \end{center}
+    }
     {\itshape distance from origin} = \gap{4}
 }
 {
+    \vspace{1\baselineskip}
+    {
     \small
+    \vspace{0.75\baselineskip}
     \begin{center}
         \begin{tikzpicture}[scale=0.75]
             \myDrawNumberlineCircle{0}{white}
@@ -29,16 +36,19 @@
             \myDrawNumberline{5}
         \end{tikzpicture}
     \end{center}
+    }
     {\itshape distance from origin} = \gap{3}
 }
 
 
+\vspace{1\baselineskip}
 
 
-\myProblemsWithContent[Draw {\bfseries\itshape points} that are the given distance from the origin.]
+\myProblemsWithContent[Draw {\bfseries\itshape two points} that are the given distance from the origin.]
 {
+    {\itshape distance from origin} = $3$
     \small
-    {\itshape distance from origin} = $4$
+    \vspace{1\baselineskip}
     \begin{center}
         \begin{tikzpicture}[scale=0.75]
             \myDrawNumberlineCircle{0}{white}
@@ -47,30 +57,37 @@
     \end{center}
 }
 {
-    \small
     {\itshape distance from origin} = $1$
+    \small
+    \vspace{1\baselineskip}
     \begin{center}
         \begin{tikzpicture}[scale=0.75]
             \myDrawNumberlineCircle{0}{white}
             \myDrawNumberline{5}
         \end{tikzpicture}
+        \vspace{0.75\baselineskip}
     \end{center}
 }
 
 \myWideProblemWithContent[Draw the points that are the given distance from the origin.]
 {
-    \small
     {\itshape distance from origin} = $-2$\\
     %
-    \vspace{-1.75\baselineskip}
+    {
+    \small
     \begin{center}
         \begin{tikzpicture}[scale=0.75]
             \myDrawNumberlineCircle{0}{white}
             \myDrawNumberline{5}
         \end{tikzpicture}
     \end{center}
-    \vspace{-0.5\baselineskip}
+    }
     %
-    \gap{No} \gap{solution}, because distance is \gap{never} \gap{negative}.
+    \normalsize
+    \gap{No} \gap{solution}, because\dots
+    \begin{tcolorbox}[center,width=5in,]
+        \centering
+        Distance is \gap{never} \gap{negative}.
+    \end{tcolorbox}
 }
 
