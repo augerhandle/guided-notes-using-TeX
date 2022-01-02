@@ -21,6 +21,27 @@
 \newcommand{\whenONLEVEL}[1] {\ifhol{}\else{#1}\fi}
 
 
+% ---------------------------------------------------------------------------
+% Teachers vs. Students ("tstu")
+% ---------------------------------------------------------------------------
+\newif\iftstu
+
+% Typically, I will set one of these ONCE at the top of the doc.
+\newcommand{\forTEACHER}{%
+    \tstutrue%
+    \dashundergapssetup{teacher-mode=true,}%
+}
+\newcommand{\forSTUDENT}{%
+    \tstufalse%
+    \dashundergapssetup{teacher-mode=false,}%
+}
+
+% These will conditionally generate output (the argument) based on 
+% whether this document is "for" HONORS or ONLEVEL according to the previous commands.
+\newcommand{\whenTEACHER}[1]  {\iftstu{#1}\else{}  \fi}
+\newcommand{\whenSTUDENT}[1] {\iftstu{}\else{#1}\fi}
+
+
 
 % ---------------------------------------------------------------------------
 % command for creating a 1- or 2-question warmup problem
