@@ -22,7 +22,7 @@
 % #5 : optional text at the bottom
 %
 \NewDocumentCommand{\myProblem}{ o m O{\large} m O{} }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
@@ -57,7 +57,7 @@
 % #5 : optional text at the bottom
 %
 \NewDocumentCommand{\myWideProblem}{ o m O{\large} m O{} }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=1,%
@@ -91,7 +91,7 @@
 % #7 : optional text at the bottom of problem 2
 %
 \NewDocumentCommand{\myProblems}{ o m m O{\large} m O{} O{#6} }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
@@ -141,7 +141,7 @@
 % #3 : optional font style for the content
 %
 \NewDocumentCommand{\myProblemWithContent}{ o m O{\large} }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
@@ -175,7 +175,7 @@
 % #4 : optional font style for the content
 %
 \NewDocumentCommand{\myProblemsWithContent}{ o m m O{\large} }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=2,%
@@ -217,7 +217,7 @@
 % #3 : optional font style for the content
 %
 \NewDocumentCommand{\myWideProblemWithContent}{ o m O{\large} }{%
-    \IfValueT{#1}{\noindent#1\nopagebreak}%
+    \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
         raster columns=1,%
