@@ -11,6 +11,16 @@
 \input{../../../common/concepts}
 \input{../../../common/problems}
 
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=underline,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
 
 \begin{document}
 \pagestyle{lsnPagestyle}

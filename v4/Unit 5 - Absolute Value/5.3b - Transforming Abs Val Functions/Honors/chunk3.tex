@@ -6,7 +6,7 @@
         Put a \gap{dot} at $(\bm{h},\bm{k})$.
     }
     \myStep{right line}{%
-        Draw a \gap{line} starting at the vertex with \gap{slope} $a$.
+        Draw a \gap{line} starting at the vertex with \gap{slope} $\bm{a}$.
     }
     \myStep{left line}{Draw a mirror image of the right line on the \gap{left} side of the vertex.}
 \end{myConceptSteps}
@@ -14,22 +14,54 @@
 
 \myProblemsWithContent[Sketch the graphs of these functions.]
 {
-    $g(x) = 2|x - 3| -4$
+    $g(x) = 2|x - 3| -1$
     \tcblower 
     \centering
-    ${a} =$ \gap{$2$},\quad ${h} =$ \gap{$3$},\quad ${k} =$ \gap{$-4$}\\[\baselineskip]
-    \begin{myTikzpictureGrid}{0.4} {5}{5}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{2*abs(x-3)-4}
+    ${a} =$ \gap{$2$},\quad ${h} =$ \gap{$3$},\quad ${k} =$ \gap{$-1$}\\[\baselineskip]
+    \begin{myTikzpictureGrid}{0.35} [-3]{7}{5}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=500, domain=-10:10,]{2*abs(x-3)-1}
+        }
         % \tkzText(5,7){$f(x) = x^2$}
     \end{myTikzpictureGrid}
 }
 {
-    $g(x) = -|x + 3| +1 $
+    $g(x) = \frac{1}{2}|x+3| -2 $
     \tcblower 
     \centering
-    ${a} =$ \gap{$-1$},\quad ${h} =$ \gap{$-3$},\quad ${k} =$ \gap{$-1$}\\[\baselineskip]
-    \begin{myTikzpictureGrid}{0.4} {5}{5}
-        \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-abs(x+3)+1}
+    ${a} =$ \gap{$\frac{1}{2}$},\quad ${h} =$ \gap{$-3$},\quad ${k} =$ \gap{$-2$}\\[\baselineskip]
+    \begin{myTikzpictureGrid}{0.35} [-8]{2}{5}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=500, domain=-10:10,]{0.5*abs(x+3)-2}
+        }
+        % \tkzText(5,7){$f(x) = x^2$}
+    \end{myTikzpictureGrid}
+}
+
+\vfill
+
+\myProblemsWithContent
+{
+    $g(x) = -2|x - 1| +2$
+    \tcblower 
+    \centering
+    ${a} =$ \gap{$-2$},\quad ${h} =$ \gap{$1$},\quad ${k} =$ \gap{$2$}\\[\baselineskip]
+    \begin{myTikzpictureGrid}{0.35} [-3]{7}{5}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=500, domain=-10:10,]{-2*abs(x-1)+2}
+        }
+        % \tkzText(5,7){$f(x) = x^2$}
+    \end{myTikzpictureGrid}
+}
+{
+    $g(x) = -\frac{7}{2}|x+3| +5 $
+    \tcblower 
+    \centering
+    ${a} =$ \gap{$-\frac{7}{2}$},\quad ${h} =$ \gap{$-3$},\quad ${k} =$ \gap{$5$}\\[\baselineskip]
+    \begin{myTikzpictureGrid}{0.35} [-8]{2}[-4]{6}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=500, domain=-10:10,]{-(7.0/2.0)*abs(x+3)+5}
+        }
         % \tkzText(5,7){$f(x) = x^2$}
     \end{myTikzpictureGrid}
 }

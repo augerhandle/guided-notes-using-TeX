@@ -1,1 +1,62 @@
 \section{The Effects of $a$, $h$, $k$ on Attributes}
+
+\myWideProblemWithContent[%
+    Sketch the graphs of these functions and then fill in the blanks.
+    ]
+{
+    $g(x) = |x - 3| -4$
+    \hfill 
+    ${a} =$ \gap{$1$},\quad ${h} =$ \gap{$3$},\quad ${k} =$ \gap{$-4$}
+    \tcblower 
+    \begin{minipage}{0.29\textwidth}
+        \centering
+        \begin{myTikzpictureGrid}{0.4} [-3]{7}{5}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=500, domain=-6:10,]{2*abs(x-3)-4}
+            }
+            % \tkzText(5,7){$f(x) = x^2$}
+        \end{myTikzpictureGrid}
+        \end{minipage}
+    \begin{minipage}{0.7\textwidth}
+        \vspace{0.5\baselineskip}
+        vertex coordinates:~\dotfill\gap{$(3,-4)$}\\[0.5\baselineskip]
+        equation of the AOS:~\dotfill\gap{x=3}\\[0.5\baselineskip]
+        domain:~\dotfill\gap{all real numbers}\\[0.5\baselineskip]
+        range:~\dotfill\gap{$y\ge -4$}\\[0.5\baselineskip]
+        vertex is max/min?~\dotfill\gap{minimum}\\[0.5\baselineskip]
+        curve opens up/down?~\dotfill\gap{opens up}\\[0.5\baselineskip]
+        left end behavior~\dotfill\gap{as} \gap{$x\rightarrow-\infty$}, \gap{$y\rightarrow+\infty$}\\[0.5\baselineskip]
+        right end behavior~\dotfill\gap{as} \gap{$x\rightarrow+\infty$}, \gap{$y\rightarrow+\infty$}
+    \end{minipage}
+    \vspace{0.25\baselineskip}
+}
+
+\myWideProblemWithContent
+{
+    $g(x) =  -\frac{4}{3}|x - 3| + 2$
+    \hfill 
+    ${a} =$ \gap{$-\frac{4}{3}$},\quad ${h} =$ \gap{$3$},\quad ${k} =$ \gap{$2$}
+    \tcblower 
+    \begin{minipage}{0.29\textwidth}
+        \centering
+        \begin{myTikzpictureGrid}{0.4} [-3]{7}{5}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=500, domain=-6:10,]{-(4.0/3.0)*abs(x-3)+2}
+            }
+            % \tkzText(5,7){$f(x) = x^2$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.7\textwidth}
+        \vspace{0.5\baselineskip}
+        vertex coordinates:~\dotfill\gap{$(3,2)$}\\[0.5\baselineskip]
+        equation of the axis of symmetry:~\dotfill\gap{x=3}\\[0.5\baselineskip]
+        domain:~\dotfill\gap{all real numbers}\\[0.5\baselineskip]
+        range:~\dotfill\gap{$y\le 2$}\\[0.5\baselineskip]
+        vertex is max/min?~\dotfill\gap{maximum}\\[0.5\baselineskip]
+        curve opens up/down?~\dotfill\gap{opens down}\\[0.5\baselineskip]
+        left end behavior~\dotfill\gap{as} \gap{$x\rightarrow-\infty$}, \gap{$y\rightarrow-\infty$}\\[0.5\baselineskip]
+        right end behavior~\dotfill\gap{as} \gap{$x\rightarrow+\infty$}, \gap{$y\rightarrow-\infty$}
+    \end{minipage}
+    \vspace{0.25\baselineskip}
+}
+
