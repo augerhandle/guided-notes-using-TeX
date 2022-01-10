@@ -71,13 +71,13 @@
         ]
         \centering
         \renewcommand{\arraystretch}{1.145}
-        \begin{tabular}[t]{|>{\raggedright}p{1in}|p{1.75in}|}
+        \begin{tabular}[t]{|>{\raggedright}p{0.75in}|p{2in}|}
             \hline
-            {\itshape coordinates of the} {\bfseries\itshape vertex} & (\gap{$h$},\gap{$k$})\\
+            {\bfseries\itshape vertex} & (\gap{$h$},\gap{$k$})\\
             % & \\
             & \\
             \noalign{\hrule height 1.5pt}
-            {\itshape equation of the} {\bfseries\itshape axis of symmetry} & $x = $ \gap{$h$}\\
+            {\bfseries\itshape axis of symmetry} & $x = $ \gap{$h$}\\
             % & \\
             & \\
             \noalign{\hrule height 1.5pt}
@@ -94,28 +94,28 @@
             & \\
             \noalign{\hrule height 1.5pt}
             \makecell[l]{%
-                {\itshape parabola}\\{\bfseries\itshape opens up?}
-            } & if $\bm{a}$ is \gap{positive}\\
-            & \\
+                {\itshape parabola}\\opens\\ {\bfseries\itshape up/down}?
+            } & if {$\bm{a}>0$}: \gap{up} \\
+            & if {$\bm{a}<0$}: \gap{down} \\
             & \\
             \noalign{\hrule height 0.25pt}
             \makecell[l]{%
-                {\itshape parabola}\\{\bfseries\itshape opens down?}
-            } & if $\bm{a}$ is \gap{negative}\\
-            & \\
+                {\itshape vertex is a}\\{\bfseries\itshape min/max}?
+            } & if {$\bm{a}>0$}: \gap{min}\\
+            &  if {$\bm{a}<0$}: \gap{max} \\
             & \\
             \noalign{\hrule height 1.5pt}
-            \makecell[l]{%
-                {\itshape vertex is a}\\{\bfseries\itshape minimum?}
-            } & if $\bm{a}$ is \gap{positive}\\
-            & \\
-            & \\
+            {\itshape\bfseries left end}
+            & if {$\bm{a}>0$}: \whenTEACHER{\tiny as $x\rightarrow-\infty$, $y\rightarrow\infty$}\\
+            {\itshape behavior}& \\
+            &  if {$\bm{a}<0$}: \whenTEACHER{\tiny as $x\rightarrow-\infty$, $y\rightarrow-\infty$}\\
+            &  \\
             \noalign{\hrule height 0.25pt}
-            \makecell[l]{%
-                {\itshape vertex is a}\\{\bfseries\itshape maximum?}
-            } & if $\bm{a}$ is \gap{negative}\\
-            & \\
-            & \\
+            {\itshape\bfseries right end}
+            & if {$\bm{a}>0$}: \whenTEACHER{\tiny as $x\rightarrow\infty$, $y\rightarrow\infty$}\\
+            {\itshape behavior}& \\
+            &  if {$\bm{a}<0$}: \whenTEACHER{\tiny as $x\rightarrow\infty$, $y\rightarrow-\infty$}\\
+            &  \\
             \hline
         \end{tabular}    \end{tcolorbox}
 \end{tcbraster}
