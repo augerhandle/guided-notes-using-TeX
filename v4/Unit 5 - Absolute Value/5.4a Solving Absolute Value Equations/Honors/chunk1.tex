@@ -1,0 +1,64 @@
+\section{Introduction}
+
+\begin{tcbraster}[
+    raster equal height, 
+    raster columns = 3,
+    raster column skip = 0.5in,
+]
+    \begin{tcolorbox}[colback=white,boxrule=0.5pt,]
+        \raggedright
+        {\small solving \myEmph{linear} equations \phantom{xxxxxxx}}
+        \begin{center}
+        $5x +3 = 13$\\[0.25\baselineskip]
+        {\HUGE$\Downarrow$}\\
+        $x =$ \gap{$2$}
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[colback=white,boxrule=0.5pt,]
+        \raggedright
+        {\small solving \myEmph{quadratic} equations}
+        \begin{center}
+        $x^2 + 5x + 6 = 0$\\[0.25\baselineskip]
+        {\HUGE$\Downarrow$}\\[0.2\baselineskip]
+        $x =$ \gap{$-2$}, \gap{$-3$}
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[colback=white,boxrule=0.5pt,]
+        \raggedright
+        {\small Now, solving \myEmph{absolute value} equations}
+        \begin{center}
+        $|4x -2 | = 10$\\[0.25\baselineskip]
+        {\HUGE$\Downarrow$}\\[0.2\baselineskip]
+        $x =$ \gap{$-2$}, \gap{$3$}
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+
+\myWideProblemWithContent[Solve this absolute value equation]
+{
+    $|x| = 4$
+    \tcblower
+    The key is to think about \gap{distance}\,:
+    \hfill
+    \begin{tikzpicture}[scale=0.75]
+        \myDrawNumberlineCircle{0}{white}
+        \whenTEACHER{
+            \myDrawNumberlineCircle{4}{black}
+            \myDrawNumberlineCircle{-4}{black}
+        }
+        \myDrawNumberline{5}
+    \end{tikzpicture}\\
+    %
+    \begin{tcbraster}[
+        raster columns = 2,
+        raster before skip = 0.5\baselineskip,
+        ]
+        \begin{tcolorbox}[colback=white,boxrule=0pt,colframe=white,]
+            \vspace{0.9in}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=white,]
+            When you solve absolute value equations,
+            you will \myEmph{always} \gap{split} the equation in two like this.
+        \end{tcolorbox}
+    \end{tcbraster}
+}
