@@ -1,0 +1,92 @@
+\section{Checking}
+
+\begin{tcolorbox}[center,width=5.5in,colback=white,]
+    After you \gap{isolate} the absolute value expression,
+    if the number is \gap{negative} 
+    you must check for \gap{special} \gap{cases}.
+    \begin{center}
+        \renewcommand{\arraystretch}{1.75}
+        \begin{tabular}{|lcl|}
+            \hline
+            {\itshape less than a negative} 
+            & {\LARGE\ding{224} }
+            & {\itshape no solution}
+                \\
+            \hline
+            {\itshape greater than a negative}    
+                & {\LARGE\ding{224} }
+                & {\itshape all real numbers}
+                \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{tcolorbox}
+
+Here is how to think about these special cases.
+
+\begin{tcbraster}[
+    raster columns = 2, raster equal height,
+    colback=white,
+]
+    \begin{tcolorbox}[]
+        \centering
+        \myEmph{``less than'' a negative}\\[1\baselineskip]
+        {$|x+2| < -3$} \qquad {\itshape or} \qquad {$|x+2| \le -3$}
+    \tcblower
+        \begin{center}
+            \begin{myTikzpictureGrid}{0.3} {6}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{abs(x+2)}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-3}
+                \node (rect) at (6,4.7) [draw,thin,solid,fill=black!20] {\tiny$\bm{y_1} = |x+2|$};
+                \node at (7,-3.2) [draw,thin,solid,fill=black!20] {\tiny$\bm{y_2} = -3$};
+            \end{myTikzpictureGrid}
+            \begin{itemize}
+                \item $y_1 = |x+2|$ is positive 
+                \item $y_2 = -3$ is negative
+            \end{itemize}
+        \end{center}
+        % \vspace{1\baselineskip}
+        A positive is \myEmph{never} less than a negative, therefore 
+        there is \gap{no} \gap{solution}.
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \centering
+        \myEmph{``greater than'' a negative}\\[1\baselineskip]
+        {$|x+2| > -3$} \qquad {\itshape or} \qquad {$|x+2| \ge -3$}
+    \tcblower
+        \begin{center}
+            \begin{myTikzpictureGrid}{0.3} {6}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{abs(x+2)}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-3}
+                \node (rect) at (6,4.7) [draw,thin,solid,fill=black!20] {\tiny$\bm{y_1} = |x+2|$};
+                \node at (7,-3.2) [draw,thin,solid,fill=black!20] {\tiny$\bm{y_2} = -3$};
+            \end{myTikzpictureGrid}
+            \begin{itemize}
+                \item $y_1 = |x+2|$ is positive 
+                \item $y_2 = -3$ is negative
+            \end{itemize}
+        \end{center}
+        A positive is \myEmph{always} greater than a negative, therefore 
+        the solution is
+        \begin{center}
+            \gap{all} \gap{real} \gap{numbers}
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+
+\begin{tcolorbox}[center,width=3.5in,]
+    \begin{itemize}[fullwidth]
+        \item ``less than'' applies to either {\Large$<$} or {\Large$\le$}
+        \item ``greater than'' applies to either {\Large$>$} or {\Large$\ge$}
+    \end{itemize}
+\end{tcolorbox}
+
+
+\myProblems[Solve these absolute value inequalities.]
+{
+    $10 - |x-3| \ge 19$
+}
+{
+    $10|9b-1| -10 \ge -20$
+}{3.5in}[\raggedleft\gap{no solution\phantom{xxxx}}][\raggedleft\gap{all real numbers}]
+
