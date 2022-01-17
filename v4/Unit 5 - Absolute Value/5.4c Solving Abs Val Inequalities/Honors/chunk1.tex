@@ -1,0 +1,78 @@
+\section{Introduction}
+
+The key to absolute value \myEmph{equations} and \myEmph{inequalities} is to think about \gap{distance} on a number line.
+
+\begin{tcolorbox}[center,colback=white,boxrule=1pt,]
+    The solution to 
+    {
+        \large
+        $|x| = 4$
+    }
+    is two points \gap{exactly} $4$ units from the origin.
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            % \myDrawNumberlineCircle{0}{white}
+            \whenTEACHER{
+                \myDrawNumberlineCircle{4}{black}
+                \myDrawNumberlineCircle{-4}{black}
+            }
+            \myDrawNumberline{10}
+        \end{tikzpicture}
+        \\
+        $x=-4$ \quad or \quad $x=4$ 
+    \end{center}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[center,colback=white,boxrule=1pt,]
+    The solution to 
+    {
+        \large
+        $|x| > 4$
+    }
+    is two intervals \gap{beyond} the two points.
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            % \myDrawNumberlineCircle{0}{white}
+            \whenTEACHER{
+                \draw[->, line width=1mm] (4,0) -- (9,0);
+                \myDrawNumberlineCircle{4}{white}
+                \draw[->, line width=1mm] (-4,0) -- (-9,0);
+                \myDrawNumberlineCircle{-4}{white}
+            }
+            \myDrawNumberline{10}
+        \end{tikzpicture}
+        \\
+        $x<-4$ \quad or \quad $x>4$ 
+    \end{center}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[center,colback=white,boxrule=1pt,]
+    The solution to 
+    {
+        \large
+        $|x| < 4$
+     } 
+    is the interval \gap{between} the two points.
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            % \myDrawNumberlineCircle{0}{white}
+            \whenTEACHER{
+                \draw[-, line width=1mm] (-4,0) -- (4,0);
+                \myDrawNumberlineCircle{4}{white}
+                \myDrawNumberlineCircle{-4}{white}
+            }
+            \myDrawNumberline{10}
+        \end{tikzpicture}
+        \\
+        $-4 < x < 4$
+    \end{center}
+\end{tcolorbox}
+
+\vfill
+Inequalities with {\large$\le$} or {\large$\ge$} are {similar}, with 
+\begin{itemize}[topsep=0in]
+    \item \gap{filled} \gap{in} circles, and 
+    \item inequalites with \gap{equals} \gap{lines} under them.
+\end{itemize}
