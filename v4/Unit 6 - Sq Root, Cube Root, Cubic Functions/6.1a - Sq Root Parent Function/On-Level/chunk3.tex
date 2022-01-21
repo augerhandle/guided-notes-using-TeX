@@ -1,0 +1,41 @@
+% \needspace{2.5in}
+\section{Shifting the Parent Function}
+
+\begin{tcolorbox}[center,width=5in,]
+    When you shift the parent function, 
+    start by shifting its \gap{end} \gap{point}.
+\end{tcolorbox}
+
+\myWideProblemWithContent[%
+    Use a graphing calculator to graph these functions.\vspace{-0.75\baselineskip}
+    \begin{itemize}[nosep]
+        \item Sketch the graphs of $f$ and $g$.
+        \item What are the coordinates of $g$'s end point?
+        \item What are  $g$'s domain and range?
+        \item What happened going from $f$ to $g$?
+    \end{itemize}
+    ]
+{
+    $f(x) = \myRoot{x}$ \hspace{1in} $g(x) = \myRoot{x} - 4$
+    \tcblower
+    \begin{minipage}{0.32\textwidth}
+        \begin{myTikzpictureGrid}{0.4} [-2]{10}{5}
+            \whenTEACHER{
+                \tkzText(9,4){$f$}
+                \tkzFct[ solid, thin, samples=100, domain=0:10,]{sqrt(x)}
+                \draw[black,thick,fill=black] (0,0) circle (0.2 cm);
+                \tkzText(9,-2){$g$}
+                \tkzFct[ solid, ultra thick, samples=100, domain=0:10,]{sqrt(x)-4}
+                \draw[black,thick,fill=black] (0,-4) circle (0.2 cm);
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.67\textwidth}
+        \begin{itemize}[fullwidth]
+            \item The coordinates of $g$'s end point are \gap{$(0,-4)$}.
+            \item The domain of $g$ is \gap{$x >= 0$}.
+            \item The range of $g$ is \gap{$y >= -4$}.
+        \end{itemize}
+    \end{minipage}
+}
