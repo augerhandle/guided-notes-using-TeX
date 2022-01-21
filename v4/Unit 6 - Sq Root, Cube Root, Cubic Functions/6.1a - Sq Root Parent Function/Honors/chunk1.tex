@@ -1,0 +1,49 @@
+\section{Parent Function}
+
+The square root parent function is 
+\myCenteredBox[width=1.75in,valign=center]{
+    \large
+    \vspace{-1.2em}
+    \[ f(x) = \myRoot{x} \]
+}
+%
+
+\begin{minipage}{0.5\textwidth}
+    \centering 
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{r|p{1.25in}|c}
+        $x$ 
+            & $y = \myRoot{x}$    
+            & $(x,y)$\\ \hline\hline
+        $-2$ 
+            & $\myRoot{-2} = $  
+            & \phantom{$(-9,9)$}\\ \hline
+        $-1$ 
+            & $\myRoot{-1} = $  
+            & \\ \hline
+        $0$ 
+            & $\myRoot{0} = $    
+            & \\ \hline
+        $1$ 
+            & $\myRoot{1} = $    
+            & \\ \hline
+        $4$ 
+            & $\myRoot{4} = $    
+            & \\ \hline
+        $9$ 
+            & $\myRoot{9} = $    
+            & \\ \hline
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.4} [-2]{10}{6}
+        % \tkzText(13,8){$x - y = 0$}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=100, domain=0:10,]{sqrt{x}}
+        }
+        % \tkzText(-13,7.25){$x + 2y = 6$}
+    \end{myTikzpictureGrid}
+\end{minipage}
+
+This looks like \gap{half} a parabola lying on its \gap{side}.

@@ -1,0 +1,45 @@
+\section{Attributes of the Parent Function}
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{r|l}
+    \toprule
+    {\bfseries\itshape end point}              
+        & where the curve \gap{stops} at a point\\
+\midrule
+    {\bfseries\itshape domain}              
+        & all the \gap{$x$-values} on the curve\\
+    {\bfseries\itshape range}               
+        & all the \gap{$y$-values} on the curve\\
+    \midrule
+    \myEmph{end behavior}
+        & as $x \rightarrow $ \fbox{\phantom{99}}, $y \rightarrow $ \fbox{\phantom{99}}
+            \\
+    % \bottomrule
+\end{tabular}
+\end{center}
+
+
+
+\vspace{-1\baselineskip}
+\begin{minipage}{0.49\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.4} [-2]{10}{5}
+        % \tkzText(13,8){$x - y = 0$}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0:10,]{sqrt(x)}
+        \draw[black,thick,fill=black] (0,0) circle (0.2 cm);
+        % \tkzText(-13,7.25){$x + 2y = 6$}
+    \end{myTikzpictureGrid}
+\end{minipage}\begin{minipage}{0.5\textwidth}
+    \centering 
+    \small
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{r|p{1.5in}}
+        {\itshape attribute} & {\itshape value} \\ \hline\hline
+        end point coordinates & \\ \hline
+        domain & \\ \hline
+        range &  \\ \hline
+        left end behavior & \\ \hline
+        right end behavior & \\ \hline
+    \end{tabular}
+\end{minipage}
