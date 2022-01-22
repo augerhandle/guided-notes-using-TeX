@@ -19,6 +19,7 @@
     \hfill
     Period : \fbox{\phantom{\large 9999}}
     \hrule\hspace{\baselineskip}
+    \vspace{1\parskip}
 }
 
 
@@ -66,8 +67,11 @@
 
 % These will conditionally generate output (the argument) based on 
 % whether this document is "for" HONORS or ONLEVEL according to the previous commands.
-\newcommand{\whenTEACHER}[1]  {\iftstu{#1}\else{}  \fi}
-\newcommand{\whenSTUDENT}[1] {\iftstu{}\else{#1}\fi}
+%
+% #1 the content 
+% #2 text color
+\NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\color{#1}#2}\else{}\fi}
+\newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
 
 
 
