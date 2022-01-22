@@ -1,4 +1,28 @@
 % ---------------------------------------------------------------------------
+% a header to put at the top of a homework assignment
+% ---------------------------------------------------------------------------
+% #1 class name 
+% #2 assignment number (eg, 2.5 CW)
+% #3 assignment title (eg, Solve Quadratic Equations)
+%
+\NewDocumentCommand{\myAssignmentHeader}{ O{Algebra~2} m m }{
+    \noindent
+    \whenHONORS{Honors~}#1
+    \hfill 
+    Name : \fbox{\phantom{X\hspace{2in}}}\par
+    \vspace{0.5em}
+    \noindent
+    {%
+        \LARGE\sffamily
+        \whenHONORS{H-}#2 -- #3
+    }
+    \hfill
+    Period : \fbox{\phantom{\large 9999}}
+    \hrule\hspace{\baselineskip}
+}
+
+
+% ---------------------------------------------------------------------------
 % I'm SO tired of writing these two explicitly!
 % ---------------------------------------------------------------------------
 \newcommand{\myEmph}[1]{{\bfseries\itshape#1}}
