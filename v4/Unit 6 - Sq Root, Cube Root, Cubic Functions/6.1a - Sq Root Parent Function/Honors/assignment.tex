@@ -1,0 +1,199 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{6.1 HW}{Square Root Parent Function}
+%-----------------------------------------------------------------------------------------
+
+\myWideProblemWithContent[%
+    Fill in the table, and (approximately) plot the points. 
+    Then ``fill in'' the graph of the 
+    parent function.
+]
+{
+    \myTwoMinipages{
+        \begin{tabular}{r|p{1.5in}|c}
+            $x$ & $y = \myRoot{x}$ & $(x,y)$ \\
+            \hline
+            {-1}  & & \\ \hline
+            {0}   & & \\ \hline
+            {1}   & & \\ \hline
+            {5}   & & \\ \hline
+            {10}  & & \\ \hline
+            {15}  & & \\ 
+        \end{tabular}
+    }{
+        \begin{myTikzpictureGrid}{0.45} [-2]{17}[-2]{6}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, thick, samples=200, domain=0:17,]{x**0.5}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }
+}
+
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    In the last problem, your $y$ values were decimals, 
+    and so you had to locate your dots \myEmph{approximately}. 
+    \begin{itemize}[nosep,]
+        \item Enter ``nicer'' $x$ values that avoid decimals for $y$.
+        \item Draw the dots and sketch the function.
+    \end{itemize}
+]
+{
+    \myTwoMinipages{
+        \begin{tabular}{r|p{1.5in}|c}
+            $x$ & $y = \myRoot{x}$ & $(x,y)$ \\
+            \hline
+            {$-1$}  & & \\ \hline
+            {$0$}   & & \\ \hline
+            {$1$}   & & \\ \hline
+            \whenTEACHER{4}  &  & \\ \hline
+            \whenTEACHER{9}  &  & \\ \hline
+            \whenTEACHER{16} &  & \\ 
+        \end{tabular}
+    }{
+        \begin{myTikzpictureGrid}{0.45} [-2]{17}[-2]{6}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, thick, samples=200, domain=0:17,]{x**0.5}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }
+}
+
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Use a graphing calculator for this function. Sketch the graph here. Find the attributes.
+]
+{
+    $ g(x) = \myRoot{x} + 2 $
+    \tcblower
+    \myTwoMinipages{
+        \begin{myTikzpictureGrid}{0.45} [-2]{17}[-1]{7}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, thick, samples=200, domain=0:17,]{(x)**0.5 + 2}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }{
+        \begin{itemize}[fullwidth,]
+            \item coordinates of the end point: \gap{$(0,2)$}
+            \item domain: \gap{$x\ge 0$}
+            \item range: \gap{$y\ge 2$}
+            \item left end behavior: as $x\rightarrow$\gap{$0$}, $y\rightarrow$\gap{$0$}
+            \item right end behavior: as $x\rightarrow$\gap{$\infty$}, $y\rightarrow$\gap{$\infty$}
+        \end{itemize}
+    }
+}
+
+\myWideProblem{
+    How does the graph in the previous problem differ from the parent function?
+}{0.5in}
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Find the attributes of these parent functions.
+]
+{
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=-17:17,]{(x**2)}
+            \node (rect) at (5,1.5) [draw,thin,solid,fill=white] {\tiny$f(x) = x^2$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        \begin{itemize}[fullwidth]
+            \item vertex: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+            \item left end behavior: \hrulefill
+            \item right end behavior: \hrulefill
+        \end{itemize}
+    \end{minipage}
+    \\[1cm]
+    %
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=-17:17,]{(abs(x))}
+            \node (rect) at (5,1.5) [draw,thin,solid,fill=white] {\tiny$f(x) = |x|$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        \begin{itemize}[fullwidth]
+            \item vertex: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+            \item left end behavior: \hrulefill
+            \item right end behavior: \hrulefill
+        \end{itemize}
+    \end{minipage}
+    \\[1cm]
+    %
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=0:17,]{(x)**0.5}
+            \node (rect) at (3,3.5) [draw,thin,solid,fill=white] {\tiny$f(x) = \myRoot{x}$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        \begin{itemize}[fullwidth]
+            \item end point: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+            \item left end behavior: \hrulefill
+            \item right end behavior: \hrulefill
+        \end{itemize}
+    \end{minipage}
+}
+
+
+
+\myWideProblem{
+    How does \myEmph{left end behavior} 
+    in third graph differ from the first two graphs?
+}{0.75in}
+
+
+\end{document}
