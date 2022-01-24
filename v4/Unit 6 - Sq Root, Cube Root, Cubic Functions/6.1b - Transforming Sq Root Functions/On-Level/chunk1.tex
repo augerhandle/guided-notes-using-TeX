@@ -1,0 +1,117 @@
+\section{The Transformations Due To $a$, $h$, $k$}
+
+\begin{tcbraster}[
+    raster equal height,
+    raster left skip = 1in, raster right skip = 1in, 
+    raster column skip = 0.5in,
+    raster before skip = 1\baselineskip, raster after skip = 1\baselineskip,
+    ]
+    \begin{tcolorbox}[]
+        \centering
+        {\bfseries\itshape parent function}\\[0.5\baselineskip]
+        \large
+        $f(x) = \myRoot{x}$
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \centering
+        {\bfseries\itshape transformed function}\\[0.5\baselineskip]
+        \large
+        $g(x) = \bm{a} \myRoot{x-\bm{h}} + \bm{k}$
+    \end{tcolorbox}
+\end{tcbraster}
+
+\begin{tcbraster}[]
+\end{tcbraster}
+
+
+The constants {$\bm{a}$}, {$\bm{h}$}, and {$\bm{k}$} result in 
+different kinds of {\bfseries\itshape transformations} 
+of the parent function:
+\vspace{-1\baselineskip}
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \newcommand{\myTempColumnWidth}{3.5in}
+    \begin{tabular}{c|p{\myTempColumnWidth}}
+        {\itshape constant} & {\itshape what it does} \\
+        \toprule 
+        $\bm{a}$ 
+            & 
+            \begin{minipage}[t]{\myTempColumnWidth}
+                \begin{itemize}[nosep,fullwidth]
+                    \item[] \gap{reflection} across the $x$-axis 
+                \end{itemize}
+            \end{minipage}
+            \\ 
+            & 
+            \begin{minipage}[t]{\myTempColumnWidth}
+                \begin{itemize}[nosep,fullwidth]
+                    \item[] \gap{stretch} or \gap{compress} by $|\bm{a}|$
+                \end{itemize}
+            \end{minipage}
+            \\[1em]
+        \toprule
+        $\bm{h}$ 
+            & 
+            \begin{minipage}[t]{\myTempColumnWidth}
+                \begin{itemize}[nosep,fullwidth]
+                    \item[] shift \gap{left} or \gap{right} by $|\bm{h}|$
+                \end{itemize}
+            \end{minipage}
+            \\
+        \toprule
+        $\bm{k}$ 
+            & 
+            \begin{minipage}[t]{\myTempColumnWidth}
+                \begin{itemize}[nosep,fullwidth]
+                    \item[] shift \gap{up} or \gap{down} by $|\bm{k}|$
+                \end{itemize}
+            \end{minipage}
+        \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+
+Remember that $\bm{h}$ is the \gap{opposite} 
+of what you see in the formula for $g(x)$.
+
+
+
+\myProblems[%
+    Find $a$, $h$, $k$, and 
+    describe the transformations that convert the parent function
+    into the following functions.
+]
+{
+    $g(x) = \myRoot{x+4} - 5$
+}
+{
+    $g(x) = -3\myRoot{x-7} + 1$
+}{1.5in}
+
+
+\myProblemsWithContent[%
+    Given these transformations that convert the parent function
+    into the following functions,
+    find $a$, $h$, $k$, and write the formula for $g(x)$.
+]
+{
+    \begin{itemize}[nosep,fullwidth]
+        \item reflection across the $x$-axis 
+        \item shift down by 2
+    \end{itemize}
+    \tcblower 
+    \large
+    $a$=\gap{-1}, $h$=\gap{0}, $k$=\gap{-2}\\[1\baselineskip] 
+    $g(x) =$ \gap{$-\myRoot{x}-2$}
+}
+{
+    \begin{itemize}[nosep,fullwidth]
+        \item stretch by 2 
+        \item shift right by 4 
+    \end{itemize}
+    \tcblower 
+    \large
+    $a$=\gap{2}, $h$=\gap{4}, $k$=\gap{0}\\[1\baselineskip] 
+    $g(x) =$ \gap{$2\myRoot{x-4}$}
+}

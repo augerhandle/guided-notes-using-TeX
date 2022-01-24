@@ -1,0 +1,46 @@
+\section{The Graph of Transformed Absolute Value Functions}
+
+\begin{myConceptSteps}{To quickly sketch the graph of a transformed square root function\dots}
+    \myStep{vertex}{%
+        Shift the \gap{end} \gap{point} by $\bm{h}$ and $\bm{k}$. 
+        Put a \gap{dot} at $(\bm{h},\bm{k})$.
+    }
+    \myStep{arc}{%
+        Draw the ``arc'' of a square root function starting at the end point.
+        \begin{itemize}
+            \item arch up if $\bm{a}$ is \gap{positive}
+            \item arch down if $\bm{a}$ is \gap{negative}
+        \end{itemize}
+    }
+\end{myConceptSteps}
+
+\begin{tcolorbox}[center,width=6in,colback=white,after skip=-11pt,]
+    Those steps \myEmph{ignore} stretching and compressing. 
+    To graph the effect of those, you'd really need to use a graphing calculator 
+    or plot a lot of points in a table.
+\end{tcolorbox}
+
+
+\myProblemsWithContent[Quickly sketch the graphs of these functions.]
+{
+    $g(x) = \myRoot{x - 3} -1$
+    \tcblower 
+    \centering
+    ${a} =$ \gap{$1$},\quad ${h} =$ \gap{$3$},\quad ${k} =$ \gap{$-1$}\\[\baselineskip]
+    \begin{myTikzpictureGrid}{0.35} [-1]{10}{4}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=900, domain=-10:10,]{sqrt(x-3)-1}
+        }
+    \end{myTikzpictureGrid}
+}
+{
+    $g(x) = -\myRoot{x+3} +2 $
+    \tcblower 
+    \centering
+    ${a} =$ \gap{$-1$},\quad ${h} =$ \gap{$-3$},\quad ${k} =$ \gap{$2$}\\[\baselineskip]
+    \begin{myTikzpictureGrid}{0.35} [-4]{6}{4}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=500, domain=-10:10,]{-sqrt(x+3)+2}
+        }
+    \end{myTikzpictureGrid}
+}
