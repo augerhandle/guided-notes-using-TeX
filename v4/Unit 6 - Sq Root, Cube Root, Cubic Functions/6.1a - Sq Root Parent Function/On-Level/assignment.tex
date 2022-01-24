@@ -1,0 +1,167 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{6.1 HW}{Square Root Parent Function}
+%-----------------------------------------------------------------------------------------
+
+\myWideProblemWithContent[%
+    Fill in the table. 
+    Plot the points. 
+    Sketch the graph by ``connecting the dots''.
+]
+{
+    \myTwoMinipages{
+        \begin{tabular}{r|p{1.5in}|c}
+            $x$ & $y = \myRoot{x}$ & $(x,y)$ \\
+            \hline
+            {-1}  & & \\ \hline
+            {0}   & & \\ \hline
+            {1}   & & \\ \hline
+            {4}   & & \\ \hline
+            {5}   & & \\ \hline
+            {9}  & & \\ \hline
+            {10}  & & \\ \hline
+            {15}  & & \\ \hline
+            {16}  & & \\ 
+        \end{tabular}
+    }{
+        \begin{myTikzpictureGrid}{0.45} [-2]{17}[-2]{6}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, thick, samples=200, domain=0:17,]{x**0.5}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }
+}
+
+
+
+
+% 
+
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Use a graphing calculator for this function. Sketch the graph here. Find the attributes.
+]
+{
+    $ g(x) = \myRoot{x} + 2 $
+    \tcblower
+    \myTwoMinipages{
+        \begin{myTikzpictureGrid}{0.45} [-2]{17}[-1]{7}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, thick, samples=200, domain=0:17,]{(x)**0.5 + 2}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }{
+        \begin{itemize}
+            \item coordinates of the end point: \gap{$(0,2)$}
+            \item domain: \gap{$x\ge 0$}
+            \item range: \gap{$y\ge 2$}
+        \end{itemize}
+    }
+}
+
+\myWideProblem{
+    How does the graph in the previous problem differ from the parent function?
+}{1.5in}
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Find the attributes of these parent functions.
+]
+{
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=-17:17,]{(x**2)}
+            \node (rect) at (5,1.5) [draw,thin,solid,fill=white] {\tiny$f(x) = x^2$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        {\begin{center}\itshape quadratic parent function\end{center}}
+        \begin{itemize}[fullwidth]
+            \item vertex: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+        \end{itemize}
+    \end{minipage}
+    \\[1cm]
+    %
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=-17:17,]{(abs(x))}
+            \node (rect) at (5,1.5) [draw,thin,solid,fill=white] {\tiny$f(x) = |x|$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        {\begin{center}\itshape absolute value parent function\end{center}}
+        \begin{itemize}[fullwidth]
+            \item vertex: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+        \end{itemize}
+    \end{minipage}
+    \\[1cm]
+    %
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=0:17,]{(x)**0.5}
+            \node (rect) at (3,3.5) [draw,thin,solid,fill=white] {\tiny$f(x) = \myRoot{x}$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        {\begin{center}\itshape square root parent function\end{center}}
+        \begin{itemize}[fullwidth]
+            \item end point: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+        \end{itemize}
+    \end{minipage}
+}
+
+
+
+\myWideProblem{
+    What is different about the domain of the third (square root) parent function
+    compared to the first two?
+}{2in}
+
+
+\end{document}
