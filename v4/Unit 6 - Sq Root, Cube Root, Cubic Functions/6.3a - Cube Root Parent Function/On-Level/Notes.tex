@@ -1,0 +1,35 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/document-geometry}
+\input{../../../common/header-footer}
+\input{../../../common/chapter-pagestyle}
+\input{../../../common/objectives}
+\input{../../../common/vocabulary}
+\input{../../../common/concepts}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{lsnPagestyle}
+\chapterstyle{lsnChapterStyle}
+\checkandfixthelayout
+\raggedbottom
+
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+
+\input{content}
+
+\end{document}

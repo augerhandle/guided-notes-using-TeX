@@ -1,0 +1,155 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{6.3a CW}{Cube Root Parent Function}
+%-----------------------------------------------------------------------------------------
+
+\myWideProblemWithContent[%
+    Fill in the table. (You will get decimals.)
+    Plot the points. 
+    Sketch the graph by ``connecting the dots''.
+]
+{
+    \myTwoMinipages{
+        \begin{tabular}{r|p{1.5in}|c}
+            $x$ & $y = \myRoot[3]{x}$ & $(x,y)$ \\
+            \hline
+            {-9}  & & \\ \hline
+            {-8}   & & \\ \hline
+            {-3}   & & \\ \hline
+            {-1}   & & \\ \hline
+            %
+            {0}   & & \\ \hline
+            %
+            {1}   & & \\ \hline
+            {3}   & & \\ \hline
+            {8}   & & \\ \hline
+            {9}  & & \\ \hline
+        \end{tabular}
+    }{
+        \begin{myTikzpictureGrid}{0.45} {10}{4}
+        %     % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=1000, domain=0:10,]{x**(1.0/3.0)}
+                \tkzFct[ solid, ultra thick, samples=1000, domain=-10:0,]{-(-x)**(1.0/3.0)}
+            }
+        %     % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }
+}
+
+
+
+
+% 
+
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Use a graphing calculator for this function. Sketch the graph here. Find the attributes.
+]
+{
+    $ g(x) = \myRoot[3]{x} + 2 $
+    \tcblower
+    \myTwoMinipages{
+        \begin{myTikzpictureGrid}{0.45} {9}[-2]{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=500, domain=0:10,]{x**(1.0/3.0) + 2}
+                \tkzFct[ solid, ultra thick, samples=500, domain=-10:0,]{-(-x)**(1.0/3.0) + 2}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    }{
+        \begin{itemize}[fullwidth]
+            \item coordinates of the inflection point: \gap{$(0,2)$}
+            \item domain: \gap{all real numbers}
+            \item range: \gap{all real numbers}
+        \end{itemize}
+    }
+}
+
+\myWideProblem{
+    How does the graph in the previous problem differ from the parent function?
+}{1.5in}
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Find the attributes of these parent functions.
+]
+{
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ color=black, solid, ultra thick, samples=200, domain=0:17,]{(x)**0.5}
+            \node (rect) at (3,3.5) [draw,thin,solid,fill=white] {\tiny$f(x) = \myRoot{x}$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        {\begin{center}\itshape square root parent function\end{center}}
+        \begin{itemize}[fullwidth]
+            \item end point: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+        \end{itemize}
+    \end{minipage}
+    %
+    \begin{minipage}{0.4\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {8}{5}
+            % \tkzText(13,8){$x - y = 0$}
+            \tkzFct[ solid, ultra thick, samples=500, domain=0:10,]{x**(1.0/3.0) }
+            \tkzFct[ solid, ultra thick, samples=500, domain=-10:0,]{-(-x)**(1.0/3.0) }
+        \node (rect) at (3,3.5) [draw,thin,solid,fill=white] {\tiny$f(x) = \myRoot[3]{x}$};
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.59\textwidth}
+        {\begin{center}\itshape cube root parent function\end{center}}
+        \begin{itemize}[fullwidth]
+            \item inflection point: \hrulefill
+            \item domain: \hrulefill
+            \item range: \hrulefill
+        \end{itemize}
+    \end{minipage}
+}
+
+
+
+\myWideProblem{
+    Describe how the \myEmph{domains} of the last two functions are different.
+}{2in}
+
+\myWideProblem{
+    Describe how the \myEmph{ranges} of the last two functions are different.
+}{2in}
+
+
+\end{document}
