@@ -1,0 +1,34 @@
+\dummypart{6}{Square Root, Cube Root, and Cubic Functions}
+\myLesson{Why Only $h$ Is the\\ Opposite of What You See}[3][*]
+
+\begin{myObjectives}
+    \myObjective{explain}{why $h$ shows up with a negative sign in transformed functions}
+\end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{translate}{\gap{move} a bunch of points in the same direction}
+    \myDefinition{satisfy an equation}{something that makes an equation \gap{true}}
+\end{myVocabulary}
+
+\renewcommand{\theequation}{\arabic{equation}}
+\newtcolorbox{myEqBox}[1][]{colback=gray!20, 
+ colframe=white,
+ width=\textwidth,
+ sharpish corners,
+ top=-3mm, % default value 2mm
+ bottom=3pt
+}
+% To enable selective eq numbering in multi eq align's 
+\newcommand\myTagThis{\addtocounter{equation}{1}\tag{\theequation}}
+
+%lower subscripts (see https://tex.stackexchange.com/questions/139752/change-size-and-position-of-subscript-like-double-subscript)
+\fontdimen16\textfont2=4pt
+\fontdimen17\textfont2=4pt
+
+\begin{NoHyper}
+\input{chunk1}
+\input{chunk2}
+\input{chunk3}
+\input{chunk4}
+\end{NoHyper}
+

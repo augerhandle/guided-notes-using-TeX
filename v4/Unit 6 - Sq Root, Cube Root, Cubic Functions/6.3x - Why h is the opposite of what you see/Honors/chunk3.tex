@@ -1,0 +1,76 @@
+\section{The Translated Equation}
+
+If \gap{every} point on the original curve 
+is translated by \gap{$h$} and \gap{$k$},
+what can we say about the \gap{new} coordinates 
+$x_t$ and $y_t$?
+
+The key is to \gap{rewrite} equations \ref{eq:newtranslate} on page \pageref{eq:newtranslate}.
+To do that, 
+let's solve those equations for the ``parent'' (\gap{$p$}) coordinates.
+
+\begin{myEqBox}
+    \begin{align*}
+        x_t &= x_p + h 
+        \text{\whenTEACHER{\quad repeat of equations~\ref{eq:newtranslate}}}
+        \\
+        y_t &= y_p + k \myTagThis
+        \label{eq:newtranslate2}
+    \end{align*}
+\end{myEqBox}
+
+\begin{myEqBox}
+    \begin{align*}
+        x_t - h &= x_p  \\
+        y_t - k &= y_p  \myTagThis
+        \label{eq:oldtranslate}
+    \end{align*}
+\end{myEqBox}
+
+How did we do to get from equations \ref{eq:newtranslate2} to equations \ref{eq:oldtranslate}? \hrulefill 
+
+\hrulefill 
+
+\hrulefill 
+
+Or
+
+\begin{myEqBox}
+    \begin{align*}
+        x_p &= x_t - h  \\
+        y_p &= y_t - k  \myTagThis
+        \label{eq:oldtranslate2}
+    \end{align*}
+\end{myEqBox}
+
+How did we get from equations~\ref{eq:oldtranslate} to equations~\ref{eq:oldtranslate2}? \hrulefill
+
+\hrulefill 
+
+\hrulefill 
+
+
+Let's \gap{substitute} these values for the parent coordinates into 
+equation~\ref{eq:original} on page~\pageref{eq:original}. 
+
+\begin{myEqBox}
+    \begin{align}
+        y_p &= \myRoot[3]{x_p} 
+        \text{\whenTEACHER{\quad repeat of equation~\ref{eq:original}}}
+        \label{eq:repeat}
+        \\
+        y_t - k &= \myRoot[3]{x_t - h} \label{eq:repeat2}
+    \end{align}
+\end{myEqBox}
+
+Remember, equation~\ref{eq:repeat} is true because $(x_p,y_p)$ is \gap{on the curve} the parent function. 
+
+\vfill 
+
+\begin{tcolorbox}[center,width=4in,colback=blue!10,]
+    \centering
+    So equation~\ref{eq:repeat2} is what we know about the \gap{translated} point, \gap{$(x_t,y_t)$}.
+\end{tcolorbox}
+
+\vfill
+\newpage 

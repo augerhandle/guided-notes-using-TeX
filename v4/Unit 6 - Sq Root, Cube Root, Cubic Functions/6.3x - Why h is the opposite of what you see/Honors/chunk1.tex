@@ -1,0 +1,39 @@
+\section{On the Parent Function}
+
+Consider the cube root \gap{parent} function.
+The equation of its graph is
+    \begin{myEqBox}
+        \begin{align}
+            y = \myRoot[3]{x}
+            \text{\whenTEACHER{\quad we talked about this parent function in Lesson 6.3a}}
+            \label{eq:parent}
+        \end{align}
+    \end{myEqBox}
+which is true \myEmph{only} for points that are \gap{on the curve}
+\whenTEACHER{and false everywhere else}.
+
+Here's what that means\dots
+
+Consider a generic point on the curve, \gap{$(x_{p}, y_{p})$}
+\whenTEACHER{(``p'' for parent)}.
+\begin{center}
+    \begin{myTikzpictureGrid}{0.5} {10}{4}
+        \tkzFct[ solid, ultra thick, samples=200, domain=0:10,]{(x)**(1.0/3.0)}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-10:0,]{-(-x)**(1.0/3.0)}
+        \whenTEACHER{
+            \draw[color=red,thick,fill=white] (2,1.26) circle (0.25 cm);
+            \tkzText(0,1.5){$(x_{p}, y_{p})$}
+        }
+    \end{myTikzpictureGrid}
+\end{center}
+
+Because $(x_{p}, y_{p})$ is any point \gap{on the curve}, 
+
+\begin{myEqBox}
+    \begin{align}
+        y_p = \myRoot[3]{x_p}
+        \label{eq:original}
+    \end{align}
+\end{myEqBox}
+
+\whenTEACHER{which is not true for points off the curve.}

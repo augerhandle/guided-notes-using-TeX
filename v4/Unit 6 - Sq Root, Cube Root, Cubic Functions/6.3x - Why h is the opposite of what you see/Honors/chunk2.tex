@@ -1,0 +1,68 @@
+\section{Translating $(x_p,y_p)$}
+
+Now suppose we \gap{translate} the generic point to a new location.
+\vspace{-1\onelineskip}
+\begin{center} 
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|p{2in}|p{2in}|}
+        \hline
+        shift horizontally by \gap{$h$} & $x_p \Longrightarrow x_p + $ \gap{$h$} \\
+        \hline
+        shift vertically by \gap{$k$}   & $y_p \Longrightarrow y_p + $ \gap{$k$} \\
+        \hline
+    \end{tabular}
+\end{center}
+
+This creates a \gap{new} point, \gap{$(x_t,y_t)$} \whenTEACHER{(``t'' for translated)}.
+
+\begin{center}
+    \begin{myTikzpictureGrid}{0.5} {10}{4}
+        \tkzFct[ solid, ultra thick, samples=200, domain=0:10,]{(x)**(1.0/3.0)}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-10:0,]{-(-x)**(1.0/3.0)}
+        \whenTEACHER{
+            \tkzText(0,1.5){$(x_{p}, y_{p})$}
+            \draw[->, very thick] (2,1.26) -- (7,1.26);
+            \tkzText(4.5,0.75){$h$}
+            \draw[color=red,thick,fill=white] (2,1.26) circle (0.25 cm);
+            \draw[color=red,thick,fill=white] (7,3.26) circle (0.25 cm);
+            \draw[->, very thick] (7,1.26) -- (7,3.26);
+            \tkzText(7.5,2.5){$k$}
+            \tkzText(7,4.2){$(x_{t}, y_{t})$}
+        }
+    \end{myTikzpictureGrid}
+\end{center}
+
+Here is how the \gap{parent} and \gap{translated} coordinates are related.
+\begin{myEqBox}
+    \begin{align*}
+        x_t &= x_p + h \\
+        y_t &= y_p + k \myTagThis
+        \label{eq:newtranslate}
+    \end{align*}
+\end{myEqBox}
+
+\vfill 
+Is the translated point on the curve of the parent function? \hrulefill
+
+\hrulefill 
+
+\hrulefill 
+
+\vfill 
+
+Because the translated point is \gap{not} \gap{on the curve}, 
+\gap{
+    $
+    y_t \neq \myRoot[3]{x_t}
+    $
+}
+
+\vfill 
+
+\begin{tcolorbox}[center,width=4in,colback=blue!10,]
+    \centering
+    So what \myEmph{do} we know about the \gap{translated} point, \gap{$(x_t,y_t)$}?
+\end{tcolorbox}
+
+\vfill
+\newpage 

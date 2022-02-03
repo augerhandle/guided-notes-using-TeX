@@ -1,0 +1,80 @@
+\section{The Translated Equation}
+
+We're used to equations 
+written as $y=\dots$.
+So let's get that $y_t$ \gap{by} \gap{itself}.
+
+\begin{myEqBox}
+    \begin{align}
+        y_t - k = \myRoot[3]{x_t - h} 
+        \text{\whenTEACHER{\quad repeat of equation~\ref{eq:repeat2}}}
+        \label{eq:repeat3}
+    \end{align}
+\end{myEqBox}
+
+\begin{myEqBox}
+    \begin{align}
+        y_t = \myRoot[3]{x_t - h} + k
+        \label{eq:repeat4}
+    \end{align}
+\end{myEqBox}
+
+How did we get from equation~\ref{eq:repeat3} to equation~\ref{eq:repeat4}? \hrulefill 
+
+\hrulefill 
+
+We're used to writing it like this \whenTEACHER{(no subscripts)}
+
+\begin{myEqBox}
+    \begin{align}
+        y = \myRoot[3]{x - h} + k
+    \end{align}
+\end{myEqBox}
+
+This is the equation of all the \gap{translated} points.
+Here is its graph.
+\vspace{-1\onelineskip}
+\begin{center}
+    \begin{myTikzpictureGrid}{0.5} {10}{4}
+        \tkzFct[ solid, thin, samples=200, domain=0:10,]{(x)**(1.0/3.0)}
+        \tkzFct[ solid, thin, samples=200, domain=-10:0,]{-(-x)**(1.0/3.0)}
+        %
+        \tkzFct[ solid, ultra thick, samples=200, domain=5:12,]{(x-5)**(1.0/3.0)+ 2}
+        \tkzFct[ solid, ultra thick, samples=200, domain=-10:5,]{-(-x+5)**(1.0/3.0) + 2}
+        \whenTEACHER{
+            \tkzText(0,1.5){$(x_{o}, y_{o})$}
+            \draw[->, very thick] (2,1.26) -- (7,1.26);
+            \tkzText(4.5,0.75){$h$}
+            \draw[color=red,thick,fill=white] (2,1.26) circle (0.25 cm);
+            \draw[color=red,thick,fill=white] (7,3.26) circle (0.25 cm);
+            \draw[->, very thick] (7,1.26) -- (7,3.26);
+            \tkzText(7.5,2.5){$k$}
+            \tkzText(7,4.2){$(x_{n}, y_{n})$}
+        }
+    \end{myTikzpictureGrid}
+\end{center}
+
+So the equation for the graph of the \gap{translated} cube root function is 
+\begin{tcolorbox}[center,width=2in,colback=blue!10,]
+    \vspace{-1.25\onelineskip}
+    \begin{align*}
+        y = \myRoot[3]{x-h} + k
+    \end{align*}
+\end{tcolorbox}
+
+\begin{itemize}
+    \item The minus sign means that $h$ is the \gap{opposite of what you see}. 
+    \item And there is \gap{no} \gap{minus} \gap{sign} in front of $k$.
+\end{itemize}
+
+\begin{tcolorbox}[center,colback=blue!10,]
+    \centering
+    So \myEmph{this} is why \gap{only} $h$ is the \gap{opposite of what you see}.
+\end{tcolorbox}
+
+\begin{center}
+    \LARGE
+    \sffamily
+    \bfseries
+    fin
+\end{center}
