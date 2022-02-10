@@ -131,3 +131,27 @@
 \NewDocumentCommand{\myDrawPointA}{ O{circle} O{4pt}} {
     \tkzDrawPoint[shape=#1, size=#2,](A)
 }
+
+% A command to draw a grid with dots at the grid points 
+% with the objective of manually constructing slope fields.
+%
+% #1 width of resizebox wrapped around it all 
+% #2 dy/dx equation
+% #3 upper limits of x & y (symmetric so also is the lower limit of x & y)
+%
+\NewDocumentCommand{\mySlopeFieldGrid}{ O{2in} mm }{
+    \resizebox{#1}{!}
+    {
+        \centering
+        \begin{myTikzpictureGrid}{0.45} {#3}{#3}[solid]
+            \foreach \x in {-#3,...,#3}
+            \foreach \y in {-#3,...,#3}
+            {
+                \fill[black!60] (\x,\y) circle (0.11cm);
+            }       
+        \end{myTikzpictureGrid}
+    }
+    \\[0.5\onelineskip]
+    \centering
+    $ \frac{ dy }{ dx } = #2$
+    }

@@ -1,0 +1,82 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader[AP Calculus]{7.3}{Graphing Slope Fields}
+%-----------------------------------------------------------------------------------------
+
+\def\myGridSize{10}
+\def\myCellWidth{1.85}
+
+
+\begin{tcbraster}[
+    raster columns = 3,
+    colback = white,
+]
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{1}{2}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{-2}{2}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{x}{3}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{-x}{3}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{y}{3}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{-y}{3}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{x+y}{3}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{x-y}{3}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{y-x}{3}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{\frac{x}{y}}{3}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{\frac{y}{x}}{3}
+\end{tcolorbox}
+\begin{tcolorbox}
+    \mySlopeFieldGrid[\myCellWidth in]{-\frac{x}{y}}{3}
+\end{tcolorbox}
+
+\end{tcbraster}
+
+
+\end{document}
