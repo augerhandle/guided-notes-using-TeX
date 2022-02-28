@@ -1,0 +1,138 @@
+\subsection{Transformations Cheat Sheet}
+
+{
+\small 
+\begin{tcbraster}[
+    raster columns = 2,
+    raster equal height,
+    colback = white,
+    % raster left skip = 0.75in, raster right skip = 0.75in, raster column skip = 0.75in,
+    % raster before skip = 0.25in, raster after skip = 0.25in,
+]
+    \begin{tcolorbox}[
+        title=Transformations, 
+        coltitle=black, 
+        colbacktitle=black!20, 
+        fonttitle=\sffamily\bfseries\centering\large,
+        boxrule=0.5pt,
+        ]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        % {\small $|\bm{a}|, |\bm{h}|, |\bm{k}|$ \itshape mean \gap{ignore} the sign}
+        \begin{tabular}[t]{|>{\raggedright}p{1in}|p{1.75in}|}
+            \hline
+            {\itshape vertical} {\bfseries\itshape reflection} 
+            & if $\bm{a}$ is \gap{negative}\\ 
+            & \\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape vertical} {\bfseries\itshape stretch} by $|\bm{a}|$
+            &  if $|\bm{a}|$  is \gap{$> 1$} \\ 
+            & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape vertical} {\bfseries\itshape compression} by $|\bm{a}|$
+            &  if $|\bm{a}|$ is \gap{$< 1$} \\ 
+            & \\
+            % & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape vertical shift} {\bfseries\itshape up} by $|\bm{k}|$
+            &  if $\bm{k}$  is \gap{positive}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape vertical shift} {\bfseries\itshape down} by $|\bm{k}|$
+            &  if $\bm{k}$  is \gap{negative}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape horizontal shift} {\bfseries\itshape right} by $|\bm{h}|$
+            &  if $\bm{h}$  is \gap{positive}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape horizontal shift} {\bfseries\itshape left} by $|\bm{h}|$
+            &  if $\bm{h}$  is \gap{negative}\\ 
+            % & \\
+            & \\
+            \hline
+        \end{tabular}
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        title=Attributes, 
+        coltitle=black, 
+        colbacktitle=black!20, 
+        fonttitle=\sffamily\bfseries\centering\large,
+        boxrule=0.5pt,
+        ]
+        \centering
+        \renewcommand{\arraystretch}{1.145}
+        \begin{tabular}[t]{|>{\raggedright}p{1in}|p{1.75in}|}
+            \hline
+            {\bfseries\itshape vertical asymptote} & \whenTEACHER{$x=h$}\\
+            % & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\bfseries\itshape horizontal asymptote} & \whenTEACHER{$y=k$}\\
+            % & \\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\bfseries\itshape domain} & \\
+            & \,\whenTEACHER{x $\ne$ h}\\
+            % & \\
+            \noalign{\hrule height 0.25pt}
+            {\bfseries\itshape range} & \\
+            & \,\whenTEACHER{y $\ne$ k}\\
+            % & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape\bfseries far left} & \\
+                {\itshape end}           & \,\whenTEACHER{as x{$\rightarrow -\infty$}, y{$\rightarrow$}k}\\
+                {\itshape behavior}      & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape\bfseries middle}   & if {$\bm{a}$ is positive}: \\
+                {\itshape\bfseries left} & \quad\whenTEACHER{as {$x\rightarrow h^-$}, y{$\rightarrow-\infty$}}\\
+                {\itshape end}           & if {$\bm{a}$ is negative}:\\
+                {\itshape behavior}      & \quad\whenTEACHER{as {$x\rightarrow h^-$}, y{$\rightarrow+\infty$}}\\
+                {}                       &\\
+            \noalign{\hrule height 0.25pt}
+            {\itshape\bfseries middle}    & if {$\bm{a}$ is positive}: \\
+                {\itshape\bfseries right} & \quad\whenTEACHER{as {$x\rightarrow h^+$}, y{$\rightarrow+\infty$}}\\
+                {\itshape end}            & if {$\bm{a}$ is negative}:\\
+                {\itshape behavior}       & \quad\whenTEACHER{as {$x\rightarrow h^+$}, y{$\rightarrow-\infty$}}\\
+                {}                        &\\
+            \noalign{\hrule height 0.25pt}
+            {\itshape\bfseries far right} & \\
+                {\itshape end}            & \,\whenTEACHER{as x{$\rightarrow \infty$}, y{$\rightarrow$}k}\\
+                {\itshape behavior}       & \\
+            \noalign{\hrule height 0.25pt}
+        \end{tabular}    \end{tcolorbox}
+\end{tcbraster}
+
+}
+
+\begin{tcbraster}[
+    raster columns = 2,
+    raster equal height,
+    colback = white,
+    % raster left skip = 0.75in, raster right skip = 0.75in, raster column skip = 0.75in,
+    % raster before skip = 0.25in, raster after skip = 0.25in,
+]
+\begin{tcolorbox}[]
+    \centering
+    $\bm{a}$ is positive\\
+    \begin{myTikzpictureGrid}{0.3} {5}{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0.1:10,]{1.0/x}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:-0.1,]{1.0/(x)}
+        \draw[black,thick,fill=black] (0,0) circle (0.2 cm);
+    \end{myTikzpictureGrid}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \centering
+    $\bm{a}$ is negative\\
+    \begin{myTikzpictureGrid}{0.3} {5}{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0.1:10,]{-1.0/x}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:-0.1,]{-1.0/(x)}
+        \draw[black,thick,fill=black] (0,0) circle (0.2 cm);
+    \end{myTikzpictureGrid}
+\end{tcolorbox}
+\end{tcbraster}

@@ -1,0 +1,90 @@
+\section{Parent Function}
+
+The reciprocal parent function is 
+\vspace{-0.5\onelineskip}
+\myCenteredBox[width=1.75in,valign=center]{
+    \large
+    \vspace{-1.2em}
+    \[ f(x) = \frac{1}{x} \]
+}
+
+{
+\renewcommand{\arraystretch}{1.5}
+\begin{tcbraster}[
+    raster columns = 3,
+    raster equal height,
+    colback=white,
+    ]
+    \begin{tcolorbox}
+        \small
+        \begin{tabular}{r|p{0.5in}|c}
+            $x$ 
+                & $y = \frac{1}{x}$    
+                & $(x,y)$\\ \hline\hline
+            $0$ 
+                &      
+                & \\ \hline
+            $\frac{1}{10}$ 
+                & 
+                & \\ \hline
+            $\frac{1}{3}$ 
+                & 
+                & \\ \hline
+            $\frac{1}{2}$ 
+                & 
+                & \\ \hline
+            $1$ 
+                & 
+                & \\ \hline
+            $2$ 
+                & 
+                & \\ \hline
+            $3$ 
+                & 
+                & \\ \hline
+            $10$ 
+                & 
+                & \\ \hline
+        \end{tabular}
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        \small
+        \begin{tabular}{r|p{0.5in}|c}
+            $x$ 
+                & $y = \frac{1}{x}$    
+                & $(x,y)$\\ \hline\hline
+            &&\\ \hline
+            $-\frac{1}{10}$ 
+                & 
+                & \\ \hline
+            $-\frac{1}{3}$ 
+                & 
+                & \\ \hline
+            $-\frac{1}{2}$ 
+                & 
+                & \\ \hline
+            $-1$ 
+                & 
+                & \\ \hline
+            $-2$ 
+                & 
+                & \\ \hline
+            $-3$ 
+                & 
+                & \\ \hline
+            $-10$ 
+                & 
+                & \\ \hline
+        \end{tabular}
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        \begin{myTikzpictureGrid}{0.5} {4}{4}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=0:10,]{sqrt{x}}
+            }
+            % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+    \end{tcolorbox}
+\end{tcbraster}
+}
