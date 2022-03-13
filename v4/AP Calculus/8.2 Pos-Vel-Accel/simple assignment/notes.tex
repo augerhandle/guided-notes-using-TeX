@@ -1,0 +1,218 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{1.25in}{*}{*}
+    \setlrmarginsandblock{1.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+\input{../../../common/defs}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\onelineskip}
+\setsecnumdepth{subsection}
+
+%-----------------------------------------------------------------------------------------
+\chapter*{Mr. Kelly and Mr. Sullivan Go For a Walk}
+%-----------------------------------------------------------------------------------------
+This is my worked solution to the last 8.2 Test Prep problem. 
+This was the one that I tried (quite unsuccessfully) to explain in class. 
+
+\section{Given} 
+
+Mr. Kelly and Mr. Sullivan are walking down a straight street.
+For $0 \le t \le 20$,
+Mr. Kelly's velocity at time $t$ is given by 
+%
+\begin{equation*}
+    K(t) = 16500 (t^2 - 5t + 74.33)^{-1} 
+\end{equation*}
+%
+and Mr. Sullivan's velocity is given by 
+%
+\begin{equation*}
+    S(t) = 41 t^3 e^{-0.6t} 
+\end{equation*}
+
+We also know that:
+\begin{itemize}[nosep]
+    \item The units for distance are {\itshape yards}.
+    \item The units for time are {\itshape minutes}.
+    \item Both velocities are {\itshape positive} for $0 \le t \le 20$.
+    \item Mr. Kelly is 5 yards ahead of Mr. Sullivan at $t=0$.
+    \item Mr. Kelly is {\itshape ahead} of Mr. Sullivan the whole time.
+\end{itemize}
+ 
+\section{To Do}
+\begin{enumerate}[nosep]
+    \item \myEmph{An integral.} Find the value of 
+    $\frac{1}{5}  \int_{10}^{15}K(t)dt$. 
+    Explain {\itshape what it means} in the context of this problem, including its units.
+    %
+    \item \myEmph{Speed up or slow down.} At $t=7$, is Mr. Kelly {\itshape speeding up} or {\itshape slowing down}? 
+    %
+    \item \myEmph{Separation increase or decrease.} Is their separation distance {\itshape increasing} or {\itshape decreasing} at $t=7$? 
+    %
+    \item \myEmph{Separation maximum.} What is the {\itshape maximum separation distance} between them during $0\le t\le20$?
+\end{enumerate}
+
+
+
+\section{How I used the TI-84} 
+
+Here are some comments about how I used the TI-84.
+\begin{itemize}[nosep]
+    \item I entered $K(t)$ into $Y_1$ and $S(t)$ into $Y_2$.
+    \item I did this because I wanted to use {\ttfamily[vars]} {\ttfamily[Y-vars]} {\ttfamily[Function]} a lot.
+    \item I also entered $Y_1-Y_2$ into $Y_3$.
+    \item I did this because it's the derivative of the {\itshape separation distance}.
+\end{itemize}
+
+I tried in class to show you how to use the TI-84 to find where 
+the graphs of $K$ and $S$ intersect.
+My problem was that I used {\ttfamily [ZoomFit]},
+and the graphing window got messed up (with huge {\ttfamily X-min} and {\ttfamily X-max}).
+By experimenting later, I was able to set the window limits to sensible values.
+If you do not know how to do this, make sure to talk to me.
+
+
+
+
+
+\section{Solution}
+
+\subsection{An integral}
+
+First, ignore the leading fraction. Just look at the integral.
+It's the integral of a \myEmph{velocity} over a time interval.
+That means it's the \myEmph{net displacement} during that time, i.e., $\Delta x$.
+The interval of time happens to be five seconds long. 
+So the leading fraction, $\frac{1}{5}$, is division by $\Delta t$. 
+Therefore,
+
+\begin{tcolorbox}[colback=white]
+    $\frac{1}{5}  \int_{10}^{15}K(t)dt$ \! is $\frac{\Delta x}{\Delta t}$, 
+    which is the {\itshape average velocity} over the interval.
+\end{tcolorbox}
+
+
+
+\subsection{Speed up or slow down}
+
+A moving object is ``speeding up'' when 
+its acceleration vector points in the same direction as its velocity vector.
+In a one dimensional case like this, 
+that means the {\itshape sign} of the two is the same.
+On the other hand, 
+a moving object is ``slowing down'' when 
+the acceleration and velocity have different signs.
+
+I used the TI-84 to calculate the velocity, $K(7)$, using 
+{\ttfamily [2ND] [CALC] [value] } applied $Y_1$, which gave $K(7) \approx 186.8$, 
+which is \myEmph{positive}.
+
+I used the TI-84 to calculate the acceleration, $a(7) = K'(7)$, using 
+{\ttfamily [MATH] [8]} applied to $Y_1$, which gave $K'(7) \approx -19.03$, 
+which is \myEmph{negative}.
+
+
+\begin{tcolorbox}[colback=white]
+    Because these two signs are opposites, Mr. Kelly is \myEmph{slowing down} at $t=7$.
+\end{tcolorbox}
+
+
+
+
+\subsection{Separation increase or decrease} 
+
+The separation distance is increasing or decreasing depending on whether its derivative 
+is positive or negative. 
+
+The derivative of the separation distance is $K(t) - S(t)$.
+I evaluated this at $t=7$ using 
+{\ttfamily [2ND] [CALC] [value]} applied to $Y_3$, which gave $K(7) - S(7) \approx -24.1$.
+\begin{tcolorbox}[colback=white]
+    Since this is negative, the separation distance between Mr. Kelly and Mr. Sullivan is \myEmph{decreasing} at $t=7$.
+\end{tcolorbox}
+
+
+\subsection{Separation maximum}
+
+Remember, 
+finding a maximum or minimum of a function on an interval requires evaluating the function at the
+\begin{itemize}[nosep]
+    \item {critical points} and 
+    \item boundary points.
+\end{itemize}
+This is important, since any max/min values at the critical points  
+might only be \myEmph{local} maxima or minima, 
+and we are interested in the \myEmph{global} max/min values 
+which can occur at the boundaries.
+
+To start with, though, let's find the value of $t$ for the critical point(s).
+We do this by setting the derivative of the sepration distance equal to zero:
+\begin{equation*}
+    K(t) - S(t) = 0
+\end{equation*}
+I did this on the TI-84 by using 
+{\ttfamily [2ND] [CALC] [zero]} applied to $Y_3$. 
+There are two zeros, which the calculator found as $t\approx 3.93$ and $t\approx 8.25$.
+
+Knowing this, I evaluated the separation distance at these to critical points and also 
+at the boundaries, $t=0$ and $t=20$.
+
+The difficult thing in this problem 
+is remembering how to calculate the separation distance.
+(We have the separation velocity, not the distance!)
+
+But wait! This is an application of {\itshape accumulation functions} 
+to the separation distance.
+\begin{align*}
+    \text{\itshape sep. distance at time}\,\, T 
+        &= \text{\itshape initial sep. distance} 
+        + 
+        \int_0^T (\text{\itshape sep. velocity}) dt \\ 
+        &= 5 
+        + \int_0^T (K(t) - S(t)) dt 
+\end{align*}
+And I evaluated that last expression four times using {\ttfamily [MATH] [9]} 
+applied to $Y_3$.
+
+\begin{center}
+\begin{tabular}{c|c}
+    \toprule
+    $T$ & {\itshape sep. distance} \\ 
+    \midrule
+    $0$ & 5\\
+    $3.93$ & 533\\ 
+    $8.25$ & 429 \\ 
+    $20$ & 960\\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+Notice that (sure enough) the actual maximum is \myEmph{not} at one of the critical points,
+which I worked so hard to find. 
+It occurs on the final boundary at $t=20$. 
+\begin{tcolorbox}[colback=white]
+    The maximum separation distance between Mr. Kelly and Mr. Sullivan 
+    occurs at the very end and is approximately 960 yards.
+\end{tcolorbox}
+
+\end{document}
