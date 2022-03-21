@@ -13,7 +13,7 @@
     Find the attributes of these rational functions.
     ]
 {
-    $ f(x) =\cfrac {2x+4} {x^2 - 4} $
+    $ f(x) =\cfrac {x^3-x^2-12x} {x^2-3x-4} $
 \tcblower
     %
     %
@@ -22,39 +22,41 @@
             \small
             $ x = 0 $ 
             \myAndThen
-            $ y = f(0) = \frac{4}{-4} = \fbox{-1} $
+            $ y = f(0) = \frac{0}{-4} = \fbox{0} $
         }
         \\[2\onelineskip]
     \myEmph{Step 2. horizontal\whenHONORS{ or slope} asymptote}\\
         \whenTEACHER{
             \small
-            $n = 1$, $d = 2$ 
+            $n = 3$, $d = 2$ 
             \myAndThen 
-            $n<d$ 
+            $n=d+1$ 
             \myAndThen 
-            HA @ $\fbox{y=0}$
+            long div quotient: $x+2$ 
+            \myAndThen 
+            slant asym: \fbox{$y=x+2$}
         }
-        \\[2\onelineskip]
+        \\[10\onelineskip]
     \myEmph{Step 3. factor \& simplify}\\
         \whenTEACHER{
             \small
-            $ f_{\scalebox{0.5}{factored}}(x) = \frac {2(x+2)} {(x+2)(x-2)} $ 
+            $ f_{\scalebox{0.5}{factored}}(x) = \frac {x(x+3)(x-4)} {(x+1)(x-4)} $ 
             \myAndThen[1em]
             $ 
                 f_{\scalebox{0.5}{simplified}}(x) 
-                = \frac {2\cancel{(x+2)}} {\cancel{(x+2)}(x-2)}  
-                = \frac {2} {(x-2)} 
+                = \frac {x(x+3)\cancel{(x-4)}} {(x+1)\cancel{(x-4)}}  
+                = \frac {x(x+3)} {(x+1)} 
             $ 
             \myAndThen[1em]
-            canc. factors: $(x+2)$
+            canc. factors: $(x-4)$
         }
         \\[2\onelineskip]
     \myEmph{Step 4. holes}\\
         \whenTEACHER{
             \small
-            \cancel{$(x+2)$} for $f_{\scalebox{0.5}{simplified}}(x)$
+            \cancel{$(x-4)$} for $f_{\scalebox{0.5}{simplified}}(x)$
             \myAndThen 
-            hole @ $\fbox{x=-2}$
+            hole @ $\fbox{x=4}$
         }
         \\[2\onelineskip]
     \myEmph{Step 5. vertical asymptotes}\\
@@ -62,7 +64,7 @@
             \small
             $f_{\scalebox{0.5}{simplified}}(x)$ denom $=0$   
             \myAndThen 
-            VA @ $\fbox{x=2}$        
+            VA @ $\fbox{x=-1}$        
         }
         \\[2\onelineskip]
     \myEmph{Step 6. domain}\\
@@ -70,7 +72,7 @@
             \small 
             holes \& VA 
             \myAndThen
-            \fbox{$x \ne 2, -2$}
+            \fbox{$x \ne 4, -1$}
         }
         \\[2\onelineskip]
     \myEmph{Step 7. $x$--intercepts}\\
@@ -78,7 +80,9 @@
             \small
             $ f_{simp}(x) $  numer $=0$
             \myAndThen 
-            \fbox{no $y$-intercept}
+            $x(x+3)=0$ 
+            \myAndThen
+            \fbox{$x = 0, -3$}
         }
         \\[2\onelineskip]
 }
