@@ -1,0 +1,116 @@
+\newpage
+\section{Transformations Cheat Sheet}
+
+\begin{tcolorbox}[center,colback=white,width=4.5in,valign=center,]
+{
+    \Large
+    \vspace{-0.25\onelineskip}
+    \begin{equation*}
+        g(x) = \bm{a} \, b^{x - \bm{h}} + \bm{k}
+    \end{equation*}
+}
+Remember: $\bm{h}$ is the \gap{opposite} of what you see.
+\end{tcolorbox}
+
+{
+\small 
+\begin{tcbraster}[
+    raster columns = 2,
+    raster equal height,
+    colback = white,
+    % raster left skip = 0.75in, raster right skip = 0.75in, raster column skip = 0.75in,
+    % raster before skip = 0.25in, raster after skip = 0.25in,
+]
+    \begin{tcolorbox}[
+        title=Transformations, 
+        coltitle=black, 
+        colbacktitle=black!20, 
+        fonttitle=\sffamily\bfseries\centering\large,
+        boxrule=0.5pt,
+        ]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        % {\small $|\bm{a}|, |\bm{h}|, |\bm{k}|$ \itshape mean \gap{ignore} the sign}
+        \begin{tabular}[t]{|>{\raggedright}p{1in}|p{1.75in}|}
+            \hline
+            {\itshape vertical} {\bfseries\itshape reflection} 
+            & if $\bm{a}$ is \gap{negative}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape vertical} {\bfseries\itshape stretch} by $|\bm{a}|$
+            &  if $|\bm{a}|$  is \gap{$> 1$} \\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape vertical} {\bfseries\itshape compression} by $|\bm{a}|$
+            &  if $|\bm{a}|$ is \gap{$< 1$} \\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape vertical shift} {\bfseries\itshape up} by $|\bm{k}|$
+            &  if $\bm{k}$  is \gap{positive}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape vertical shift} {\bfseries\itshape down} by $|\bm{k}|$
+            &  if $\bm{k}$  is \gap{negative}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\itshape horizontal shift} {\bfseries\itshape right} by $|\bm{h}|$
+            &  if $\bm{h}$  is \gap{positive}\\ 
+            % & \\
+            & \\
+            \noalign{\hrule height 0.25pt}
+            {\itshape horizontal shift} {\bfseries\itshape left} by $|\bm{h}|$
+            &  if $\bm{h}$  is \gap{negative}\\ 
+            % & \\
+            & \\
+            \hline
+        \end{tabular}
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        title=Attributes, 
+        coltitle=black, 
+        colbacktitle=black!20, 
+        fonttitle=\sffamily\bfseries\centering\large,
+        boxrule=0.5pt,
+        ]
+        \centering
+        \renewcommand{\arraystretch}{1.145}
+        \begin{tabular}[t]{|>{\raggedright}p{0.75in}|p{2in}|}
+            \hline
+            {\bfseries\itshape growth or decay} & if {$b>1$}: \whenTEACHER{growth}\\
+            {}                                  & if {$b<1$}: \whenTEACHER{decay}\\
+            % {} & \\
+            \noalign{\hrule height 1.5pt}
+            \hline
+            {\bfseries\itshape horizontal asymptote} & \whenTEACHER{$y=k$}\\
+            & \\
+            \noalign{\hrule height 1.5pt}
+            {\bfseries\itshape domain} & \whenTEACHER{all real numbers}\\
+            % & \\
+            \noalign{\hrule height 1.5pt}
+            {\bfseries\itshape range} & if {$\bm{a}>0$} (positive):\\
+            {}                        & \whenTEACHER{$y > k$}\\
+            % {}                        & \\
+            {} & if {$\bm{a}<0$} (negative):\\
+            {} & \whenTEACHER{$y < k$}\\
+            {} & \\
+            % \noalign{\hrule height 1.5pt}
+            % {\itshape\bfseries left end behavior} & \whenTEACHER{as x{$\rightarrow-\infty$}, y{$\rightarrow$}k}\\
+            % % {} & \\
+            % \noalign{\hrule height 0.25pt}
+            % {\itshape\bfseries right end behavior} & if {$\bm{a}>0$} (positive):  \\
+            % & \whenTEACHER{as x{$\rightarrow\infty$}, y{$\rightarrow\infty$}}\\
+            % % & \\
+            % &  if {$\bm{a}<0$} (negative): \\
+            % {} & \whenTEACHER{as x{$\rightarrow\infty$}, y{$\rightarrow-\infty$}}\\
+            % {} & \\
+            \hline
+        \end{tabular}
+    \end{tcolorbox}
+\end{tcbraster}
+
+}
