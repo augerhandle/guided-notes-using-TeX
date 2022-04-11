@@ -1,0 +1,58 @@
+
+
+\myProblems[%
+    List the transformations involved in these exponential functions.
+]
+{
+    $g(x) = e^{x-2} -4$
+}
+{
+    $g(x) = -2 \cdot 10^{x} -4$
+}
+{0.5in}
+
+\myProblems[%
+    Write the equation for a transformed exponential functions involving the following transformations.
+]
+{
+    \begin{itemize}[nosep]
+        \item shifted right by 5 
+        \item shifted up by 2 
+    \end{itemize}
+}
+{
+    \begin{itemize}[nosep]
+        \item reflected across the $x$-axis 
+        \item compressed by a factor of $\frac{2}{3}$
+        \item shifted left by 5 
+        \item shifted down by 2 
+    \end{itemize}
+}
+{0.5in}
+
+\myProblems[%
+    List the transformations involved in the exponential functions graphed below.
+    Hints:
+    \begin{itemize}[nosep]
+        \item There is no stretch or compress.
+        \item The dot is where the old $y$-intercept (of the parent function) ended up.
+    \end{itemize}
+]
+{
+    \centering
+    \begin{myTikzpictureGrid}{0.35} [-10]{2}[-1]{6}
+        \tkzFct[ solid, very thick, samples=100, domain=-10:3,]{2**(\x+3) + 2}
+        \tkzDefPointByFct(-3)\tkzGetPoint{A}\myDrawPointA
+\end{myTikzpictureGrid}
+}
+{
+    \centering
+    \begin{myTikzpictureGrid}{0.35} [-10]{6}[-6]{2}
+        \tkzFct[ solid, very thick, samples=100, domain=-10:3,]{(-1)*2**(\x)-1}
+        \tkzDefPointByFct(0)\tkzGetPoint{A}\myDrawPointA
+    \end{myTikzpictureGrid}
+}
+{0.75in}
+
+
+       
