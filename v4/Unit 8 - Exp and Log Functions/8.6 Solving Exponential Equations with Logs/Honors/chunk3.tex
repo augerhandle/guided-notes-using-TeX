@@ -1,1 +1,73 @@
-\section{Solving by using Logarithms as Inverse Functions}
+\section{Inverse Functions}
+
+For some original function, $f$, 
+the \gap{inverse} function, $f^{-1}$, 
+has the effect of \gap{undoing} $f$.
+
+\begin{tcbraster}[ 
+    raster columns = 2,
+    raster left skip = 0.25in, raster right skip = 0.25in, raster column skip = 0.75in,
+    raster equal height,
+    colback=white,
+    ]
+    \begin{tcolorbox}[]
+        The function notation for this is:
+        \Large
+        \begin{align*}
+            y &= f(x) \\
+            x &= f^{-1}(y) \\
+        \end{align*}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        This diagram makes the idea a bit clearer:\\
+        \vspace{-1\onelineskip}
+        \begin{center}
+            \Large
+            \begin{tikzpicture}[codi] 
+                \obj { x & y \\ }; 
+                \mor :[bend left] x f:-> y;
+                \mor :[bend left] y ["f^{-1}"]:-> x;
+            \end{tikzpicture} 
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+
+It turns out that the function $log_b$ is the inverse of base-$b$ exponentials.
+\begin{equation*} 
+    log_b( b^x ) = x 
+\end{equation*}
+
+\begin{tcolorbox}[center,colback=white,width=4.5in]
+    A base-$b$ logarithm ``undoes'' a base-$b$ exponential:
+    {
+    \Large
+    \begin{equation*}
+        \cancel{log_b}( \cancel{b}^x ) = x 
+    \end{equation*}
+    }
+    \vskip0.25\onelineskip
+    {
+        \footnotesize
+        {\scshape Warning:} 
+        \begin{itemize}[fullwidth]
+            \item This works \gap{only} if you take the log of a base-$b$ exponential.
+            \item \gap{Nothing} can be in front of the $b$!
+        \end{itemize}
+    }
+\end{tcolorbox}
+
+\myProblems[%
+    Use a log to cancel the base of these exponential expressions. 
+    \vspace{-1\onelineskip}
+    \begin{itemize}[nosep]
+        \item Which base logarithm did you use?
+        \item What was the simplified result?
+    \end{itemize}
+    ]
+{
+    $e^{x}$
+}
+{
+    $10^{8x-15}$
+}
+{1in}
