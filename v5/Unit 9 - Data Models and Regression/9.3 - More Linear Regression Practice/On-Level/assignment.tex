@@ -1,0 +1,36 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+\input{../../../common/defs}
+\input{../../../common/packages}
+    \hypersetup{pdfborder = {0 0 0}} % so the box doesn't show up in the footnote link
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{9.3 CW}{More Linear Regression Practice}
+%-----------------------------------------------------------------------------------------
+
+\input{chunk1}
+\input{chunk2}
+
+\end{document}

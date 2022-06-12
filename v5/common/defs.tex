@@ -1,0 +1,324 @@
+% ---------------------------------------------------------------------------
+% a header to put at the top of a homework assignment
+% ---------------------------------------------------------------------------
+% #1 class name 
+% #2 assignment number (eg, 2.5 CW)
+% #3 assignment title (eg, Solve Quadratic Equations)
+%
+\NewDocumentCommand{\myAssignmentHeader}{ O{Algebra~2} m m }{
+    \noindent
+    \whenHONORS{Honors~}#1
+    \hfill 
+    Name : \fbox{\phantom{X\hspace{2in}}}\par
+    \vspace{0.5em}
+    \noindent
+    {%
+        \LARGE\sffamily
+        \whenHONORS{H-}#2 -- #3
+    }
+    \hfill
+    Period : \fbox{\phantom{\large 9999}}
+    \hrule\hspace{\baselineskip}
+    \vspace{0.5\baselineskip}
+}
+
+
+% ---------------------------------------------------------------------------
+% I'm SO tired of writing these two explicitly!
+% ---------------------------------------------------------------------------
+\newcommand{\myEmph}[1]{{\bfseries\itshape#1}}
+
+% ---------------------------------------------------------------------------
+% For writing TI-84 instructions it's useful to have a visually
+% distinct way to format the keys.
+% ---------------------------------------------------------------------------
+\newcommand{\myKey}[1]{{\ttfamily [#1]}}
+
+\newcommand{\myDesmos}{{\scshape Desmos~}}
+\newcommand{\myTi}{{\scshape TI-84~}}
+
+% ---------------------------------------------------------------------------
+% Honors vs. On-Level ("hol")
+%
+% Note: The APCALC thing is a bit of a hack to "squeeze" AP Calculus into 
+% this framework. The framework was original designed ONLY for Algebra 2 with 
+% the only variation being Honors-vs-OnLevel. 
+%
+% This needs refactoring to separate course attributes (Honors, On-Level, AP...) 
+% and class name (Algebra 2, Calculus, ...) to be independently specified 
+% possibly using a completely new mechanism (which will propogate further than 
+% I am prepared to deal with right now, since I don't want to "break" all the 
+% lessons so far in this year.)
+% ---------------------------------------------------------------------------
+\newif\ifhol
+\newif\ifAPCALC
+
+% Typically, I will set one of these ONCE at the top of the doc.
+\newcommand{\forHONORS}{\holtrue\APCALCfalse}
+\newcommand{\forONLEVEL}{\holfalse\APCALCfalse}
+\newcommand{\forAPCALC}{\holfalse\APCALCtrue} % APCALC "turns off" the Honors attribute
+
+% These will conditionally generate output (the argument) based on 
+% whether this document is "for" HONORS or ONLEVEL according to the previous commands.
+\newcommand{\whenHONORS}[1]  {\ifhol{#1}\else{}  \fi}
+\newcommand{\whenONLEVEL}[1] {\ifhol{}\else{#1}\fi}
+
+
+
+% This is the name of the course that these lessons are for.
+% Once upon a time, I had this as a package option, but I'm 
+% not using .sty files for this year. (Maybe next year.)
+%
+%\newcommand{\lsnCourseName}{\whenHONORS{Honors~}Algebra 2}
+%
+\NewDocumentCommand{\lsnCourseName}{ O{Algebra 2} }{% % arg currently unused anywhere. FIXME
+    \ifAPCALC{%
+        AP~Calculus
+    }\else{%
+        % If it's not AP Calc, we assume it's Algebra 2 (FIXME)
+        \whenHONORS{Honors~}Algebra 2%
+    }\fi
+    
+}
+
+
+% ---------------------------------------------------------------------------
+% Teachers vs. Students ("tstu")
+% ---------------------------------------------------------------------------
+\newif\iftstu
+
+% Typically, I will set one of these ONCE at the top of the doc.
+\newcommand{\forTEACHER}{%
+    \tstutrue%
+    \dashundergapssetup{teacher-mode=true,}%
+}
+\newcommand{\forSTUDENT}{%
+    \tstufalse%
+    \dashundergapssetup{teacher-mode=false,}%
+}
+
+% These will conditionally generate output (the argument) based on 
+% whether this document is "for" HONORS or ONLEVEL according to the previous commands.
+%
+% #1 the content 
+% #2 text color
+\NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\ECFAugie\color{#1}#2}\else{}\fi}
+\newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
+
+
+
+% ---------------------------------------------------------------------------
+% command for creating a 1- or 2-question warmup problem
+%
+% #1 date
+% #2 optional general directions
+%
+% ---------------------------------------------------------------------------
+\NewDocumentEnvironment{myWarmupProblems}{ 
+        O{
+            \begin{itemize}
+                \item Show {\itshape all} your work.
+                \item Put a \fbox{box} around your answer.
+            \end{itemize}
+            \vspace{0.5em}
+        } 
+    }
+{
+    \newpage
+    {
+        \sffamily
+        \begin{center}
+            {
+                \huge\bfseries%
+                \whenHONORS{Honors~}Algebra 2 Warmup
+            }%
+            \\[0.5em]
+            {\Large\itshape\printdate}
+        \end{center}
+        \noindent{\Large#1}
+    }
+    \large
+}{
+}
+
+
+% ---------------------------------------------------------------------------
+% A centered tcolorbox
+% ---------------------------------------------------------------------------
+%
+% #1 - optional options to pass to tcolorbox
+% #2 - the contents to put in the box
+%
+\NewDocumentEnvironment{myCenteredBox}{ O{} m }{%
+    \begin{center}
+        \begin{tcolorbox}[#1]#2\end{tcolorbox}
+    \end{center}
+}
+
+% ---------------------------------------------------------------------------
+% Split the output into two (roughly) equally sized side-by-side minipages.
+% ---------------------------------------------------------------------------
+%
+% #1 - content of first minipage
+% #2 - content of second minipage
+%
+\NewDocumentCommand{\myTwoMinipages}{mm}{
+    \begin{minipage}{0.49\textwidth}
+        #1
+    \end{minipage}
+    % \hfill 
+    \begin{minipage}{0.49\textwidth}
+        #2
+    \end{minipage}
+}
+
+
+% ---------------------------------------------------------------------------
+% A version of \sqrt 
+% ---------------------------------------------------------------------------
+%
+% #1 index of the root
+% #2 uproot amount
+% #3 radicand
+%
+\NewDocumentCommand{\myRoot}{ o O{2} m  }{%
+    \IfNoValueTF{#1}{\sqrt{#3\,}}{\sqrt[\uproot{#2}#1]{#3\,}}
+}
+
+
+% ---------------------------------------------------------------------------
+% changes to part/chapter/section
+% I am piggybacking Units and Lessons on Latex Parts and Chapters, respectively. 
+% ---------------------------------------------------------------------------
+
+% Here are some of the macros that capture "my settings".
+\newcommand{\myPartName}{Unit}      % what I'll replace "Unit" with.
+\newcommand{\myChapterName}{Lesson} % what I'll replace "Chapter" with.
+\newcommand{\myLessonSuffix}{}      % a suffix after lesson (chapter) numbers (eg, 'a' in Lesson 5.2a)
+
+% Redefine the Latex part and chapter names to use "my settings".
+\renewcommand{\partname}{\myPartName}       % "Unit 2" instead of "Part II"
+\renewcommand{\thepart}{\arabic{part}}
+\renewcommand{\chaptername}{\myChapterName} % "Lesson 2" instead of "Chapter 2"
+
+% A \chapter-based command to generate a lesson.
+% This is a thin wrapper around \chapter that allows me
+% to explicitly specify the lesson number. 
+%
+% #1 lesson name
+% #2 optional lesson number (eg, the '2' in Lesson 5.2)
+% #3 optional lesson suffix (eg, the 'a' in Lesson 5.2a)
+%
+\NewDocumentCommand{\myLesson}{ m O{1} O{} }
+{
+    \setcounter{chapter}{#2-1}
+    \renewcommand{\myLessonSuffix}{#3}
+    \chapter{#1}
+}
+
+% remove chapter numbers from section numbering
+\makeatletter
+\renewcommand\thesection{\@arabic\c@section}
+\makeatother
+
+% simulate a part without typesetting one
+% 
+% #1 - the part (unit) number
+% #2 - the part (unit) title
+\newcommand{\dummypart}[2]{%
+    \setcounter{part}{#1}
+    \partmark{#2}
+}
+
+% ---------------------------------------------------------------------------
+% These are "annotations", the foundation of the blocked-in-text that I use.
+%
+% I use the term "annotations" to capture the common
+% infrastructure I use to define Objectives, Vobabulary & Concepts.
+% ---------------------------------------------------------------------------
+
+% font and styling commands for
+% Objectives, Voculary, Key Concepts, etc...
+\newcommand{\myAnnotationStyling}{\bfseries\large}
+
+% #1 : name of the kind of annotation (Objectives, ...)
+% #2 : title text to go with the annotation
+% #3 : extra tcolorbox options
+%
+\NewDocumentEnvironment{myAnnotate}{ m m O{}}{
+    \begin{tcolorbox}[
+        colbacktitle=blue!10!white,
+        colback=white,
+        coltitle=black,
+        fonttitle={\myAnnotationStyling},
+        title={#1:~},
+        after title={\normalfont\itshape#2},
+        #3,
+        ]
+}{
+    \end{tcolorbox}
+}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+%
+\NewDocumentEnvironment{myTabularAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{tabular}{r|l}
+}{
+    \end{tabular}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+%
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape \textcolor{blue}{#1}}&#2\\[1ex]}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+% #3 : text before the list starts
+%
+\NewDocumentEnvironment{myListAnnotate}{ m m o }{
+    \begin{myAnnotate}{#1}{#2}
+    \IfValueT{#3}{#3}
+    \begin{enumerate}[itemsep=0pt,fullwidth,]
+}{
+    \end{enumerate}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+%
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
+
+
+% ---------------------------------------------------------------------------
+% A table for systems of equations word problems.
+%
+% #1 scale factor
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\mySystemTable}{O{8}}{
+    \begin{center}
+        \begin{tabular}{|m{5em}|m{2in}|m{2in}|m{1.5in}|}
+            \hline
+            {\bfseries\itshape variables} & {\bfseries\itshape equations} & {\bfseries\itshape system} & {\bfseries\itshape augmented matrix} \\
+            \hline\hline
+            \scalebox{#1}{\fontsize{32pt}{0pt}\selectfont \phantom{\textbf{I}}} & \phantom{X} & \phantom{X} & \phantom{X}\\
+            \hline
+        \end{tabular}
+    \end{center}
+}
+
+\NewDocumentCommand{\myBetterSystemTable}{O{4}}{
+    \begin{center}
+        \begin{tabular}{|m{3.25in}|m{3.25in}|}
+            \hline
+            \underline{\bfseries\itshape variables:} & \underline{\bfseries\itshape system of equations:}  \\
+            \scalebox{#1}{\fontsize{32pt}{0pt}\selectfont \phantom{\textbf{I}}} & \phantom{X} \\
+            \hline
+            \underline{\bfseries\itshape augmented matrix:} & \underline{\bfseries\itshape RREF matrix:} \\
+            \scalebox{#1}{\fontsize{32pt}{0pt}\selectfont \phantom{\textbf{I}}} & \phantom{X} \\
+            \hline
+        \end{tabular}
+    \end{center}
+}

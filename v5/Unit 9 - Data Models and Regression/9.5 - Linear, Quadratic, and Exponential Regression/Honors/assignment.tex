@@ -1,0 +1,83 @@
+\documentclass[10pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.75in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+    \dashundergapssetup{
+        gap-format=underline,
+        teacher-gap-format=dot,
+        gap-font={\ECFAugie\MTversion{augie}\color{black}},
+        gap-numbers=false,
+        gap-widen=true,
+        gap-extend-percent=75, % note: making this too big might create errors
+        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+    }
+    \input{../../../common/defs}
+    \input{../../../common/packages}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\setlength{\parskip}{1\onelineskip}
+\setlength{\parindent}{0in}
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{9.5 CW}{L/Q/E Regression Models}
+%-----------------------------------------------------------------------------------------
+
+L/Q/E stands for ``linear'', ``quadratic'', and ``exponential''. 
+In each of the (three) problems, 
+I ask you to decide (perhaps based on a \myDesmos scatterplot?) which of these 
+three models seems to make sense for the data.
+However, I would like you to use \myEmph{one of each} of them. 
+So you may decide which makes sense as long as you pick one of each of them!
+Here is the relevant information for each.
+
+\begin{center}
+\small
+\begin{tabular}{l|l|l}
+    \toprule
+    {\itshape model} 
+        & {\myDesmos\itshape command} 
+        & {\itshape algebraic model} \\
+    \midrule 
+    {\itshape Linear} 
+        & {\ttfamily
+            y1 $\sim$ m x1 + b
+        }
+        & $y = \bm{m}x + \bm{b}$
+        \\
+    {\itshape Quadratic} 
+        & {\ttfamily
+            y1 $\sim$ a x1\textasciicircum2 + bx1 + c
+        }
+        & $y = \bm{a}x^2 + \bm{b}x + \bm{c}$
+        \\
+    {\itshape Exponential} 
+        & {\ttfamily
+            y1 $\sim$ a b\textasciicircum x1
+        }
+        & $y = \bm{a}\bm{b}^{x}$
+        \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tcolorbox}[center,width=5in,]
+    Since we're using the same variables in some of these models,
+    I suggest that you only do \myEmph{one} model in \myDesmos at a time.
+\end{tcolorbox}
+
+
+\input{chunk1}
+\input{chunk2}
+\input{chunk3}
+
+\end{document}

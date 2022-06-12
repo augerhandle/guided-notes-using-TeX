@@ -1,0 +1,34 @@
+% ---------------------------------------------------------------------------
+% A chapter style
+% ---------------------------------------------------------------------------
+
+\makechapterstyle{myChapterStyle}{%
+    % Reset everything so there's no "hold overs"
+    \chapterstyle{default}
+
+    % Here I set up the size/fonts that I use. 
+    \renewcommand*{\chapnamefont}{\normalfont\sffamily}
+    \renewcommand*{\chapnumfont}{\normalfont\LARGE\bfseries\sffamily}
+    \renewcommand*{\chaptitlefont}{\normalfont\Large\bfseries\sffamily}
+
+    \renewcommand*{\chapterheadstart}{} % No leading vertical whitespace
+
+    % In this chapter style, all the work is being done when I print the chapter title.
+    % So I redefine these to do nothing.
+    \renewcommand*{\printchaptername}{}
+    \renewcommand*{\printchapternum}{}
+
+    % I do the formatting of the entire chapter (aka, lesson) banner here.
+    \renewcommand*{\printchaptertitle}[1]{
+        \begin{minipage}{0.14\textwidth}%
+            {\chapnamefont\myChapterName\par\vspace{0.25\onelineskip}}
+            {\chapnumfont\par\thepart.\thechapter\myLessonSuffix}%
+        \end{minipage}
+        \begin{minipage}{0.85\textwidth}
+            {\begin{flushright}{\chaptitlefont##1}\end{flushright}}
+        \end{minipage}
+    }
+
+    % No trailing whitespace.
+    \renewcommand*{\afterchaptertitle}{}
+}
