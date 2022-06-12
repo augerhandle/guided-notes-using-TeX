@@ -3,8 +3,8 @@
 % ---------------------------------------------------------------------------
 \nouppercaseheads
 
-\copypagestyle{lsnPagestyle}{headings}
-\aliaspagestyle{chapter}{lsnPagestyle}
+\copypagestyle{myPagestyle}{headings}
+\aliaspagestyle{chapter}{myPagestyle}
 
 \newcommand{\lsnHeaderLeft}  {\tiny\scshape\myFullCourseName}
 \newcommand{\lsnHeaderCenter}{}
@@ -18,11 +18,11 @@
 % \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\rightmark}
 \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\myChapterName\ \thepart.\thechapter\myLessonSuffix}
 
-\makeevenhead{lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
-\makeoddhead {lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
+\makeevenhead{myPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
+\makeoddhead {myPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
 
-\makeevenfoot{lsnPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
-\makeoddfoot {lsnPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
+\makeevenfoot{myPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
+\makeoddfoot {myPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
 
 % clear these out so they don't set any marks
 \clearmark{book}
