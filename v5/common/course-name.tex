@@ -1,0 +1,66 @@
+% ---------------------------------------------------------------------------
+% These hold the name of the course (with and without modifiers)
+% ---------------------------------------------------------------------------
+\newcommand{\myCourseName}{undefined}     % no modifier in front
+\newcommand{\myFullCourseName}{undefined} % modifier + course-name
+
+\newcommand{\myModifyTheCourseName}{
+    \ifADVANCED 
+        \ifAP
+            \renewcommand*{\myFullCourseName}{AP~\myCourseName}
+        \else 
+            % The only other possibility (for now) is Honors. Modify accordingly.
+            \renewcommand*{\myFullCourseName}{Honors~\myCourseName}
+        \fi
+    \else 
+        \renewcommand*{\myFullCourseName}{\myCourseName}
+    \fi
+}
+
+% ---------------------------------------------------------------------------
+% Class name modifiers.
+% This is how I am distinguishing Honors, AP and On-Level.
+%
+% The basic idea is that there is either On-Level or there is some kind 
+% of "advanced" modifier. In my case, the modifier might be "Honors" 
+% or "AP". 
+% ---------------------------------------------------------------------------
+\newif\ifADVANCED % At this point, we don't know which kind of advanced.
+                  % If this is not true, we assume all modifiers are irrelevant 
+                  % and that it's an On-Level class.
+\newif\ifHONORS % Here are the "advanced" modifiers. They're intended to be mutually exclusive.
+\newif\ifAP
+
+% By default, the modifiers are all false (ie, On-Level).
+\ADVANCEDfalse\HONORSfalse\APfalse
+
+% ---------------------------------------------------------------------------
+% What (modified) course are we talking about?
+% ---------------------------------------------------------------------------
+% These commands declare which modifier(s) to use. 
+% Typically, I will use one of these ONCE at the top of a lesson document.
+% They ensure that the newifs are all set "consistently".
+\NewDocumentCommand{\forONLEVEL}{O{Algebra 2}}{
+    \ADVANCEDfalse\HONORSfalse\APfalse 
+    \renewcommand*{\myCourseName}{#1}
+    \myModifyTheCourseName
+    }
+
+\NewDocumentCommand{\forHONORS}{O{Algebra 2}}{
+    \ADVANCEDtrue\HONORStrue\APfalse
+    \renewcommand*{\myCourseName}{#1}
+    \myModifyTheCourseName
+    }
+
+\NewDocumentCommand{\forAP}{O{Algebra 2}}{
+    \ADVANCEDtrue\HONORSfalse\APtrue
+    \renewcommand*{\myCourseName}{#1}
+    \myModifyTheCourseName
+    }
+
+% 
+% These will conditionally generate output (the argument) based on 
+% whichever modifier(s) are set.
+\newcommand{\whenHONORS}[1]  {\ifHONORS{#1}\else{}  \fi}
+\newcommand{\whenAP}[1]      {\ifAP{#1}\else{}  \fi}
+\newcommand{\whenONLEVEL}[1] {\ifADVANCED{}\else{#1}\fi}

@@ -6,19 +6,17 @@
 \copypagestyle{lsnPagestyle}{headings}
 \aliaspagestyle{chapter}{lsnPagestyle}
 
-\newcommand{\lsnHeaderLeft}  {\tiny\scshape\lsnCourseName}
+\newcommand{\lsnHeaderLeft}  {\tiny\scshape\myFullCourseName}
 \newcommand{\lsnHeaderCenter}{}
 \newcommand{\lsnHeaderRight} {}
 
 \newcommand{\lsnFooterLeft}  {\tiny\sffamily\itshape\leftmark}
 \newcommand{\lsnFooterCenter}{\tiny\sffamily\itshape\thepage}
-\makeatletter
 % I'm not using \rightmark here (although I'd like to), since in some cases
 % (first page of the first chapter?) it doesn't get generated. Instead I'm 
 % "hardcoding" the footer right to be what I'd like it to be.
 % \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\rightmark}
-\newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\@chapapp\ \thepart.\thechapter\myLessonSuffix}
-\makeatother
+\newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\myChapterName\ \thepart.\thechapter\myLessonSuffix}
 
 \makeevenhead{lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
 \makeoddhead {lsnPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
@@ -35,62 +33,7 @@
 
 % Redefine partmark and chaptermark to put part(unit) and chapter(lesson) info
 % into \leftmark and \rightmark, respectively, for use in the header/footer.
-\makeatletter
 \makepsmarks{headings}{%
     \createmark{part}{left}{shownumber}{\partname\ }{\ }
-    \createmark{chapter}{right}{shownumber}{\@chapapp\ \thepart.}{\ }
+    \createmark{chapter}{right}{shownumber}{\myChapterName\ \thepart.}{\ }
 }
-\makeatother
-
-
-
-% ---------------------------------------------------------------------------
-% Folder Check headers / footers
-% ---------------------------------------------------------------------------
-%
-% I need to manually UNCOMMENT tests lines for a FOlder Check.
-% Otherwise they collide w/ Lessons. 
-% Obviously need to fix this!
-%
-% For the time being, I'm moving it to the FOlder Check files themselves.
-%
-% \nouppercaseheads
-
-% \copypagestyle{fchkPagestyle}{headings}
-% \aliaspagestyle{chapter}{fchkPagestyle}
-
-% \newcommand{\fchkHeaderLeft}  {\tiny\scshape\lsnCourseName}
-% \newcommand{\fchkHeaderCenter}{}
-% \newcommand{\fchkHeaderRight} {\large\scshape Name: \gap{xxxxxx xxxxxx}\\ Period: \gap{x}}
-
-% \newcommand{\fchkFooterLeft}  {\tiny\sffamily\itshape Folder Check}
-% \newcommand{\fchkFooterCenter}{\tiny\sffamily\itshape\thepage}
-% \makeatletter
-% % I'm not using \rightmark here (although I'd like to), since in some cases
-% % (first page of the first chapter?) it doesn't get generated. Instead I'm 
-% % "hardcoding" the footer right to be what I'd like it to be.
-% % \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\rightmark}
-% \newcommand{\fchkFooterRight} {}
-% \makeatother
-
-% \makeevenhead{fchkPagestyle}{\fchkHeaderLeft}{\fchkHeaderCenter}{\fchkHeaderRight}
-% \makeoddhead {fchkPagestyle}{\fchkHeaderLeft}{\fchkHeaderCenter}{\fchkHeaderRight}
-
-% \makeevenfoot{fchkPagestyle}{\fchkFooterLeft}{\fchkFooterCenter}{\fchkFooterRight}
-% \makeoddfoot {fchkPagestyle}{\fchkFooterLeft}{\fchkFooterCenter}{\fchkFooterRight}
-
-% % clear these out so they don't set any marks
-% \clearmark{book}
-% \clearmark{part}
-% \clearmark{chapter}
-% \clearmark{section}
-% \clearmark{subsection}
-
-% % % Redefine partmark and chaptermark to put part(unit) and chapter(lesson) info
-% % % into \leftmark and \rightmark, respectively, for use in the header/footer.
-% \makeatletter
-% \makepsmarks{headings}{%
-%     \createmark{part}{left}{shownumber}{\partname\ }{\ }
-%     \createmark{chapter}{right}{shownumber}{\@chapapp\ \thepart.}{\ }
-% }
-% \makeatother
