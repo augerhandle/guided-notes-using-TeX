@@ -4,23 +4,29 @@
     \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
 
 \input{../../../common/packages}
-    \dashundergapssetup{
-        gap-format=underline,
-        teacher-gap-format=dot,
-        gap-font={\ECFAugie\MTversion{augie}\color{black}},
-        gap-numbers=false,
-        gap-widen=true,
-        gap-extend-percent=75, % note: making this too big might create errors
-        gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
-    }
-    \input{../../../common/defs}
-    \input{../../../common/packages}
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\input{../../../common/course-name.tex}
+\input{../../../common/defs}
+\input{../../../common/assignment-defs}
+\input{../../../common/packages}
 \input{../../../common/graphs}
 \input{../../../common/problems}
-\input{for-whom}
 
 
 \begin{document}
+
+\forHONORS
+\forSTUDENT
+
 \pagestyle{empty}
 \checkandfixthelayout
 \raggedbottom

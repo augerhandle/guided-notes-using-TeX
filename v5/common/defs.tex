@@ -1,29 +1,4 @@
 % ---------------------------------------------------------------------------
-% a header to put at the top of a homework assignment
-% ---------------------------------------------------------------------------
-% #1 class name 
-% #2 assignment number (eg, 2.5 CW)
-% #3 assignment title (eg, Solve Quadratic Equations)
-%
-\NewDocumentCommand{\myAssignmentHeader}{ O{Algebra~2} m m }{
-    \noindent
-    \whenHONORS{Honors~}#1
-    \hfill 
-    Name : \fbox{\phantom{X\hspace{2in}}}\par
-    \vspace{0.5em}
-    \noindent
-    {%
-        \LARGE\sffamily
-        \whenHONORS{H-}#2 -- #3
-    }
-    \hfill
-    Period : \fbox{\phantom{\large 9999}}
-    \hrule\hspace{\baselineskip}
-    \vspace{0.5\baselineskip}
-}
-
-
-% ---------------------------------------------------------------------------
 % I'm SO tired of writing these two explicitly!
 % ---------------------------------------------------------------------------
 \newcommand{\myEmph}[1]{{\bfseries\itshape#1}}
@@ -94,37 +69,6 @@
     }
     \large
 }{
-}
-
-
-% ---------------------------------------------------------------------------
-% A centered tcolorbox
-% ---------------------------------------------------------------------------
-%
-% #1 - optional options to pass to tcolorbox
-% #2 - the contents to put in the box
-%
-\NewDocumentEnvironment{myCenteredBox}{ O{} m }{%
-    \begin{center}
-        \begin{tcolorbox}[#1]#2\end{tcolorbox}
-    \end{center}
-}
-
-% ---------------------------------------------------------------------------
-% Split the output into two (roughly) equally sized side-by-side minipages.
-% ---------------------------------------------------------------------------
-%
-% #1 - content of first minipage
-% #2 - content of second minipage
-%
-\NewDocumentCommand{\myTwoMinipages}{mm}{
-    \begin{minipage}{0.49\textwidth}
-        #1
-    \end{minipage}
-    % \hfill 
-    \begin{minipage}{0.49\textwidth}
-        #2
-    \end{minipage}
 }
 
 
