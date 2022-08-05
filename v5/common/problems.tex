@@ -21,7 +21,7 @@
 % #4 : vertical height of the problem boxes
 % #5 : optional text at the bottom
 %
-\NewDocumentCommand{\myProblem}{ o m O{\large} m O{} }{%
+\NewDocumentCommand{\myProblem}{ o m O{\normalsize} m O{} }{%
     \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
@@ -56,7 +56,7 @@
 % #4 : vertical height of the problem boxes
 % #5 : optional text at the bottom
 %
-\NewDocumentCommand{\myWideProblem}{ o m O{\large} m O{} }{%
+\NewDocumentCommand{\myWideProblem}{ o m O{\normalsize} m O{} }{%
     \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
@@ -90,7 +90,7 @@
 % #6 : optional text at the bottom of problem 1
 % #7 : optional text at the bottom of problem 2
 %
-\NewDocumentCommand{\myProblems}{ o m m O{\large} m O{} O{#6} }{%
+\NewDocumentCommand{\myProblems}{ o m m O{\normalsize} m O{} O{#6} }{%
     \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
@@ -140,7 +140,7 @@
 % #2 : the problem contents
 % #3 : optional font style for the content
 %
-\NewDocumentCommand{\myProblemWithContent}{ o m O{\large} }{%
+\NewDocumentCommand{\myProblemWithContent}{ o m O{\normalsize} }{%
     \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
@@ -174,7 +174,7 @@
 % #3 : the 2nd problem contents
 % #4 : optional font style for the content
 %
-\NewDocumentCommand{\myProblemsWithContent}{ o m m O{\large} }{%
+\NewDocumentCommand{\myProblemsWithContent}{ o m m O{\normalsize} }{%
     \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
@@ -216,7 +216,7 @@
 % #2 : the problem
 % #3 : optional font style for the content
 %
-\NewDocumentCommand{\myWideProblemWithContent}{ o m O{\large} }{%
+\NewDocumentCommand{\myWideProblemWithContent}{ o m O{\normalsize} }{%
     \IfValueT{#1}{\vspace{1\parskip}\noindent#1\nopagebreak}%
     \begin{tcbraster}[%
         raster equal height,%
