@@ -4,6 +4,7 @@
 \newcommand{\useMyProblemCounter}{\theMyProblemCounter\stepcounter{MyProblemCounter}}
 
 
+% the style to use to render the problem counter on paper
 \newcommand{\myProblemFont}{\bfseries\itshape}
 
 
@@ -37,7 +38,8 @@
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=-3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southwest,},
             ]
             #3#2
             \tcblower\vspace{#4}#5
@@ -72,7 +74,8 @@
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=-3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southwest,},
             ]
             #3#2
             \tcblower\vspace{#4}#5
@@ -105,8 +108,10 @@
             colback=white,%
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            fonttitle=\small,
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=-3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southwest,},
             ]
             #4#2
             \tcblower\vspace{#5}#6
@@ -118,8 +123,10 @@
             colback=white,%
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
+            fonttitle=\small,
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top right={xshift=3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southeast,},
             ]
             #4#3
             \tcblower\vspace{#5}#7
@@ -156,7 +163,8 @@
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=-3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southwest,},
             ]
             #3#2
         \end{tcolorbox}
@@ -190,7 +198,8 @@
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=-3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southwest,},
             ]
             #4#2
         \end{tcolorbox}
@@ -202,7 +211,8 @@
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southeast,},
             ]
             #4#3
         \end{tcolorbox}
@@ -231,7 +241,8 @@
             coltitle=black, colbacktitle=black!10!white,%
             boxrule=0pt, borderline={0.5pt}{0pt}{black},%
             title={\texttt{\useMyProblemCounter}},%
-            attach boxed title to top left%
+            attach boxed title to top left={xshift=-3mm,yshift=-3mm},%
+            boxed title style = {size=small, drop fuzzy shadow southwest,},
             ]%
             #3#2
         \end{tcolorbox}
