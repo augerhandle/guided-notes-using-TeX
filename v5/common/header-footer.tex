@@ -8,9 +8,9 @@
 
 \newcommand{\lsnHeaderLeft}  {\tiny\sffamily\itshape\myFullCourseName}
 \newcommand{\lsnHeaderCenter}{}
-\newcommand{\lsnHeaderRight} {}
+\newcommand{\lsnHeaderRight} {\tiny\sffamily\itshape\leftmark}
 
-\newcommand{\lsnFooterLeft}  {\tiny\sffamily\itshape\leftmark}
+\newcommand{\lsnFooterLeft}  {}
 \newcommand{\lsnFooterCenter}{\tiny\sffamily\itshape\thepage}
 % I'm not using \rightmark here (although I'd like to), since in some cases
 % (first page of the first chapter?) it doesn't get generated. Instead I'm 
@@ -18,10 +18,10 @@
 % \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\rightmark}
 \newcommand{\lsnFooterRight} {\tiny\sffamily\itshape\myChapterName\ \thepart.\thechapter\myLessonSuffix}
 
-\makeevenhead{myPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
+\makeevenhead{myPagestyle}{\lsnHeaderRight}{\lsnHeaderCenter}{\lsnHeaderLeft}
 \makeoddhead {myPagestyle}{\lsnHeaderLeft}{\lsnHeaderCenter}{\lsnHeaderRight}
 
-\makeevenfoot{myPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
+\makeevenfoot{myPagestyle}{\lsnFooterRight}{\lsnFooterCenter}{\lsnFooterLeft}
 \makeoddfoot {myPagestyle}{\lsnFooterLeft}{\lsnFooterCenter}{\lsnFooterRight}
 
 % clear these out so they don't set any marks
