@@ -109,7 +109,7 @@
 % #5 ymax
 % #6 drawing style of x/y axes (solid, dashed, etc...)
 %
-\NewDocumentEnvironment{myTikzpictureGrid}{ m omom O{dashed} }{
+\NewDocumentEnvironment{myTikzpictureGrid}{ m omom O{solid} }{
     \begin{tikzpicture}[
         scale=#1,
         xaxe style/.style = { #6, very thick, arrows={-{Straight Barb}}, },                 
