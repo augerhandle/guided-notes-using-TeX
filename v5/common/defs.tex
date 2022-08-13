@@ -12,28 +12,28 @@
 \newcommand{\myDesmos}{{\scshape Desmos~}}
 \newcommand{\myTi}{{\scshape TI-84~}}
 
-% ---------------------------------------------------------------------------
-% Teachers vs. Students ("tstu")
-% ---------------------------------------------------------------------------
-\newif\iftstu
+% % ---------------------------------------------------------------------------
+% % Teachers vs. Students ("tstu")
+% % ---------------------------------------------------------------------------
+% \newif\iftstu
 
-% Typically, I will set one of these ONCE at the top of the doc.
-\newcommand{\forTEACHER}{%
-    \tstutrue%
-    \dashundergapssetup{teacher-mode=true,}%
-}
-\newcommand{\forSTUDENT}{%
-    \tstufalse%
-    \dashundergapssetup{teacher-mode=false,}%
-}
+% % Typically, I will set one of these ONCE at the top of the doc.
+% \newcommand{\forTEACHER}{%
+%     \tstutrue%
+%     \dashundergapssetup{teacher-mode=true,}%
+% }
+% \newcommand{\forSTUDENT}{%
+%     \tstufalse%
+%     \dashundergapssetup{teacher-mode=false,}%
+% }
 
-% These will conditionally generate output (the argument) based on 
-% whether this document is "for" HONORS or ONLEVEL according to the previous commands.
-%
-% #1 the content 
-% #2 text color
-\NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\ECFAugie\color{#1}#2}\else{}\fi}
-\newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
+% % These will conditionally generate output (the argument) based on 
+% % whether this document is "for" HONORS or ONLEVEL according to the previous commands.
+% %
+% % #1 the content 
+% % #2 text color
+% \NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\ECFAugie\color{#1}#2}\else{}\fi}
+% \newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
 
 
 
@@ -221,3 +221,18 @@
         \end{tabular}
     \end{center}
 }
+
+
+% Read an environment variable.
+% 1: name of the variable 
+% 2: optional command to "insert" it into so that the command 
+%    evaluates to the env var's value
+%
+% If option 2 is not present, the \getenv command will just 
+% echo the env var value into the output file.
+%
+% See: https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
+%
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
