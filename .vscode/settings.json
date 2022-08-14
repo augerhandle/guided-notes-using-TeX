@@ -105,5 +105,6 @@
         }
     ],
     "git.autofetch": true,
-    "git.closeDiffOnOperation": true
+    "git.closeDiffOnOperation": true,
+    "git.enableStatusBarSync": true
 }
