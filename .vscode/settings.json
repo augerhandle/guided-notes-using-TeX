@@ -2,7 +2,7 @@
     "editor.fontSize": 14,
     "latex-workshop.view.pdf.zoom": "page-fit",
     "latex-workshop.texcount.interval": 2000,
-    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.clean.fileTypes":[
         "*.aux", 
