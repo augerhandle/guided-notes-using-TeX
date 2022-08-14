@@ -82,6 +82,12 @@
             ],
             "env": {}
         },
+        {
+            "name": "add-honors-prefix",
+            "command": "add-honors-prefix",
+            "args": [],
+            "env": {}
+        },
     ],
     "latex-workshop.latex.recipes": [
         {
@@ -100,9 +106,16 @@
             "name": "latexmk-BOTH 🔃",
             "tools": [
                 "latexmk-TEACHER",
-                "latexmk-STUDENT"
+                "latexmk-STUDENT",
+                "add-honors-prefix",
             ]
-        }
+        },
+        {
+            "name": "add-honors-prefix 🔃",
+            "tools": [
+                "add-honors-prefix"
+            ]
+        },
     ],
     "git.autofetch": true,
     "git.closeDiffOnOperation": true,
