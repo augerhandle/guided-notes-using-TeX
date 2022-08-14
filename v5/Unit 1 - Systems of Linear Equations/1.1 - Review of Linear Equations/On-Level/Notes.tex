@@ -2,6 +2,7 @@
 
 \input{../../../common/packages}
 \input{../../../common/defs}
+\input{../../../common/student-or-teacher}
 \input{../../../common/course-name}
 \input{../../../common/graphs}
 \input{../../../common/document-geometry}
@@ -14,9 +15,6 @@
 
 
 \begin{document}
-
-\forONLEVEL
-\forSTUDENT
 
 \pagestyle{myPagestyle}
 \chapterstyle{myChapterStyle}
@@ -33,6 +31,7 @@
     gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
 }
 
+\input{for-whom}
 \input{content}
 
 \end{document}
