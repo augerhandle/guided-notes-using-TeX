@@ -1,10 +1,35 @@
 {
+    "editor.fontSize": 14,
+    "latex-workshop.view.pdf.zoom": "page-fit",
+    "latex-workshop.texcount.interval": 2000,
+    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.clean.fileTypes":[
+        "*.aux", 
+        "*.bbl", "*.blg", 
+        "*.idx", "*.ind", 
+        "*.lof", "*.lot", 
+        "*.out", 
+        "*.toc", 
+        "*.acn", "*.acr", "*.alg", "*.glg", 
+        "*.glo", "*.gls", 
+        "*.fls", 
+        "*.log", 
+        "*.fdb_latexmk", 
+        "*.snm", 
+        "*.synctex(busy)", 
+        "*.synctex.gz(busy)", 
+        "*.synctex.gz",
+        "*.tkzfonct.gnuplot",
+        "*.tkzfonct.table",
+        "*.nav"
+    ],
     "latex-workshop.latex.tools": [
-
         {
             "name": "latexmk",
             "command": "latexmk",
             "args": [
+                "-shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
@@ -15,43 +40,41 @@
             "env": {}
         },
         {
-            "name": "lualatexmk",
+            "name": "latexmk-STUDENT",
             "command": "latexmk",
             "args": [
+                "-shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-lualatex",
-                "-outdir=%OUTDIR%",
+                "-pdf",
+                "-auxdir=%DIR%",
+                "-outdir=%DIR%",
                 "%DOC%"
             ],
-            "env": {}
+            "env": {"STUDENTorTEACHER" : "STUDENT"}
         },
         {
-            "name": "xelatexmk",
+            "name": "latexmk-TEACHER",
             "command": "latexmk",
             "args": [
+                "-shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-xelatex",
-                "-outdir=%OUTDIR%",
+                "-pdf",
+                "-auxdir=%DIR%",
+                "-outdir=%DIR%",
+                "-jobname=%A-TEACHER",
                 "%DOC%"
             ],
-            "env": {}
-        },
-        {
-            "name": "latexmk_rconly",
-            "command": "latexmk",
-            "args": [
-                "%DOC%"
-            ],
-            "env": {}
+            "env": {"STUDENTorTEACHER" : "TEACHER"}
         },
         {
             "name": "pdflatex",
             "command": "pdflatex",
             "args": [
+                "-shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
@@ -59,51 +82,28 @@
             ],
             "env": {}
         },
+    ],
+    "latex-workshop.latex.recipes": [
         {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ],
-            "env": {}
+            "name": "latexmk-TEACHER",
+            "tools": [
+                "latexmk-TEACHER"
+            ]
         },
         {
-            "name": "rnw2tex",
-            "command": "Rscript",
-            "args": [
-                "-e",
-                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
-            ],
-            "env": {}
+            "name": "latexmk-STUDENT",
+            "tools": [
+                "latexmk-STUDENT"
+            ]
         },
         {
-            "name": "jnw2tex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2texmintex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "tectonic",
-            "command": "tectonic",
-            "args": [
-                "--synctex",
-                "--keep-logs",
-                "%DOC%.tex"
-            ],
-            "env": {}
+            "name": "latexmk-BOTH 🔃",
+            "tools": [
+                "latexmk-TEACHER",
+                "latexmk-STUDENT"
+            ]
         }
     ],
-    "latex-workshop.texcount.interval": 2000
+    "git.autofetch": true,
+    "git.closeDiffOnOperation": true
 }
