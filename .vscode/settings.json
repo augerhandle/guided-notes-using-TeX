@@ -91,15 +91,15 @@
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "latexmk-TEACHER",
-            "tools": [
-                "latexmk-TEACHER"
-            ]
-        },
-        {
             "name": "latexmk-STUDENT",
             "tools": [
                 "latexmk-STUDENT"
+            ]
+        },
+        {
+            "name": "latexmk-TEACHER",
+            "tools": [
+                "latexmk-TEACHER"
             ]
         },
         {
