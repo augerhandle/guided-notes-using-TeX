@@ -1,0 +1,42 @@
+\section{Simple Systems of Equations}
+
+The systems in this lesson will always be written like this:
+
+\begin{minipage}{0.3\textwidth}
+    \begin{align*}
+        y = -2x + 3 \\
+        y = x-3
+    \end{align*}    
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+    \begin{align*}
+        y = -2x + 3 \\
+        -x+y = -3
+    \end{align*}    
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+    \begin{align*}
+        2x + y = 3 \\
+        x = y+3
+    \end{align*}    
+\end{minipage}
+
+\begin{tcolorbox}[center,width=4in]
+    These $2\times2$ systems are ``simple'' since one (or both) equations are already solved
+    for one of the variables.
+    They start with  
+    \gap{$y =$} or \gap{$x=$}.
+\end{tcolorbox}
+We could solve these by \gap{graphing}.
+
+\begin{center}
+    \begin{myTikzpictureGrid}{0.5} [-5]{5}[-5]{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{-2*x + 3}
+        % \tkzText(13,8){$x - y = 0$}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x-3}
+        % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+\end{center}
+%
+But today we solve them 
+\gap{algebraically}.
