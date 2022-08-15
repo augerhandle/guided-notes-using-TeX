@@ -88,6 +88,17 @@
             "args": [],
             "env": {}
         },
+        {
+            "name": "delete-Notes-PDFs",
+            "command": "rm",
+            "args": [
+                "Notes.pdf", 
+                "Notes-TEACHER.pdf", 
+                "H-Notes.pdf",
+                "H-Notes-TEACHER.pdf",
+            ],
+            "env": {}
+        },
     ],
     "latex-workshop.latex.recipes": [
         {
@@ -114,6 +125,12 @@
             "name": "add-honors-prefix 🔃",
             "tools": [
                 "add-honors-prefix"
+            ]
+        },
+        {
+            "name": "delete-Notes-PDFs 🔃",
+            "tools": [
+                "delete-Notes-PDFs"
             ]
         },
     ],
