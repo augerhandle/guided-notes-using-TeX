@@ -236,3 +236,11 @@
 \newcommand{\getenv}[2][]{%
   \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
   \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+
+
+% a macro for typesetting buttons (eg, TI-84)
+% 1: text 
+%
+\NewDocumentCommand{\myButton}{ m }{
+    {\fbox{\ttfamily#1}}
+}

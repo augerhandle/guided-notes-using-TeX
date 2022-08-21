@@ -1,0 +1,46 @@
+\section{Solving Systems with a {TI-84}}
+
+\begin{myConceptSteps}{To solve a $3\times3$ system using a TI-84 calculator\dots}
+  \myStep{augmented matrix}{%
+    \begin{itemize}
+      \item enter the matrix dimensions 
+      \item enter the matrix entries 
+    \end{itemize}
+  }
+  \myStep{RREF}{%
+    Use the {\ttfamily rref()} function to convert the matrix to {\bfseries\itshape reduced row echelon form}
+  }
+  \myStep{solution}{%
+    Read the \gap{values} for the solution from the \gap{last} column of the result.
+    Make sure to recognize \gap{no solution} and \gap{infinite solutions} cases.
+    }
+\end{myConceptSteps}
+
+\begin{tcolorbox}[center,width=4in]
+  \centering
+  See the next page for {\itshape detailed instructions.}
+\end{tcolorbox}
+
+\myWideProblem[
+    Solve this system using a TI-84. Write down all the following information.
+    \vspace{-1\onelineskip}
+    \begin{itemize}[nosep]
+      \item the augmented matrix,
+      \item the reduced row-echelon form, and 
+      \item the solution.
+    \end{itemize}
+]
+{
+  $x -4z = 1 $\\
+  $-4x + 3y - 3z = 0$ \\
+  $5x - 2y + 3z = -8$
+}{3in}[%
+  \begin{flushright}
+    \large
+    $x = $ \gap{\ttfamily-3}\\[0.5\baselineskip]
+    $y = $ \gap{\ttfamily-5}\\[0.5\baselineskip]
+    $z = $ \gap{\ttfamily-1}
+  \end{flushright}
+  ]
+
+
