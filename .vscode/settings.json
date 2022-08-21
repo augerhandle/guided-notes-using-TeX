@@ -92,10 +92,10 @@
             "name": "delete-Notes-PDFs",
             "command": "rm",
             "args": [
-                "Notes.pdf", 
-                "Notes-TEACHER.pdf", 
-                "H-Notes.pdf",
-                "H-Notes-TEACHER.pdf",
+                "%DOCFILE%.pdf", 
+                "%DOCFILE%-TEACHER.pdf", 
+                "H-%DOCFILE%.pdf",
+                "H-%DOCFILE%-TEACHER.pdf",
             ],
             "env": {}
         },
