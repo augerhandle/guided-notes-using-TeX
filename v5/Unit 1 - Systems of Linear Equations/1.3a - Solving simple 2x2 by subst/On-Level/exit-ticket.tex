@@ -1,0 +1,42 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/student-or-teacher}
+\input{../../../common/course-name}
+\input{../../../common/graphs}
+\input{../../../common/document-geometry}
+\input{../../../common/header-footer}
+\input{../../../common/chapter-pagestyle}
+\input{../../../common/objectives}
+\input{../../../common/vocabulary}
+\input{../../../common/concepts}
+\input{../../../common/problems}
+\input{../../../common/assignment-defs}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forONLEVEL
+\myAssignmentHeader{1.3a}{Exit Ticket}
+
+\vspace{-2\onelineskip}
+\myWideProblemWithContent[%
+    Solve this system of equations by {substitution}. %
+    {\itshape Show all your work.}
+    ]
+{
+    \large
+    \vspace{-\baselineskip}
+    \begin{align*}
+        &2x + 3y = 1 \\
+        &y = x+7
+    \end{align*}
+}
+
+
+\end{document}
