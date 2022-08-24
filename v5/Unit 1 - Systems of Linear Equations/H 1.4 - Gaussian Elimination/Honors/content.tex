@@ -1,0 +1,77 @@
+\dummypart{1}{Systems of Linear Equations}
+\myLesson{Solving Systems using Gaussian Elimination}[4]
+
+\begin{myObjectives}
+    \myObjective{reduce}{
+        a system to {\bfseries\itshape row echelon} form using \gap{row operations}
+        }
+    \myObjective{solve}{
+        a system in {\bfseries\itshape row echelon} form using \gap{back substitution} 
+        }
+    \end{myObjectives}
+
+\begin{myVocabulary}
+    \myDefinition{full matrix}{
+        \small
+        \vspace{0.2em}
+        \(
+            \begin{bmatrix}
+              \blacksquare & \blacksquare & \blacksquare \\
+              \blacksquare & \blacksquare & \blacksquare \\
+              \blacksquare & \blacksquare & \blacksquare 
+            \end{bmatrix}
+        \)
+        \vspace{0.2em}
+    }
+    \myDefinition{diagonal matrix}{
+        \small
+        \vspace{0.2em}
+        \(
+            \begin{bmatrix}
+                \blacksquare & 0 & 0 \\
+              0 & \blacksquare & 0 \\
+              0 & 0 & \blacksquare
+            \end{bmatrix}
+        \)
+        \vspace{0.2em}
+    }
+    \myDefinition{triangular matrix}{
+        \small
+        \vspace{0.2em}
+        \(
+            \begin{bmatrix}
+                \blacksquare & \blacksquare & \blacksquare \\
+              0 & \blacksquare & \blacksquare \\
+              0 & 0 & \blacksquare
+            \end{bmatrix}
+        \)
+        \vspace{0.2em}
+    }
+    \myDefinition{row-echelon form}{
+        \small
+        \vspace{0.2em}
+        \(
+            \begin{bmatrix}[ccc|c]
+                \boldsymbol{1} & \blacksquare & \blacksquare& \blacksquare \\
+                0 & \boldsymbol{1} & \blacksquare& \blacksquare \\
+                0 & 0 & \boldsymbol{1} & \blacksquare
+            \end{bmatrix}
+        \)
+        \vspace{0.2em}
+    }
+    \myDefinition{back substitution}{%
+        solving systems in row echelon form 
+        starting at the \gap{bottom} 
+    }
+    \myDefinition{diagonal}{%
+        from the \gap{top} \gap{left} 
+        to the \gap{bottom} \gap{right}
+    }
+    \myDefinition{matrix dimensions}{\#rows $\times$ \#columns}
+\end{myVocabulary}
+
+
+\input{chunk0}
+\input{chunk1}
+\input{chunk2}
+\input{chunk3}

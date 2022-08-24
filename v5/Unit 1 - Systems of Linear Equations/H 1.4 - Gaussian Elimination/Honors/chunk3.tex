@@ -1,0 +1,44 @@
+\section{Back Substitution}
+
+Once an augmented matrix is in row echelon form,
+it is easy to solve the system, because the matrix is \gap{triangular}.
+
+\begin{myConceptSteps}{To solve a system with an augmented matrix in row echelon form\dots}
+  \myStep{start}{%
+    Start solving at the \gap{bottom} of the matrix.
+    }
+  \myStep{substitute and solve}{%
+      Substitute the variable values
+      into the \gap{row above}.
+      Solve for the next variable.
+      }
+  \myStep{keep going}{%
+      Follow these steps to the \gap{top}.
+    }
+\end{myConceptSteps}
+
+\begin{tcolorbox}[center,width=5in]
+  Because we start at the \gap{bottom} and work \gap{up},
+  this is called \gap{back} \gap{substitution}.
+\end{tcolorbox}
+
+\myWideProblem[
+    Solve the system represented by this augmented matrix in
+    row echelon form.
+]
+{
+  \(
+    \begin{bmatrix}[ccc|c]
+      1 &  4 & 6 & -7\\
+      0 & 1  & 2 & -3\\
+      0 &  0 & 1 & 2
+    \end{bmatrix}
+\)
+}{3in}[%
+  \begin{flushright}
+    \large
+    $x = $ \gap{9}\\[0.5\baselineskip]
+    $y = $ \gap{-7}\\[0.5\baselineskip]
+    $z = $ \gap{2}
+  \end{flushright}
+  ]
