@@ -102,11 +102,9 @@
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "latexmk-BOTH 🔃",
+            "name": "latexmk-TEACHER",
             "tools": [
-                "latexmk-TEACHER",
-                "latexmk-STUDENT",
-                "add-honors-prefix",
+                "latexmk-TEACHER"
             ]
         },
         {
@@ -116,9 +114,11 @@
             ]
         },
         {
-            "name": "latexmk-TEACHER",
+            "name": "latexmk-BOTH 🔃",
             "tools": [
-                "latexmk-TEACHER"
+                "latexmk-TEACHER",
+                "latexmk-STUDENT",
+                "add-honors-prefix",
             ]
         },
         {
