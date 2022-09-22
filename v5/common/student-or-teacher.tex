@@ -20,7 +20,7 @@
 %
 % #1 the content 
 % #2 text color
-\NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\ECFAugie\MTversion{augie}\color{#1}#2}\else{}\fi}
+\NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\textcolor{#1}{\ECFAugie\MTversion{augie}#2}}\else{}\fi}
 \newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
 
 % Set a macro to be the value of the env. var. 
