@@ -92,6 +92,7 @@
             "name": "delete-Notes-PDFs",
             "command": "rm",
             "args": [
+                "-f",
                 "%DOCFILE%.pdf", 
                 "%DOCFILE%-TEACHER.pdf", 
                 "H-%DOCFILE%.pdf",
@@ -101,6 +102,15 @@
         },
     ],
     "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk-BOTH",
+            "tools": [
+                "delete-Notes-PDFs",
+                "latexmk-TEACHER",
+                "latexmk-STUDENT",
+                "add-honors-prefix"
+            ]
+        },
         {
             "name": "latexmk-TEACHER",
             "tools": [
@@ -114,21 +124,13 @@
             ]
         },
         {
-            "name": "latexmk-BOTH 🔃",
-            "tools": [
-                "latexmk-TEACHER",
-                "latexmk-STUDENT",
-                "add-honors-prefix",
-            ]
-        },
-        {
-            "name": "add-honors-prefix 🔃",
+            "name": "add-honors-prefix",
             "tools": [
                 "add-honors-prefix"
             ]
         },
         {
-            "name": "delete-Notes-PDFs 🔃",
+            "name": "delete-Notes-PDFs",
             "tools": [
                 "delete-Notes-PDFs"
             ]
