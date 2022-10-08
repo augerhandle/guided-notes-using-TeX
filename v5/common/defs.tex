@@ -4,6 +4,55 @@
 \newcommand{\myEmph}[1]{{\bfseries\itshape#1}}
 
 % ---------------------------------------------------------------------------
+% Draw a circle around the argument
+% ---------------------------------------------------------------------------
+\newcommand*\mycirc[1]{%
+  \begin{tikzpicture}
+    \node[draw,circle,inner sep=2pt] {#1};
+  \end{tikzpicture}}
+%
+%-----------------------------------------------------------------------------------------
+% A command to insert the "scaffolding" for the reverse box method.
+%
+% #1 : exponent on the variable in the upper-left 
+% #2 : exponent on the variable in the upper-right and lower-left
+%-----------------------------------------------------------------------------------------
+\NewDocumentCommand{\myReverseBox}{O{2} O{\text{\:}}}{
+    \small
+    \mycirc{1}\underline{\myEmph{Rewrite:}} \fbox{ \phantom{$ax^m + bx^n + c$} }\\[0.25\onelineskip]
+    \mycirc{2}\underline{\myEmph{Constants:}} 
+    \begin{tabular}{llll}
+        $a = $ & \fbox{\phantom{999}}\\
+        $b = $ & \fbox{\phantom{999}}& $a\cdot c = $ & \fbox{\phantom{999}}\\ 
+        $c = $ & \fbox{\phantom{999}}\\
+    \end{tabular}\\[0.25\onelineskip]
+    \mycirc{3}\underline{\myEmph{T-chart:}}\\[0.1\onelineskip]
+    \begin{tabular}{c|c}
+        factors of \fbox{\phantom{999}} & sum (look for \fbox{\phantom{999}}~) \\
+        \hline\hline 
+        & \\ 
+        & \\
+        & \\
+        & \\
+    \end{tabular}\\[0.25\onelineskip]
+    \mycirc{4}\mycirc{5}\underline{\myEmph{reverse box:}}\\[0.1\onelineskip]
+    {
+        \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{r||r|r|}
+        \cellcolor{lightgray}&&\\
+        \hline\hline
+        \phantom{GCF~~~}& \phantom{999999}$x^#1$& \phantom{99999}$x^#2$\\
+        \hline
+                         & $x^#2$             & \\
+        \hline
+    \end{tabular}
+    }\\[0.25\onelineskip]
+    \mycirc{6}\underline{\myEmph{result:}} 
+    {
+        \fbox{(\phantom{$9x^2+99$})~(\phantom{$9x^2+99$})}
+    }
+}
+% ---------------------------------------------------------------------------
 % For writing TI-84 instructions it's useful to have a visually
 % distinct way to format the keys.
 % ---------------------------------------------------------------------------
