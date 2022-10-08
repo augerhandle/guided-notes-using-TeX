@@ -17,7 +17,7 @@
 % #1 : exponent on the variable in the upper-left 
 % #2 : exponent on the variable in the upper-right and lower-left
 %-----------------------------------------------------------------------------------------
-\NewDocumentCommand{\myReverseBox}{O{2} O{\text{\:}}}{
+\NewDocumentCommand{\myReverseBox}{mm O{2} O{\text{\:}}}{
     \small
     \mycirc{1}\underline{\myEmph{Rewrite:}} \fbox{ \phantom{$ax^m + bx^n + c$} }\\[0.25\onelineskip]
     \mycirc{2}\underline{\myEmph{Constants:}} 
@@ -41,15 +41,15 @@
     \begin{tabular}{r||r|r|}
         \cellcolor{lightgray}&&\\
         \hline\hline
-        \phantom{GCF~~~}& \phantom{999999}$x^#1$& \phantom{99999}$x^#2$\\
+        \phantom{GCF~~~}& \phantom{999999}$x^#3$& \phantom{99999}$x^#4$\\
         \hline
-                         & $x^#2$             & \\
+                         & $x^#4$             & \\
         \hline
     \end{tabular}
     }\\[0.25\onelineskip]
     \mycirc{6}\underline{\myEmph{result:}} 
     {
-        \fbox{(\phantom{$9x^2+99$})~(\phantom{$9x^2+99$})}
+        \fbox{(\whenSTUDENT{\hspace{0.75in}}\whenTEACHER{#1})~(\whenSTUDENT{\hspace{0.75in}}\whenTEACHER{#2})}
     }
 }
 % ---------------------------------------------------------------------------
