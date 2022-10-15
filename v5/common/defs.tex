@@ -14,42 +14,57 @@
 %-----------------------------------------------------------------------------------------
 % A command to insert the "scaffolding" for the reverse box method.
 %
-% #1 : exponent on the variable in the upper-left 
-% #2 : exponent on the variable in the upper-right and lower-left
+% #1 : variable
+% #2 : first factor in the answer 
+% #3 : second factor in the answer
+% #4 : exponent on the variable in the upper-left 
+% #5 : exponent on the variable in the upper-right and lower-left
 %-----------------------------------------------------------------------------------------
-\NewDocumentCommand{\myReverseBox}{mm O{2} O{\text{\:}}}{
+\NewDocumentCommand{\myReverseBox}{O{x} mm O{2} O{\text{\:}}}{
     \small
-    \mycirc{1}\underline{\myEmph{Rewrite:}} \fbox{ \phantom{$ax^m + bx^n + c$} }\\[0.25\onelineskip]
-    \mycirc{2}\underline{\myEmph{Constants:}} 
-    \begin{tabular}{llll}
-        $a = $ & \fbox{\phantom{999}}\\
-        $b = $ & \fbox{\phantom{999}}& $a\cdot c = $ & \fbox{\phantom{999}}\\ 
-        $c = $ & \fbox{\phantom{999}}\\
-    \end{tabular}\\[0.25\onelineskip]
-    \mycirc{3}\underline{\myEmph{T-chart:}}\\[0.1\onelineskip]
-    \begin{tabular}{c|c}
-        factors of \fbox{\phantom{999}} & sum (look for \fbox{\phantom{999}}~) \\
+    %
+    \mycirc{1}\underline{\myEmph{Rewrite:}}
+        \fbox{ \phantom{$aaax^m + bbbx^n + ccc$} }\\[0.1\onelineskip]
+    %
+    \mycirc{2}\underline{\myEmph{Constants:}}
+    \begin{minipage}{0.75\textwidth}
+        \begin{align*}
+            a = \text{\fbox{\phantom{999}}} \quad
+            b &= \text{\fbox{\phantom{999}}} \quad
+            c = \text{\fbox{\phantom{999}}} \\
+            %
+            a\cdot c &= \text{\fbox{\phantom{999}}}
+        \end{align*}
+    \end{minipage}
+    %
+    \mycirc{3}\underline{\myEmph{T-chart:}}
+    \hfill
+    \begin{tabular}[t]{c|c}
+        \fbox{\phantom{999}} factors & sum (look for \fbox{\phantom{99}}) \\
         \hline\hline 
         & \\ 
         & \\
         & \\
         & \\
-    \end{tabular}%\\[0.25\onelineskip]
-    \mycirc{4}\mycirc{5}\underline{\myEmph{reverse box:}}\\[0.1\onelineskip]
+    \end{tabular}\\[0.1\onelineskip]
+    %
+    \mycirc{4}\mycirc{5}\underline{\myEmph{reverse box:}}
     {
         \renewcommand{\arraystretch}{1.25}
-    \begin{tabular}{r||r|r|}
-        \cellcolor{lightgray}&&\\
-        \hline\hline
-        \phantom{GCF~~~}& \phantom{999999}$x^#3$& \phantom{99999}$x^#4$\\
-        \hline
-                         & $x^#4$             & \\
-        \hline
-    \end{tabular}
-    }\\[0.2\onelineskip]
+        \begin{tabular}[t]{r||r|r|}
+            \cellcolor{lightgray}&&\\
+            \hline\hline
+            \phantom{GCF~~~}& \phantom{999}$#1^#4$& \phantom{999}$#1^#5$\\
+            \hline
+                            & $#1^#5$             & \\
+            \hline
+        \end{tabular}
+    }\\[0.1\onelineskip]
+    %
     \mycirc{6}\underline{\myEmph{result:}} 
     {
-        \fbox{(\whenSTUDENT{\hspace{0.75in}}\whenTEACHER{#1})~(\whenSTUDENT{\hspace{0.75in}}\whenTEACHER{#2})}
+        \setlength\fboxrule{1.5pt}
+        \fbox{(\whenSTUDENT{\phantom{#2}}\whenTEACHER{#2})~(\whenSTUDENT{\phantom{#3}}\whenTEACHER{#3})}
     }
 }
 
@@ -64,26 +79,29 @@
 \NewDocumentCommand{\myFourTermCubicReverseBox}{mm O{x}}{
     \small
     \mycirc{1}\underline{\myEmph{Descending:}} \fbox{ \phantom{$ax^m + bx^n + c$} }\\[0.25\onelineskip]
+    %
     \mycirc{2}\underline{\myEmph{Constants:}} 
     \begin{tabular}{llll}
         $a = $ & \fbox{\phantom{999}} & $b = $ & \fbox{\phantom{999}}\\
         $c = $ & \fbox{\phantom{999}}&  $d = $ & \fbox{\phantom{999}}\\ 
     \end{tabular}\\[0.25\onelineskip]
-
-    \mycirc{3}\mycirc{5}\underline{\myEmph{reverse box:}}\\[0.1\onelineskip]
+    %
+    \mycirc{3}\mycirc{4}\underline{\myEmph{reverse box:}}%\\[0.1\onelineskip]
     {
         \renewcommand{\arraystretch}{1.25}
-    \begin{tabular}{r||r|r|}
-        \cellcolor{lightgray}&&\\
-        \hline\hline
-        \phantom{GCF~~~}& \phantom{999999}$#3^3$& \phantom{99999}$#3^2$\\
-        \hline
-                         & $#3$             & \\
-        \hline
-    \end{tabular}
+        \begin{tabular}[t]{r||r|r|}
+            \cellcolor{lightgray}&&\\
+            \hline\hline
+            \phantom{GCF~~~}& \phantom{999}$#3^3$& \phantom{999}$#3^2$\\
+            \hline
+                            & $#3$             & \\
+            \hline
+        \end{tabular}
     }\\[0.25\onelineskip]
-    \mycirc{6}\underline{\myEmph{result:}} 
+    %
+    \mycirc{5}\underline{\myEmph{result:}} 
     {
+        \setlength\fboxrule{1.5pt}
         \fbox{(\whenSTUDENT{\hspace{0.75in}}\whenTEACHER{#1})~(\whenSTUDENT{\hspace{0.75in}}\whenTEACHER{#2})}
     }
 }
