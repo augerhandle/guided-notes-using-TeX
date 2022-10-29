@@ -22,6 +22,7 @@
 % #2 text color
 \NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\textcolor{#1}{\ECFAugie\MTversion{augie}#2}}\else{}\fi}
 \newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
+\NewDocumentCommand{\myAnswer}{m}{\whenSTUDENT{\phantom{#1}}\whenTEACHER{#1}}
 
 % Set a macro to be the value of the env. var. 
 \getenv[\STUDENTorTEACHER]{STUDENTorTEACHER}

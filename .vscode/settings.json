@@ -37,7 +37,7 @@
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
-            "env": {}
+            "env": {"STUDENTorTEACHER" : "TEACHER"}
         },
         {
             "name": "latexmk-STUDENT",
@@ -102,6 +102,12 @@
         },
     ],
     "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
         {
             "name": "latexmk-BOTH",
             "tools": [
