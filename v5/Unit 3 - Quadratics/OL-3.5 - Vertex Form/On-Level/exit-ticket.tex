@@ -1,0 +1,93 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/assignment-defs}
+\input{../../../common/scaffold}
+\input{../../../common/student-or-teacher}
+\input{../../../common/course-name}
+\input{../../../common/graphs}
+\input{../../../common/document-geometry}
+\input{../../../common/header-footer}
+\input{../../../common/chapter-pagestyle}
+\input{../../../common/objectives}
+\input{../../../common/vocabulary}
+\input{../../../common/concepts}
+\input{../../../common/problems}
+\input{for-whom}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+\forONLEVEL
+\myAssignmentHeader{3.5}{Exit Ticket}
+
+\vspace{-2\onelineskip}
+\myProblemsWithContent[%
+    Sketch the graph of these quadratic functions.
+    Put a \myEmph{dot} at the $x$-intercepts and at the vertex. 
+    Draw the axis of symmetry (a vertical line through the vertex).
+    ]
+{
+    A function in vertex form:
+    \begin{center}
+        $f(x) = (x+1)^2 - 9$
+    \end{center}
+    \tcblower
+    \begin{center}
+        \begin{myTikzpictureGrid}{0.35} {10}{10}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ solid, red, ultra thick, samples=100, domain=-10:10,]
+                { (x+1)**2 - 9 }
+                \draw [loosely dashed,line width=1mm,red] (-1,-10) -- (-1,10);
+                \draw [fill,red] (-1,-9) circle (4mm);
+                \draw [fill,red] (2,0) circle (4mm);
+                \draw [fill,red] (-4,0) circle (4mm);
+            }
+        \end{myTikzpictureGrid}
+    \end{center}
+}
+{
+    A function in standard form:
+    \begin{center}
+        $f(x) = x^2 + 2x - 8$
+    \end{center}
+    \tcblower
+    \begin{center}
+        \begin{myTikzpictureGrid}{0.35} {10}{10}
+            % \tkzText(13,8){$x - y = 0$}
+            \whenTEACHER{
+                \tkzFct[ solid, red, ultra thick, samples=100, domain=-10:10,]
+                { x**2 + 2*x - 8 }
+                \draw [loosely dashed,line width=1mm,red] (-1,-10) -- (-1,10);
+                \draw [fill,red] (-1,-9) circle (4mm);
+                \draw [fill,red] (2,0) circle (4mm);
+                \draw [fill,red] (-4,0) circle (4mm);
+            }
+        \end{myTikzpictureGrid}
+    \end{center}
+}
+
+\vfill 
+
+\myProblems
+{
+    What do you notice about the graphs of problem\#1 and \#2?
+}
+{
+    Evaluate the function 
+    in problem\#1 at $x = -1$.
+    Compare it to the $y$-coordinate of the vertex 
+    in problem \#1. 
+    What do you notice?
+}
+{2.5in}
+
+
+
+\end{document}
