@@ -1,4 +1,18 @@
 % ---------------------------------------------------------------------------
+% A "strut" command
+%
+% I can use this command to squeeze some NEGATIVE vertical space into text 
+% without taking up any horizontal space.
+%
+% #1 descent distance below the baseline
+% ---------------------------------------------------------------------------
+\newcommand{\myDropStrutLength}{-13ex}
+\NewDocumentCommand{\myDropStrut}{O{\myDropStrutLength}}
+{%
+    \rule[#1]{0pt}{0pt}%
+}
+
+% ---------------------------------------------------------------------------
 % A warning box similar to that in the tcolorbox documentation.
 % This is code written by Thomas F. Sturm.
 % See: https://tex.stackexchange.com/questions/307432/tcolorbox-manual-tip-box-how-to-clone

@@ -1,9 +1,10 @@
 \section{Transformation Effects}
-
-This is a \gap{one}-\gap{stop}-\gap{shop} 
-for the effects of 
-$\bm{a}, \bm{h}, \bm{k}$.
-
+\vspace{-0.5\onelineskip}
+\begin{center}
+    A \myEmph{{one}-{stop}-{shop}}
+    for the effects of 
+    $\bm{a}, \bm{h}, \bm{k}$.
+\end{center}
 {
 \small 
 
@@ -14,101 +15,64 @@ $\bm{a}, \bm{h}, \bm{k}$.
     % raster left skip = 0.75in, raster right skip = 0.75in, raster column skip = 0.75in,
     % raster before skip = 0.25in, raster after skip = 0.25in,
 ]
-    \begin{tcolorbox}[]
+    \begin{tcolorbox}[] 
         \centering
+        \myEmph{Transformations}\\
+        {
+            \tiny 
+            $|\bm{a}|, |\bm{h}|, |\bm{k}|$ 
+            \itshape mean \gap{ignore} the sign
+        }
+        %
         \renewcommand{\arraystretch}{1.5}
-        {\bfseries\itshape Which transformations?}\\[1\baselineskip]
-        {\small $|\bm{a}|, |\bm{h}|, |\bm{k}|$ \itshape mean \gap{ignore} the sign}
-        \begin{tabular}[t]{|>{\raggedright}p{1in}|p{1.75in}|}
+        \renewcommand{\myDropStrutLength}{-14.35ex}
+        \begin{tabular}[t]{|l|l|}
             \hline
-            {\itshape vertical} {\bfseries\itshape reflection} 
-            & if $\bm{a}$ is\\ 
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            {\itshape vertical} {\bfseries\itshape stretch} by $|\bm{a}|$
-            &  if $|\bm{a}|$  is\\ 
-            & \\
-            & \\
-            \noalign{\hrule height 0.25pt}
-            {\itshape vertical} {\bfseries\itshape compression} by $|\bm{a}|$
-            &  if $|\bm{a}|$ is\\ 
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            {\itshape vertical shift} {\bfseries\itshape up} by $|\bm{k}|$
-            &  if $\bm{k}$  is\\ 
-            & \\
-            & \\
-            \noalign{\hrule height 0.25pt}
-            {\itshape vertical shift} {\bfseries\itshape down} by $|\bm{k}|$
-            &  if $\bm{k}$  is\\ 
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            {\itshape horizontal shift} {\bfseries\itshape right} by $|\bm{h}|$
-            &  if $\bm{h}$  is\\ 
-            & \\
-            & \\
-            \noalign{\hrule height 0.25pt}
-            {\itshape horizontal shift} {\bfseries\itshape left} by $|\bm{h}|$
-            &  if $\bm{h}$  is\\ 
-            & \\
-            & \\
+            \myAnswer{$a<0$}         & vertical \myEmph{reflection}\myDropStrut \\ 
+            \noalign{\hrule height 1.25pt}
+            \myAnswer{$0 < |a| < 1$} & vertical \myEmph{compression} by $|a|$\myDropStrut \\
+            \noalign{\hrule height 0.1pt}
+            \myAnswer{$|a| > 1$}     & vertical \myEmph{stretch} by $|a|$\myDropStrut \\
+            \noalign{\hrule height 1.25pt}
+            \myAnswer{$h>0$} & horizontal shift \myEmph{right} by $h$\myDropStrut \\
+            \noalign{\hrule height 0.1pt}
+            \myAnswer{$h<0$} & horizontal shift \myEmph{left} by $|h|$\myDropStrut \\
+            \noalign{\hrule height 1.25pt}
+            \myAnswer{$k>0$} & vertical shift \myEmph{up} by $k$\myDropStrut \\
+            \noalign{\hrule height 0.1pt}
+            \myAnswer{$k<0$} & horizontal shift \myEmph{down} by $|k|$\myDropStrut \\
             \hline
         \end{tabular}
     \end{tcolorbox}
-    \begin{tcolorbox}[]
+    %
+    %
+    %
+    \begin{tcolorbox}[] 
         \centering
-        {\bfseries\itshape Attribute values?}\\[2\baselineskip]
-        \renewcommand{\arraystretch}{1.145}
-        \begin{tabular}[t]{|>{\raggedright}p{1in}|p{1.75in}|}
+        \myEmph{Attributes}\\[1\onelineskip]
+        %
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}[t]{|p{1in}|l|}
             \hline
-            {\itshape coordinates of the} {\bfseries\itshape vertex} & \\
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            {\itshape equation of the} {\bfseries\itshape axis of symmetry} & \\
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            {\bfseries\itshape domain} & \\
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            {\bfseries\itshape range} \hspace{0.5in} {\itshape goes up?} & if $\bm{a}$ is\\
-            & \\
-            & \\
-            \noalign{\hrule height 0.25pt}
-            {\bfseries\itshape range} \hspace{0.5in} {\itshape goes down?} & if $\bm{a}$ is\\
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            \makecell[l]{%
-                {\itshape parabola}\\{\bfseries\itshape opens up?}
-            } & if $\bm{a}$ is\\
-            & \\
-            & \\
-            \noalign{\hrule height 0.25pt}
-            \makecell[l]{%
-                {\itshape parabola}\\{\bfseries\itshape opens down?}
-            } & if $\bm{a}$ is\\
-            & \\
-            & \\
-            \noalign{\hrule height 1.5pt}
-            \makecell[l]{%
-                {\itshape vertex is a}\\{\bfseries\itshape minimum?}
-            } & if $\bm{a}$ is\\
-            & \\
-            & \\
-            \noalign{\hrule height 0.25pt}
-            \makecell[l]{%
-                {\itshape vertex is a}\\{\bfseries\itshape maximum?}
-            } & if $\bm{a}$ is\\
-            & \\
-            & \\
-            \hline
-        \end{tabular}    \end{tcolorbox}
+            \myEmph{vertex} & \myAnswer{$(h,k)$} \myDropStrut \\ 
+            \noalign{\hrule height 1.25pt}
+            \myEmph{AOS} & \myAnswer{$x=h$} \myDropStrut \\
+            \noalign{\hrule height 1.25pt}
+            \myEmph{domain} & \myAnswer{$(-\infty,+\infty)$} \\
+            \noalign{\hrule height 0.1pt}
+            \myEmph{range} & $a>0$:\myAnswer{$[k,+\infty)$} \myDropStrut[-3ex]\\
+                  & $a<0$:\myAnswer{$(-\infty,k]$}\myDropStrut[-3ex] \\
+            \noalign{\hrule height 1.25pt}
+            opens \myEmph{up}/\myEmph{down}, 
+            \mbox{vertex} \myEmph{max}/\myEmph{min} & $a>0$:\myAnswer{opens up, min} \myDropStrut \\
+                                      & $a<0$:\myAnswer{opens down, max} \myDropStrut \\
+            \noalign{\hrule height 1.25pt}
+            \myEmph{end behavior} & \myEmph{left end}: \\
+                         & as $x\rightarrow$\myAnswer{$-\infty$,} \myAnswer{$y\rightarrow+\infty$} \myDropStrut\\
+                         & \myEmph{right end}: \\
+                         & as $x\rightarrow$\myAnswer{$+\infty$,} \myAnswer{$y\rightarrow+\infty$} \myDropStrut\\
+            \noalign{\hrule height 1.25pt}
+        \end{tabular}
+    \end{tcolorbox}
 \end{tcbraster}
 
-}
