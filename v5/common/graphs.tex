@@ -32,6 +32,7 @@
 }
 
 
+% ---------------------------------------------------------------------------
 % a numberline 
 % (Must be inside a tikzpicture.)
 %
@@ -39,6 +40,7 @@
 % #2 upper number line limit
 % #3 label font commands
 %
+% ---------------------------------------------------------------------------
 \NewDocumentCommand{\myDrawNumberline}{ o m O{\ttfamily\tiny} }
 {
         %
@@ -54,12 +56,14 @@
 }
 
 
+% ---------------------------------------------------------------------------
 % numberline labels
 % (Must be inside a tikzpicture.)
 %
 % #1 list of x-coordinates for plain labels
 % #3 plain label font commands
 %
+% ---------------------------------------------------------------------------
 \NewDocumentCommand{\myDrawNumberlineLabels}{ m O{\ttfamily\tiny} }
 {
     \foreach \i in {#1} {
@@ -69,24 +73,28 @@
 }
 
 
+% ---------------------------------------------------------------------------
 % numberline point and label
 % (Must be inside a tikzpicture.)
 %
 % #1 x-coordinates for the point
 % #2 point circle fill color
 %
+% ---------------------------------------------------------------------------
 \NewDocumentCommand{\myDrawNumberlineCircle}{ m m }
 {
         \draw[black,thick,fill=#2] (#1,0) circle (0.175 cm);
 }
 
 
+% ---------------------------------------------------------------------------
 % numberline point and label
 % (Must be inside a tikzpicture.)
 %
 % #1 x-coordinates for the point
 % #2 point circle fill color
 %
+% ---------------------------------------------------------------------------
 \NewDocumentCommand{\myDrawNumberlineCircleAndLabel}{ m m }
 {
         \draw[black,thick,fill=#2] (#1,0) circle (0.175 cm);
@@ -128,10 +136,15 @@
 }
 
 
+% ---------------------------------------------------------------------------
+% #1 what kind of shape to draw at the point
+% #2 size of the shape
+% ---------------------------------------------------------------------------
 \NewDocumentCommand{\myDrawPointA}{ O{circle} O{4pt}} {
     \tkzDrawPoint[shape=#1, size=#2,](A)
 }
 
+% ---------------------------------------------------------------------------
 % A command to draw a grid with dots at the grid points 
 % with the objective of manually constructing slope fields.
 %
@@ -139,6 +152,7 @@
 % #2 dy/dx equation
 % #3 upper limits of x & y (symmetric so also is the lower limit of x & y)
 %
+% ---------------------------------------------------------------------------
 \NewDocumentCommand{\mySlopeFieldGrid}{ O{2in} mm }{
     \resizebox{#1}{!}
     {
