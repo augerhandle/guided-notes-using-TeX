@@ -182,30 +182,35 @@
 % Use \renewcommand to redefine this default. (This avoids specifying the arg each time.)
 \newcommand{\myIntervalScale}{0.5}
 
+% The default font size used for the interval endpoint labels.
+\newcommand{\myIntervalTextSize}{\footnotesize}
+
 % Draw an interval with two circles and a line between them.
 \NewDocumentCommand{\myAndInterval}{O{\myIntervalScale} m O{#2}}{
+    \myIntervalTextSize
     \begin{tikzpicture}[scale=#1]
         % a straight line segment
         \draw[-,] (0,0) -- (10,0);
         % the thicker segment
-        \draw[line width=1.1mm,] (3,0) -- (7,0);
+        \draw[line width=1mm,] (3,0) -- (7,0);
         % the labels
-        \node[circle,inner sep=0.4em,draw=black,fill=#2,line width=0.7mm,label=below:{$L$}] at (3,0) {};
-        \node[circle,inner sep=0.4em,draw=black,fill=#3,line width=0.7mm,label=below:{$R$}] at (7,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$L$}] at (3,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$R$}] at (7,0) {};
     \end{tikzpicture}
 }
 
 % Draw an interval with two circles with outward-facing arrows.
 \NewDocumentCommand{\myOrInterval}{O{\myIntervalScale} m O{#2}}{
+    \myIntervalTextSize
     \begin{tikzpicture}[scale=#1]
         % a straight line segment
-        \draw[<->, arrows={{Latex[width=5mm, length=4mm]}-{Latex[width=5mm, length=4mm]}}] 
+        \draw[<->, arrows={{Latex[width=4mm, length=4mm]}-{Latex[width=4mm, length=4mm]}}] 
             (0,0) -- (10,0);
         % the thicker segment
-        \draw[line width=1.1mm,] (0.25,0) -- (3,0); % trim off 0.25 to avoid the arrow
-        \draw[line width=1.1mm,] (7,0) -- (9.75,0); % trim off 0.25 to avoid the arrow
+        \draw[line width=1mm,] (0.25,0) -- (3,0); % trim off 0.25 to avoid the arrow
+        \draw[line width=1mm,] (7,0) -- (9.75,0); % trim off 0.25 to avoid the arrow
         % the labels
-        \node[circle,inner sep=0.4em,draw=black,fill=#2,line width=0.7mm,label=below:{$L$}] at (3,0) {};
-        \node[circle,inner sep=0.4em,draw=black,fill=#3,line width=0.7mm,label=below:{$R$}] at (7,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$L$}] at (3,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$R$}] at (7,0) {};
     \end{tikzpicture}
 }
