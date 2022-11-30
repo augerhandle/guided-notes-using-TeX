@@ -176,6 +176,8 @@
 % #1 scale
 % #2 left circle fill color 
 % #3 right circle fill color 
+% #4 left bound 
+% #5 right bound
 % ---------------------------------------------------------------------------
 
 % The default scale used by the interval commands.
@@ -186,7 +188,7 @@
 \newcommand{\myIntervalTextSize}{\footnotesize}
 
 % Draw an interval with two circles and a line between them.
-\NewDocumentCommand{\myAndInterval}{O{\myIntervalScale} m O{#2}}{
+\NewDocumentCommand{\myAndInterval}{O{\myIntervalScale} m O{#2} O{L} O{R}}{
     \myIntervalTextSize
     \begin{tikzpicture}[scale=#1]
         % a straight line segment
@@ -194,13 +196,13 @@
         % the thicker segment
         \draw[line width=1mm,] (3,0) -- (7,0);
         % the labels
-        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$L$}] at (3,0) {};
-        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$R$}] at (7,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$#4$}] at (3,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$#5$}] at (7,0) {};
     \end{tikzpicture}
 }
 
 % Draw an interval with two circles with outward-facing arrows.
-\NewDocumentCommand{\myOrInterval}{O{\myIntervalScale} m O{#2}}{
+\NewDocumentCommand{\myOrInterval}{O{\myIntervalScale} m O{#2} O{L} O{R}}{
     \myIntervalTextSize
     \begin{tikzpicture}[scale=#1]
         % a straight line segment
@@ -210,7 +212,7 @@
         \draw[line width=1mm,] (0.25,0) -- (3,0); % trim off 0.25 to avoid the arrow
         \draw[line width=1mm,] (7,0) -- (9.75,0); % trim off 0.25 to avoid the arrow
         % the labels
-        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$L$}] at (3,0) {};
-        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$R$}] at (7,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$#4$}] at (3,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$#5$}] at (7,0) {};
     \end{tikzpicture}
 }
