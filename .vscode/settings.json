@@ -2,7 +2,7 @@
     "latex-workshop.message.warning.show" : false,
     "latex-workshop.message.error.show" : false,
     "editor.fontSize": 14,
-    "latex-workshop.view.pdf.zoom": "page-fit",
+    "latex-workshop.view.pdf.zoom": "page-width",
     "latex-workshop.texcount.interval": 2000,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.subfolder.enabled": true,
