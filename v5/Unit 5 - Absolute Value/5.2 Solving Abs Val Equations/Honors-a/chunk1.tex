@@ -1,0 +1,74 @@
+\section{Introduction}
+
+You are learning \gap{different} ways to solve \gap{different} kinds of equations.
+
+\vspace{1\onelineskip}
+
+\begin{tcbraster}[
+    raster equal height, 
+    raster columns = 3,
+    raster column skip = 0.5in,
+]
+    \begin{tcolorbox}[colback=white,boxrule=0.5pt,]
+        \raggedright
+        \begin{center}
+            {\large\myEmph{linear}}\\[0.5\onelineskip]
+            $5x +3 = 13$\\[0.25\baselineskip]
+            {\huge$\Downarrow$}\\
+            $x =$ \gap{$2$}
+            \whenTEACHER{
+                \\ \tiny Get x by itself.
+            }
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[colback=white,boxrule=0.5pt,]
+        \raggedright
+        \begin{center}
+            {\large\myEmph{quadratic}}\\[0.5\onelineskip]
+            $x^2 + 5x + 6 = 0$\\[0.25\baselineskip]
+            {\huge$\Downarrow$}\\[0.2\baselineskip]
+            $x =$ \gap{$-2$}, \gap{$-3$}
+            \whenTEACHER{
+                \\ \tiny everything = 0. Factor (or quad. form.)
+            }
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[colback=white,boxrule=3pt,]
+        \raggedright
+        \begin{center}
+            {\large\myEmph{absolute value}}\\[0.5\onelineskip]
+            $|4x -2 | = 10$\\[0.25\baselineskip]
+            {\huge$\Downarrow$}\\[0.2\baselineskip]
+            $x =$ \gap{$-2$}, \gap{$3$}
+            \whenTEACHER{
+                \\ \tiny TODAY! ... split into 2 parts
+            }
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+
+\myWideProblemWithContent[Solve this absolute value equation.]
+{
+    $|x| = 4$
+    \tcblower
+    The key to solving \gap{absolute} \gap{value} equations 
+    is to think about \gap{distance}:\\
+    \begin{center}
+        \tcbox[center,colback=white,]{This distance of $x$ from the origin is $4$.}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \whenTEACHER{
+                \draw [->,line width=3pt,red] (-4,-2) -- (-4,-1);
+                \myDrawNumberlineCircle{-4}{red}
+                %
+                \draw [->,line width=3pt,red] (4,-2) -- (4,-1);
+                \myDrawNumberlineCircle{4}{red}
+            }
+            \myDrawNumberline{5}
+        \end{tikzpicture}\\
+    \end{center}
+    \whenSTUDENT{\vspace{3\onelineskip}}
+    %
+    To solve absolute value equations,
+    \gap{split} them into \gap{two} \gap{parts}.
+}
