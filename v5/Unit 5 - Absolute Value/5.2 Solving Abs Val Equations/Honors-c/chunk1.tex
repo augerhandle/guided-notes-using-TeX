@@ -1,0 +1,193 @@
+The key to solving absolute value 
+\myEmph{equations} was to think about \gap{distance}.
+
+\begin{tcolorbox}[width=4in, center, colback=white,]
+    $|2x-1| = 3$
+    \tcblower
+    \begin{center}
+        \begin{tcolorbox}[center,colback=white,boxrule=0.5pt,]
+            \small The distance of $2x-1$ from the origin is \myEmph{equal to} $3$.
+        \end{tcolorbox}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \whenTEACHER{
+                % \draw [->,line width=3pt,red] (-3,-2) -- (-3,-1);
+                \draw[red,line width=2.5pt,fill=red] (-3,0) circle (0.15 cm);
+                %
+                % \draw [->,line width=3pt,red] (3,-2) -- (3,-1);
+                \draw[red,line width=2.5pt,fill=red] (3,0) circle (0.15 cm);
+                }
+            \myDrawNumberline{5}
+        \end{tikzpicture}\\
+        \whenSTUDENT{\vspace{3\onelineskip}}
+        %
+        \whenTEACHER{
+            {
+                $2x-1 = -3$
+            }
+            \hfil
+            {
+                $2x-1 = 3$
+            }
+        }
+    \end{center}
+\end{tcolorbox}
+
+Similarly,
+the key to solving absolute value
+\myEmph{inequalities} is to think about \gap{distance}.
+
+\begin{tcbraster}[
+    raster columns = 2,
+    raster equal height,
+    colback = white,
+    ]
+    \begin{tcolorbox}
+        $|2x-1| > 3$ 
+        \tcblower
+        \begin{center}
+            \begin{tcolorbox}[center,colback=white,boxrule=0.5pt,]
+                \small The distance of $2x-1$ from the origin is \myEmph{greater than} $3$.
+            \end{tcolorbox}
+            \begin{tikzpicture}[scale=0.7]
+                \myDrawNumberlineCircle{0}{white}
+                \whenTEACHER{
+                    \draw [->,line width=3pt,red] (-3,0) -- (-5,0);
+                    \draw[red,line width=3pt,fill=white] (-3,0) circle (0.175 cm);
+                    %
+                    \draw [->,line width=3pt,red] (3,0) -- (5,0);
+                    \draw[red,line width=3pt,fill=white] (3,0) circle (0.175 cm);
+                }
+                \myDrawNumberline{5}
+            \end{tikzpicture}\\
+            \whenSTUDENT{\vspace{2\onelineskip}}
+            %
+            \whenTEACHER{
+                {
+                    $2x-1 < -3$
+                }
+                \hfil
+                {
+                    $2x-1 > 3$
+                }
+            }
+            \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        $|2x-1| \ge 3$ 
+        \tcblower
+        \begin{center}
+            \begin{tcolorbox}[center,colback=white,boxrule=0.5pt,]
+                \small The distance of $2x-1$ from the origin is \myEmph{greater than or equal to} $3$.
+            \end{tcolorbox}
+            \begin{tikzpicture}[scale=0.7]
+                \myDrawNumberlineCircle{0}{white}
+                \whenTEACHER{
+                    \draw [->,line width=3pt,red] (-3,0) -- (-5,0);
+                    \draw[red,line width=3pt,fill=red] (-3,0) circle (0.175 cm);
+                    %
+                    \draw [->,line width=3pt,red] (3,0) -- (5,0);
+                    \draw[red,line width=3pt,fill=red] (3,0) circle (0.175 cm);
+                }
+                \myDrawNumberline{5}
+            \end{tikzpicture}\\
+            \whenSTUDENT{\vspace{2\onelineskip}}
+            %
+            \whenTEACHER{
+                {
+                    $2x-1 < -3$
+                }
+                \hfil
+                {
+                    $2x-1 > 3$
+                }
+            }
+            \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        $|2x-1| < 3$ 
+        \tcblower
+        \begin{center}
+            \begin{tcolorbox}[center,colback=white,boxrule=0.5pt,]
+                \small The distance of $2x-1$ from the origin is \myEmph{less than} $3$.
+            \end{tcolorbox}
+            \begin{tikzpicture}[scale=0.7]
+                \myDrawNumberlineCircle{0}{white}
+                \whenTEACHER{
+                    \draw [-,line width=3pt,red] (-3,0) -- (3,0);
+                    \draw[red,line width=3pt,fill=white] (-3,0) circle (0.175 cm);
+                    \draw[red,line width=3pt,fill=white] (3,0) circle (0.175 cm);
+                }
+                \myDrawNumberline{5}
+            \end{tikzpicture}\\
+            \whenSTUDENT{\vspace{2\onelineskip}}
+            %
+            \whenTEACHER{
+                {
+                    $-3 < 2x-1 < 3$
+                }
+            }
+            \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        $|2x-1| \le 3$ 
+        \tcblower
+        \begin{center}
+            \begin{tcolorbox}[center,colback=white,boxrule=0.5pt,]
+                \small The distance of $2x-1$ from the origin is \myEmph{less than or equal to} $3$.
+            \end{tcolorbox}
+            \begin{tikzpicture}[scale=0.7]
+                \myDrawNumberlineCircle{0}{white}
+                \whenTEACHER{
+                    \draw [-,line width=3pt,red] (-3,0) -- (3,0);
+                    \draw[red,line width=3pt,fill=red] (-3,0) circle (0.175 cm);
+                    \draw[red,line width=3pt,fill=red] (3,0) circle (0.175 cm);
+                }
+                \myDrawNumberline{5}
+            \end{tikzpicture}\\
+            \whenSTUDENT{\vspace{2\onelineskip}}
+            %
+            \whenTEACHER{
+                {
+                    $-3 \le 2x-1 \le 3$
+                }
+            }
+            \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+
+
+\begin{myConceptSteps}{To solve equations of the form $|ax+b| = P|cx+d|$\dots}
+    \myStep{opposite sides}{Ensure that the expressions are on \gap{opposite} sides of the equation.}
+    \myStep{split}{%
+        Write two equations for the \gap{negative} and \gap{positive} cases.
+        \begin{itemize}[nosep]
+            \item $ ax+b = P(cx+d) $
+            \item $ ax+b = -P(cx+d) $
+            \item These equations do \gap{not} have absolute values in them!
+        \end{itemize}
+    }
+    \myStep{solve}{Solve each of the \gap{simpler} equations.}
+    % \myStep{check}{Reject any extraneous solutions.
+    %     \begin{itemize}[nosep]
+    %         \item You find extraneous solutions by \gap{substituting} your 
+    %         solutions back into the \gap{original} equation.
+    %     \end{itemize}
+    % }
+\end{myConceptSteps}
+
+\myProblems[%
+    Solve these equations. 
+    ]
+    {
+        $|x+8| = 2|x+20|$
+    }
+    {
+        $|x+3| = |x+7|$
+    }
+      {11\onelineskip}  
+      [\myAnswer{$-32,-16$}]
+      [\myAnswer{$0, -5$}]
+
+
+
