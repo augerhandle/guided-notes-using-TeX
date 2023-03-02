@@ -1,0 +1,69 @@
+\section{Describing Transformations}
+We will focus on \myEmph{three} kinds of transformations
+of the absolute value parent function:
+\begin{itemize}[nosep]
+    \item horizontal shifts \gap{left} \gap{or} \gap{right}
+    \item vertical shifts \gap{up} \gap{or} \gap{down}
+    \item \gap{reflections} across the $x$-axis
+\end{itemize}
+
+\begin{myConceptSteps}{To decide which of these transformations is involved for a particular function\dots}
+    \myStep{graph}{Look at the graph the function using a \gap{TI-84} calculator.}
+    \myStep{shifts}{Use the location of the \gap{vertex} to decide what kinds of shifts are involved.}
+    \myStep{reflection}{Decide if there is a reflection based on whether the graph opens \gap{up} or opens \gap{down}.}
+\end{myConceptSteps}
+
+\myProblemsWithContent[%
+    For these problems, do the following things. (Use the TI-84 to help you.)
+    \begin{itemize}[nosep]
+        \item Sketch the graph of the absolute value parent function.
+        \item Sketch the graph of $g(x)$.
+        \item Describe what transformations are involved in $g(x)$.
+    \end{itemize}
+    ]
+{
+    $g(x) = |x+2| - 5$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.4} {6}{6}
+        \whenTEACHER{
+            \tkzFct[ dashed, thick, samples=100, domain=-6:6,]{abs(x)}
+            \draw[draw=red, fill=red] (0,0) circle (2.5mm);    
+            \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{abs(x+2)-5}
+            \draw[draw=red, fill=red] (-2,-5) circle (2.5mm);    
+            \tkzText(0,-5){\tiny$(-2,-5)$}
+        }
+    \end{myTikzpictureGrid}
+    \whenTEACHER{
+        \tiny 
+        \begin{itemize}[nosep]
+            \item shift \gap{LEFT} by \gap{2} 
+            \item shift \gap{DOWN} by \gap{5}
+        \end{itemize}
+    }
+}
+{
+    $g(x) = -|x| +3 $
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.4} {6}{6}
+        \whenTEACHER{
+            \tkzFct[ dashed, thick, samples=100, domain=-6:6,]{abs(x)}
+            \draw[draw=red, fill=red] (0,0) circle (2.5mm);    
+            \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-abs(x)+3}
+            \draw[draw=red, fill=red] (0,3) circle (2.5mm);    
+            \tkzText(1.5,3.5){\tiny$(0,4)$}
+        }
+    \end{myTikzpictureGrid}
+    \whenTEACHER{
+        \tiny 
+        \begin{itemize}[nosep]
+            \item \gap{REFLECT} across the $x$-axis 
+            \item shift \gap{UP} by \gap{3}
+        \end{itemize}
+    }
+}
+
+\whenTEACHER{
+    \tiny 
+    Make sure to explain that it's not sufficient to say ``left'' or ``right''.
+    They must tell us BY HOW MUCH.
+}
