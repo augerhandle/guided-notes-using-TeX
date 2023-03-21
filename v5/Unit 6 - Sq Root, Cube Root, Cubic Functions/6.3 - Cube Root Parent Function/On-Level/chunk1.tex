@@ -8,7 +8,7 @@ Parent functions we have seen:
     \begin{tcolorbox}[]
         \begin{center}
             \small
-            \begin{myTikzpictureGrid}{0.2} {9}[-2]{6}
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
                 \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x*x}
                 \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
             \end{myTikzpictureGrid}
@@ -18,21 +18,22 @@ Parent functions we have seen:
     \begin{tcolorbox}[]
         \begin{center}
             \small
-            \begin{myTikzpictureGrid}{0.2} {9}[-2]{6}
-                \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{abs(x)}
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:-0.01,]{1/x}
+                \tkzFct[ solid, ultra thick, samples=100, domain=0.01:10,]{1/x}
                 \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
             \end{myTikzpictureGrid}
-            \myEmph{absolute value}  $f(x) = |x|$
+            \myEmph{reciprocal}  $f(x) = \frac{1}{x}$
         \end{center}
     \end{tcolorbox}
     \begin{tcolorbox}[]
         \begin{center}
             \small
-            \begin{myTikzpictureGrid}{0.2} {9}[-2]{6}
-                \tkzFct[ solid, ultra thick, samples=500, domain=-10:10,]{sqrt(x)}
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{abs(x)}
                 \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
             \end{myTikzpictureGrid}
-            \myEmph{square root}  $f(x) = \myRoot{x}$
+            \myEmph{absolute value}  $f(x) = |x|$
         \end{center}
     \end{tcolorbox}
 \end{tcbraster}
