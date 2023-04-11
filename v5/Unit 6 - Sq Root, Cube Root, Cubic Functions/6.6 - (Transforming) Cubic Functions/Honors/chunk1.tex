@@ -1,0 +1,170 @@
+\vfill 
+This year's parent functions:
+
+\begin{tcbraster}[
+    raster columns = 4,
+    raster equal height,
+    colback = white,
+    ]
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x*x}
+            \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+        \end{myTikzpictureGrid}
+        \myEmph{quadratic:} $f(x) = x^2$
+    \end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:-0.01,]{1/x}
+            \tkzFct[ solid, ultra thick, samples=100, domain=0.01:10,]{1/x}
+            \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+        \end{myTikzpictureGrid}
+        \myEmph{reciprocal:} 
+        $f(x) = \frac{1}{x}$
+    \end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{abs(x)}
+            \draw[black,ultra thick,fill=red] (0,0) circle (0.4 cm);
+        \end{myTikzpictureGrid}
+        \myEmph{absolute value:}  $f(x) = |x|$
+    \end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            \tkzFct[ solid, ultra thick, samples=1000, domain=-10:10,]{sqrt(x)}
+            \draw[black,ultra thick,fill=red] (0,0) circle (0.4 cm);
+        \end{myTikzpictureGrid}
+        \myEmph{square root:}  $f(x) = \myRoot{x}$
+    \end{center}
+\end{tcolorbox}
+%
+%
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            \tkzFct[ solid, ultra thick, samples=1000, domain=-10:0,]{-(-x)**(1.0/3.0)}
+            \tkzFct[ solid, ultra thick, samples=1000, domain=0:10,]{(x)**(1.0/3.0)}
+            \draw[black,ultra thick,fill=red] (0,0) circle (0.4 cm);
+        \end{myTikzpictureGrid}
+        \myEmph{cube root:} $f(x) = \myRoot[3]{x}$
+    \end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-5:5,]{x**3}
+            % \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \node[draw=black,fill=blue!10,]{\huge\bfseries ?};
+        \end{myTikzpictureGrid}
+        \qquad\myEmph{cubic:}\qquad  $f(x) = x^3$ %whitespace to put "cubic" on a line by itself
+    \end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            % \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{abs(x)}
+            % \draw[black,ultra thick,fill=red] (0,0) circle (0.4 cm);
+            \node[draw=black,fill=blue!10,]{\huge\bfseries ?};
+        \end{myTikzpictureGrid}
+        \myEmph{exponential:}  $f(x) = b^x$
+    \end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[]
+    \begin{center}
+        \small
+        \begin{myTikzpictureGrid}{0.2} {7}{6}
+            % \tkzFct[ solid, ultra thick, samples=1000, domain=-10:0,]{-(-x)**(1.0/3.0)}
+            % \tkzFct[ solid, ultra thick, samples=1000, domain=0:10,]{(x)**(1.0/3.0)}
+            % \draw[black,ultra thick,fill=red] (0,0) circle (0.4 cm);
+            \node[draw=black,fill=blue!10,]{\huge\bfseries ?};
+        \end{myTikzpictureGrid}
+        \myEmph{logarithm:}  $f(x) = log_b{x}$
+    \end{center}
+\end{tcolorbox}
+\end{tcbraster}
+\vfill
+
+
+
+\section{Cubic Parent Function}
+
+\begin{tcolorbox}[center, width=1.75in,]
+    \large
+    \centering
+    $ f(x) = x^3 $
+\end{tcolorbox}
+
+\begin{minipage}{0.5\textwidth}
+    \centering 
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{r|p{1.25in}|c}
+        $x$ 
+            & $y = x^3$    
+            & $(x,y)$\\ \hline\hline
+        $-2$ 
+            & 
+            & \phantom{$(-9,9)$}\\ \hline
+        $-1.5$ 
+            & 
+            & \\ \hline
+        $-1$ 
+            & 
+            & \\ \hline
+        $-0.5$ 
+            & 
+            & \\ \hline
+        $0$ 
+            &    
+            & \\ \hline
+        $0.5$ 
+            &    
+            & \\ \hline
+        $1$ 
+            &    
+            & \\ \hline
+        $1.5$ 
+            &    
+            & \\ \hline
+        $2$ 
+            &     
+            & \\ \hline
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.35} {5}{10}
+        % \tkzText(13,8){$x - y = 0$}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=100, domain=-3:3,]{x**3}
+        }
+        % \tkzText(-13,7.25){$x + 2y = 6$}
+    \end{myTikzpictureGrid}
+\end{minipage}
+
+The attributes of the cubic \myEmph{parent function} are
+\begin{center}
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{r|l}
+        \myEmph{attribute} & \myEmph{value} \\ 
+        \midrule
+        inflection point & \gap{$(0,0)$} \\
+        domain           & \gap{all} \gap{real} \gap{numbers} \\ 
+        range            & \gap{all} \gap{real} \gap{numbers} \\ 
+        left end behavior& as $x \rightarrow$ \gap{$-\infty$}, as $y \rightarrow$ \gap{$-\infty$} \\ 
+        right end behavior& as $x \rightarrow$ \gap{$\infty$}, as $y \rightarrow$ \gap{$\infty$} \\
+    \end{tabular}
+\end{center}
