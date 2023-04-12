@@ -1,0 +1,186 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+\iftstu 
+    \dashundergapssetup{gap-font={\ECFAugie\MTversion{augie}\color{red}},}
+\fi
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{7.2}{Desmos Marbleslide Activity}
+%-----------------------------------------------------------------------------------------
+
+This Desmos activity is called a ``marbleslide'' for obvious reasons. 
+For this assignment, go through the screens of the activity and answer the following 
+questions.
+
+\vspace{1\onelineskip}
+
+\myProblems[Screen 2]
+{
+    Describe what happened when you clicked {\sffamily Launch}.
+}
+{
+    What is the purpose of the blue curves?
+}
+{1in}
+
+
+\myProblemsWithContent[Screen 3]
+{
+    The function $f$ started out as $f(x) = b^{x-h}$. 
+    What were the starting values of $b$ and $h$?
+    \tcblower
+    \begin{itemize}[nosep]
+        \item $b = $ \gap{999}
+        \item $h = $ \gap{999}
+    \end{itemize}
+}
+{
+    What did you change $b$ and $h$ to?
+    \tcblower
+    \begin{itemize}[nosep]
+        \item $b = $ \gap{999}
+        \item $h = $ \gap{999}
+    \end{itemize}
+}
+
+\myProblems[Screen 5]
+{
+    Desmos defines the domain as an expression in curly braces.
+    You {\itshape had} to change the domain on this screen. 
+    Why?
+}
+{
+    Besides the change to the domain, 
+    what transformation allowed you to roll over all the stars?
+}
+{1in}
+
+\myProblems[Screen 6]
+{
+    The function $f$ started out as exponential {\itshape growth}, 
+    but it grew too fast. 
+    Is the function that you ended up with ``growth'' or ``decay''?
+}
+{
+    You should have changed the base for function $f$.
+    What was the value of the base that you ended up with?
+}
+{1in}
+
+\myProblems[Screen 7]
+{
+    What kind of function do you need  
+    for the marbles to roll over all the stars on this screen, 
+    {\itshape growth} or {\itshape decay}?
+}
+{
+    Describe all the changes you made to the function
+    so that the marbles rolled over all the stars.
+}
+{1in}
+
+\myProblems[Screens 9 \& 11]
+{
+    What kind of transformation do you get 
+    when you change $-3$ to $+3$ on Screen 9?
+}
+{
+    What kind of transformation do you get 
+    when you change $-4$ to $+4$ on Screen 1?
+}
+{1in}
+
+\myProblems[Screens 12 \& 13]
+{
+    Describe how the graph changes 
+    when you change the base from $2$ to $1.2$.
+    Is that a switch from {\itshape growth} to {\itshape decay}?
+}
+{
+    What kind of change would you have to make 
+    to the base to change it from {\itshape growth} 
+    to {\itshape decay}? 
+    (You may experiment on Screen 13 if you need to.)
+}
+{1in}
+
+\myProblems[Screens 14 \& 15]
+{
+    Describe your strategy for changing the function. 
+    What did you change, and why?
+}
+{
+    Did it work?
+}
+{1in}
+
+\myProblems[Screen 17]
+{
+    How many functions did you end up with on Screen 17?
+}
+{
+    Describe your strategy on Screen 17.
+}
+{1in}
+
+\myProblems[Screen 18]
+{
+    Is it true that you {\itshape must} have a domain modifier 
+    (the curly braces) 
+    on at least one function for Screen 18? 
+    Why?
+}
+{
+    How many functions did you use on Screen 18? 
+    Do you think that's the fewest needed?
+}
+{1in}
+
+
+\myProblems[Screen 21]
+{
+    When I first create Screen 21, 
+    I thought that it might be impossible.
+    Why do you think I thought that?
+}
+{
+    I was wrong. Screen 21 is not impossible. 
+    Describe how you solved it.
+}
+{1in}
+
+\myProblems[Screen 23]
+{
+    How many functions did you use for Screen 23?
+}
+{
+    Do you think Screen 23 is possible with just 
+    {\itshape one function}? 
+    Explain why or why not.
+}
+{1in}
+
+\end{document}
