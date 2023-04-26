@@ -1,0 +1,79 @@
+\section{Introduction}
+
+
+\begin{tcbraster}[ 
+    raster columns = 2,
+    raster left skip = 0.5in, raster right skip = 0.5in, raster column skip = 0.75in,
+    raster equal height,
+    colback=white, colframe=white,
+    ]
+    \begin{tcolorbox}[]
+        \large
+        \begin{center}
+            \myEmph{exponential function}\\[0.5\onelineskip]
+            \renewcommand{\arraystretch}{1.1}
+            \begin{tabular}{r|l}
+                \toprule
+                $x$ & $y=2^x$ \\ 
+                \midrule
+                -3 & \whenTEACHER{\tiny $\frac{1}{8}$}\\
+                -2 & \whenTEACHER{\tiny $\frac{1}{4}$}\\
+                -1 & \whenTEACHER{\tiny $\frac{1}{2}$}\\
+                0 & $1$\\
+                1 & \whenTEACHER{\tiny 2}\\
+                2 & \whenTEACHER{\tiny 4}\\
+                3 & \whenTEACHER{\tiny 8}\\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \large
+        \begin{center}
+        \myEmph{logarithmic function}\\[0.5\onelineskip]
+        \renewcommand{\arraystretch}{1.1}
+        \begin{tabular}{c|r}
+            \toprule
+            $x$ & $y=2^x$ \\ 
+            \midrule
+            \whenTEACHER{\tiny $\frac{1}{8}$} & \whenTEACHER{\tiny -3}\\
+            \whenTEACHER{\tiny $\frac{1}{4}$} & \whenTEACHER{\tiny -2}\\
+            \whenTEACHER{\tiny $\frac{1}{2}$} & \whenTEACHER{\tiny -1}\\
+            1              & $0$\\
+            \whenTEACHER{\tiny 2} & \whenTEACHER{\tiny 1}\\
+            \whenTEACHER{\tiny 4} & \whenTEACHER{\tiny 2}\\
+            \whenTEACHER{\tiny 8} & \whenTEACHER{\tiny 3}\\
+            \bottomrule
+        \end{tabular}
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+\vspace{-1\onelineskip}
+\begin{center}
+    \begin{myTikzpictureGrid}{0.45} {8}{8}
+        \whenTEACHER{
+            \tkzText(1,4){$f$}
+            \tkzFct[ solid, very thick, samples=100, domain=-8:8,]{2**x}
+            \draw[color=red,thick,fill=red] (-3,0.125) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (-2,0.25) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (-1,0.5) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (0,1) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (1,2) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (2,4) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (3,8) circle (0.15 cm);
+        }
+        \whenTEACHER{
+            \tkzText(4,1){$f^{-1}$}
+            \draw[color=red,thick,fill=red] (8,3) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (4,2) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (2,1) circle (0.15 cm);
+            \tkzFct[ solid, very thick, samples=100, domain=0.001:8,]{log(x)/log(2)}
+            \draw[color=red,thick,fill=red] (0.5,-1) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (0.25,-2) circle (0.15 cm);
+            \draw[color=red,thick,fill=red] (0.125,-3) circle (0.15 cm);
+        }
+        \whenTEACHER{
+            \tkzFct[ dashed, thick, samples=10, domain=-8:8,]{x}
+        }
+    \end{myTikzpictureGrid}
+\end{center}
