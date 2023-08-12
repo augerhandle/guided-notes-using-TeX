@@ -1,0 +1,154 @@
+\section{Transformations of Parent Functions}
+
+\myProblemsWithContent 
+    [
+        Fill in the blanks and sketch the graph for these transformed functions.
+    ]
+{
+    $g(x) = 2x - 3$
+    \tcblower
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l}
+        This is a \gap{linear} function. 
+        \\
+        {\itshape parent function} : $f(x) =$ \gap{$x$}
+        \\
+        $m = $\gap{$2$} \quad $b=$\gap{$-3$}
+        \\ 
+        \begin{myTikzpictureGrid}{0.2}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{2*x-3}
+            }
+        \end{myTikzpictureGrid}
+        \\
+    \end{tabular}
+}
+{
+    $g(x) = -x^2 + 4$
+    \tcblower
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l}
+        This is a \gap{quadratic} function. 
+        \\
+        {\itshape parent function} : $f(x) =$ \gap{$x^2$}
+        \\
+        $a = $\gap{$-1$} \quad $h=$\gap{$0$} \quad $k$ = \gap{$4$}
+        \\ 
+        \begin{myTikzpictureGrid}{0.2}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{-x**2 +4}
+                \draw[black,thick,fill=red] (0,4) circle (0.5 cm);
+                }
+        \end{myTikzpictureGrid}
+        \\
+        Draw the \myEmph{vertex} as a BIG DOT. 
+        \\
+    \end{tabular}
+}
+
+
+
+
+\myProblemsWithContent 
+{
+    $g(x) = |x+3| - 4$
+    \tcblower
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l}
+        This is an \gap{absolute} \gap{value} function. 
+        \\
+        {\itshape parent function} : $f(x) =$ \gap{$|x|$}
+        \\
+        $a = $\gap{$1$} \quad $h=$\gap{$-3$} \quad $k$ = \gap{$-4$}
+        \\ 
+        \begin{myTikzpictureGrid}{0.2}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{abs(x+3) - 4}
+                \draw[black,thick,fill=red] (-3,-4) circle (0.5 cm);
+            }
+        \end{myTikzpictureGrid}
+        \\
+        Draw the \myEmph{vertex} as a BIG DOT. 
+        \\
+    \end{tabular}
+}
+{
+    $g(x) = \frac{1}{x-2} -3$
+    \tcblower
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l}
+        This is a \gap{reciprocal} function. 
+        \\
+        {\itshape parent function} : $f(x) =$ \gap{$\frac{1}{x}$}
+        \\
+        $a = $\gap{$1$} \quad $h=$\gap{$2$} \quad $k$ = \gap{$-3$}
+        \\ 
+        \begin{myTikzpictureGrid}{0.2}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:1.99,]{1/(x-2) - 3}
+                \tkzFct[ solid, ultra thick, samples=100, domain=2.01:6,]{1/(x-2) - 3}
+                \draw [red, ultra thick, dashed] (2.1,-6) -- (2.1,6);
+                \draw [red, ultra thick, dashed] (-6,-3.1) -- (6,-3.1);
+                \draw[black,thick,fill=red] (2,-3) circle (0.5 cm);
+            }
+        \end{myTikzpictureGrid}
+        \\
+        Draw the \myEmph{vertical} and \myEmph{horizontal} asymptotes 
+        \\as DASHED LINES.
+    \end{tabular}
+}
+
+
+
+\myProblemsWithContent 
+{
+    $g(x) = (x+1)^3) - 2 $
+    \tcblower
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l}
+        This is a \gap{cubic} function. 
+        \\
+        {\itshape parent function} : $f(x) =$ \gap{$x^3$}
+        \\
+        $a = $\gap{$1$} \quad $h=$\gap{$-1$} \quad $k$ = \gap{$-2$}
+        \\ 
+        \begin{myTikzpictureGrid}{0.2}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=-6:6,]{(x+1)**3 - 2}
+                \draw[black,thick,fill=red] (-1,-2) circle (0.5 cm);
+                }
+        \end{myTikzpictureGrid}
+        \\
+        Draw the \myEmph{inflection point} as a BIG DOT. 
+        \\
+    \end{tabular}
+}
+{
+    $g(x) = \myRoot[3]{x-1} + 2$
+    \tcblower
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l}
+        This is a \gap{reciprocal} function. 
+        \\
+        {\itshape parent function} : $f(x) =$ \gap{$\myRoot[3]{x}$}
+        \\
+        $a = $\gap{$1$} \quad $h=$\gap{$1$} \quad $k$ = \gap{$2$}
+        \\ 
+        \begin{myTikzpictureGrid}{0.2}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=1.1:9,]{(x-1)**(1.0/3.0) + 2}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-9:0.9,]{-(-(x-1))**(1.0/3.0) + 2}
+                    \draw[black,thick,fill=red] (1,2) circle (0.5 cm);
+            }
+        \end{myTikzpictureGrid}
+        \\
+        Draw the \myEmph{inflection point} as a BIG DOT. 
+        \\
+    \end{tabular}
+}

@@ -1,0 +1,87 @@
+\section{Cube Root Functions}
+
+The \myEmph{cube root parent function} is \tcbox[on line]{$f(x) = \myRoot[3]{x}$.}
+\vspace{1\onelineskip}
+
+\myWideProblemWithContent[Fill in the table, plot the points, and sketch the graph.]
+{
+\begin{minipage}{0.57\textwidth}
+    \centering 
+    \small
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{r|p{1.5in}|c}
+        $x$  & $y = f(x) = \myRoot[3]{x}$ & $(x,y)$\\ 
+        \hline\hline
+        $-8$ & $f(-8)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-3.5$ & $f(-3.5)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-1$ & $f(-1)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $0$ & $f(0)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $1$ & $f(1)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $3.5$ & $f(3.5)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $8$ & $f(8)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.425\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.3} {9}{9}
+        % \tkzText(13,8){$x - y = 0$}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=100, domain=0:9,]{x**(1.0/3.0)}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-9:0,]{-(-x)**(1.0/3.0)}
+            \draw[black,thick,fill=red] (-8,-2) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-3.5,-1.52) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-1,-1) circle (0.2 cm);
+            \draw[black,thick,fill=red] (0,0) circle (0.2 cm);
+            \draw[black,thick,fill=red] (1,1) circle (0.2 cm);
+            \draw[black,thick,fill=red] (3.5,1.52) circle (0.2 cm);
+            \draw[black,thick,fill=red] (8,2) circle (0.2 cm);
+        }
+    \end{myTikzpictureGrid}
+\end{minipage}
+}
+
+\myWideProblem{Describe how this curve is \myEmph{similar to} the graph of the cubic parent function?}{0.5in}
+
+\myWideProblemWithContent[Do these things:
+    \begin{itemize}[nosep]
+        \item Sketch a transformed parent function that has been
+            \myEmph{reflected} across the $x$-axis and
+            shifted \myEmph{up} by 5. 
+        \item Put a BIG DOT at the inflection point.
+        \item Then fill in the blanks.
+    \end{itemize}
+    ]
+{
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.25} {9}{9}
+        % \tkzText(13,8){$x - y = 0$}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=100, domain=0:9,]{-x**(1.0/3.0)+5}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-9:0,]{--(-x)**(1.0/3.0)+5}
+            \draw[fill,black,fill=red] (0,5) circle (3mm);
+        }
+    \end{myTikzpictureGrid}
+\end{minipage}
+\begin{minipage}{0.64\textwidth}
+    \centering 
+    \small
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{lcl}
+        coords of the inflection pt & : & (\gap{$0$},\gap{$5$}) \\
+        $a$, $h$, and $k$           & : & $a=$ \gap{$-1$}, $h=$ \gap{$0$}, $k=$ \gap{$5$} \\
+        transformed function        & : & $g(x)=$ \gap{$-x^3 + 5$}
+    \end{tabular}
+\end{minipage}
+}
+
+\myWideProblemWithContent[Write the equations for these parent functions.]
+{
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{p{2in}cp{2.5in}}
+        \myEmph{cubic} parent function     & : & $f(x) = $ \gap{$x^3$}\\
+        \myEmph{cube root} parent function & : & $f(x) = $ \gap{$\myRoot[3]{x}$}\\
+        \myEmph{linear} parent function    & : & $f(x) = $ \gap{$x$}\\
+        \myEmph{quadratic} parent function & : & $f(x) = $ \gap{$x^2$}\\
+    \end{tabular}
+}
