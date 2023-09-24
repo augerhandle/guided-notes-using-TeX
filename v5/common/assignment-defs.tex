@@ -5,7 +5,7 @@
 % #2 assignment number (eg, 2.5 CW)
 % #3 assignment title (eg, Solve Quadratic Equations)
 %
-\NewDocumentCommand{\myAssignmentHeader}{ O{\myFullCourseName} m m }{
+\NewDocumentCommand{\myAssignmentHeader}{O{\myFullCourseName} m o }{
     \noindent#1
     \hfill 
     Name : \fbox{\phantom{X\hspace{2in}}}\par
@@ -13,7 +13,7 @@
     \noindent
     {%
         \LARGE\sffamily
-        \whenHONORS{H-}#2 -- #3
+        \whenHONORS{H-}#2\IfValueT{#3}{ -- #3}
     }
     \hfill
     Period : \fbox{\phantom{\large 9999}}
