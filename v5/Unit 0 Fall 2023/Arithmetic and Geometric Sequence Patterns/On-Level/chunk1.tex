@@ -1,0 +1,77 @@
+\section{Simple Sequences}
+
+\begin{itemize}
+    \item A \myEmph{sequence} is a chain of \gap{numbers} (or other objects) that follow a \gap{pattern}.
+    \item The individual elements (numbers) in a sequence are called \gap{terms}.
+    \item Fill in the missing terms.
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {3};
+        \node (2) at (2,0)  [myShape,draw] {6};
+        \node (3) at (4,0)  [myShape,draw] {9};
+        \node (4) at (6,0)  [myShape,draw] {12};
+        \node (5) at (8,0)  [myShape,draw] {15};
+        \node (6) at (10,0) [myShape,draw] {\tiny\gap{18}};
+        \node (7) at (12,0) [myShape,draw] {\tiny\gap{21}};
+        \node (dots) at (13.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$+3$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$+3$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$+3$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$+3$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$+3$} (6.north west);
+        \draw [-Stealth] (6.north east) to node  {\tiny$+3$} (7.north west);
+    \end{tikzpicture}    
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {1};
+        \node (2) at (2,0)  [myShape,draw] {2};
+        \node (3) at (4,0)  [myShape,draw] {4};
+        \node (4) at (6,0)  [myShape,draw] {8};
+        \node (5) at (8,0)  [myShape,draw] {16};
+        \node (6) at (10,0) [myShape,draw] {\tiny\gap{32}};
+        \node (7) at (12,0) [myShape,draw] {\tiny\gap{64}};
+        \node (dots) at (13.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$\times 2$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$\times 2$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$\times 2$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$\times 2$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$\times 2$} (6.north west);
+        \draw [-Stealth] (6.north east) to node  {\tiny$\times 2$} (7.north west);
+    \end{tikzpicture}    
+
+    \item The dots (\dots) at the end mean a sequence goes on \gap{forever}. 
+    
+    \item We often write each term using a \myEmph{variable} 
+    and a small number. Fill in the missing information.
+        
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+
+        % lower subscript 
+        \fontdimen16\textfont2=5pt
+        \fontdimen17\textfont2=5pt
+
+        \node (1) at (0,0)  [myShape,draw] {$x_1$};
+        \node (2) at (2,0)  [myShape,draw] {$x_2$};
+        \node (3) at (4,0)  [myShape,draw] {$x_3$};
+        \node (4) at (6,0)  [myShape,draw] {$x_4$};
+        \node (5) at (8,0)  [myShape,draw] {$x_5$};
+        \node (6) at (10,0) [myShape,draw] {\gap{$x_6$}};
+        \node (7) at (12,0) [myShape,draw] {\gap{$x_7$}};
+        \node (dots) at (13.5,0) {\huge\dots};
+    \end{tikzpicture}    
+
+    \item The small numbers after the $x$ are called \gap{subscripts}.
+\end{itemize}

@@ -30,121 +30,51 @@
 %-----------------------------------------------------------------------------------------
 \myAssignmentHeader{Arithmetic and Geometric Sequence Patterns}{}
 %-----------------------------------------------------------------------------------------
+\usetikzlibrary {shapes.geometric} 
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=1, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
 
-\myProblems[Evaluate these expressions.]
-{
-    $|-32|$
-}
-{
-    $-|8-5|$
-}
-{0.4in}
-\myProblems[]
-{
-    $|50-75|$
-}
-{
-    $|75-50|$
-}
-{0.4in}
-
-
-\myProblems[]
-{
-    Describe some \myEmph{differences} between 
-    vertical and horizontal reflections.
-}
-{
-    Explain what the constants $A$, $B$, $C$, $D$ are. 
-}
-{1.5in}
-\myProblems[]
-{
-    Write the formula for a horizontal reflection.
-}
-{
-    Write the formula for a vertical reflection.
-}
-{1in}
+\tikzstyle{myShape}
+    =
+    [
+        regular polygon, 
+        regular polygon sides=6, 
+        shape border rotate=30, 
+        draw=black,
+        fill=white,
+        very thick,
+        minimum size=3.5em,
+        inner sep=0pt
+    ]
 
 
-\myProblems[Describe the transformation(s) on these functions.]
-{
-    $g(x) = 2|x| - 5$
-}
-{
-    $g(x) = -5|x+3| $
-}
-{1in}
-\myProblems[]
-{
-    $g(x) = \frac{2}{3}|x+ 11| + 22$
-}
-{
-    $g(x) = 6.02|x- 0.123| -8$
-}
-{1in}
+\noindent 
+Use Chrome and fill in the blanks based on
+what you do on this interactive web page:
 
+\hfill\url{https://mathigon.org/course/sequences/introduction}\hfill{}
 
-\myProblems[Write the formula for absolute value functions that have the following transformations.]
-{
-    \begin{itemize}
-        \setlength\itemsep{-0.5em}
-        \item horizontal shift right by 5
-        \item vertical shift down by 13
-    \end{itemize}
-}
-{
-    \begin{itemize}
-        \setlength\itemsep{-0.5em}
-        \item horizontal stretch by 3
-        \item horizontal shift left by 12
-        \item vertical shift up by 8
-    \end{itemize}
-}
-{0.4in}
-\myProblems[]
-{
-    \begin{itemize}
-        \setlength\itemsep{-0.5em}
-        \item vertical compression by $\frac{1}{5}$
-        \item horizontal shift right by 2
-        \item vertical shift up by 5
-    \end{itemize}
-}
-{
-    \begin{itemize}
-        \setlength\itemsep{-0.5em}
-        \item horizontal compression by 0.25
-        \item reflection across the $x$-axis
-        \item vertical shift up by 5
-    \end{itemize}
-}
-{0.4in}
-
-
-\myProblemsWithContent[In these problems, do the following \myEmph{three} things.
-\begin{itemize}
-    \setlength\itemsep{-0.5em}
-    \item Sketch and label the graph of the parent function, $f(x) = |x|$.
-    \item Sketch and label the graph of the transformed function, $g(x)$.
-    \item List all the transformations for $g(x)$.
+\noindent \\Work on these two sections of that page:
+\begin{itemize}[nosep]
+    \item[$>$] \sffamily{Introduction }
+    \item[$>$] \sffamily{Arithmetic and Geometric sequences}
 \end{itemize}
-]
-{
-    $g(x) = |x| -7$
-    \tcblower
-    \begin{myTikzpictureGrid}{0.25} {8}{8}
-    \end{myTikzpictureGrid}
-    \vspace{4\onelineskip}
-}
-{
-    $g(x) = - |x-5| + 6$
-    \tcblower
-    \begin{myTikzpictureGrid}{0.25} {8}{8}
-    \end{myTikzpictureGrid}
-}
 
+
+\input{chunk1.tex}
+\input{chunk2.tex}
+\input{chunk3.tex}
+\input{chunk4.tex}
+\input{chunk5.tex}
+\input{chunk6.tex}
+\input{chunk7.tex}
 
 
 \end{document}

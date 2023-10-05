@@ -1,0 +1,39 @@
+\section{Halley's Comet}
+
+\begin{itemize}
+    \item Edmond Halley observed a glowing white comet in \gap{1682} (what year?).
+    \item He remembered that similar comets were observed in \gap{1530} and \gap{1606} (what years?). 
+    \item Fill in this sequence for when Halley's comment appeared.
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {1530};
+        \node (2) at (2,0)  [myShape,draw] {1606};
+        \node (3) at (4,0)  [myShape,draw] {1682};
+        \node (4) at (6,0)  [myShape,draw] {1758};
+        \node (5) at (8,0)  [myShape,draw] {\tiny\gap{1834}};
+        \node (6) at (10,0) [myShape,draw] {{\tiny\gap{1910}}};
+        \node (7) at (12,0) [myShape,draw] {\tiny\gap{1986}};
+        \node (dots) at (13.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$+76$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$+76$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$+76$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$+76$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$+76$} (6.north west);
+        \draw [-Stealth] (6.north east) to node  {\tiny$+76$} (7.north west);
+    \end{tikzpicture}  
+\end{itemize}
+
+\begin{tcolorbox}[center,colback=white,]
+    \centering
+    When you \myEmph{add} the same amount to each term,
+    it is called an \scshape{Arithmetic Sequence}.
+\end{tcolorbox}
+
+\begin{itemize}
+    \item The Halley's Comet sequence is arithmetic, because you add \gap{76} to get the next term.
+\end{itemize}

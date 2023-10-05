@@ -1,0 +1,58 @@
+\section{Pay It Forward}
+
+\begin{itemize}
+    \item The number of people (from the video about Trevor) is a geometric sequence.
+    \item Fill in the missing terms.
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {1};
+        \node (2) at (2,0)  [myShape,draw] {3};
+        \node (3) at (4,0)  [myShape,draw] {9};
+        \node (4) at (6,0)  [myShape,draw] {\tiny\gap{27}};
+        \node (5) at (8,0)  [myShape,draw] {\tiny\gap{81}};
+        \node (6) at (10,0) [myShape,draw] {\tiny\gap{243}};
+        \node (dots) at (11.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$\times 3$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$\times 3$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$\times 3$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$\times 3$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$\times 3$} (6.north west);
+    \end{tikzpicture}  
+
+    \item For this sequence, the first term is $a=$\gap{1}, and the ratio is $r=$\gap{3}.
+    
+    \item The explicit formula for a geometric sequence is $x_n = a r^{n-1}$. 
+    So for Trevor's sequence, the explicit formula is
+    \[ x_n = \text{\gap{$3^{n-1}$}} \]
+
+    \item So Trevor's sequence looks like this.
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {$3^0$};
+        \node (2) at (2,0)  [myShape,draw] {$3^1$};
+        \node (3) at (4,0)  [myShape,draw] {$3^2$};
+        \node (4) at (6,0)  [myShape,draw] {$3^3$};
+        \node (5) at (8,0)  [myShape,draw] {$3^4$};
+        \node (6) at (10,0) [myShape,draw] {$3^5$};
+        \node (dots) at (11.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$\times 3$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$\times 3$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$\times 3$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$\times 3$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$\times 3$} (6.north west);
+    \end{tikzpicture}  
+
+    \item What is the next term in that sequence? \gap{$3^6$}.
+    
+    \item A name for this sequence is ``powers of \gap{3}''.
+\end{itemize}

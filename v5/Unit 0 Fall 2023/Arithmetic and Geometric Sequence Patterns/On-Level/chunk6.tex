@@ -1,0 +1,106 @@
+\section{Definitions}
+
+\begin{itemize}
+    \item An \myEmph{arithmetic sequence} has a constant \gap{difference}, $d$,
+    between the terms.
+
+    \item A \myEmph{geometric sequence} has a constant \gap{ratio}, $r$, 
+    between the terms.
+
+    \item What kind of sequence is this?
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {2};
+        \node (2) at (2,0)  [myShape,draw] {5};
+        \node (3) at (4,0)  [myShape,draw] {8};
+        \node (4) at (6,0)  [myShape,draw] {11};
+        \node (5) at (8,0)  [myShape,draw] {14};
+        \node (6) at (10,0) [myShape,draw] {17};
+        \node (dots) at (11.5,0) {\huge\dots};
+    
+    \end{tikzpicture}  
+
+    It is an \gap{arithmetic} sequence.
+
+    \item Find the difference for this arithmetic sequence.
+    \item 
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+
+        \node (1) at (0,0)  [myShape,draw] {17};
+        \node (2) at (2,0)  [myShape,draw] {13};
+        \node (3) at (4,0)  [myShape,draw] {9};
+        \node (4) at (6,0)  [myShape,draw] {5};
+        \node (5) at (8,0)  [myShape,draw] {1};
+        \node (6) at (10,0) [myShape,draw] {-3};
+        \node (dots) at (11.5,0) {\huge\dots};
+
+    \end{tikzpicture}  
+
+    The difference is $d = $\gap{$-4$}.
+
+
+    \item What kind of sequence is this?
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {2};
+        \node (2) at (2,0)  [myShape,draw] {4};
+        \node (3) at (4,0)  [myShape,draw] {8};
+        \node (4) at (6,0)  [myShape,draw] {16};
+        \node (5) at (8,0)  [myShape,draw] {32};
+        \node (6) at (10,0) [myShape,draw] {64};
+        \node (dots) at (11.5,0) {\huge\dots};
+    
+    \end{tikzpicture}  
+
+    It is a \gap{geometric} sequence.
+
+    \item Find the ratio for this geometric sequence.
+    \item 
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+
+        \node (1) at (0,0)  [myShape,draw] {40};
+        \node (2) at (2,0)  [myShape,draw] {20};
+        \node (3) at (4,0)  [myShape,draw] {10};
+        \node (4) at (6,0)  [myShape,draw] {5};
+        \node (5) at (8,0)  [myShape,draw] {2.5};
+        \node (6) at (10,0) [myShape,draw] {1.25};
+        \node (dots) at (11.5,0) {\huge\dots};
+
+    \end{tikzpicture}  
+
+    The ratio is $r = $\gap{$0.5$}.
+
+    \item For an \myEmph{arithmetic sequence}, if the difference ($d$) is positive, then the terms \gap{increase}.
+    \item For an \myEmph{arithmetic sequence}, if the difference ($d$) is negative, then the terms \gap{decrease}.
+    
+    \item For a \myEmph{geometric sequence}, if the ratio is $r>1$, then the terms quickly \gap{increase}.
+    \item For a \myEmph{geometric sequence}, if the ratio is $-1<r<1$, then the terms \gap{get closer to zero}.
+
+    \item Write the recursive and explicit formulas for arithmetic and geometric sequences.
+    \begin{itemize}
+        \item Arithmetic Sequences: ($a$:first term, $d$:difference)
+            \begin{itemize}
+                \item {\scshape recursive formula}: \gap{$x_n = x_{n-1} + d$}
+                \item {\scshape explicit formula}: \gap{$x_n = a + d(n-1)$}
+            \end{itemize}
+        \item Geometric Sequences: ($a$:first term, $r$:ratio)
+        \item \begin{itemize}
+            \item {\scshape recursive formula}: \gap{$x_n = x_{n-1}\times r$}
+            \item {\scshape explicit formula}: \gap{$x_n = a\times r^{n-1}$}
+    \end{itemize}
+    \end{itemize}
+\end{itemize}
