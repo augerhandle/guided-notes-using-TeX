@@ -1,0 +1,64 @@
+\begin{myConceptSteps}{To divide polynomials using synthetic division\dots}
+    \myStep{Check}{
+        \begin{itemize}[nosep]
+            \item Rewrite the {\scshape Dividend} in \gap{descending} \gap{order}.
+            \item Fill in \gap{missing} \gap{terms} with zero coefficients.
+        \end{itemize}
+    }
+    \myStep{frame}{%
+        Draw an L-frame for \gap{two} \gap{rows} of numbers.
+        \begin{itemize}[nosep]
+            \item Write $a$ on the \gap{left} (the \gap{opposite} of what you see in $(x-a)$)
+            \item Write coefficients of the {\scshape Dividend} across the \gap{top}
+        \end{itemize}
+    }
+    \myStep{start}{Bring the \gap{leading} coefficient down below the line.}
+    \myStep{multiply}{%
+        Multiply the number \gap{below} the line by $a$.
+        Write it under the next coefficient.
+    } 
+    \myStep{add}{%
+        Add the next coefficient and the number from \#4.
+        Write it \gap{below} the line.
+    }
+    \myStep{repeat}{Repeat until done. (Goto step 4.)}
+    \myStep{result}{%
+        The result is 
+        \fbox{
+            $ 
+                \text{\scshape Quotient} 
+                + 
+                \frac{\text{\scshape Remainder}}{\text{\scshape Divisor}} 
+            $
+        }
+    }
+\end{myConceptSteps}
+\whenTEACHER{%
+    Hasan/Espinoza do
+    $ \frac{x^3 + 2x^2+1}{(x+6)} = (x^2-4x+24) - \frac{143}{(x+6)} $ 
+    in parallel on whiteboard.
+}
+
+\myProblemsWithContent[Divide these polynomials.]
+    {
+        $
+            (8x^2 -7x - 4 + 2x^3) 
+            \:\text{\large$\bm{\div}$}\:
+            (x-2)
+        $
+        \tcblower
+        \mySyntheticDivisionScaffold{4}
+        \vspace{2\onelineskip}
+    }
+    {
+        \Large
+        $\frac
+            {t^3 - 9t -8} 
+            {t + 3}
+        $
+        \tcblower
+        \mySyntheticDivisionScaffold{4}
+        \vspace{5\onelineskip}
+    }
+    % [\whenTEACHER{$2x^2 +12x +17 + \frac{30}{(x-2)}$}]
+    % [\whenTEACHER{$t^2 - 3t - \frac{8}{t+3}$}]

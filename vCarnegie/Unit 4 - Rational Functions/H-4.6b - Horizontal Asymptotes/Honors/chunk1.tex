@@ -1,0 +1,65 @@
+\section{Introduction}
+
+\subsection{All Things Great and Small}
+
+\begin{minipage}{0.5\textwidth}
+    \ttfamily\small
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{c||lllllll}
+        $x$ 
+        & 2 & 1   & 0.1 & 0.01 & 0.001 & 0.000001 \\
+        $\frac{1}{x} $
+        & 0.5 & 1 & 10  & 100 & 1000   & 1,000,000\\
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    When the \myEmph{denominator} gets \gap{small}, 
+    the fraction gets \gap{large}.
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\ttfamily\small
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{c||lllllll}
+    $x$ 
+    & 0.5 & 1 & 10  & 100 & 1000   & 1,000,000\\
+    $\frac{1}{x} $
+    & 2 & 1   & 0.1 & 0.01 & 0.001 & 0.000001 \\
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    When the \myEmph{denominator} gets \gap{large}, 
+    the fraction gets \gap{small}.
+\end{minipage}
+
+
+\subsection{End Behaviors of Rational Functions}
+\gap{Horizontal} \gap{asymptotes} of rational functions 
+can be thought of as the far left and right \gap{end} \gap{behavior} of the functions.
+
+\vspace{-1\onelineskip}
+\begin{tcolorbox}[center,width=6in,colback=white,colframe=white,]
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \large
+        $
+        \frac
+            {6x^3 - x^2 + x - 30}
+            {2x^3 - x^2 + 20}
+        $
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{myTikzpictureGrid}{0.175} {10}{6}
+            \tkzFct[ solid, gray, ultra thick, samples=100, domain=-10:-2.7,] 
+                { (6*x**3 - x**2 + x - 30)  /  (2*x**3 - x**2 + 20) }
+            \tkzFct[ solid, gray, ultra thick, samples=100, domain=-1.6:10,] 
+                { (6*x**3 - x**2 + x - 30)  /  (2*x**3 - x**2 + 20) }
+            \draw [dashed, black, very thick] (-12,3) -- (12,3);
+    \end{myTikzpictureGrid}
+    \end{minipage}
+    \hfill{\,}
+\end{tcolorbox}
+
+Exactly what happens depends on the \gap{degree} of the polynomials 
+and on their \gap{leading} \gap{coefficients}.

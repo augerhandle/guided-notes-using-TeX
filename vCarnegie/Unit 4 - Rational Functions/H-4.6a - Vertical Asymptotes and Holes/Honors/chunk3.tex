@@ -1,0 +1,55 @@
+\myProblems[For these rational functions, 
+    Find the simplied function, 
+    and say how many vertical asymptotes and holes the function has.]
+{
+    $\frac{(2x+1)(x-5)}{3x(x-5)}$
+}
+{
+    $
+    \frac
+        {3x^2 + 7x - 6}
+        {6x + 18}
+    $
+}
+{0.5in}
+
+
+
+
+\myProblemsWithContent[For these rational functions, 
+    Sketch the graph of the simplied function, 
+    sketch the vertical asymptotes and label each one with its equation, 
+    and sketch each hole and label each one with its $(x,y)$ coordinates.]
+{
+    $
+    \frac
+        {x+5}
+        {(x-3)(x+5)}
+    $\\
+    \begin{myTikzpictureGrid}{0.3} {6}{6}
+        \whenTEACHER{
+            % \tkzText[red](4,-3){hyperbola}
+            \tkzFct[ solid, red, ultra thick, samples=100, domain=-6:2.99,] {1/(x-3) }
+            \tkzFct[ solid, red, ultra thick, samples=100, domain=3.01:6,] {1/(x-3) }
+            \draw[red, fill=white, very thick,] (-5,-0.125) circle (4mm);
+            \draw [dashed, red, very thick] (3,-6) -- (3,6);
+        }
+    \end{myTikzpictureGrid}
+}
+{
+    $
+    \frac
+        {x(x-1)}
+        {x(x+2)(x-1)}
+    $\\
+    \begin{myTikzpictureGrid}{0.3} {6}{6}
+        \whenTEACHER{
+            % \tkzText[red](4,-3){hyperbola}
+            \tkzFct[ solid, red, ultra thick, samples=100, domain=-6:-2.01,] {1/(x+2) }
+            \tkzFct[ solid, red, ultra thick, samples=100, domain=-1.99:6,] {1/(x+2) }
+            \draw[red, fill=white, very thick,] (0,0.5) circle (4mm);
+            \draw[red, fill=white, very thick,] (1,0.333) circle (4mm);
+            \draw [dashed, red, very thick] (-2,-6) -- (-2,6);
+        }
+    \end{myTikzpictureGrid}
+}

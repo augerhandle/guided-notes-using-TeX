@@ -1,0 +1,24 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{packages}
+\input{claim-cite-cement}
+\input{fillwithlines}
+
+
+\begin{document}
+
+\Large
+\myClaimCiteCement
+    {
+        I claim that 
+        \fillwithlines{3\baselineskip}
+    }
+    {
+        As evidence, I cite the following.
+        \vspace{3in}
+    }
+    {
+        This makes sense, because \hrulefill
+    }
+
+\end{document}

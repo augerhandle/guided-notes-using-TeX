@@ -1,0 +1,92 @@
+\vfill 
+Parent functions we have seen:
+\begin{tcbraster}[
+        raster columns = 3,
+        raster equal height,
+        colback = white,
+        ]
+    \begin{tcolorbox}[]
+        \begin{center}
+            \small
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x*x}
+                \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \end{myTikzpictureGrid}
+            \myEmph{quadratic}: $f(x) = x^2$
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \begin{center}
+            \small
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:-0.01,]{1/x}
+                \tkzFct[ solid, ultra thick, samples=100, domain=0.01:10,]{1/x}
+                \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \end{myTikzpictureGrid}
+            \myEmph{reciprocal}  $f(x) = \frac{1}{x}$
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \begin{center}
+            \small
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{abs(x)}
+                \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \end{myTikzpictureGrid}
+            \myEmph{absolute value}  $f(x) = |x|$
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
+\vfill
+
+
+
+\section{Cube Root Parent Function}
+
+\begin{tcolorbox}[center, width=1.75in,after skip = 1\onelineskip,]
+    \large
+    \centering
+    $ f(x) = \myRoot[3]{x} $
+\end{tcolorbox}
+
+\begin{minipage}{0.57\textwidth}
+    \centering 
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{r|p{1.2in}|c}
+        $x$ 
+            & $y = \myRoot[3]{x}$    
+            & $(x,y)$\\ \hline\hline
+        $-8$ 
+            &   
+            & \phantom{$(-9,9)$}\\ \hline
+        $-1$ 
+            &   
+            & \\ \hline
+        $0$ 
+            &     
+            & \\ \hline
+        $1$ 
+            &    
+            & \\ \hline
+        $8$ 
+            & 
+            & \\ \hline
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.425\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.4} {9}{5}
+        % \tkzText(13,8){$x - y = 0$}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=1000, domain=0:10,]{x**(1.0/3.0)}
+            \draw[black,thick,fill=red] (0,0) circle (0.2 cm);
+            \draw[black,thick,fill=red] (1,1) circle (0.2 cm);
+            \draw[black,thick,fill=red] (8,2) circle (0.2 cm);
+            \tkzFct[ solid, ultra thick, samples=1000, domain=-10:0,]{-(-x)**(1.0/3.0)}
+            \draw[black,thick,fill=red] (-1,-1) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-8,-2) circle (0.2 cm);
+            \tkzText(4.5,2.5){$f$}
+        }
+    \end{myTikzpictureGrid}
+\end{minipage}
+

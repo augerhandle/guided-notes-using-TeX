@@ -1,0 +1,45 @@
+\section{Is $(x-a)$ a factor of a polynomial?}
+
+Suppose we are given:
+\begin{itemize}
+    \item a polynomial, $D(x)$, and 
+    \item a linear binomial, $(x-a)$.
+\end{itemize}
+
+Start with
+$ 
+D(x) = Q(x)\:(x-a)  +  R
+$
+and notice what happens to the division equation if the remainder is \gap{zero}:
+\begin{align*}
+    D(x) &= (x-a)\:Q(x)  +  R \\
+    D(x) &= (x-a)\:Q(x)  +  0 \\
+    D(x) &= (x-a)\:Q(x)   \\
+\end{align*}
+%
+which means that $D(x)$ is the \gap{product} of two things.
+One of those is $(x-a)$.
+Wait! That means $(x-a)$ \myEmph{is a factor} of $D(x)$.
+
+\begin{myConceptSteps}{To use synthetic division to decide if $(x-a)$ is a factor of $D(x)$\dots}
+    \myStep{Divide}{Use \gap{synthetic} \gap{division} for $\frac{D(x)}{(x-a)}$.}
+    \myStep{Remainder}{Look at the remainder, which will be a \gap{number}.}
+    \myStep{Factor}[?]{$(x-a)$ is a factor if the remainder is \gap{zero}. }
+\end{myConceptSteps}
+
+\myProblems[Use synthetic division to decide if $(x-a)$ is a factor of the given polynomial.]
+{
+    Is 
+    $(v-4)$ 
+    a factor of 
+    $(8v^3 - 30v^2 - 2v - 21)$
+    ?
+}
+{
+    Is 
+    $(1+b)$ 
+    a factor of 
+    $(-4b^3 - 7 - 10b - 7b^2)$
+    ?
+}
+{2in}

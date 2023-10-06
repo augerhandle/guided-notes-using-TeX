@@ -1,0 +1,156 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+\iftstu 
+    \dashundergapssetup{gap-font={\ECFAugie\MTversion{augie}\color{red}},}
+\fi
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{6.5}{Cubic Parent Function}
+%-----------------------------------------------------------------------------------------
+
+\myWideProblemWithContent[%
+    Fill in the table. (You will get decimals. Round them to a single digit after the decimal point.)
+    Plot the points. 
+    Sketch the graph by ``connecting the dots''.
+]
+{
+    \begin{minipage}{0.49\textwidth}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{center}
+        \begin{tabular}{r|p{1.5in}|c}
+            $x$ & $y = x^3$ & $(x,y)$ \\
+            \hline
+            {-1.75}  & & \\ \hline
+            {-1.5}  & & \\ \hline
+            {-0.75}  & & \\ \hline
+            {-0.15} & & \\ \hline
+            {0}   & & \\ \hline
+            {0.15} & & \\ \hline
+            {0.75}   & & \\ \hline
+            {1.5}  & & \\ \hline
+            {1.75}  & & \\ 
+        \end{tabular}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        \begin{center}
+        \begin{myTikzpictureGrid}{0.35} {5}{10}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, ultra thick, samples=1000, domain=-4:4,]{x**3}
+            }
+        \end{myTikzpictureGrid}
+        \end{center}
+    \end{minipage}
+}
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+In the last problem, your $y$ values were decimals, 
+and so you had to plot your dots \myEmph{approximately}. 
+\begin{itemize}[nosep,]
+    \item Enter ``nicer'' $x$ values that avoid decimals for $y$.
+        (Hint: Look in the notes!)
+    \item Draw the dots and sketch the function.
+    \item What happens if you try to plot $x=-3$ or $x=3$?
+\end{itemize}
+]
+{
+    \begin{minipage}{0.49\textwidth}
+        \begin{tabular}{r|p{1.5in}|c}
+            $x$ & $y = x^3$ & $(x,y)$ \\
+            \hline
+            \whenTEACHER{-2}  &  & \\ \hline
+            \whenTEACHER{-1}  &  & \\ \hline
+            {$0$}   & & \\ \hline
+            \whenTEACHER{1}  &  & \\ \hline
+            \whenTEACHER{2}  &  & \\ \hline
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        \begin{myTikzpictureGrid}{0.35} {4}{10}
+            \whenTEACHER{
+                \tkzFct[ color=red, solid, ultra thick, samples=1000, domain=-4:4,]{x**3}
+            }
+        \end{myTikzpictureGrid}
+    \end{minipage}\\[1\onelineskip]
+    If I try to plot points for $x = +3 \text{ or } x=-3$, \hrulefill
+}
+
+\vspace{4.0\onelineskip}
+
+\myProblemsWithContent[%
+    Find the attributes for the cubic functions graphed below.
+]
+{
+    \begin{myTikzpictureGrid}{0.35} {4}{10}
+        \tkzFct[ color=black, solid, very thick, samples=1000, domain=-4:4,]{x**3+4}
+        \draw[fill,black] (0,4) circle (2.5mm);
+    \end{myTikzpictureGrid}
+    \begin{itemize}[fullwidth,]
+        \item inflection point coords: \gap{$(0,4)$}
+        \item domain: \gap{all real \#'s}
+        \item range: \gap{all real \#'s}
+    \end{itemize}
+}
+{
+        \begin{myTikzpictureGrid}{0.35} [-2]{8}{10}
+            \tkzFct[ color=black, solid, very thick, samples=1000, domain=0:8,]{(x-4)**3-2}
+            \draw[fill,black] (4,-2) circle (2.5mm);
+        \end{myTikzpictureGrid}
+        \begin{itemize}[fullwidth,]
+            \item inflection point coords: \gap{$(4,-2)$}
+            \item domain: \gap{all real \#'s}
+            \item range: \gap{all real \#'s}
+        \end{itemize}
+    }
+
+
+
+\vspace{\baselineskip}
+\myWideProblemWithContent[%
+    Describe in words how the graphs in the last two problems 
+    are different from the cubic parent function.
+]
+{
+    The graph in problem \#3 differs from the parent function because \hrulefill \\[0.5\onelineskip] 
+    \_\hrulefill.\\[0.5\onelineskip]
+    \_\hrulefill.\\[1.25\onelineskip]
+    The graph in problem \#4 differs from the parent function because \hrulefill \\[0.5\onelineskip] 
+    \_\hrulefill.\\[0.5\onelineskip]
+    \_\hrulefill.
+}
+
+
+
+\myWideProblem{
+    How are the domain and range of the \myEmph{cubic parent function} (this lesson) 
+    different from the domain and range of the \myEmph{cube root parent function} 
+    (Lesson 6.3)?
+}{1.5in}
+
+
+\end{document}

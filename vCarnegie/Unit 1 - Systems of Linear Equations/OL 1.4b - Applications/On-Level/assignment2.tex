@@ -1,0 +1,196 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+\myAssignmentHeader{1.4b}{(DAY 2) Applications of Systems of Equations}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent[Solve these word problems.]
+{
+    Jean, Max and Charlie went to the store 
+    to buy boxes of pens, pencils and erasers.
+    Based on the following information, how much does a box of each cost?
+    \begin{itemize}[nosep]
+        \item Jean paid \$167.50 for 
+        2 boxes of pens, 5 boxes of pencils, and 9 boxes of erasers.
+        \item Max paid \$130.00 for
+        3 boxes of pens, 7 boxes of pencils, and 4 boxes of erasers.
+        \item Charlie paid \$300.00 for
+        10 boxes of pencils, and 20 boxes of erasers.
+    \end{itemize} 
+    %
+    \mySystemTable[7]
+    \small
+    a box of pens : \$\gap{999.99}
+    \hfill 
+    a box of pencils : \$\gap{999.99}
+    \hfill 
+    a box of erasers : \$\gap{999.99}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Juanita paid for calls to the US, Canada and Mexico.
+    The cost per minute was different for each country. 
+    The table below shows Juanita's phone bill for three months.
+    Find the cost per minute to each country.
+    \begin{center}
+        \small
+        \begin{tabular}{lcccc}
+            Month & minutes to the US & minutes to Canada & minutes to Mexico & Cost \\
+            \toprule
+            March & 60 & 0 & 120 & \$30.00  \\
+            April   & 125 & 32 & 0 & \$23.70  \\
+            May  & 105 & 10 & 50 & \$24.00  \\
+        \end{tabular}
+    \end{center}
+    %
+    \mySystemTable[7]
+    \small
+    \$/min to US : \$\gap{99.99}/min. \hfill
+    \$/min to CA : \$\gap{99.99}/min. \hfill 
+    \$/min to MX : \$\gap{99.99}/min.
+    }[\small]
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Uriel, Danny and Lupe bought snacks. 
+    They each bought the items shown below.
+    \begin{center}
+        \small
+        \begin{tabular}{ccccc}
+            who & bags of Fritos & bottles of Pepsi & tubs of Guacamole & Cost \\
+            \toprule
+            Uriel & 2 & 1 & 1  & \$19.49  \\
+            Danny & 10 & 3 & 6 & \$101.94  \\
+            Lupe  & 0 & 5 &  0 & \$10.00  \\
+        \end{tabular}
+    \end{center}
+    Find the cost of each item.
+    %
+    \mySystemTable[7]
+    \small
+    bag of Fritos: \$\gap{9.99}
+    \hfill 
+    bottle of Pepsi: \$\gap{9.99}
+    \hfill 
+    tub of Guacamole: \$\gap{9.99}
+    }[\small]
+
+\vfill
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    A phone distributor sells three types of smart phones  
+    to three stores. 
+    The number of ordered ordered by each store and the amount owed to the
+    distributor for the order is shown below.
+    \begin{center}
+        \small
+        \begin{tabular}{lcccc}
+            store & Sprial V & jPhone-20 & Minidot 2.0 & amount owed \\
+            \toprule
+            E-Mart & 8 & 8 & 20 & \$6,580.00  \\
+            Payco    & 31  & 15 & 0 & \$10,850.00  \\
+            Bow and Arrow   & 10  & 10 & 10 & \$6,350.00  \\
+        \end{tabular}
+    \end{center}
+    Find the price of each kind of computer.
+    %
+    \mySystemTable[7]
+    \small
+    Sprial V: \$\gap{9.99}
+    \hfil 
+    jPhone-20: \$\gap{9.99}
+    \hfil 
+    Minidot 2.0: \$\gap{9.99}
+    }[\small]
+
+
+\end{document} % 4 problems is enough for OL
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Carlos, Josh and Dan went shopping for Halloween treats. 
+    Carlos bought 3 chocolate pumpkins, 4 masks and 8 candy witches. 
+    He spent \$36.65. 
+    Josh bought 5 chocolate pumpkins, 3 masks and 10 candy witches. 
+    He spent \$37.50. 
+    Dan bought 4 chocolate pumpkins, 5 masks and 6 candy witches. 
+    He spent \$43.45. \\[1\onelineskip]
+    Find the price of each of the three kinds of treats.
+    %
+    \mySystemTable[7]
+    \small
+    a chocolate pumpkin: \$\gap{9.99}
+    \hfill 
+    a mask: \$\gap{9.99}
+    \hfill 
+    a chocolate witch: \$\gap{9.99}
+    }[\small]
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    Juanita, Larry and Zara went to a store.
+    They each bought decorations for a party. 
+    The number of items bought by each person is shown below
+    along with the total cost of each purchase. 
+    Find the unit price of each item. 
+    \begin{center}
+        \small
+        \begin{tabular}{lcccc}
+            person & \# rolls wrapping paper & \# wreaths & \# colored lights & amount owed \\
+            \toprule
+            Juanita  & 2  & 4 & 2 & \$49.50  \\
+            Larry    & 3  & 2 & 4 & \$57.75  \\
+            Zara     & 3  & 3 & 1 & \$38.50  \\
+        \end{tabular}
+    \end{center}
+    \mySystemTable[7]
+    \small
+    a roll of wrapping paper: \$\gap{9.99}
+    \hfill 
+    a wreath: \$\gap{9.99}
+    \hfill 
+    colored lights: \$\gap{9.99}
+}[\small]
+
+
+\end{document}

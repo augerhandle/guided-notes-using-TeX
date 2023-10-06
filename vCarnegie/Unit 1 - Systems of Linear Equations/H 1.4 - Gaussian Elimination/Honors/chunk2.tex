@@ -1,0 +1,83 @@
+\newpage
+\section{Gaussian Elimination}
+
+\begin{myConceptSteps}{To transform a system to \gap{row} \gap{echelon} \gap{form}\dots}
+  \myStep{left-to-right}{%
+      Transform \gap{columns} starting at the
+      \gap{left} and moving \gap{right}.
+      }
+  \myStep{ones}{%
+      Use {\bfseries\itshape row operations} to get \gap{$1$s} on the diagonal.
+      }
+  \myStep{zeros}{%
+      Use {\bfseries\itshape row operations} to get \gap{$0$s} below the diagonal.
+    }
+  \myStep{column-by-column}{%
+    Finish steps 2 and 3
+    \gap{before} moving to the next column.
+}
+\end{myConceptSteps}
+
+
+\myWideProblemWithContent[%
+    Reduce this system into 
+    {row echelon} form.
+]
+{
+    \begin{center}
+        \syslineskipcoeff{1}\sysalign{r,r}\sysdelim..\systeme{
+            2x+12y + 17z=-32,
+            -3x-7y-8z=6,
+            x + 4y + 6z = -7
+        }
+    \end{center}
+    \[
+        \begin{bmatrix}[ccc|c]
+           2 &  12 & 17 & -32\\
+          -3 & -7  & -8 & 6\\
+          1 &  4 & 6 & -7
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          -3 & -7  & -8 & 6\\
+          2 &  12 & 17 & -32
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 5  & 10 & -15\\
+          2 &  12 & 17 & -32
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 5  & 10 & -15\\
+          0 &  4 & 5 & -18
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 1  & 2 & -3\\
+          0 &  4 & 5 & -18
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 1  & 2 & -3\\
+          0 &  0 & -3 & -6
+        \end{bmatrix}
+    \]
+    \[
+        \begin{bmatrix}[ccc|c]
+          1 &  4 & 6 & -7\\
+          0 & 1  & 2 & -3\\
+          0 &  0 & 1 & 2
+        \end{bmatrix}
+    \]
+}

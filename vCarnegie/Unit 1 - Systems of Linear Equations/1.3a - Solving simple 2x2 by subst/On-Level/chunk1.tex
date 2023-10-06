@@ -1,0 +1,25 @@
+\section{Simple Systems of Equations}
+
+The systems in this lesson will always be writting like this:
+\begin{align*}
+    y = -2x + 3 \\
+    y-x = -3
+\end{align*}
+
+\begin{tcolorbox}[center,width=4in]
+    This $2\times2$ system is ``simple'' since one (or both) equations start with 
+    \gap{$y =$}.
+\end{tcolorbox}
+We could solve this system by \gap{graphing}.
+
+\begin{center}
+    \begin{myTikzpictureGrid}{0.4} [-5]{5}[-5]{5}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{-2*x + 3}
+        % \tkzText(13,8){$x - y = 0$}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x-3}
+        % \tkzText(-13,7.25){$x + 2y = 6$}
+        \end{myTikzpictureGrid}
+\end{center}
+%
+But today we solve this system 
+\gap{algebraically}.

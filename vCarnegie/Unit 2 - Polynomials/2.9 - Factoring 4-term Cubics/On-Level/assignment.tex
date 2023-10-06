@@ -1,0 +1,105 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+\myAssignmentHeader{2.9}{Factoring 4-term Cubic Polynomials}
+
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent[Factor these 4-term cubic polynomials.]
+{
+    $ 9x^3 + 3x^2 + 6x + 2 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$3x^2+2$}{$3x+1$}[x]
+}
+{
+    $ 3z^3 + 6z^2 - 2z - 4 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$3z^2-2$}{$z+2$}[z]
+}
+
+
+\myProblemsWithContent
+{
+    $ 2x^3 - 4x^2 + 3x - 6 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$2x^2+3$}{$x-2$}
+}
+{
+    $ 2t^3 + 4t^2 + 3t + 6 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$2t^2+3$}{$t+2$}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent%[Factor these 4-term cubic polynomials.]
+{
+    $ 9r^3 - 3r^2 - 3r + 1 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$3r^2-1$}{$3r-1$}
+}
+{
+    $ 5x^3 + 4x^2 + 25x + 20 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$x^2+5$}{$5x+4$}
+}
+
+
+\myProblemsWithContent
+{
+    $ 12v^3 + 9v^2 + 16v + 12 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$3v^2+4$}{$4v+3$}
+}
+{
+    $ 15x^3 + 10x^2 - 12x - 8 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$5x^2-4$}{$3x+2$}
+}
+
+\vspace{1\onelineskip}
+The following problems combine this lesson with \myEmph{previous ones}. 
+So you'll need to look back in your notes to see how to work them.
+
+\myProblems[%
+\begin{enumerate}[nosep]
+    \item Factor the polynomial by removing the GCF. (See the Lesson 2.4 notes.)
+    \item Then factor the result some more using today's Lesson 2.9 notes.
+\end{enumerate}]
+{
+    $ 24v^3 + 18v^2 + 32v + 24 $
+}
+{
+    $ 30x^3 + 20x^2 - 24x - 16 $
+}
+{4.5in}
+[\whenTEACHER{like \#7 but with a 2 in front}]
+[\whenTEACHER{like \#8 but with a 2 in front}]
+\end{document}

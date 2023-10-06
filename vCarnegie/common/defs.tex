@@ -1,0 +1,263 @@
+% ---------------------------------------------------------------------------
+% A "strut" command
+%
+% I can use this command to squeeze some NEGATIVE vertical space into text 
+% without taking up any horizontal space.
+%
+% #1 descent distance below the baseline
+% ---------------------------------------------------------------------------
+\newcommand{\myDropStrutLength}{-13ex}
+\NewDocumentCommand{\myDropStrut}{O{\myDropStrutLength}}
+{%
+    \rule[#1]{0pt}{0pt}%
+}
+
+% ---------------------------------------------------------------------------
+% A warning box similar to that in the tcolorbox documentation.
+% This is code written by Thomas F. Sturm.
+% See: https://tex.stackexchange.com/questions/307432/tcolorbox-manual-tip-box-how-to-clone
+%
+% I made some minor changes to what shows up in that post.
+% ---------------------------------------------------------------------------
+\newtcolorbox{myWarningBox}[1][]{enhanced,
+  before skip=2mm, after skip=3mm,
+  boxrule=0.4pt,
+  left=5mm, right=2mm, top=1mm, bottom=1mm,
+  colback=yellow!20, colframe=yellow!20!black,
+  sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+  underlay={%
+    \path[fill=tcbcolback!80!black] 
+        ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcolframe,shorten <=-0.05mm,shorten >=-0.05mm] 
+        ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=yellow,draw=none] 
+        (interior.south west) rectangle node[black]{\huge\bfseries !} ([xshift=4mm]interior.north west);
+    },
+  drop fuzzy shadow,#1}
+
+
+% ---------------------------------------------------------------------------
+% I'm SO tired of writing these two explicitly!
+% ---------------------------------------------------------------------------
+\newcommand{\myEmph}[1]{{\bfseries\itshape#1}}
+
+% ---------------------------------------------------------------------------
+% Draw a circle around the argument
+% ---------------------------------------------------------------------------
+\newcommand*\mycirc[1]{%
+  \begin{tikzpicture}
+    \node[draw,circle,inner sep=2pt] {#1};
+  \end{tikzpicture}
+}
+
+
+% ---------------------------------------------------------------------------
+% For writing TI-84 instructions it's useful to have a visually
+% distinct way to format the keys.
+% ---------------------------------------------------------------------------
+\newcommand{\myKey}[1]{{\ttfamily [#1]}}
+
+\newcommand{\myDesmos}{{\scshape Desmos~}}
+\newcommand{\myTi}{{\scshape TI-84~}}
+
+% % ---------------------------------------------------------------------------
+% % Teachers vs. Students ("tstu")
+% % ---------------------------------------------------------------------------
+% \newif\iftstu
+
+% % Typically, I will set one of these ONCE at the top of the doc.
+% \newcommand{\forTEACHER}{%
+%     \tstutrue%
+%     \dashundergapssetup{teacher-mode=true,}%
+% }
+% \newcommand{\forSTUDENT}{%
+%     \tstufalse%
+%     \dashundergapssetup{teacher-mode=false,}%
+% }
+
+% % These will conditionally generate output (the argument) based on 
+% % whether this document is "for" HONORS or ONLEVEL according to the previous commands.
+% %
+% % #1 the content 
+% % #2 text color
+% \NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\ECFAugie\color{#1}#2}\else{}\fi}
+% \newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
+
+
+
+% ---------------------------------------------------------------------------
+% command for creating a 1- or 2-question warmup problem
+%
+% #1 date
+% #2 optional general directions
+%
+% ---------------------------------------------------------------------------
+\NewDocumentEnvironment{myWarmupProblems}{ 
+        O{
+            \begin{itemize}
+                \item Show {\itshape all} your work.
+                \item Put a \fbox{box} around your answer.
+            \end{itemize}
+            \vspace{0.5em}
+        } 
+    }
+{
+    \newpage
+    {
+        \sffamily
+        \begin{center}
+            {
+                \huge\bfseries%
+                \whenHONORS{Honors~}Algebra 2 Warmup
+            }%
+            \\[0.5em]
+            {\Large\itshape\printdate}
+        \end{center}
+        \noindent{\Large#1}
+    }
+    \large
+}{
+}
+
+
+% ---------------------------------------------------------------------------
+% A version of \sqrt 
+% ---------------------------------------------------------------------------
+%
+% #1 index of the root
+% #2 uproot amount
+% #3 radicand
+%
+\NewDocumentCommand{\myRoot}{ o O{2} m  }{%
+    \IfNoValueTF{#1}{\sqrt{#3\,}}{\sqrt[\uproot{#2}#1]{#3\,}}
+}
+
+
+% ---------------------------------------------------------------------------
+% changes to part/chapter/section
+% I am piggybacking Units and Lessons on Latex Parts and Chapters, respectively. 
+% ---------------------------------------------------------------------------
+
+% Here are some of the macros that capture "my settings".
+\newcommand{\myPartName}{Unit}      % what I'll replace "Unit" with.
+\newcommand{\myChapterName}{Lesson} % what I'll replace "Chapter" with.
+\newcommand{\myLessonSuffix}{}      % a suffix after lesson (chapter) numbers (eg, 'a' in Lesson 5.2a)
+
+% Redefine the Latex part and chapter names to use "my settings".
+\renewcommand{\partname}{\myPartName}       % "Unit 2" instead of "Part II"
+\renewcommand{\thepart}{\arabic{part}}
+\renewcommand{\chaptername}{\myChapterName} % "Lesson 2" instead of "Chapter 2"
+
+% A \chapter-based command to generate a lesson.
+% This is a thin wrapper around \chapter that allows me
+% to explicitly specify the lesson number. 
+%
+% #1 lesson name
+% #2 optional lesson number (eg, the '2' in Lesson 5.2)
+% #3 optional lesson suffix (eg, the 'a' in Lesson 5.2a)
+%
+\NewDocumentCommand{\myLesson}{ m O{1} O{} }
+{
+    \setcounter{chapter}{#2-1}
+    \renewcommand{\myLessonSuffix}{#3}
+    \chapter{#1}
+}
+
+% remove chapter numbers from section numbering
+\makeatletter
+\renewcommand\thesection{\@arabic\c@section}
+\makeatother
+
+% simulate a part without typesetting one
+% 
+% #1 - the part (unit) number
+% #2 - the part (unit) title
+\newcommand{\dummypart}[2]{%
+    \setcounter{part}{#1}
+    \partmark{#2}
+}
+
+% ---------------------------------------------------------------------------
+% These are "annotations", the foundation of the blocked-in-text that I use.
+%
+% I use the term "annotations" to capture the common
+% infrastructure I use to define Objectives, Vobabulary & Concepts.
+% ---------------------------------------------------------------------------
+
+% font and styling commands for
+% Objectives, Voculary, Key Concepts, etc...
+\newcommand{\myAnnotationStyling}{\bfseries\normalsize}
+
+% #1 : name of the kind of annotation (Objectives, ...)
+% #2 : title text to go with the annotation
+% #3 : extra tcolorbox options
+%
+\NewDocumentEnvironment{myAnnotate}{ m m O{}}{
+    \begin{tcolorbox}[
+        colbacktitle=blue!10!white,
+        colback=white,
+        coltitle=black,
+        fonttitle={\myAnnotationStyling},
+        title={#1:~},
+        after title={\normalfont\itshape#2},
+        #3,
+        ]
+}{
+    \end{tcolorbox}
+}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+%
+\NewDocumentEnvironment{myTabularAnnotate}{ m m }{
+    \begin{myAnnotate}{#1}{#2}
+    \begin{tabular}{r|l}
+}{
+    \end{tabular}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+%
+\NewDocumentCommand{\myRow}{mm}{{\bfseries\itshape \textcolor{blue}{#1}}&#2\\[1ex]}
+
+% #1 : name of the kind of annotation 
+% #2 : title 
+% #3 : text before the list starts
+%
+\NewDocumentEnvironment{myListAnnotate}{ m m o }{
+    \begin{myAnnotate}{#1}{#2}
+    \IfValueT{#3}{#3}
+    \begin{enumerate}[itemsep=0pt,fullwidth,]
+}{
+    \end{enumerate}
+    \end{myAnnotate}
+}
+% #1 - column 1 text
+% #2 - column 2 text
+%
+\NewDocumentCommand{\myItem}{mm}{\item{\bfseries\itshape \textcolor{blue}{#1}} #2}
+
+
+
+% Read an environment variable.
+% 1: name of the variable 
+% 2: optional command to "insert" it into so that the command 
+%    evaluates to the env var's value
+%
+% If option 2 is not present, the \getenv command will just 
+% echo the env var value into the output file.
+%
+% See: https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
+%
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+
+
+% a macro for typesetting buttons (eg, TI-84)
+% 1: text 
+%
+\NewDocumentCommand{\myButton}{ m }{
+    {\fbox{\ttfamily#1}}
+}

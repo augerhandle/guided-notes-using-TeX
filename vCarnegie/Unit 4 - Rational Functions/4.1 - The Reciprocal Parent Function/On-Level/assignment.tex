@@ -1,0 +1,223 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+\myAssignmentHeader{4.1}{The Reciprocal Parent Function}
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent
+{
+    Draw a \myEmph{big dot} for each of these points. 
+    Then draw a \myEmph{dashed line} going through all of them.
+    \begin{itemize}[nosep]
+        \item $(2,-4)$
+        \item $(2,2)$
+        \item $(2,5)$
+        \item $(2,-6)$
+    \end{itemize}
+    \vspace{-3\onelineskip}
+    \hfill
+    \begin{myTikzpictureGrid}{0.35} {6}{6}
+        \whenTEACHER{
+            \draw [ultra thick, dashed] (2.1,-7) -- (2.1,7);
+            \draw[fill,red] (2,-4) circle (3mm);
+            \draw[fill,red] (2,2) circle (3mm);
+            \draw[fill,red] (2,4) circle (3mm);
+            \draw[fill,red] (2,-6) circle (3mm);
+            \node[draw,red,fill=white] at (5,8) {$x=2$};
+        }
+    \end{myTikzpictureGrid}
+}
+{
+    Answer these questions about problem \#1. 
+    \tcblower 
+    \begin{itemize}[fullwidth]
+        \item[] What are the $x$ coordinates of the points? 
+        \item[] $x =$\gap{2}\\
+        \item[] What is the \myEmph{equation} of the line? 
+        \item[] $x =$\gap{2}\\
+        \item[] Is the line horizontal or vertical?
+        \item[] \gap{vertical}
+    \end{itemize}
+}
+
+
+\myProblemsWithContent
+{
+    Draw a \myEmph{big dot} for each of these points. 
+    Then draw a \myEmph{dashed line} going through all of them.
+    \begin{itemize}[nosep]
+        \item $(2,-3)$
+        \item $(0,-3)$
+        \item $(-3,-3)$
+        \item $(-6,-3)$
+    \end{itemize}
+    \vspace{-3\onelineskip}
+    \hfill
+    \begin{myTikzpictureGrid}{0.35} {6}{6}
+        \whenTEACHER{
+            \draw [ultra thick, dashed] (-7,-3.1) -- (7,-3.1);
+            \draw[fill,red] (2,-3) circle (3mm);
+            \draw[fill,red] (0,-3) circle (3mm);
+            \draw[fill,red] (-3,-3) circle (3mm);
+            \draw[fill,red] (-6,-3) circle (3mm);
+            \node[draw,red,fill=white] at (5,-3) {$y=-3$};
+        }
+    \end{myTikzpictureGrid}
+}
+{
+    Answer these questions about problem \#3. 
+    \tcblower 
+    \begin{itemize}[fullwidth]
+        \item[] What are the $y$ coordinates of the points? 
+        \item[] $y =$\gap{-3}\\
+        \item[] What is the \myEmph{equation} of the line? 
+        \item[] $y =$\gap{-3}\\
+        \item[] Is the line horizontal or vertical?
+        \item[] \gap{horizontal}
+    \end{itemize}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent
+{
+    What is the equation of the dashed line? \\
+    \gap{$x=3$}\\ 
+    Is the line horizontal or vertical?\\
+    \gap{vertical}\\
+    \vspace{-2.5\onelineskip}
+    \begin{flushright}
+        \begin{myTikzpictureGrid}{0.3} {6}{6}
+            \draw [ultra thick, dashed] (3.1,-7) -- (3.1,7);
+            \whenTEACHER{
+            % \draw [ultra thick, dashed] (2.1,-7) -- (2.1,7);
+            % \draw[fill,red] (2,-4) circle (3mm);
+            % \draw[fill,red] (2,2) circle (3mm);
+            % \draw[fill,red] (2,4) circle (3mm);
+            % \draw[fill,red] (2,-6) circle (3mm);
+            % \node[draw,red,fill=white] at (5,8) {$x=2$};
+            }
+        \end{myTikzpictureGrid}
+    \end{flushright}
+}
+{
+    What is the equation of the dashed line? \\
+    \gap{$y = -5$}\\ 
+    Is the line horizontal or vertical?\\
+    \gap{horizont}\\
+    \vspace{-2.5\onelineskip}
+    \begin{flushright}
+        \begin{myTikzpictureGrid}{0.3} {6}{6}
+            \draw [ultra thick, dashed] (-7,-5.1) -- (7,-5.1);
+            \whenTEACHER{
+            % \draw [ultra thick, dashed] (2.1,-7) -- (2.1,7);
+            % \draw[fill,red] (2,-4) circle (3mm);
+            % \draw[fill,red] (2,2) circle (3mm);
+            % \draw[fill,red] (2,4) circle (3mm);
+            % \draw[fill,red] (2,-6) circle (3mm);
+            % \node[draw,red,fill=white] at (5,8) {$x=2$};
+            }
+        \end{myTikzpictureGrid}
+    \end{flushright}
+}
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent
+{
+    Draw a \myEmph{dashed line} for $y = -2$. \\
+    Is the line horizontal or vertical?\\
+    \gap{horizont}\\
+    \vspace{-2\onelineskip}
+    \begin{flushright}
+        \begin{myTikzpictureGrid}{0.5} {6}{6}
+            \whenTEACHER{
+                \draw [ultra thick, dashed] (-7,-2.1) -- (7,-2.1);
+            }
+        \end{myTikzpictureGrid}
+    \end{flushright}
+}
+{
+    Draw a \myEmph{dashed line} for $x = 3$. \\
+    Is the line horizontal or vertical?\\
+    \gap{vertical}\\
+    \vspace{-2\onelineskip}
+    \begin{flushright}
+        \begin{myTikzpictureGrid}{0.5} {6}{6}
+            \whenTEACHER{
+                \draw [ultra thick, dashed] (3.1,-7) -- (3.1,7);
+            }
+        \end{myTikzpictureGrid}
+    \end{flushright}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    In the graph, I've already sketched in several points 
+    on the \myEmph{reciprocal parent function} and also its 
+    \myEmph{center} and \myEmph{asymptotes}.
+    Sketch the \myEmph{curve} of the function. 
+    \begin{itemize}[nosep]
+        \item Make sure it goes through all the points.
+        \item Make sure it \myEmph{does not} cross an asymptote line!
+    \end{itemize}
+    %
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.7} {5}{5}
+        \draw [ultra thick, dashed] (0.05,-6) -- (0.05,6);
+        \draw [ultra thick, dashed] (-6,0.05) -- (6,0.05);
+        \draw[fill=white,draw=black,ultra thick] (0,0) circle (3mm);
+        %
+        \draw[fill=black,draw=black] (0.2,5) circle (1.5mm);
+        \draw[fill=black,draw=black] (0.5,2) circle (1.5mm);
+        \draw[fill=black,draw=black] (1,1) circle (1.5mm);
+        \draw[fill=black,draw=black] (2,0.5) circle (1.5mm);
+        \draw[fill=black,draw=black] (5,0.2) circle (1.5mm);
+        %
+        \draw[fill=black,draw=black] (-0.2,-5) circle (1.5mm);
+        \draw[fill=black,draw=black] (-0.5,-2) circle (1.5mm);
+        \draw[fill=black,draw=black] (-1,-1) circle (1.5mm);
+        \draw[fill=black,draw=black] (-2,-0.5) circle (1.5mm);
+        \draw[fill=black,draw=black] (-5,-0.2) circle (1.5mm);
+        %
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=100, domain=-5:-0.01,]{1/x}
+            \tkzFct[ solid, ultra thick, samples=100, domain=0.01:5,]{1/x}
+        }
+    \end{myTikzpictureGrid}
+    \end{center}
+}
+
+\end{document}

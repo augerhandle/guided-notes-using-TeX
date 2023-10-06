@@ -1,0 +1,53 @@
+% ---------------------------------------------------------------------------
+% A chapter style
+% ---------------------------------------------------------------------------
+
+\makechapterstyle{myChapterStyle}{%
+    % Reset everything so there's no "hold overs"
+    \chapterstyle{default}
+
+    % Here I set up the size/fonts that I use. 
+    \renewcommand*{\chapnamefont}{\normalfont\sffamily}
+    \renewcommand*{\chapnumfont}{\normalfont\huge\bfseries\sffamily}
+    \renewcommand*{\chaptitlefont}{\normalfont\LARGE\bfseries\sffamily}
+
+    \renewcommand*{\chapterheadstart}{} % No leading vertical whitespace
+
+    % In this chapter style, all the work is being done when I print the chapter title.
+    % So I redefine these to do nothing.
+    \renewcommand*{\printchaptername}{}
+    \renewcommand*{\printchapternum}{}
+
+    % I do the formatting of the entire chapter (aka, lesson) banner here.
+    \renewcommand*{\printchaptertitle}[1]{
+        \begin{minipage}{0.14\textwidth}%
+            % Perhaps I want to to TpT and leave the lesson number blank? 
+            % FIXME: left margins 
+            % FIXME: If I do that, I also need to remove the # from footer.
+            %
+            % \noindent
+            % \tcbox[
+            %     left skip=0pt, 
+            %     colframe=black,
+            %     % boxsep=0pt,
+            %     left=0pt, top=0pt, bottom=0pt,
+            %     boxrule=0.2pt,
+            %     colback=white,
+            %     coltitle=black, colbacktitle=white,
+            %     title={\chapnamefont\myChapterName}]{
+            %     \noindent
+            %     \begin{tabular}{l} 
+            %         {\chapnumfont\par\thepart.\thechapter\myLessonSuffix}
+            %     \end{tabular}
+            % }
+            {\chapnamefont\myChapterName\par\vspace{0.25\onelineskip}}
+            {\chapnumfont\par\thepart.\thechapter\myLessonSuffix}%
+        \end{minipage}
+        \begin{minipage}{0.85\textwidth}
+            {\begin{flushright}{\chaptitlefont##1}\end{flushright}}
+        \end{minipage}
+    }
+
+    % No trailing whitespace.
+    \renewcommand*{\afterchaptertitle}{}
+}

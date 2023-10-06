@@ -1,0 +1,114 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+\myAssignmentHeader{2.8-2.9}{Factoring Practice}
+
+
+\section*{Lesson 2.8 practice -- Quadratic Form Trinomials}
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent[Factor these \myEmph{quadratic form trinomials}.]
+{
+    $ x^4 +6x^2 + 8 $ 
+    \tcblower 
+    \myReverseBoxScaffold[x]{$x^2+2$}{$x^2+4$}[4][2]
+}
+{
+    $ z^4 + z^2 - 12 $ 
+    \tcblower 
+    \myReverseBoxScaffold[z]{$z^2+4$}{$z^2-3$}[4][2]
+}
+
+
+\myProblemsWithContent
+{
+    $ 5x^4 - 24x^2 - 5 $ 
+    \tcblower 
+    \myReverseBoxScaffold{$5x^2+1$}{$x^2-5$}[4][2]
+}
+{
+    $ 3x^4 + 19x^2 + 20 $ 
+    \tcblower 
+    \myReverseBoxScaffold{$3x^2+4$}{$x^2+5$}[4][2]
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+
+\section*{Lesson 2.9 practice -- 4-term Cubic Polynomials}
+
+\myProblemsWithContent%[Factor these 4-term cubic polynomials.]
+{
+    $ 4x^3 - 6x^2 + 2x - 3 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$2x^2+1$}{$2x-3$}
+}
+{
+    $ 6x^3 + 4x^2 + 3x + 2 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$2x^2+1$}{$3x+2$}
+}
+
+
+\myProblemsWithContent
+{
+    $ 8x^3 - 6x^2 - 12x + 9 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$2x^2-3$}{$4x-3$}
+}
+{
+    $ 20x^3 + 25x^2 - 4x - 5 $ 
+    \tcblower 
+    \myFourTermCubicReverseBoxScaffold{$5x^2-1$}{$4x+5$}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+
+\section*{Lesson 2.4b -- Factoring out a GCF}
+
+\myProblemsWithContent[Factor these polynomials by finding and removing a GCF.]
+{
+    $8x^3 + 16x$
+    \tcblower
+    \vspace{1.5in}
+    GCF: \fbox{\whenSTUDENT{\phantom{$8x$}}\whenTEACHER{$8x$}}\\
+    factored form: \fbox{\whenSTUDENT{\phantom{$8x$}}\whenTEACHER{$8x$}}~\fbox{\whenSTUDENT{\phantom{$x^2 + 2$}}\whenTEACHER{$x^2 + 2$}}
+}
+{
+    $15x^3 + 10x - 50$
+    \tcblower
+    \vspace{1.5in}
+    GCF: \fbox{\whenSTUDENT{\phantom{$5$}}\whenTEACHER{$5$}}\\
+    factored form: 
+        \fbox{\whenSTUDENT{\phantom{$5$}}\whenTEACHER{$5$}}%
+        ~%
+        \fbox{\whenSTUDENT{\phantom{$3x^2+2x-10$}}\whenTEACHER{$3x^3+2x-10$}}
+}
+\end{document}

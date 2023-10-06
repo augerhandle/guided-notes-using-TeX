@@ -1,0 +1,49 @@
+\section{Attributes}
+
+\begin{tcolorbox}[center,colback=white]
+\begin{center}
+    \small
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{2in}p{4in}}
+    \myEmph{attribute} & \myEmph{description} \\
+    \toprule
+    \myEmph{vertical asymptote}   & \,\gap{vertical} \gap{line} the graph gets close to\\ 
+    \myEmph{horizontal asymptote} & \,\gap{horizontal} \gap{line} the graph gets close to\\ 
+    \midrule[0.1mm]
+    \myEmph{center} & where the asymptotes \gap{intersect}\\ 
+    \midrule[0.1mm]
+    \myEmph{domain} & is all the \gap{$x$-values} on the curve\\
+    \myEmph{range} & is all the \gap{$y$-values} on the curve\\
+    \midrule[0.1mm]
+    \myEmph{end behavior} 
+        & as $x \rightarrow \text{\fbox{\phantom{ZZ}},\quad} y \rightarrow \text{\fbox{\phantom{ZZ}}}$\\
+\end{tabular}
+\end{center}
+\end{tcolorbox}
+
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.4} {6}{6}
+        % \tkzText(13,8){$x - y = 0$}
+        \tkzFct[ solid, ultra thick, samples=100, domain=-6:-0.01,]{1/x}
+        \tkzFct[ solid, ultra thick, samples=100, domain=0.01:6,]{1/x}
+    \end{myTikzpictureGrid}
+\end{minipage}\begin{minipage}{0.69\textwidth}
+    \centering 
+    \small
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{r|p{1.75in}}
+        {\itshape attribute}  & {\itshape value} \\ \hline\hline
+        equation of the vertical asymptote   & \whenTEACHER{$x=0$}\\ \hline
+        equation of the horizontal asymptote & \whenTEACHER{$y=0$}\\ \hline
+        center                               & \whenTEACHER{$(0,0)$}\\ \hline
+        domain                & \whenTEACHER{$x \ne 0$}\\ \hline
+        range                 & \whenTEACHER{$y \ne 0$}\\ \hline
+        left end behavior     & \whenTEACHER{as $x\rightarrow-\infty$, $y\rightarrow 0$} \\ \hline
+        mid-left end behavior 
+            & \whenTEACHER{as $x\rightarrow0^{-}$, $y\rightarrow-\infty$} \\ \hline
+        mid-right end behavior
+            & \whenTEACHER{as $x\rightarrow0^{+}$, $y\rightarrow\infty$} \\ \hline
+        right end behavior    & \whenTEACHER{as $x\rightarrow\infty$, $y\rightarrow0$} \\ \hline
+    \end{tabular}
+\end{minipage}

@@ -1,0 +1,79 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+\myAssignmentHeader{2.11}{Synthetic Division}
+
+\myEmph{Show all your work.}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent[Divide these polynomials using synthetic division.]
+{
+    $ (x^3 - 3x^2 - 12x + 11) \div (x-5)$ 
+    \tcblower 
+    \mySyntheticDivisionScaffold{4}\\
+    \vspace{1\onelineskip}
+    \whenSTUDENT{\phantom{$x^2 + 2x - 2 + \frac{1}{x-5}$}}\whenTEACHER{$x^2 + 2x - 2 + \frac{1}{x-5}$}
+}
+{
+    $ (z^3 + 8z^2 + 18z + 10) \div  (z+4)$ 
+    \tcblower 
+    \mySyntheticDivisionScaffold{4}\\
+    \vspace{1\onelineskip}
+    \whenSTUDENT{\phantom{$z^2 + 4x + 2 + \frac{2}{z+4}$}}\whenTEACHER{$z^2 + 4x + 2 + \frac{2}{z+4}$}
+}
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent
+{
+    {\large $ \frac{(x^4 + 2x^3 - 32x^2 + 39x - 38)}{(x-4)}$ }
+    \tcblower 
+    \mySyntheticDivisionScaffold{5}\\
+    \vspace{1\onelineskip}
+    \whenSTUDENT{\phantom{$x^3 + 6x^2 - 8x +7 - \frac{10}{x-4}$}}\whenTEACHER{$x^3 + 6x^2 - 8x +7 - \frac{10}{x-4}$}
+}
+{
+    {\large $ \frac{(-3z - 17 + 7z^3 + z^4)}{(z+7)}$ }
+    \tcblower 
+    \mySyntheticDivisionScaffold{5}\\
+    \vspace{1\onelineskip}
+    \whenSTUDENT{\phantom{$z^3 - 3 + \frac{4}{z+7}$}}\whenTEACHER{$z^3 - 3 + \frac{4}{z+7}$}
+}
+
+\myProblems[Is the given binomial {\scshape Divisor} a \myEmph{factor} of the long polynomial? Explain why or why not.]
+{
+    $   (3x^3 + 4x^2 - 28x + 17) \div  (x+4)   $
+}
+{
+    $   ( - x^3 - 67x^2 - 35x - 90 + x^4) \div  (x-9)   $
+}
+{1.5in}[\whenTEACHER{No}][\whenTEACHER{Yes}]
+
+\end{document}

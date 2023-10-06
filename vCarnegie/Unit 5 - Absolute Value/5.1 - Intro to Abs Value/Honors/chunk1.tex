@@ -1,0 +1,90 @@
+\section{Distance on the Number Line}
+
+\begin{tcolorbox}
+    \begin{itemize}[nosep]
+        \item The \gap{distance} of a point from the origin is \gap{how} \gap{far} it is from $\bm{0}$.
+        \item Distance is \gap{always} \gap{positive}.
+    \end{itemize}
+\end{tcolorbox}
+
+\myProblemsWithContent[Find the {\bfseries\itshape distance} of the black point from the origin.]
+{
+    {
+    \small
+    \vspace{0.75\baselineskip}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberlineCircle{4}{black}
+            \myDrawNumberline{5}
+        \end{tikzpicture}
+    \end{center}
+    }
+    {\itshape distance from origin} = \gap{4}
+}
+{
+    {
+    \small
+    \vspace{0.75\baselineskip}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberlineCircle{-3}{black}
+            \myDrawNumberline{5}
+        \end{tikzpicture}
+    \end{center}
+    }
+    {\itshape distance from origin} = \gap{3}
+}
+
+\myProblemsWithContent[Draw {\bfseries\itshape two points} that are the given distance from the origin.]
+{
+    \small
+    {\itshape distance from origin} = $3$
+    \vspace{1\baselineskip}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberline{5}
+            \whenTEACHER{
+                \myDrawNumberlineCircle{3}{red}
+                \myDrawNumberlineCircle{-3}{red}
+            }
+        \end{tikzpicture}
+    \end{center}
+}
+{
+    \small
+    {\itshape distance from origin} = $1.5$
+    \vspace{1\baselineskip}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberline{5}
+            \whenTEACHER{
+                \myDrawNumberlineCircle{1.5}{red}
+                \myDrawNumberlineCircle{-1.5}{red}
+            }
+        \end{tikzpicture}
+        \vspace{0.75\baselineskip}
+    \end{center}
+}
+
+\myWideProblemWithContent
+{
+    {
+    \small
+    {\itshape distance from origin} = $-2$
+    \begin{center}
+        \begin{tikzpicture}[scale=0.75]
+            \myDrawNumberlineCircle{0}{white}
+            \myDrawNumberline{5}
+        \end{tikzpicture}
+    \end{center}
+    }
+    %
+    \normalsize
+    There is \gap{no} \gap{solution}, because
+    distance is \gap{never} \gap{negative}.
+}
+

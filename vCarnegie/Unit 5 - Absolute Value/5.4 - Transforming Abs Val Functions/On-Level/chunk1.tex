@@ -1,0 +1,79 @@
+\section{Tranformed Absolute Value Functions}
+
+We can \gap{transform} absolute value functions 
+using \gap{$a$}, \gap{$h$}, and \gap{$k$}.
+
+\begin{tcbraster}[
+    raster columns = 2,
+    raster equal height,
+    raster left skip = 0.5in, raster right skip = 0.5in, raster column skip = 0.25in,
+    raster before skip = 0.25in, raster after skip = 0.25in,
+    colback=white,
+]
+    \begin{tcolorbox}[]
+        \centering
+        {\itshape parent function}\\[1\baselineskip]
+        \Large
+        $ f(x) = |x| $
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \centering
+        {\itshape transformed function}\\[1\baselineskip]
+        \Large
+        $g(x) = \bm{a} |x-\bm{h}| + \bm{k}$
+    \end{tcolorbox}
+\end{tcbraster}
+%
+
+\begin{minipage}[t]{0.5\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.25} {6}{6}
+        \tkzFct[ dashed, ultra thick, samples=100, domain=-6:6,]{abs(x)}
+        \draw[fill=black,draw=black] (0,0) circle (2.5mm);
+        % \tkzText(5,7){$f(x) = x^2$}
+    \end{myTikzpictureGrid}
+    \\[1.5ex]
+    \large
+    $f(x) = |x|$
+\end{minipage}
+\hfill{}
+\begin{minipage}[t]{0.5\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.25} {6}{6}
+        \tkzFct[ dashed, ultra thick, samples=100, domain=-6:6,]{-1*abs(x-2) + 3}
+        \draw[fill=black,draw=black] (2,3) circle (2.5mm);
+        % \tkzText(2,1){$f(x) = x^2$}
+    \end{myTikzpictureGrid}
+    \\[1.5ex]
+    \large
+    $g(x) = -|x-2|+3$
+    {
+        \small
+        \begin{equation*} 
+            a = -1 \quad h = 2 \quad k = 3
+        \end{equation*} 
+    }
+\end{minipage}
+
+\begin{myWarningBox}
+    \begin{center}
+    $h$ is the \myEmph{opposite} of what you see.
+    \end{center}
+\end{myWarningBox}
+
+\myProblems[Find the values of $a, h, k$ for these functions.]
+{
+    $g(x) = |x-5| - 12$ 
+    \whenTEACHER{\tiny
+        \hfill 
+        $a=1$, $h=5$, $k=-12$
+    }
+}
+{
+    $g(x) = - |x+3| $
+    \whenTEACHER{\tiny
+        \hfill 
+        $a=-1$, $h=-3$, $k=0$
+    }
+}
+{0.45in}

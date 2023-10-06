@@ -1,0 +1,39 @@
+% ---------------------------------------------------------------------------
+% Lesson headers / footers
+% ---------------------------------------------------------------------------
+\nouppercaseheads
+
+\copypagestyle{myPagestyle}{headings}
+\aliaspagestyle{chapter}{myPagestyle}
+
+\newcommand{\myHeaderInner}  {\tiny\sffamily\itshape\myFullCourseName}
+\newcommand{\myHeaderCenter}{}
+\newcommand{\myHeaderOuter} {\tiny\sffamily\itshape\leftmark}
+
+\newcommand{\myFooterInner}  {}
+\newcommand{\myFooterCenter}{\tiny\sffamily\itshape\thepage}
+% I'm not using \rightmark here (although I'd like to), since in some cases
+% (first page of the first chapter?) it doesn't get generated. Instead I'm 
+% "hardcoding" the footer right to be what I'd like it to be.
+% \newcommand{\myFooterOuter} {\tiny\sffamily\itshape\rightmark}
+\newcommand{\myFooterOuter} {\tiny\sffamily\itshape\myChapterName\ \thepart.\thechapter\myLessonSuffix}
+
+\makeevenhead{myPagestyle}{\myHeaderOuter}{\myHeaderCenter}{\myHeaderInner}
+\makeoddhead {myPagestyle}{\myHeaderInner}{\myHeaderCenter}{\myHeaderOuter}
+
+\makeevenfoot{myPagestyle}{\myFooterOuter}{\myFooterCenter}{\myFooterInner}
+\makeoddfoot {myPagestyle}{\myFooterInner}{\myFooterCenter}{\myFooterOuter}
+
+% clear these out so they don't set any marks
+\clearmark{book}
+\clearmark{part}
+\clearmark{chapter}
+\clearmark{section}
+\clearmark{subsection}
+
+% Redefine partmark and chaptermark to put part(unit) and chapter(lesson) info
+% into \leftmark and \rightmark, respectively, for use in the header/footer.
+\makepsmarks{headings}{%
+    \createmark{part}{left}{shownumber}{\partname\ }{\ }
+    \createmark{chapter}{right}{shownumber}{\myChapterName\ \thepart.}{\ }
+}

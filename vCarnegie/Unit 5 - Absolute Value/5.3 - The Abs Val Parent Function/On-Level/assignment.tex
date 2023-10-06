@@ -1,0 +1,160 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+\iftstu 
+    \dashundergapssetup{gap-font={\ECFAugie\MTversion{augie}\color{red}},}
+\fi
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+\myAssignmentHeader{5.3}{The Absolute Value Parent Function}
+
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myProblemsWithContent
+{
+    Draw a \myEmph{big dot} for each of these points. 
+    Then draw a \myEmph{dashed line} going through all of them.
+    \begin{itemize}[nosep]
+        \item $(2,-4)$
+        \item $(2,2)$
+        \item $(2,5)$
+        \item $(2,-6)$
+    \end{itemize}
+    \vspace{-3\onelineskip}
+    \hfill
+    \begin{myTikzpictureGrid}{0.35} {6}{6}
+        \whenTEACHER{
+            \draw [ultra thick, dashed] (2.1,-7) -- (2.1,7);
+            \draw[fill,red] (2,-4) circle (3mm);
+            \draw[fill,red] (2,2) circle (3mm);
+            \draw[fill,red] (2,4) circle (3mm);
+            \draw[fill,red] (2,-6) circle (3mm);
+            \node[draw,red,fill=white] at (5,8) {$x=2$};
+        }
+    \end{myTikzpictureGrid}
+}
+{
+    Answer these questions about problem \#1. 
+    \tcblower 
+    \begin{itemize}[fullwidth]
+        \item[] What are the $x$ coordinates of the points? 
+        \item[] $x =$\gap{2}\\
+        \item[] What is the \myEmph{equation} of the line? 
+        \item[] $x =$\gap{2}\\
+        \item[] Is the line horizontal or vertical?
+        \item[] \gap{vertical}
+    \end{itemize}
+}
+
+%
+%-----------------------------------------------------------------------------------------
+%
+\myWideProblemWithContent
+{
+    In this graph, I've sketched the \myEmph{vertex} 
+    of the absolute value parent function and two other points on it.
+    Add the following things to the graph:
+    \begin{enumerate}[nosep]
+        \item At least four other points on the function.
+            (Hint: Look at the \myEmph{Lesson 5.3} notes.)
+        \item Draw the graph of the partent function. 
+            (Make sure it goes through all the points.)
+        \item Draw the \myEmph{axis of symmetry}.
+            (Hint: It's the \myEmph{vertical line} going through the vertex.)
+    \end{enumerate}
+    %
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.7} {5}{5}
+        \draw[fill=black,draw=black,ultra thick] (0,0) circle (2mm);
+        \draw[fill=black,draw=black] (3,3) circle (1.5mm);
+        \draw[fill=black,draw=black] (-3,3) circle (1.5mm);
+        \whenTEACHER{
+            \draw[fill=red,draw=red] (1,1) circle (1.5mm);
+            \draw[fill=red,draw=red] (-1,1) circle (1.5mm);
+            \draw[fill=red,draw=red] (5,5) circle (1.5mm);
+            \draw[fill=red,draw=red] (-5,5) circle (1.5mm);
+            %
+            \draw [ultra thick, dashed] (0.1,-6) -- (0.1,6);
+            %
+            \tkzFct[ solid, ultra thick, samples=100, domain=-5:0,]{-x}
+            \tkzFct[ solid, ultra thick, samples=100, domain=0:5,]{x}
+        }
+    \end{myTikzpictureGrid}
+    \end{center}
+}
+
+\myProblems 
+{
+    What are the \myEmph{coordinates} of the vertex?
+}
+{
+    What is the \myEmph{equation} of the axis of symmetry? 
+}
+{0.25in}
+[\myAnswer{$(0,0)$}]
+[\myAnswer{$x=0$}]
+
+\myProblems 
+{
+    Do the points on the graph have $y$-coordinates that are 
+    greater or less than zero?
+}
+{
+    What is the \myEmph{range} of the function?
+}
+{0.5in}
+
+\myProblems
+{
+    Does the graph of the absolute parent function 
+    \myEmph{open up} or \myEmph{open down}?
+}
+{
+    Is the vertex a \myEmph{minimum} or a \myEmph{maximum}?
+    EXPLAIN why you say that.
+}
+{1.5in}
+
+\myProblems
+{
+    What is a ``parent function''? 
+    (Hint: Look the vocabulary in the \myEmph{Lesson 5.3} notes.)
+}
+{
+    There is one ``attribute'' that we discussed in the notes 
+    that I have not asked you about here. What is the name that attribute?
+    (Hint: Look at the notes!!)
+}
+{1.5in}
+
+\myWideProblem{
+    How would you describe the shape of the graph of the 
+    absolute value parent function?
+}
+{2in}
+
+
+\end{document}

@@ -1,0 +1,40 @@
+\section{Previous Parent Functions}
+
+Parent functions we have previously studied:
+\begin{tcbraster}[
+        raster columns = 3,
+        raster equal height,
+        colback = white,
+        ]
+    \begin{tcolorbox}[]
+        \begin{center}
+            \small
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x}
+                \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \end{myTikzpictureGrid}
+            \myEmph{linear}: $f(x) = x$
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \begin{center}
+            \small
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x*x}
+                \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \end{myTikzpictureGrid}
+            \myEmph{quadratic}  $f(x) = x^2$
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \begin{center}
+            \small
+            \begin{myTikzpictureGrid}{0.2} {9}{6}
+                \tkzFct[ solid, ultra thick, samples=500, domain=-10:-0.05,]{1/x}
+                \tkzFct[ solid, ultra thick, samples=500, domain=0.05:10,]{1/x}
+                \draw[black,thick,fill=red] (0,0) circle (0.4 cm);
+            \end{myTikzpictureGrid}
+            \myEmph{reciprocal}  $f(x) = \frac{1}{x}$
+        \end{center}
+    \end{tcolorbox}
+\end{tcbraster}
