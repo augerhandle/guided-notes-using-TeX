@@ -1,0 +1,206 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\input{../../../common/course-name}
+\input{../../../common/defs}
+\input{../../../common/student-or-teacher}
+\input{../../../common/assignment-defs}
+\input{../../../common/packages}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+
+\def\thickhline{\noalign{\hrule height1.5pt}}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X} 
+\renewcommand\arraystretch{1.2}
+
+\begin{document}
+
+\input{for-whom}
+
+\pagestyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{Activity 3.5}{One-to-One Functions}
+%-----------------------------------------------------------------------------------------
+
+\myProblemsWithContent[For each function,
+   \begin{itemize}[nosep]
+    \item Complete the tables for the function and its inverse.
+    \item Sketch the graphs of the function (as a SOLID line) and its inverse (as a DASHED line).
+    \item Find the equation for the inverse (using the 3 steps in the notes).
+   \end{itemize}
+]
+{
+    $f(x) = 5x$
+    \myAnswer{\small\hfill$f^{-1}(x)=\frac{x}{5}$}
+    \tcblower
+    {
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{original function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            -2 &  \myAnswer{-10} \\ \hline
+            -1 &  \myAnswer{-5}   \\ \hline
+            0 &  \myAnswer{0}   \\ \hline 
+            1 &  \myAnswer{5}   \\ \hline 
+            2 &  \myAnswer{10}   \\ \hline 
+        \end{tabularx}
+        \hfill
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{inverse function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            \myAnswer{-10} & -2  \\ \hline
+            \myAnswer{-5} & -1  \\ \hline
+            \myAnswer{0} &  0  \\ \hline 
+            \myAnswer{5} &  1  \\ \hline 
+            \myAnswer{10} &  2  \\ \hline 
+        \end{tabularx}
+    }\\
+    \begin{myTikzpictureGrid}{0.3} {10}{10} [solid]
+        \myAnswer{
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{5*x}
+            \tkzFct[ dashed, ultra thick, samples=800, domain=-10:10,]{x/5}
+        }
+\end{myTikzpictureGrid}\\
+Use this space to find the inverse of $f(x)$:\\
+\vspace{2.5in}
+}
+{
+    $f(x) = 3x + 4$
+    \myAnswer{\small\hfill $f^{-1}(x)= \frac{x-4}{3} = \frac{x}{3} - \frac{4}{3}$}
+    \tcblower
+    {
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{original function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            -2 &  \myAnswer{-2} \\ \hline
+            -1 &  \myAnswer{1}   \\ \hline
+            0 &  \myAnswer{4}   \\ \hline 
+            1 &  \myAnswer{7}   \\ \hline 
+            2 &  \myAnswer{10}   \\ \hline 
+        \end{tabularx}
+        \hfill
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{inverse function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            \myAnswer{-2} & -2  \\ \hline
+            \myAnswer{1} & -1  \\ \hline
+            \myAnswer{4} &  0  \\ \hline 
+            \myAnswer{7} &  1  \\ \hline 
+            \myAnswer{10} &  2  \\ \hline 
+        \end{tabularx}
+    }\\
+    \begin{myTikzpictureGrid}{0.3} {10}{10} [solid]
+        \myAnswer{
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{3*x + 4}
+            \tkzFct[ dashed, ultra thick, samples=800, domain=-10:10,]{(x-4)/3}
+        }
+    \end{myTikzpictureGrid}\\
+    Use this space to find the inverse of $f(x)$:\\
+    \vspace{2.5in}
+}
+\myProblemsWithContent
+{
+    $f(x) = 2x - 4$
+    \myAnswer{\small\hfill $f^{-1}(x)= \frac{x+4}{2} = \frac{x}{2} + 2$}
+    \tcblower
+    {
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{original function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            -2 &  \myAnswer{-8} \\ \hline
+            -1 &  \myAnswer{-6}   \\ \hline
+            0 &  \myAnswer{-4}   \\ \hline 
+            1 &  \myAnswer{-2}   \\ \hline 
+            2 &  \myAnswer{0}   \\ \hline 
+        \end{tabularx}
+        \hfill
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{inverse function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            \myAnswer{-8} & -2  \\ \hline
+            \myAnswer{-6} & -1  \\ \hline
+            \myAnswer{-4} &  0  \\ \hline 
+            \myAnswer{-2} &  1  \\ \hline 
+            \myAnswer{0} &  2  \\ \hline 
+        \end{tabularx}
+    }\\
+    \begin{myTikzpictureGrid}{0.3} {10}{10} [solid]
+        \myAnswer{
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{2*x - 4}
+            \tkzFct[ dashed, ultra thick, samples=800, domain=-10:10,]{(x+4)/2}
+        }
+\end{myTikzpictureGrid}\\
+Use this space to find the inverse of $f(x)$:\\
+\vspace{2.5in}
+}
+{
+    $f(x) = x^2 - 6$
+    \myAnswer{\small\hfill $f^{-1}(x)= \pm \myRoot{x+6}$}
+    \tcblower
+    {
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{original function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            -2 &  \myAnswer{-2} \\ \hline
+            -1 &  \myAnswer{-5}   \\ \hline
+            0 &  \myAnswer{-6}   \\ \hline 
+            1 &  \myAnswer{-5}   \\ \hline 
+            2 &  \myAnswer{-2}   \\ \hline 
+        \end{tabularx}
+        \hfill
+        \begin{tabularx}{0.4\textwidth}{|Y|Y|}
+            \hline
+            \multicolumn{2}{|c|}{\itshape{inverse function}} \\ \hline 
+            $x$ & $y$ \\
+            \thickhline
+            \myAnswer{-2} & -2  \\ \hline
+            \myAnswer{-5} & -1  \\ \hline
+            \myAnswer{-6} &  0  \\ \hline 
+            \myAnswer{-5} &  1  \\ \hline 
+            \myAnswer{-2} &  2  \\ \hline 
+        \end{tabularx}
+    }\\
+    \begin{myTikzpictureGrid}{0.3} {10}{10} [solid]
+        \myAnswer{
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:10,]{x**2 - 6}
+            \tkzFct[ dashed, ultra thick, samples=800, domain=-10:10,]{sqrt(x+6)}
+            \tkzFct[ dashed, ultra thick, samples=800, domain=-10:10,]{-sqrt(x+6)}
+        }
+    \end{myTikzpictureGrid}\\
+    Use this space to find the inverse of $f(x)$:\\
+    \vspace{2.5in}
+}
+
+
+
+
+\end{document}
