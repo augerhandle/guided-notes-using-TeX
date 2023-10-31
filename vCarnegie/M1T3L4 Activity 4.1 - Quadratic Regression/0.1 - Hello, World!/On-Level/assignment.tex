@@ -1,0 +1,306 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+
+\input{../../../common/course-name}
+\input{../../../common/defs}
+\input{../../../common/student-or-teacher}
+\input{../../../common/assignment-defs}
+\input{../../../common/packages}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{red}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\def\thickhline{\noalign{\hrule height1.5pt}}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X} 
+\renewcommand\arraystretch{1.2}
+
+\begin{document}
+
+\input{for-whom}
+
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{Lesson 4}{Quadratic Regression}
+%-----------------------------------------------------------------------------------------
+
+\myWideProblemWithContent[%
+Use Desmos to find the linear and quadratic regression functions 
+that best ``fit'' the data in the given table. 
+(After you create the Desmos $x_1-y_1$ table, click the 
+magnifying ``Zoom fit'' icon 
+\includegraphics[width=0.2in]{magnifying-glass-plus.png}
+so that you can see the whole scatterplot.)
+]
+{
+    A 12oz can of soda was put into a freezer.
+    This table shows the volume of the soda in the can,
+    measured at different temperatures.\\[0.5em]
+    \begin{minipage}{0.35\textwidth}
+        \footnotesize
+        \begin{tabular}{cc}
+            $x$ & $y$ \\ 
+            temperature (${}^\circ F$) & volume ($cm^3$) \\
+            \midrule 
+            68.0 & 355.51 \\
+            50.0 & 354.98 \\ 
+            42.8 & 354.89 \\ 
+            39.2 & 354.88 \\ 
+            35.6 & 354.89 \\ 
+            32.0 & 354.93 \\ 
+            23.0 & 355.13 \\ 
+            14.0 & 355.54 \\ 
+            \bottomrule
+        \end{tabular}
+        \end{minipage}
+    \begin{minipage}{0.64\textwidth}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Linear Regression}\hfill$y_1 \sim m x_1 + b$
+            \tcblower
+            $m =$ \gap{\tiny$0.000055$} \whenHONORS{\hfill $r^2 = \gap{0.00001}$}\\
+            $b =$ \gap{\tiny$355.09$}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Quadratic Regression}\hfill$y_1 \sim A x_1^2 + B x_1 + C$
+            \tcblower
+            $A =$ \gap{\tiny$0.00088$} \whenHONORS{\hfill $R^2 = \gap{0.9943}$}\\
+            $B =$ \gap{\tiny$-0.072$}\\
+            $C =$ \gap{\tiny$356.35$}
+        \end{tcolorbox}
+    \end{minipage}\\[1\onelineskip]
+    Click the 
+    \includegraphics[width=0.2in]{magnifying-glass-plus.png} 
+    icon to make sure you can see all the points.
+    Look at the graphs of the two regression equations 
+    (the line and the parabola).
+    Which one seems to best fit the points?
+    Explain why you say that.
+    \vspace{0.7in}
+}
+
+\myWideProblemWithContent 
+{
+    A comparison of the speed of cars with gas mileageis 
+    shown in the table.\\[0.5em]
+    \begin{minipage}{0.35\textwidth}
+        \footnotesize
+        \begin{tabular}{cc}
+            $x$ & $y$ \\ 
+            speed ({\itshape mph}) & mileage ({\itshape mpg}) \\
+            \midrule 
+            15 & 22.3 \\
+            20 & 25.5 \\ 
+            25 & 27.5 \\ 
+            30 & 29.0 \\ 
+            35 & 28.8 \\ 
+            40 & 30.0 \\ 
+            45 & 29.9 \\ 
+            50 & 30.2 \\ 
+            55 & 30.4 \\ 
+            60 & 28.8 \\ 
+            65 & 27.4 \\ 
+            70 & 25.3 \\ 
+            75 & 23.3 \\ 
+            \bottomrule
+        \end{tabular}
+        \end{minipage}
+    \begin{minipage}{0.64\textwidth}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Linear Regression}\hfill$y_1 \sim m x_1 + b$
+            \tcblower
+            $m =$ \gap{\tiny$0.0081$} \whenHONORS{\hfill $r^2 = \gap{0.000011}$}\\
+            $b =$ \gap{\tiny$27.20$}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Quadratic Regression}\hfill$y_1 \sim A x_1^2 + B x_1 + C$
+            \tcblower
+            $A =$ \gap{\tiny$-0.0082$} \whenHONORS{\hfill $R^2 = \gap{0.9943}$}\\
+            $B =$ \gap{\tiny$0.75$}\\
+            $C =$ \gap{\tiny$13.5$}
+        \end{tcolorbox}
+    \end{minipage}\\[1\onelineskip]
+    Click the 
+    \includegraphics[width=0.2in]{magnifying-glass-plus.png} 
+    icon to make sure you can see all the points.
+    Look at the graphs of the two regression equations 
+    (the line and the parabola).
+    Which one seems to best fit the points?
+    Explain why you say that.
+    \vspace{0.7in}
+}
+
+\myWideProblemWithContent 
+{
+    A sports medicine study collected data on the 
+    arm-span and height of student atheletes.
+    The data are shown in the table.\\[0.5em]
+    \begin{minipage}{0.35\textwidth}
+        \footnotesize
+        \begin{tabular}{cc}
+            $x$ & $y$ \\ 
+            arm-span ({\itshape in}) & height ({\itshape in}) \\
+            \midrule 
+            64 & 62 \\
+            69 & 70 \\ 
+            62 & 62 \\ 
+            63 & 60 \\ 
+            70 & 72 \\ 
+            71 & 70.5 \\ 
+            69 & 68 \\ 
+            65 & 67.5 \\ 
+            \bottomrule
+        \end{tabular}
+        \end{minipage}
+    \begin{minipage}{0.64\textwidth}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Linear Regression}\hfill$y_1 \sim m x_1 + b$
+            \tcblower
+            $m =$ \gap{\tiny$1.19$} \whenHONORS{\hfill $r^2 = \gap{0.8467}$}\\
+            $b =$ \gap{\tiny$-13.02$}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Quadratic Regression}\hfill$y_1 \sim A x_1^2 + B x_1 + C$
+            \tcblower
+            $A =$ \gap{\tiny$-0.059$} \whenHONORS{\hfill $R^2 = \gap{0.8544}$}\\
+            $B =$ \gap{\tiny$9.054$}\\
+            $C =$ \gap{\tiny$-273.8$}
+        \end{tcolorbox}
+    \end{minipage}\\[1\onelineskip]
+    Click the 
+    \includegraphics[width=0.2in]{magnifying-glass-plus.png} 
+    icon to make sure you can see all the points.
+    Look at the graphs of the two regression equations 
+    (the line and the parabola).
+    Which one seems to best fit the points?
+    Explain why you say that.
+    \vspace{0.7in}
+}
+
+
+\myWideProblemWithContent 
+{
+    A ball is dropped from a height of 5.25 feet.
+    The height of the ball as it falls is recorded 
+    for various times in the table.\\[0.5em]
+    \begin{minipage}{0.35\textwidth}
+        \footnotesize
+        \begin{tabular}{cc}
+            $x$ & $y$ \\ 
+            time ({\itshape sec}) & height ({\itshape ft}) \\
+            \midrule 
+            0.0   & 5.24 \\
+            0.04  & 5.16 \\ 
+            0.08  & 5.03 \\ 
+            0.16  & 4.63 \\ 
+            0.18  & 4.50 \\ 
+            0.24  & 4.03 \\ 
+            0.32  & 3.23 \\ 
+            0.36  & 2.77 \\ 
+            0.40  & 2.26 \\
+            0.44  & 1.63 \\
+            \bottomrule
+        \end{tabular}
+        \end{minipage}
+    \begin{minipage}{0.64\textwidth}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Linear Regression}\hfill$y_1 \sim m x_1 + b$
+            \tcblower
+            $m =$ \gap{\tiny$-8.15$} \whenHONORS{\hfill $r^2 = \gap{0.9515}$}\\
+            $b =$ \gap{\tiny$5.66$}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Quadratic Regression}\hfill$y_1 \sim A x_1^2 + B x_1 + C$
+            \tcblower
+            $A =$ \gap{\tiny$-15.65$} \whenHONORS{\hfill $R^2 = \gap{0.9999}$}\\
+            $B =$ \gap{\tiny$-1.24$}\\
+            $C =$ \gap{\tiny$5.23$}
+        \end{tcolorbox}
+    \end{minipage}\\[1\onelineskip]
+    Click the 
+    \includegraphics[width=0.2in]{magnifying-glass-plus.png} 
+    icon to make sure you can see all the points.
+    Look at the graphs of the two regression equations 
+    (the line and the parabola).
+    Which one seems to best fit the points?
+    Explain why you say that.
+    \vspace{0.7in}
+}
+
+
+\myWideProblemWithContent 
+{
+    The following table contains rainfall data 
+    for San Francisco.\\[0.5em]
+    \begin{minipage}{0.35\textwidth}
+        \footnotesize
+        \begin{tabular}{rcc}
+            &$x$ & $y$ \\ 
+            \cmidrule{2-2} \cmidrule{3-3}
+            month & month \# & rainfall ({\itshape in}) \\
+            \midrule 
+            January  &1 & 4.45 \\
+            February  &2& 4.01 \\ 
+            March  &3& 3.26 \\ 
+            April  &4& 1.17 \\ 
+            May  &5& 0.38 \\ 
+            June  &6& 0.11 \\ 
+            July  &7& 0.03 \\ 
+            August  &8& 0.07 \\ 
+            September  &9& 0.20 \\
+            October  &10& 1.40 \\
+            November &11& 2.49 \\ 
+            December &12& 2.89 \\
+            \bottomrule
+        \end{tabular}
+        \end{minipage}
+    \begin{minipage}{0.64\textwidth}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Linear Regression}\hfill$y_1 \sim m x_1 + b$
+            \tcblower
+            $m =$ \gap{\tiny$-0.174$} \whenHONORS{\hfill $r^2 = \gap{0.1455}$}\\
+            $b =$ \gap{\tiny$2.84$}
+            % r^2 = 0.9515
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=white,width=\textwidth]
+            \small
+            \scshape{Quadratic Regression}\hfill$y_1 \sim A x_1^2 + B x_1 + C$
+            \tcblower
+            $A =$ \gap{\tiny$0.132$} \whenHONORS{\hfill $R^2 = \gap{0.9315}$}\\
+            $B =$ \gap{\tiny$-1.893$}\\
+            $C =$ \gap{\tiny$6.85$}
+        \end{tcolorbox}
+    \end{minipage}\\[1\onelineskip]
+    Click the 
+    \includegraphics[width=0.2in]{magnifying-glass-plus.png} 
+    icon to make sure you can see all the points.
+    Look at the graphs of the two regression equations 
+    (the line and the parabola).
+    Which one seems to best fit the points?
+    Explain why you say that.
+    \vspace{0.7in}
+}
+
+\end{document}
