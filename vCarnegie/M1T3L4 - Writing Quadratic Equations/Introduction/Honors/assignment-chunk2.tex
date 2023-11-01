@@ -1,0 +1,105 @@
+\myProblemsWithContent[In these problems,
+the \myEmph{focus}, \myEmph{vertex}, \myEmph{directrix} and parabola are already shown.
+Sketch the axis of symmetry (AOS) and write its equation.
+{
+    \tiny
+    Hint: The AOS is perpendicular to the directrix and goes throught the focus and vertex.
+}
+]
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (3,11) -- (3,-11); 
+        \node[] at (3,11.75) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (9,4) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (9,4) circle [radius=0.15];
+        \node[] at (9,5) {\small $F$};
+        % vertex
+        \draw[color=black,thick,fill=black] (6,4) circle [radius=0.25];
+        \node[] at (5.2,3.2) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid,  thick, samples=900, domain=-10:15,]{sqrt(12*x-72) + 4}
+        \tkzFct[ black, solid,  thick, samples=900, domain=-10:15,]{-sqrt(12*x-72) + 4}
+        \whenTEACHER{
+            \draw[ultra thick, dotted, red] (-11,4) -- (11,4);
+            \node[red] at (-9,4.5) {\small AOS};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the AOS: \gap{$y=4$.}
+\end{center}
+}
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-11,2) -- (11,2); 
+        \node[] at (11.5,2.25) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (4,6) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (4,6) circle [radius=0.15];
+        \node[] at (5,7) {\small $F$};
+        % vertex
+        \draw[color=black,thick,fill=black] (4,4) circle [radius=0.25];
+        \node[] at (5,3.4) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid,  thick, samples=500, domain=-10:15,]{((x-4)**2)/8 + 4}
+        \whenTEACHER{
+            \draw[ultra thick, dotted, red] (4,-11) -- (4,11);
+            \node[red] at (4,-11.5) {\small AOS};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the AOS: \gap{$x=4$.}
+\end{center}
+}
+
+
+\myProblemsWithContent
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-1,8) -- (-1,-11); 
+        \node[] at (-1,8.75) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (-5,0) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (-5,0) circle [radius=0.15];
+        \node[] at (-5,1) {\small $F$};
+        % vertex
+        \draw[color=black,thick,fill=black] (-3,0) circle [radius=0.25];
+        \node[] at (-2.5,-1) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid,  thick, samples=1000, domain=-10:15,]{sqrt(-8*x-24) }
+        \tkzFct[ black, solid,  thick, samples=1000, domain=-10:15,]{-sqrt(-8*x-24) }
+        \whenTEACHER{
+            \draw[ultra thick, dotted, red] (-11,0.1) -- (11,0.1);
+            \node[red] at (9,1) {\small AOS};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the AOS: \gap{$y=0$.}
+\end{center}
+}
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-11,2) -- (11,2); 
+        \node[] at (11.5,2.25) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (4,-6) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (4,-6) circle [radius=0.15];
+        \node[] at (5,-7) {\small $F$};
+        % vertex
+        \draw[color=black,thick,fill=black] (4,-2) circle [radius=0.25];
+        \node[] at (5,-1) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid, thick, samples=500, domain=-10:15,]{((x-4)**2)/(-16) -2}
+        \whenTEACHER{
+            \draw[ultra thick, dotted, red] (4,-11) -- (4,11);
+            \node[red] at (4,-11.5) {\small AOS};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the AOS: \gap{$x=4$.}
+\end{center}
+}
