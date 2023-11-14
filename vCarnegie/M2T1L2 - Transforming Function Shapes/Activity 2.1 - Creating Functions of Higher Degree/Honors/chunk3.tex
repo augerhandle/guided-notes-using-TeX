@@ -1,0 +1,184 @@
+\section{Attributes}
+
+We are interested in these attributes of quadratic functions:
+\begin{itemize}[nosep]
+    \item \gap{domain} and \gap{range}
+    \item $x$-intercepts (\gap{roots} or \gap{zeros})
+    \item \gap{maximum} or \gap{minimum}
+\end{itemize}
+
+\vspace{-1\onelineskip}
+
+\myProblemsWithContent[Use Desmos to sketch these functions and find their domain and range.]
+{
+    $f(x) = (x-4)(x+2)$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.3} {10}[-10]{3} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x-4)*(x+2)}
+            %min
+            \draw[color=red,thick,fill=red] (1,-9) circle [radius=0.25];
+            \node[red] at (3.5,-9) {\small $(1,-9)$};
+        }
+    \end{myTikzpictureGrid}\\
+    \whenTEACHER{
+        \small
+        \begin{tabular}{p{1.25in}|p{1.25in}}
+            domain & range \\
+            \midrule 
+            A.R.N.                  & \\ 
+            $-\infty < x < +\infty$ & $y\ge-9$\\
+            $(-\infty,+\infty)$     & $[-9,+\infty)$\\
+        \end{tabular} 
+    }
+    \whenSTUDENT{\vspace{1in}}
+}
+{
+    $f(x) = (x+5)(1-x)$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.3} {8}[-2]{10} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x+5)*(1-x)}
+            %min
+            \draw[color=red,thick,fill=red] (-2,9) circle [radius=0.25];
+            \node[red] at (0.5,9) {\small $(-2,9)$};
+        }
+    \end{myTikzpictureGrid}\\
+    \whenTEACHER{
+        \small
+        \begin{tabular}{p{1.25in}|p{1.25in}}
+            domain & range \\
+            \midrule 
+            A.R.N.                  & \\ 
+            $-\infty < x < +\infty$ & $y\le9$\\
+            $(-\infty,+\infty)$     & $(-\infty,9]$\\
+        \end{tabular} 
+    }
+    \whenSTUDENT{\vspace{1in}}
+}
+
+
+
+\myProblemsWithContent[Use Desmos to sketch these functions and find their $x$-intercepts, roots, or zeros.]
+{
+    $f(x) = (x-4)(x+2)$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.3} {10}[-10]{3} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x-4)*(x+2)}
+            %x-int
+            \draw[color=red,thick,fill=red] (4,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (-2,0) circle [radius=0.25];
+            %min
+            % \draw[color=red,thick,fill=red] (1,-9) circle [radius=0.25];
+            % \node[red] at (3.5,-9) {\small $(1,-9)$};
+        }
+    \end{myTikzpictureGrid}\\
+    \whenTEACHER{
+        \small
+        \begin{tabular}{p{1.25in}|p{1.25in}}
+            $x$-intercepts & roots or zeros \\
+            \midrule 
+            $(4,0), (-2,0)$ & $4, -2$\\
+        \end{tabular} \\
+        {
+            \tiny 
+            Notice: roots come from setting each factor = 0
+            \begin{itemize}[nosep]
+                \item $x-4=0 \Longrightarrow x=4$
+                \item $x+2=0 \Longrightarrow x=-2$
+            \end{itemize}
+        }
+    }
+    \whenSTUDENT{\vspace{0.8in}}
+}
+{
+    $f(x) = (x+5)(1-x)$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.3} {8}[-3]{10} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x+5)*(1-x)}
+            %x-int
+            \draw[color=red,thick,fill=red] (-5,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (1,0) circle [radius=0.25];
+            %min
+            % \draw[color=red,thick,fill=red] (-2,9) circle [radius=0.25];
+            % \node[red] at (0.5,9) {\small $(-2,9)$};
+        }
+    \end{myTikzpictureGrid}\\
+    \whenTEACHER{
+        \small
+        \begin{tabular}{p{1.25in}|p{1.25in}}
+            $x$-intercepts & roots or zeros \\
+            \midrule 
+            $(-5,0), (1,0)$     & $-5, 1$\\
+        \end{tabular}  \\
+        {
+            \tiny 
+            Notice: roots come from setting each factor = 0
+            \begin{itemize}[nosep]
+                \item $x+5=0 \Longrightarrow x=-5$
+                \item $1-x=0 \Longrightarrow x=1$
+            \end{itemize}
+        }
+    }
+    \whenSTUDENT{\vspace{0.8in}}
+}
+
+
+
+
+
+\myProblemsWithContent[Use Desmos to sketch these functions and find their maximum or minimum points.]
+{
+    $f(x) = (x-4)(x+2)$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.3} {10}[-10]{3} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x-4)*(x+2)}
+            %x-int
+            % \draw[color=red,thick,fill=red] (4,0) circle [radius=0.25];
+            % \draw[color=red,thick,fill=red] (-2,0) circle [radius=0.25];
+            %min
+            \draw[color=red,thick,fill=red] (1,-9) circle [radius=0.25];
+            \node[red] at (5.5,-9) {\small $(1,-9)$ MIN};
+        }
+    \end{myTikzpictureGrid}\\
+    \whenTEACHER{
+        \small
+        {
+            \tiny 
+            Notice: for quadratic functions, max/min is the vertex
+        }
+        \begin{itemize}[nosep]
+            \item minimum at $(1,-9)$
+        \end{itemize}
+    }
+    \whenSTUDENT{\vspace{1in}}
+}
+{
+    $f(x) = (x+5)(1-x)$
+    \tcblower 
+    \begin{myTikzpictureGrid}{0.3} {8}[-3]{10} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x+5)*(1-x)}
+            %x-int
+            % \draw[color=red,thick,fill=red] (-5,0) circle [radius=0.25];
+            % \draw[color=red,thick,fill=red] (1,0) circle [radius=0.25];
+            %min
+            \draw[color=red,thick,fill=red] (-2,9) circle [radius=0.25];
+            \node[red] at (2.5,9) {\small $(-2,9)$ MAX};
+        }
+    \end{myTikzpictureGrid}\\
+    \whenTEACHER{
+        \small
+        {
+            \tiny 
+            Notice: for quadratic functions, max/min is the vertex
+        }
+        \begin{itemize}[nosep]
+            \item maximum at $(-2,9)$
+        \end{itemize}
+    }
+    \whenSTUDENT{\vspace{1in}}
+}
