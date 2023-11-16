@@ -1,0 +1,40 @@
+\section{Relative Maxima and Minima}
+
+Maxima and minima are like \gap{hills} and \gap{valleys}.
+\begin{itemize}[]
+    \item A \gap{relative} \gap{maximum} is the \gap{point} at the \gap{top} of a hill.
+    \item A \gap{relative} \gap{minimum} is the \gap{point} at the \gap{bottom} of a valley.
+\end{itemize}
+
+\myWideProblemWithContent[Find the relative maxima and minima for this function. Write the coordinates of each.]
+{
+ $f(x) = (x+1)(x-2)(x+3)$\myAnswer{\hfill\tiny same function as last problem}
+ \tcblower 
+ \begin{minipage}{0.3\textwidth}
+    \begin{myTikzpictureGrid}{0.35} {5}{10} 
+        \whenTEACHER{
+            \tkzFct[ red, solid, thick, samples=100, domain=-4:4,]{(x+1)*(x-2)*(x+3)}
+            \draw[color=red,thick,fill=red] (2,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (-1,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (-3,0) circle [radius=0.25];
+            %
+            \draw[color=blue,thick,fill=blue] (-2.12,4) circle [radius=0.3];
+            \draw[color=blue,thick,fill=blue] (0.79,-8.2) circle [radius=0.3];
+            \node[blue] at (-2.8,5) {\small max (-2.12,4.06)};
+            \node[blue] at (1,-9.5) {\small min (0.786,-8.21)};
+        }
+    \end{myTikzpictureGrid}
+\end{minipage}
+\hfill
+\begin{minipage}{0.55\textwidth}
+    \myEmph{relative maximum:} \\[-1em]
+    \begin{itemize}[nosep]
+        \item \gap{$(-2.12,4.06)$}
+    \end{itemize}
+    \vspace{\onelineskip}
+    \myEmph{relative minimum:} \\[-1em]
+    \begin{itemize}[nosep]
+        \item \gap{$(0.786,-8.21)$}
+    \end{itemize}
+\end{minipage}
+}

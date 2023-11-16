@@ -1,0 +1,77 @@
+\section{$x$-Intercepts, Zeros and Roots}
+
+Zeros, roots, and $x$-intercepts are \gap{closely} \gap{related}.
+Find them using \gap{Desmos}.
+
+\begin{center}
+    \begin{tabular}{rlcl}
+        \toprule 
+                      & {\itshape What is it?} & {\itshape example} & {\itshape comments}\\
+        \midrule
+        {\sffamily $x$-intercept} & a point      & \gap{$(5,0)$} & \myAnswer{\tiny $y$-coordinate is 0}\\ 
+        {\sffamily zero}          & a number     &  \gap{5}      & \myAnswer{\tiny $x$-coordinate of the $x$-intercept}\\ 
+        {\sffamily root}          & a number     &  \gap{5}      & \myAnswer{\tiny same as ``zero''}\\ 
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\myProblemsWithContent[Use {\sffamily Desmos} to find the $x$-intercepts and zeros (roots) of these functions.]
+{
+    $f(x) = x^2 - 2x - 8 $
+    \tcblower 
+    \begin{minipage}{0.3\textwidth}
+        \begin{myTikzpictureGrid}{0.3} [-5]{6}{10} 
+            \whenTEACHER{
+                \tkzFct[ red, solid, thick, samples=100, domain=-10:10,]{x**2 - 2*x - 8}
+                \draw[color=red,thick,fill=red] (4,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (-2,0) circle [radius=0.25];
+            %     \node[red] at (-1.2,11) {\tiny max};
+            }
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.55\textwidth}
+        \myEmph{$x$-intercepts:} \\[-1em]
+        \begin{itemize}[nosep]
+            \item \gap{$(-2,0)$}
+            \item \gap{$(4,0)$}
+        \end{itemize}
+        \vspace{\onelineskip}
+        \myEmph{zeros (roots):} \\[-1em]
+        \begin{itemize}[nosep]
+            \item \gap{$-2$}
+            \item \gap{$4$}
+        \end{itemize}
+    \end{minipage}
+}
+{
+    $f(x) = (x+1)(x-2)(x+3) $ \myAnswer{\hfill\tiny graph in fact. form}
+    \tcblower 
+    \begin{minipage}{0.3\textwidth}
+        \begin{myTikzpictureGrid}{0.3} {5}{10} 
+            \whenTEACHER{
+                \tkzFct[ red, solid, thick, samples=100, domain=-4:4,]{(x+1)*(x-2)*(x+3)}
+                \draw[color=red,thick,fill=red] (2,0) circle [radius=0.25];
+                \draw[color=red,thick,fill=red] (-1,0) circle [radius=0.25];
+                \draw[color=red,thick,fill=red] (-3,0) circle [radius=0.25];
+                %     \node[red] at (-1.2,11) {\tiny max};
+            }
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.55\textwidth}
+        \myEmph{$x$-intercepts:} \\[-1em]
+        \begin{itemize}[nosep]
+            \item \gap{$(-3,0)$}
+            \item \gap{$(-1,0)$}
+            \item \gap{$(2,0)$}
+        \end{itemize}
+        \vspace{\onelineskip}
+        \myEmph{zeros (roots):} \\[-1em]
+        \begin{itemize}[nosep]
+            \item \gap{$-3$}
+            \item \gap{$-1$}
+            \item \gap{$2$}
+        \end{itemize}
+    \end{minipage}
+}
