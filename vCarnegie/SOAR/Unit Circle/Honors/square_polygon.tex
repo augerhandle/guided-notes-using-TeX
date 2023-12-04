@@ -1,0 +1,68 @@
+% Unit circle
+% Author: Supreme Aryal
+% A unit circle with cosine and sine values for some
+% common angles.
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+%%%<
+\usepackage{verbatim}
+% \usepackage[active,tightpage]{preview}
+% \PreviewEnvironment{tikzpicture}
+% \setlength\PreviewBorder{5pt}%
+%%%>
+
+
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+\begin{document}
+\thispagestyle{empty}
+
+\newcommand{\myRadius}{2in}
+\newcommand{\myRadiusIncrement}{0.175in}
+\newcommand{\myInnerRadius}{\myRadius-\myRadiusIncrement}
+\newcommand{\myOuterRadius}{\myRadius+\myRadiusIncrement}
+\newcommand{\myFarOuterRadius}{\myRadius+1in}
+
+\newcommand{\mySquareEdge}{3.4cm}
+\newcommand{\mySquareInset}{0.75cm}
+
+\newcommand{\mySquare}[1]{
+    \begin{tikzpicture}[scale=#1,cap=round,>=latex]
+        \draw[black,solid,ultra thick] (-\mySquareEdge,\mySquareEdge) -- (\mySquareEdge,\mySquareEdge);
+        \draw[black,solid,ultra thick] (-\mySquareEdge,\mySquareEdge) -- (-\mySquareEdge,-\mySquareEdge);
+        \draw[black,solid,ultra thick] (\mySquareEdge,\mySquareEdge) -- (\mySquareEdge,-\mySquareEdge);
+        \draw[black,solid,ultra thick] (-\mySquareEdge,-\mySquareEdge) -- (\mySquareEdge,-\mySquareEdge);
+
+        \draw (-\mySquareEdge+\mySquareInset,\mySquareEdge-\mySquareInset) 
+            node[fill=white,inner sep=0pt,minimum size=3em] {\centering\Huge\sffamily a};
+        \draw (-\mySquareEdge+\mySquareInset,-\mySquareEdge+\mySquareInset) 
+            node[fill=white,inner sep=0pt,minimum size=2em] {\Huge\sffamily d};
+        \draw (\mySquareEdge-\mySquareInset,-\mySquareEdge+\mySquareInset) 
+            node[fill=white,inner sep=0pt,minimum size=2em] {\Huge\sffamily c};
+        \draw (\mySquareEdge-\mySquareInset,\mySquareEdge-\mySquareInset) 
+            node[fill=white,inner sep=0pt,minimum size=2em] {\Huge\sffamily b};
+
+        \draw[solid,fill=black] (0cm,0cm) circle(0.05in);
+        \foreach \x in {45,135,...,315} {
+            % lines from center to point
+            \draw[black,dotted] (0cm,0cm) -- (\x:\myInnerRadius);
+        }
+        % \draw[] (0cm,0cm) circle(\myInnerRadius);
+        % \draw[] (0cm,0cm) circle(\myRadius);
+
+
+    \end{tikzpicture}
+}
+
+\ttfamily
+\vfill 
+\begin{center}
+    \renewcommand{\arraystretch}{4}
+    \begin{tabular}{cc}
+        \mySquare{1.0} & \mySquare{1.0} \\ 
+        \mySquare{1.0} & \mySquare{1.0} \\ 
+        \mySquare{1.0} & \mySquare{1.0} \\ 
+    \end{tabular} 
+\end{center}
+\vfill 
+\end{document}
