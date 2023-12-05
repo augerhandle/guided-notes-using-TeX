@@ -1,0 +1,57 @@
+\begin{center}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabular}{|c|c|l||l|}
+        \hline
+        {\itshape function} & {\itshape condition} & {\itshape description} & {\itshape coordinates} \\
+        \hline\hline
+        \multirow{3}*{$y = \bm{A} f(x)$} 
+            & $|\bm{A}| > 1$       
+            & vert. \gap{stretch} by $\bm{A}$ 
+            & $(x,y) \rightarrow (\text{\gap{x}},\text{\gap{Ay}})$ \\
+            \cline{2-4}
+            & $ 0 < |\bm{A}| < 1$ 
+            & vert. \gap{compress} by $\bm{A}$
+            & $(x,y) \rightarrow (\text{\gap{x}},\text{\gap{Ay}})$ \\
+            \cline{2-4}
+            & $ \bm{A} < 0$       
+            & \gap{reflect} across \gap{$x$-axis}
+            & $(x,y) \rightarrow (\text{\gap{x}},\text{\gap{-y}})$ \\
+        \hline
+        %
+        \multirow{3}*{$y = f( \bm{B} x)$} 
+            & $|\bm{B}| > 1$       
+            & horiz. \gap{stretch} by $\frac{1}{|\bm{B}|}$ 
+            & $(x,y) \rightarrow (\text{\gap{$\frac{1}{|B|}x$}},\text{\gap{y}})$ \\
+            \cline{2-4}
+            & $ 0 < |\bm{B}| < 1$ 
+            & horiz. \gap{compress} by $\frac{1}{|\bm{B}|}$
+            & $(x,y) \rightarrow (\text{\gap{$\frac{1}{|B|}x$}},\text{\gap{y}})$ \\
+            \cline{2-4}
+            & $ \bm{B} < 0$       
+            & \gap{reflect} across \gap{$y$-axis}
+            & $(x,y) \rightarrow (\text{\gap{-x}},\text{\gap{y}})$ \\
+            \hline
+        %
+        \multirow{2}*{$y = f(x - \bm{C})$}
+            & $\bm{C}>0$ 
+            &  \gap{right} by $\bm{C}$  
+            & $(x,y) \rightarrow (\text{\gap{x+C}},\text{\gap{y}})$ \\
+            \cline{2-4}
+            & $\bm{C}<0$ 
+            &  \gap{left} by $\bm{C}$  
+            & $(x,y) \rightarrow (\text{\gap{x-$|C|$}},\text{\gap{y}})$ \\
+            \cline{2-4}
+        \hline
+        %
+        \multirow{2}*{$y = f(x) + \bm{D}$}
+        & $\bm{D}>0$ 
+        &  \gap{up} by $\bm{D}$  
+        & $(x,y) \rightarrow (\text{\gap{x}},\text{\gap{y+D}})$ \\
+        \cline{2-4}
+        & $\bm{D}<0$ 
+        &  \gap{down} by $\bm{D}$  
+        & $(x,y) \rightarrow (\text{\gap{x}},\text{\gap{y-$|D|$}})$ \\
+        \cline{2-4} 
+        \hline
+    \end{tabular}
+\end{center}
