@@ -1,0 +1,87 @@
+\myProblemsWithContent
+{
+    $p(x) = x^3$\\
+    $q(x) = p(-x)$ \hspace{1em} {\tiny\itshape(Hint: $-x$ is the same as $-1x$.)}
+    \tcblower
+    A B C D {\tiny\itshape (circle one)} = \gap{$B=-1$}\\[0.5em]
+    {\small\itshape transf. description:} \gap{{\tiny reflect across y}}
+    \vspace{0.5\onelineskip}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \thead{{\itshape reference points}\\{\itshape on $p(x)$}} &  & \thead{{\itshape transformed points}\\{\itshape on $q(x)$}} \\ 
+            \midrule 
+            $(-2,-8)$ & $\rightarrow$ & \gap{$(2,-8)$} \\
+            $(-1,-1)$ & $\rightarrow$ & \gap{$(1,-1)$} \\
+            $(0,0)$   & $\rightarrow$ & \gap{$(0, 0)$} \\
+            $(1,1)$   & $\rightarrow$ & \gap{$(-1, 1)$} \\
+            $(2,8)$   & $\rightarrow$ & \gap{$(-2,8)$} \\
+        \end{tabular}
+        \\[0.75em]
+        \begin{myTikzpictureGrid}{0.3} {8}{8} [solid]
+            \tkzFct[ solid, thick, samples=100, domain=-4:4,]{x**3}
+            %
+            \myDot{(-2,-8)}
+            \myDot{(-1,-1)}
+            \myDot{(0,0)}
+            \myDot{(1,1)}
+            \myDot{(2,8)}
+            \myAnswer{
+                \tkzFct[ solid, thick, samples=100, domain=-4:4,]{(-x)**3}
+                \myDot{(2,-8)}[red]
+                \myDot{(1,-1)}[red]
+                \myDot{(0,0)}[red]
+                \myDot{(-1,1)}[red]
+                \myDot{(-2,8)}[red]
+                }
+        \end{myTikzpictureGrid}
+    \end{center}
+}
+{
+    $s(x) = x^3$\\
+    $t(x) = s(\frac{1}{3}x)$
+    \tcblower
+    A B C D {\tiny\itshape (circle one)} = \gap{$B=\frac{1}{3}$}\\[0.5em]
+    {\small\itshape transf. description:} \gap{{\tiny h stretch by 3}}
+    \vspace{0.5\onelineskip}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \thead{{\itshape reference points}\\{\itshape on $s(x)$}} &  & \thead{{\itshape transformed points}\\{\itshape on $t(x)$}} \\ 
+            \midrule 
+            $(-2,-8)$ & $\rightarrow$ & \gap{$(-6,-8)$} \\
+            $(-1,-1)$ & $\rightarrow$ & \gap{$(-3,-1)$} \\
+            $(0,0)$   & $\rightarrow$ & \gap{$(0, 0)$} \\
+            $(1,1)$   & $\rightarrow$ & \gap{$(3, 1)$} \\
+            $(2,8)$   & $\rightarrow$ & \gap{$(6,8)$} \\
+        \end{tabular}
+        \\[0.75em]
+        \begin{myTikzpictureGrid}{0.3} {8}{8} [solid]
+            \tkzFct[ solid, thick, samples=100, domain=-4:4,]{(x)**3}
+            %
+            \myDot{(-2,-8)}
+            \myDot{(-1,-1)}
+            \myDot{(0,0)}
+            \myDot{(1,1)}
+            \myDot{(2,8)}
+            \myAnswer{
+                \tkzFct[ solid, thick, samples=100, domain=-10:10,]{(x/3)**3}
+                \myDot{(-6,-8)}[red]
+                \myDot{(-3,-1)}[red]
+                \myDot{(0,0)}[red]
+                \myDot{(3,1)}[red]
+                \myDot{(6,8)}[red]
+                }
+        \end{myTikzpictureGrid}
+    \end{center}
+}
+
+\vspace{2\onelineskip}
+\myWideProblemWithContent[Find the values of $A$, $B$, $C$, and $D$. And describe all the transformations.]
+{
+    $g(x) = 2 f(3(x+4)) - 5$
+    \tcblower
+    $ A = $ \gap{2}\hspace{1.5em}
+    $ B = $ \gap{3}\hspace{1.5em}
+    $ C = $ \gap{$-4$}\hspace{1.5em}
+    $ D = $ \gap{$-5$}\\[0.5em]
+    {\itshape transformations:} \hspace{1em}{\tiny Hint: There are 4.} \\[1in]
+}

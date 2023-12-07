@@ -1,0 +1,75 @@
+\myProblemsWithContent
+{
+    $p(x) = x^3$\\
+    $q(x) = -p(x)$
+    \tcblower
+    A B C D {\tiny\itshape (circle one)} = \gap{$A=-1$}\\[0.5em]
+    {\small\itshape transf. description:} \gap{{\tiny reflect across x}}
+    \vspace{0.5\onelineskip}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \thead{{\itshape reference points}\\{\itshape on $p(x)$}} &  & \thead{{\itshape transformed points}\\{\itshape on $q(x)$}} \\ 
+            \midrule 
+            $(-2,-8)$ & $\rightarrow$ & \gap{$(-2,8)$} \\
+            $(-1,-1)$ & $\rightarrow$ & \gap{$(-1,1)$} \\
+            $(0,0)$   & $\rightarrow$ & \gap{$(0, 0)$} \\
+            $(1,1)$   & $\rightarrow$ & \gap{$(1, -1)$} \\
+            $(2,8)$   & $\rightarrow$ & \gap{$(2,-8)$} \\
+        \end{tabular}
+        \\[0.75em]
+        \begin{myTikzpictureGrid}{0.25} {8}{8} [solid]
+            \tkzFct[ solid, thick, samples=100, domain=-4:4,]{x**3}
+            %
+            \myDot{(-2,-8)}
+            \myDot{(-1,-1)}
+            \myDot{(0,0)}
+            \myDot{(1,1)}
+            \myDot{(2,8)}
+            \myAnswer{
+                \tkzFct[ solid, thick, samples=100, domain=-4:4,]{-x**3}
+                \myDot{(-2,8)}[red]
+                \myDot{(-1,1)}[red]
+                \myDot{(0,0)}[red]
+                \myDot{(1,-1)}[red]
+                \myDot{(2,-8)}[red]
+                }
+        \end{myTikzpictureGrid}
+    \end{center}
+}
+{
+    $s(x) = x^3$\\
+    $t(x) = s(\frac{1}{4}x)$
+    \tcblower
+    A B C D {\tiny\itshape (circle one)} = \gap{$B=\frac{1}{4}$}\\[0.5em]
+    {\small\itshape transf. description:} \gap{{\tiny v stretch by 4}}
+    \vspace{0.5\onelineskip}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \thead{{\itshape reference points}\\{\itshape on $s(x)$}} &  & \thead{{\itshape transformed points}\\{\itshape on $t(x)$}} \\ 
+            \midrule 
+            $(-2,-8)$ & $\rightarrow$ & \gap{$(-8,-8)$} \\
+            $(-1,-1)$ & $\rightarrow$ & \gap{$(-4,-1)$} \\
+            $(0,0)$   & $\rightarrow$ & \gap{$(0, 0)$} \\
+            $(1,1)$   & $\rightarrow$ & \gap{$(4, 1)$} \\
+            $(2,8)$   & $\rightarrow$ & \gap{$(8,8)$} \\
+        \end{tabular}
+        \\[0.75em]
+        \begin{myTikzpictureGrid}{0.25} {8}{8} [solid]
+            \tkzFct[ solid, thick, samples=100, domain=-4:4,]{(x)**3}
+            %
+            \myDot{(-2,-8)}
+            \myDot{(-1,-1)}
+            \myDot{(0,0)}
+            \myDot{(1,1)}
+            \myDot{(2,8)}
+            \myAnswer{
+                \tkzFct[ solid, thick, samples=100, domain=-10:10,]{(0.25*x)**3}
+                \myDot{(-8,-8)}[red]
+                \myDot{(-4,-1)}[red]
+                \myDot{(0,0)}[red]
+                \myDot{(4,1)}[red]
+                \myDot{(8,8)}[red]
+                }
+        \end{myTikzpictureGrid}
+    \end{center}
+}

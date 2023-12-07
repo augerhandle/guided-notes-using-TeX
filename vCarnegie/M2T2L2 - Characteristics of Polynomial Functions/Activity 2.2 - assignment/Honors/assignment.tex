@@ -1,0 +1,50 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\input{../../../common/course-name}
+\input{../../../common/defs}
+\input{../../../common/student-or-teacher}
+\input{../../../common/assignment-defs}
+\input{../../../common/packages}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+
+\usepackage{makecell}
+
+\def\thickhline{\noalign{\hrule height1.5pt}}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X} 
+\renewcommand\arraystretch{1.2}
+
+
+\begin{document}
+\NewDocumentCommand{\myDot}{mO{black}}
+    {\draw[color=#2,thick,fill=#2] #1 circle [radius=0.25];}
+
+\input{for-whom}
+
+\pagestyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{Activity 2.2}{Transformations }
+%-----------------------------------------------------------------------------------------
+
+\input{problems1}
+\input{problems2}
+\input{problems3}
+
+\end{document}
