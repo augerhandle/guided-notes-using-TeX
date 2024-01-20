@@ -1,0 +1,89 @@
+\section*{Problem 2 ---  Prescription Medicine Spending}
+This table shows spending on prescription medicine in the US 
+from 2015 to 2022.
+% https://www.statista.com/statistics/184914/prescription-drug-expenditures-in-the-us-since-1960/
+\begin{center}
+    % \small
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{c|c|c}
+        \toprule
+        year 
+            & 
+                \begin{tabular}{c}
+                    $x$\\
+                    {\tiny\itshape years since 2015}\\
+                \end{tabular}
+            & 
+            \begin{tabular}{c}
+                $y$\\
+                {\tiny\itshape spending  (billions of \$)}\\
+            \end{tabular}
+            \\
+        \midrule 
+        2015 & \gap{0}  & 312.2 \\
+        2016 & \gap{1}  & 313.3\\
+        2017 & \gap{2}  & 315.7 \\
+        2018 & \gap{3}  & 322.7 \\
+        % 2019 & \gap{4}  & 335.7 \\ 
+        2020 & \gap{5}  & 350.6 \\ 
+        2021 & \gap{6}  & 374.5 \\
+        2022 & \gap{7}  & 405.9 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+Use \myDesmos to do \myEmph{linear} and \myEmph{quadratic} regressions on these data.
+\begin{itemize}[nosep]
+    \item Fill in the second column ({\itshape years since 2015}).
+    \item Enter the $x$ and $y$ data into a \myDesmos $\mathtt{x_1}$--$\mathtt{y_1}$ table.
+    \item Do a \myEmph{linear} and \myEmph{quadratic} regressions in \myDesmos{}.
+    \item Write the regression equations, and find the values of $r^2$.
+\end{itemize}
+\begin{center}
+    \small
+    \setlength{\tabcolsep}{1.3em}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{l|l}
+        \toprule
+        {\itshape regression equation} & $r^2$ \\
+        \midrule 
+        $y=$ \gap{13.02}$x$ + \gap{297.5} & $r^2 =$ \gap{0.8848}\\ 
+        $y=$ \gap{2.544}$x^2$ + \gap{-4.968}$x$ + \gap{314.1} & $r^2 =$ \gap{0.9976}\\
+        % $y=$ \gap{aaa}$x^3$ + \gap{bbb}$x^2$ + \gap{ccc}$x$ + \gap{ddd} & $r^2 =$ \gap{xxx} \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+% \vspace{\onelineskip}
+\noindent
+If $r^2$ is close to 1.0, the model is a ``good fit'' for the data.
+Which model is a better fit, linear or quadratic regression? 
+Explain your reasoning.\\[0.65\onelineskip]
+
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}\\[0.65\onelineskip]
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}\\[0.65\onelineskip]
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}\\[0.65\onelineskip]
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}
+
+\begin{minipage}{0.45\textwidth}
+    \noindent 
+    Use the best regression equation to \myEmph{estimate} 
+    what prescription spending was in 2019.
+    \begin{itemize}[fullwidth]
+        \item 2019 is how many years after 2015? $x =$ \gap{4}.
+        \item Substitute that value of $x$ into the regression equation.
+        \item $y =$ \gap{334.9}. 
+        This value of $y$ corresponds to \gap{334.9 billion} dollars.
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \noindent 
+    Use the best regression equation to \myEmph{predict} 
+    what prescription spending will be in 2025.
+    \begin{itemize}[fullwidth]
+        \item 2025 is how many years after 2015? $x =$ \gap{10}.
+        \item Substitute that value of $x$ into the regression equation.
+        \item $y =$ \gap{518.9}. 
+        This value of $y$ corresponds to \gap{518.9 billion} dollars.
+    \end{itemize}
+\end{minipage}
