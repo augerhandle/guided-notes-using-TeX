@@ -1,0 +1,62 @@
+\section{Sketching the Graphs}
+
+You can use Desmos 
+to check that you multiplied correctly.
+\begin{itemize}[nosep]
+    \item The curves should be the same.
+    \item The $x$-intercepts should be the same.
+    \item The maxima/minima should be the same.
+\end{itemize}
+
+\vspace{-2\onelineskip}
+\myProblemsWithContent[]
+{
+    Multiply these linear factors: $(x+2)$, $(x-3)$ to get a new polynomial, $g(x)$.
+    \begin{center}
+        \vspace{0.75in}
+        $g(x) = $ \gap{$x^2 - x -6$}
+    \end{center}
+    Sketch the graphs of 
+    \begin{itemize}[nosep]
+        \item $y = (x+2)(x-3)$ \myAnswer{\hfill\tiny before mult.}
+        \item $y = g(x)$ \myAnswer{\hfill\tiny after mult.}
+    \end{itemize}
+    Sketch dots at the $x$-intercepts and maximum/minimum.\\
+    \begin{myTikzpictureGrid}{0.3} {8}{8} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{(x+2)*(x-3)}
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{x**2 - x - 6}
+            \draw[color=red,thick,fill=red] (-2,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (3,0) circle [radius=0.25];
+            %min
+            \draw[color=red,thick,fill=red] (1/2,-6.25) circle [radius=0.25];
+            \node[red] at (0.5,-7) {\tiny min};
+        }
+    \end{myTikzpictureGrid}
+    \myAnswer{\hfill\tiny same graphs!}
+}
+{
+    Multiply these linear factors: $(x+3)$, $(2-3x)$ to get a new polynomial, $g(x)$.
+    \begin{center}
+        \vspace{0.75in}
+        $g(x) = $ \gap{$-3 x^2 - 7 x + 6$}
+    \end{center}
+    Sketch the graphs of 
+    \begin{itemize}[nosep]
+        \item $y = (x+3)(2-3x)$ \myAnswer{\hfill\tiny before mult.}
+        \item $y = g(x)$ \myAnswer{\hfill\tiny after mult.}
+    \end{itemize}
+    Sketch dots at the $x$-intercepts and maximum/minimum.\\
+    \begin{myTikzpictureGrid}{0.3} {5}[-3]{12} [solid]
+        \whenTEACHER{
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-8:8,]{(x+3)*(2-3*x)}
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{3*x^2 + 11*x + 6}
+            \draw[color=red,thick,fill=red] (-3,0) circle [radius=0.25];
+            \draw[color=red,thick,fill=red] (2/3,0) circle [radius=0.25];
+            % %max
+            \draw[color=red,thick,fill=red] (-7/6,121/12) circle [radius=0.25];
+            \node[red] at (-1.2,11) {\tiny max};
+        }
+    \end{myTikzpictureGrid}
+    \myAnswer{\hfill\tiny same graphs!}
+}

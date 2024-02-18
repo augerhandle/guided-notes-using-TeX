@@ -1,0 +1,63 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+{
+    \Large
+    Use these reminders for how to factor using the 
+    \myEmph{Reverse Box Method}.
+}
+
+\vfill
+
+\myProblemsWithContent
+{
+    Use this for {\Large $ax^2 + bx + c$.}
+    \tcblower
+    \myReverseBoxScaffold[x]{$x^2+2$}{$x^2+4$}
+}
+{
+    Use this for {\Large $ax^4 + bx^2 + c$.}
+    \tcblower
+    \myReverseBoxScaffold[x]{$x^2+2$}{$x^2+4$}[4][2]
+}
+
+\vfill
+
+\myProblemsWithContent
+{
+    Use this for {\Large $ax^3 + bx^2 + cx + d$.}
+    \tcblower
+    \myFourTermCubicReverseBoxScaffold{$2x^2+1$}{$2x-3$}
+}
+{
+    Use this for differences (subtraction) of perfect squares: $A^2 - B^2$.
+    \tcblower
+    \myDifferenceOfSquaresScaffold
+}
+
+\vfill
+
+\end{document}

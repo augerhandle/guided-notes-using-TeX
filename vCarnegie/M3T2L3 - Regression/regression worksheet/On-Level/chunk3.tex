@@ -1,0 +1,95 @@
+\newpage
+\section*{Problem 3 --- COVID Hospitalizations}\label{sec:prob-3}
+This table shows 
+the number of people hospitalized in the US due to COVID for each month since June 2023.
+% https://covid.cdc.gov/covid-data-tracker/#trends_weeklyhospitaladmissions_select_00
+\begin{center}
+    % \small
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{r|c|c}
+        \toprule
+            {\itshape date}
+            & 
+            \begin{tabular}{c}
+                $x$\\
+                {\tiny\itshape months since June 2023} \\
+            \end{tabular}
+            & 
+            \begin{tabular}{c}
+                $y$\\
+                {\tiny\itshape \# hospitalizations (in thousands)}
+            \end{tabular}
+            \\
+        \midrule 
+        January 2024   & \gap{7} & 35.801\\
+        December 2023  & \gap{6} & 22.885\\
+        November 2023  & \gap{5} & 15.082\\
+        October 2023   & \gap{4} & 17.156\\
+        September 2023 & \gap{3} & 19.144\\
+        August 2023    & \gap{2} & 10.521\\
+        July 2023      & \gap{1} &  6.49 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+Use \myDesmos to do \myEmph{linear}, \myEmph{quadratic}, and \myEmph{cubic} regressions on these data.
+\begin{itemize}[nosep]
+    \item Fill in the second column ({\itshape months since June 2023}).
+        {\itshape 
+            Be careful. The starting date is \fbox{June} 2023, but there are no data for that month.
+        }
+    \item Enter the $x$ and $y$ data into a \myDesmos $\mathtt{x_1}$--$\mathtt{y_1}$ table.
+    \item Do a \myEmph{linear}, \myEmph{quadratic}, and \myEmph{cubic} regressions in \myDesmos{}.
+    \item Write the regression equations, and find the values of $r^2$.
+\end{itemize}
+\begin{center}
+    \footnotesize
+    \setlength{\tabcolsep}{1.3em}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{l|c}
+        \toprule
+        {\itshape regression equation} & $r^2$ \\
+        \midrule 
+        $y=$ \gap{3.8785}$x$ + \gap{2.64} & \gap{0.7807}\\ 
+        $y=$ \gap{0.47801}$x^2$ + \gap{0.05444}$x$ + \gap{8.3761} & \gap{0.8163}\\
+        $y=$ \gap{0.58358}$x^3$ + \gap{-6.525}$x^2$ + \gap{23.981}$x$ + \gap{-12.633} & \gap{0.9526} \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+
+% \vspace{\onelineskip}
+\noindent
+If $r^2$ is close to 1.0, the model is a ``good fit'' for the data.
+Which model is a better fit, linear, quadratic, or cubic regression? 
+Explain your reasoning.\\[0.65\onelineskip]
+
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}\\[0.65\onelineskip]
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}\\[0.65\onelineskip]
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}\\[0.65\onelineskip]
+\noindent\rule[\onelineskip]{\textwidth}{0.4pt}
+
+
+\begin{minipage}{0.45\textwidth}
+    \noindent 
+    Use the best regression equation to \myEmph{estimate} 
+    the number of hospitalizations \myEmph{halfway} thru November 2023.
+    \begin{itemize}[fullwidth,]
+        \item How many months after June 2023 is that?\\ $x =$ \gap{5.5}.
+        \item Substitute that $x$ into the regression equation.
+        \item $y =$ \gap{18.977}. 
+        This suggests \gap{18,977} people were admitted to the hospital.
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \noindent 
+    Use the best regression equation to \myEmph{predict} 
+    the number of hospitalizations \myEmph{halfway} thru February 2024.
+    \begin{itemize}[fullwidth,]
+        \item How many months after June 2023 is that?\\ $x =$ \gap{8.5}.
+        \item Substitute that $x$ into the regression equation.
+        \item $y =$ \gap{78.171}. 
+        This suggests \gap{78,171} people will be admitted to the hospital.
+    \end{itemize}
+\end{minipage}

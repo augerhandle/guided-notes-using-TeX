@@ -1,0 +1,35 @@
+
+% ---------------------------------------------------------------------------
+% Teachers vs. Students ("tstu")
+% ---------------------------------------------------------------------------
+\newif\iftstu
+
+% Typically, I will set one of these ONCE at the top of the doc.
+\newcommand{\forTEACHER}{%
+    \tstutrue%
+    \dashundergapssetup{teacher-mode=true,}%
+}
+\newcommand{\forSTUDENT}{%
+    \tstufalse%
+    \dashundergapssetup{teacher-mode=false,}%
+}
+
+
+% These will conditionally generate output (the argument) based on 
+% whether this document is "for" HONORS or ONLEVEL according to the previous commands.
+%
+% #1 the content 
+% #2 text color
+\NewDocumentCommand{\whenTEACHER}{ O{red} m }{\iftstu{\textcolor{#1}{\ECFAugie\MTversion{augie}#2}}\else{}\fi}
+\newcommand{\whenSTUDENT}[1]{\iftstu{}\else{#1}\fi}
+\NewDocumentCommand{\myAnswer}{m}{\whenSTUDENT{\phantom{#1}}\whenTEACHER{#1}}
+
+% Set a macro to be the value of the env. var. 
+\getenv[\STUDENTorTEACHER]{STUDENTorTEACHER}
+% Define a macro depending on whether that env. var. is STUDENT or TEACHER.
+% (NO ERROR CHECKING if it's not one of those two!  FIXME)
+\ifnum\pdfstrcmp{\STUDENTorTEACHER}{STUDENT}=0%
+    \newcommand{\forSTUDENTorTEACHER}{\forSTUDENT}%
+\else
+    \newcommand{\forSTUDENTorTEACHER}{\forTEACHER}%
+\fi

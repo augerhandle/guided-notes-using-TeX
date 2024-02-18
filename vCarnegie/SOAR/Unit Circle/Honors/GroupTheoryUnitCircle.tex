@@ -1,0 +1,59 @@
+% Unit circle
+% Author: Supreme Aryal
+% A unit circle with cosine and sine values for some
+% common angles.
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+%%%<
+\usepackage{verbatim}
+% \usepackage[active,tightpage]{preview}
+% \PreviewEnvironment{tikzpicture}
+% \setlength\PreviewBorder{5pt}%
+%%%>
+
+
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+\begin{document}
+
+\newcommand{\myRadius}{2in}
+\newcommand{\myRadiusIncrement}{0.175in}
+\newcommand{\myInnerRadius}{\myRadius-\myRadiusIncrement}
+\newcommand{\myOuterRadius}{\myRadius+\myRadiusIncrement}
+\newcommand{\myFarOuterRadius}{\myRadius+1in}
+
+\ttfamily
+\vfill 
+\begin{center}
+    \begin{tikzpicture}[scale=1.0,cap=round,>=latex]
+
+        \foreach \x in {0} {
+                % lines from center to point
+                \draw[black,dotted] (0cm,0cm) -- (\x:\myRadius);
+                \draw[black,solid,ultra thick,line cap=butt] (\x:\myInnerRadius) -- (\x:\myRadius);
+                % draw each angle in degrees
+                \draw (\x:\myOuterRadius) node[fill=white,inner sep=0pt,minimum size=2em] {\Large $\text{0}^\circ \atop \text{360}^\circ$};
+        }
+
+        \foreach \x in {0,45,...,360} {
+                % lines from center to point
+                \draw[gray,solid] (0cm,0cm) -- (\x:\myRadius);
+                \draw[black,solid,line width = 3pt,line cap=butt] (\x:\myInnerRadius) -- (\x:\myRadius);
+                \draw[black,solid,line cap=butt] (\x:\myRadius) -- (\x:\myFarOuterRadius);
+        }
+
+        \foreach \x in {15,30,...,345} {
+                % draw each angle in degrees
+                \draw (\x:\myOuterRadius) node[fill=white,inner sep=0pt,minimum size=2em] {\normalsize$\text{\x}^\circ$};
+                % lines from center to point
+                \draw[gray,dotted] (0cm,0cm) -- (\x:\myRadius);
+                \draw[black,solid,thick,line cap=butt] (\x:\myInnerRadius) -- (\x:\myRadius);
+        }
+
+        % draw the unit circle
+        \draw[] (0cm,0cm) circle(\myInnerRadius);
+        \draw[] (0cm,0cm) circle(\myRadius);
+    \end{tikzpicture}
+\end{center}
+\vfill 
+\end{document}

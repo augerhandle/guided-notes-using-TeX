@@ -1,0 +1,107 @@
+\myProblemsWithContent[In these problems,
+The \myEmph{focus} and \myEmph{directrix} are already shown.
+Do the following things:
+\begin{itemize}[nosep]
+    \item Plot the location of the \myEmph{vertex} as a dot.
+    \item Sketch what the parabola might look like.
+    \item Write the equation of the directrix.
+\end{itemize}
+{\itshape\tiny
+Hints: 
+\begin{itemize}[nosep]
+    \item The vertex is halfway between the focus and directrix.
+    \item The parabola bends away from the directrix and wraps around the focus.
+    \item The equation of a \myEmph{vertical} line is $x=\dots$.
+    \item The equation of a \myEmph{horizontal} line is $y=\dots$.
+\end{itemize}
+}
+]
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (3,11) -- (3,-11); 
+        \node[] at (3,11.75) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (9,4) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (9,4) circle [radius=0.15];
+        \node[] at (11,5) {\small $F$ $(9,4)$};
+        \whenTEACHER{
+            % vertex
+            \draw[color=red,thick,fill=red] (6,4) circle [radius=0.25];
+            \node[] at (6,3) {\small $V$ $(6,4)$};
+            %parabola
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{sqrt(12*x-72) + 4}
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{-sqrt(12*x-72) + 4}
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the directrix: \gap{$x=3$.}
+\end{center}
+}
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-11,2) -- (11,2); 
+        \node[] at (11.5,2.25) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (4,6) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (4,6) circle [radius=0.15];
+        \node[] at (5,7) {\small $F$ $(4,6)$};
+        \whenTEACHER{
+            % vertex
+            \draw[color=red,thick,fill=red] (4,4) circle [radius=0.25];
+            \node[] at (7,4) {\small $V$ $(4,4)$};
+            %parabola
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{((x-4)**2)/8 + 4}
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the directrix: \gap{$y=2$.}
+\end{center}
+}
+
+
+\myProblemsWithContent
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-1,8) -- (-1,-11); 
+        \node[] at (-1,8.75) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (-5,0) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (-5,0) circle [radius=0.15];
+        \node[] at (-8,1) {\small $F$ $(-5,0)$};
+        \whenTEACHER{
+            % vertex
+            \draw[color=red,thick,fill=red] (-3,0) circle [radius=0.25];
+            \node[] at (0,-1) {\small $V$ $(-3,0)$};
+            %parabola
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{sqrt(-8*x-24) }
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{-sqrt(-8*x-24) }
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the directrix: \gap{$x=-1$.}
+\end{center}
+}
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-11,2) -- (11,2); 
+        \node[] at (11.5,2.25) {$\mathscr{D}$};
+        % focus
+        \draw[color=black,thick,fill=white] (4,-6) circle [radius=0.35];
+        \draw[color=black,thick,fill=black,opacity=1.0] (4,-6) circle [radius=0.15];
+        \node[] at (5.5,-7) {\small $F$ $(4,-6)$};
+        \whenTEACHER{
+            % vertex
+            \draw[color=red,thick,fill=red] (4,-2) circle [radius=0.25];
+            \node[] at (7,-1) {\small $V$ $(4,-2)$};
+            %parabola
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{((x-4)**2)/(-16) -2}
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+    equation of the directrix: \gap{$y=2$.}
+\end{center}
+}

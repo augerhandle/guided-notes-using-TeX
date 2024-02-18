@@ -1,0 +1,86 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../common/packages}
+\input{../../common/defs}
+\input{../../common/graphs}
+\input{../../common/document-geometry}
+\input{../../common/problems}
+
+%
+% I'm using the package texdate to set, print and advance dates
+%
+\usepackage{texdate}
+
+
+\begin{document}
+\pagestyle{empty}
+\chapterstyle{empty}
+\checkandfixthelayout
+\raggedbottom
+\def\setdateformat{A,\ d\ B\ Y} % eg, "Monday, 30 August 2021"
+
+% --------------------------------------------------------------------------
+% Set these!
+% --------------------------------------------------------------------------
+\forONLEVEL
+\input{init-date}
+
+% --------------------------------------------------------------------------
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[Factor this polynomial using the Quadratic Formula.]
+    {
+        \centering
+        \Large
+        $ x^2 -6x + 9 = 0 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        How many $x$-intercepts does this function have? 
+        (Graph it using the TI-84 calculator so that you can look for them.)
+        ]
+    {
+        \centering
+        \Large
+        $ f(x) = x^2 -4x + 6 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Solve this equation by {\bfseries\itshape graphing}.
+        Use the TI-84 calculator to graph it. Copy the graph onto your paper.
+        ]
+    {
+        \centering
+        \Large
+        $ x^2 -4x -5 = 0 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+% --------------------------------------------------------------------------
+\advancebydays{1}
+
+\begin{myWarmupProblems}[]
+    \setcounter{MyProblemCounter}{1}
+    \myWideProblemWithContent[%
+        Solve this equation using the {\bfseries\itshape Zero Product Property}. 
+        ]
+    {
+        \centering
+        \Large
+        $ (2x-5)(3x+7) = 0 $ 
+    }[\LARGE]
+\end{myWarmupProblems}
+
+\end{document}

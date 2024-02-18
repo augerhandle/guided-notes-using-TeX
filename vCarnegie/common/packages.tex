@@ -1,0 +1,71 @@
+\usepackage{xparse}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{makecell}
+\usepackage{ifthen}
+\usepackage{pifont} %for fancy bullets
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{cancel} % cancel expressions w/ a diagonal line
+
+\usepackage{amsmath,mathtools,amssymb,amsthm}
+% See https://texblog.net/latex-archive/maths/amsmath-matrix/ 
+% for an explanation of this extention of the amsmath matrix commands.
+% It's a way to enable "augmented matrices" using a new optional argument:
+%
+% \begin{pmatrix}[cc|c]
+%     1 & 2 & 3\\
+%     4 & 5 & 9
+%   \end{pmatrix}
+%
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\usepackage{bm} % bold math package
+\usepackage{mathtools} % \xrightarrow et al.
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{systeme}
+
+\usepackage[most]{tcolorbox}
+    \tcbuselibrary{skins}
+    \tcbuselibrary{raster}
+    \tcbuselibrary{skins}
+    \tcbuselibrary{poster}
+\usepackage{tikz}
+    \usetikzlibrary{arrows.meta}
+    \usetikzlibrary{commutative-diagrams}
+\usepackage{tkz-base}
+\usepackage{tkz-fct}    
+\usepackage{pgfplots}
+    \pgfplotsset{compat=newest}
+
+% for inserting blanks that the students fill in
+\usepackage{dashundergaps} % for \gap
+\dashundergapssetup{
+    teacher-mode=false, % set to true to show answers 
+    gap-format=underline,
+    teacher-gap-format=underline,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=100, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\usepackage{emerald}
+\usepackage[subdued]{mathastext}% no italic for Augie anyhow
+    \MTDeclareVersion[n]{lmvtt}{T1}{lmvtt}{m}{n}
+    \MTfamily{augie}
+    \Mathastext[augie]
+
+\usepackage{catchfile} % used to define getenv
+\usepackage{pdflscape} % for PDF-compatible landscape environment

@@ -1,0 +1,155 @@
+\newpage 
+
+\myProblemsWithContent[In these problems,
+the \myEmph{vertex}, \myEmph{directrix}, \myEmph{axis of symmetry} and parabola are already shown,
+along with the \myEmph{distance} from the directrix to the vertex.
+Do the following.
+\begin{itemize}[nosep]
+    \item Plot the focus as a BIG DOT.
+    \item Show the distance from the vertex to focus on the graph.
+\end{itemize}
+{
+    \tiny
+    Hints: 
+    \begin{itemize}[nosep]
+        \item The focus is on the axis of symmetry. 
+        \item The vertex is halfway between the focus and directrix.
+    \end{itemize}
+}
+]
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-11,2) -- (11,2); 
+        \node[] at (11.5,2.25) {$\mathscr{D}$};
+        % vertex
+        \draw[color=black,thick,fill=black] (4,4) circle [radius=0.25];
+        \node[] at (3,3.4) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid,  thick, samples=500, domain=-10:15,]{((x-4)**2)/8 + 4}
+        % AOS
+        \draw[ultra thick, dotted, black] (4,-11) -- (4,11);
+        \node[] at (4,-11.5) {\small AOS};
+        % directrix-to-vertex distance
+        \draw[solid, black] (4,4) -- (7,3);
+        \draw[solid, black] (4,2) -- (7,3);
+        \node[] at (7.25,3) {\small $2$};
+        %
+        \whenTEACHER{
+            % focus
+            \draw[color=red, thick, fill=white] (4,6) circle [radius=0.35];
+            \draw[color=red, thick, fill=red, opacity=1.0] (4,6) circle [radius=0.15];
+            \node[red] at (3,7) {\small $F$};
+            % vertex-to-focus distance
+            \draw[solid, red] (4,6) -- (-1,5);
+            \draw[solid, red] (4,4) -- (-1,5);
+            \node[red] at (-1,5) {\small $2$};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+\end{center}
+}
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-11,2) -- (11,2); 
+        \node[] at (11.5,2.25) {$\mathscr{D}$};
+        % vertex
+        \draw[color=black,thick,fill=black] (4,-2) circle [radius=0.25];
+        \node[] at (3,-1) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid, thick, samples=500, domain=-10:15,]{((x-4)**2)/(-16) -2}
+        % AOS
+        \draw[ultra thick, dotted, black] (4,-11) -- (4,11);
+        \node[black] at (4,-11.5) {\small AOS};
+        %
+        % directrix-to-vertex distance
+        \draw[solid, black] (4,2) -- (8,3);
+        \draw[solid, black] (4,-2) -- (8,3);
+        \node[] at (8.4,3) {\small $4$};
+        %
+        \whenTEACHER{
+            % focus
+            \draw[color=red,thick,fill=white] (4,-6) circle [radius=0.35];
+            \draw[color=red,thick,fill=red,opacity=1.0] (4,-6) circle [radius=0.15];
+            \node[red] at (5,-7) {\small $F$};
+            % vertex-to-focus distance
+            \draw[solid, red] (4,-2) -- (-1,-5);
+            \draw[solid, red] (4,-6) -- (-1,-5);
+            \node[red] at (-1.4,-5) {\small $4$};        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+\end{center}
+}
+
+
+
+\myProblemsWithContent
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (-1,8) -- (-1,-11); 
+        \node[] at (-1,8.75) {$\mathscr{D}$};
+        % vertex
+        \draw[color=black,thick,fill=black] (-3,0) circle [radius=0.25];
+        \node[] at (-2.5,-1) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid,  thick, samples=1000, domain=-10:15,]{sqrt(-8*x-24) }
+        \tkzFct[ black, solid,  thick, samples=1000, domain=-10:15,]{-sqrt(-8*x-24) }
+        % AOS
+        \draw[ultra thick, dotted, black] (-11,0.1) -- (11,0.1);
+        \node[black] at (9,1) {\small AOS};
+        %
+        % directrix-to-vertex distance
+        \draw[solid, black] (-3,0) -- (2,3);
+        \draw[solid, black] (-1,0) -- (2,3);
+        \node[] at (2.4,3.5) {\small $2$};
+        %
+        \whenTEACHER{
+            % focus
+            \draw[color=red,thick,fill=white] (-5,0) circle [radius=0.35];
+            \draw[color=red,thick,fill=red,opacity=1.0] (-5,0) circle [radius=0.15];
+            \node[red] at (-5,1) {\small $F$};
+            % vertex-to-focus distance
+            \draw[solid, red] (-5,0) -- (-2.5,-5);
+            \draw[solid, red] (-3,0) -- (-2.5,-5);
+            \node[red] at (-2.2,-5) {\small $2$};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+\end{center}
+}
+{
+    \begin{center}
+    \begin{myTikzpictureGrid}{0.35} {10}{10} [solid]
+        % directrix
+        \draw[ultra thick, dashed, black] (3,11) -- (3,-11); 
+        \node[] at (3,11.75) {$\mathscr{D}$};
+        % vertex
+        \draw[color=black,thick,fill=black] (6,4) circle [radius=0.25];
+        \node[] at (5.2,3.2) {\small $V$};
+        %parabola
+        \tkzFct[ black, solid,  thick, samples=900, domain=-10:15,]{sqrt(12*x-72) + 4}
+        \tkzFct[ black, solid,  thick, samples=900, domain=-10:15,]{-sqrt(12*x-72) + 4}
+        % AOS
+        \draw[ultra thick, dotted, black] (-11,4) -- (11,4);
+        \node[black] at (-9,4.5) {\small AOS};
+        %
+        % directrix-to-vertex distance
+        \draw[solid, black] (3,4) -- (4,7);
+        \draw[solid, black] (6,4) -- (4,7);
+        \node[] at (4,7.5) {\small $3$};
+        %
+        \whenTEACHER{
+            % focus
+            \draw[color=red,thick,fill=white] (9,4) circle [radius=0.35];
+            \draw[color=red,thick,fill=red,opacity=1.0] (9,4) circle [radius=0.15];
+            \node[red] at (9,5) {\small $F$};
+            % vertex-to-focus distance
+            \draw[solid, red] (9,4) -- (5,-2);
+            \draw[solid, red] (6,4) -- (5,-2);
+            \node[red] at (5,-2) {\small $3$};
+        }
+    \end{myTikzpictureGrid}\\[0.5\onelineskip]
+\end{center}
+}

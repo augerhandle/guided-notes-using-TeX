@@ -1,0 +1,107 @@
+\definecolor{myGreen}{RGB}{102,252,102}
+
+\myWideProblemWithContent[%
+Given the focus and directrix, find the equation of the parabola.
+]
+{
+    Focus $F$ : $(2,-2)$
+    \hspace{3em} 
+    Directrix $\mathscr{D}$ : $y=6$
+    \tcblower
+    \begin{minipage}{0.49\textwidth}
+    \begin{myTikzpictureGrid}{0.4} {10}{10} [solid]
+        \whenTEACHER{
+            % directrix
+            \draw[ultra thick, dashed, red] (-11,6) -- (11,6); 
+            \node[] at (11,6) {$\mathscr{D}$};
+            % focus
+            \draw[color=red,thick,fill=white] (2,-2) circle [radius=0.35];
+            \draw[color=red,thick,fill=red,opacity=1.0] (2,-2) circle [radius=0.15];
+            \node[red] at (1,-3) {\small $F$};
+            % vertex
+            \draw[color=red,thick,fill=red] (2,2) circle [radius=0.25];
+            \node[red] at (1,1) {\small $V$};
+            % p-arrow
+            \draw[arrows = {-Stealth[scale=1.5]}, very thick, solid, blue] (2,2) -- (2,-2); 
+            \node[blue] at (4.75,-1) {$p=-4$};
+            %parabola
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{ ((x-2)**2)/(-16) + 2}
+            % \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{sqrt(-8*x-24) }
+            % \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{-sqrt(-8*x-24) }
+        }
+    \end{myTikzpictureGrid}
+    \end{minipage}
+    %
+    \begin{minipage}{0.5\textwidth} 
+        \whenTEACHER{
+            \tiny
+            \begin{enumerate}[nosep]
+                \item Draw $F$ and $\mathscr{D}$.
+                \item vertex : $(2,2)$ (halfway between $F$ and $\mathscr{D}$)
+                \item $h=2$, $k=2$ (from coords of vertex)
+                \item Draw arrow from $V$ to $F$. Since it goes DOWN, $p=-4$ (NEG).
+                \item Sketch parabola (bend away from $\mathscr{D}$)
+                \item since it's VERTICAL, pick : $(x-h)^2 = 4p (y-2)$
+                \item substitute : \fbox{$(x-2)^2 = -16(y-2)$}
+            \end{enumerate}
+            \whenHONORS{
+                \begin{itemize}[nosep]
+                    \item solve for y : \fbox{$y = \frac{(x-2)^2}{-16} + 2$}
+                \end{itemize}
+                }
+        }
+    \end{minipage}
+}
+
+
+
+\myWideProblemWithContent
+{
+    Focus $F$ : $(6,-2)$
+    \hspace{3em} 
+    Directrix $\mathscr{D}$ : $x=0$
+    \tcblower
+    \begin{minipage}{0.49\textwidth}
+    \begin{myTikzpictureGrid}{0.4} {10}{10} [solid]
+        \whenTEACHER{
+            % directrix
+            \draw[ultra thick, dashed, red] (0.1,11) -- (0.1,-11); 
+            \node[] at (1.1,-11) {$\mathscr{D}$};
+            % focus
+            \draw[color=red,thick,fill=white] (6,-2) circle [radius=0.35];
+            \draw[color=red,thick,fill=red,opacity=1.0] (6,-2) circle [radius=0.15];
+            \node[red] at (5,-3) {\small $F$};
+            % vertex
+            \draw[color=red,thick,fill=red] (3,-2) circle [radius=0.25];
+            \node[red] at (2,-3) {\small $V$};
+            % p-arrow
+            \draw[arrows = {-Stealth[scale=1.3]}, very thick, solid, blue] (3,-2) -- (6,-2); 
+            \node[blue] at (4.75,-1) {$p=3$};
+            %parabola
+            % \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{ ((x-2)**2)/(-16) + 2}
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{sqrt(12*(x-3))-2 }
+            \tkzFct[ red, dotted, very thick, samples=500, domain=-10:15,]{-sqrt(12*(x-3))-2 }
+        }
+    \end{myTikzpictureGrid}
+    \end{minipage}
+    %
+    \begin{minipage}{0.50\textwidth} 
+        \whenTEACHER{
+            \tiny
+            \begin{enumerate}[nosep]
+                \item draw $F$ and $\mathscr{D}$ 
+                \item vertex : $(3,-2)$ (halfway between $F$ and $\mathscr{D}$)
+                \item $h=3$, $k=-2$ (from coords of vertex)
+                \item Draw arrow from $V$ to $F$. Since it goes RIGHT, $p=3$ (POS)
+                \item sketch parabola (bend away from $\mathscr{D}$)
+                \item since it's HORIZONTAL, pick : $(x-h)^2 = 4p (y-2)$
+                \item substitute : \fbox{$(y+2)^2 = 12(x-3)$}
+            \end{enumerate}
+            \whenHONORS{
+                \begin{itemize}[nosep]
+                    \item solve for y : \fbox{$y = \pm \myRoot{12(x-3)}-2$}
+                \end{itemize}
+                }
+        }
+    \end{minipage}
+}

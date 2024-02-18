@@ -1,0 +1,40 @@
+
+%-----------------------------------------------------
+% A macro to draw a folder-like tcolorbox.
+% 
+% #1 : The title in the "tab" of the folder.
+% #2 : The contents of the box.
+%-----------------------------------------------------
+\NewDocumentCommand{\myFolderBox}{m O{}}{
+    \begin{tcolorbox}[
+        enhanced,
+        title=#1,
+        colframe=black, colback=blue!10!white, colbacktitle=blue!10!white, coltitle=red!50!black,
+        fonttitle=\ttfamily, 
+        sharp corners = northwest,
+        attach boxed title to top left={
+            yshift=-0.7mm
+        },
+        boxrule=0.5mm, rightrule=1mm, bottomrule=1mm,
+        boxed title style={
+            skin=enhancedfirst jigsaw,
+            arc=1mm,
+            toprule=0.5mm, leftrule=0.5mm, rightrule=1mm,
+        }
+    ]
+    #2
+    \end{tcolorbox}
+}
+
+%-----------------------------------------------------
+% A macro to write three folder-like boxes containing 
+% claim/cite/cement text.
+% #1 : The claim text.
+% #2 : The cite text.
+% #3 : The cement text.
+%-----------------------------------------------------
+\NewDocumentCommand{\myClaimCiteCement}{mmm}{
+    \myFolderBox{Claim}[#1]
+    \myFolderBox{Cite}[#2]
+    \myFolderBox{Cement}[#3]
+}

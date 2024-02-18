@@ -1,0 +1,94 @@
+\begin{minipage}{0.7\textwidth}
+\begin{myConceptSteps}{To solve a quadratic equation by factoring\dots}
+    \myStep{rewrite}{%
+        Write the equation in \gap{standard} \gap{form}: 
+        \begin{itemize}
+            \item $ax^2 + bx + c = 0$
+            \item Write down $a$, $b$, $c$. Calculate \gap{$ac$}. 
+        \end{itemize}
+    }
+    \myStep{T-chart}{Find the \gap{factors} of $ac$ that add to $b$. 
+        \begin{center}
+            \tiny
+            \begin{tabular}{c|c}
+                {\itshape factors of $ac$} & {\itshape sum of factors}\\
+                \hline
+                {\dots} & {\dots} \\
+                {\dots} & {\dots} \\
+                {$f_1$, $f_2$} & {$b$} \\
+                {\dots} & {\dots} \\
+            \end{tabular}
+        \end{center}
+    }
+    \myStep{reverse box}{Draw a box.
+        \begin{minipage}{0.3\textwidth}
+            \footnotesize
+            \renewcommand{\arraystretch}{1.5}
+            \setlength{\fboxsep}{4pt}
+            \setlength{\fboxrule}{0.9pt}
+            \begin{tabular}{r|c|c|}
+                {} & {} & {} \\
+                \hline
+                {\phantom{xx}} & \gap{$a$} $x^2$ & \gap{$f_1$} $x$ \\
+                \hline
+                {} & \gap{$f_2$} $x$ & \gap{$c$} \\
+                \hline
+            \end{tabular}
+        \end{minipage}
+        \begin{itemize}
+            \item Write the GCF of the \gap{top} \gap{row} on the left.
+            \item For the rest of the outside, think of a \gap{times} \gap{table}.
+        \end{itemize}
+        \begin{center}
+        \begin{minipage}{0.3\textwidth}
+            \footnotesize
+            \renewcommand{\arraystretch}{1.5}
+            \setlength{\fboxsep}{4pt}
+            \setlength{\fboxrule}{0.9pt}
+            \begin{tabular}{c|c|c|}
+                {} & {\cellcolor{black!10}\# $x$} & {\cellcolor{black!10}\#} \\
+                \hline
+                {\cellcolor{black!10}\sffamily GCF} $x$ & \gap{$a$} $x^2$ & \gap{$f_1$} $x$ \\
+                \hline
+                {\cellcolor{black!10}\#} & \gap{$f_2$} $x$ & \gap{$c$} \\
+                \hline
+            \end{tabular}
+        \end{minipage}
+        \end{center}
+    }
+    \myStep{factored form}{
+        The equation can be rewritten as 
+        \[
+            \underbrace{
+            \left(\text{\gap{left} outside column}\right) 
+            }_\text{\itshape 1st factor}
+            \times 
+            \underbrace{
+            \left(\text{\gap{top} outside row}\right)
+            }_\text{\itshape 2nd factor}
+            = 0
+        \]
+    }
+    \myStep{solution}{
+        To find the solutions, 
+        set each factor equal to zero:
+        \begin{itemize}
+            \item $ \text{\itshape 1st factor} = 0 $
+            \item $ \text{\itshape 2nd factor} = 0 $
+        \end{itemize}
+        \vspace{5\onelineskip}
+    }
+\end{myConceptSteps}
+\end{minipage}
+
+
+
+\myProblems[Solve these quadratic byfactoring.]
+    {
+        $x^2 - 3x + 2 = 0$ \myAnswer{\hfill $x=2,1$}
+    }
+    {
+        $2x^2 +7x +1 = -2 $ \myAnswer{\hfill $x = -\frac{1}{2}, -3$}
+    }
+    {6in}
+

@@ -1,0 +1,30 @@
+\section{Evaluate a polynomial function at $x=a$}
+
+Suppose we are given:
+\begin{itemize}
+    \item a polynomial, $D(x)$, and 
+    \item a number $a$.
+\end{itemize}
+Notice what happens if we set \gap{$x=a$} in the division equation:
+\begin{align*}
+    D(x) &= (x-a)\:Q(x)  +  R \\
+    D(a) &= (a-a)\:Q(a)  +  R \\
+    D(a) &= 0\cdot Q(a) +  R \\
+    D(a) &= 0  +  R \\
+    D(a) &= R \\
+\end{align*}
+
+Hey! The value of $D(a)$ is equal to the \gap{remainder}!
+
+\begin{myConceptSteps}{To use synthetic division to evaluate $D(x)$ at $x=a$\dots}
+    \myStep{Divide}{Use \gap{synthetic} \gap{division} for $\frac{D(x)}{(x-a)}$.}
+    \myStep{Remainder}{Look at the remainder, which will be a \gap{number}.}
+    \myStep{Evaluate}{The value of $D(a)$ is equal to the \gap{remainder}.}
+\end{myConceptSteps}
+
+ 
+\myWideProblem[Evaluate $D(x)$ at the given value of $x$ using synthetic division.]
+{
+    Evaluate $D(x) = x^3 - 7x - 6$ at $x=4$. (Find $D(4)$.)
+}
+{2in}

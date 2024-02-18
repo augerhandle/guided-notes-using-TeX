@@ -1,0 +1,142 @@
+\section{The Geometry of Parabolas}
+
+The geometry of parabolas has six ``pieces''.
+\begin{enumerate}[nosep]
+    \item the \gap{focus}, $F$, which is a \gap{point},
+    \item the \gap{directrix} $\mathscr{D}$, which is a \gap{line},
+    \item the \gap{vertex}, $F$, which is another \gap{point},
+    \item the \gap{axis} \gap{of} \gap{symmetry} (AOS), which is a \gap{line},
+    \item a parameter \gap{$p$}, which is a \gap{distance},
+    \item and the parabola itself.
+\end{enumerate}
+
+\subsection{Vertical Parabolas} 
+
+\begin{minipage}{0.49\textwidth}
+\begin{myTikzpictureGrid}{0.45} [-1]{15}[-1]{15}
+    \whenTEACHER{
+        % Here's the AOS 
+        \draw[very thick, dashed, red] (7,-2) -- (7,16);
+        \node[red] at (6,16) {\tiny AOS};
+        % Here's the focus
+        \draw[color=red,thick,fill=white] (7,11) circle [radius=0.35];
+        \draw[color=red,thick,fill=red,opacity=1.0] (7,11) circle [radius=0.15];
+        \node[red] at (5.5,11) {\tiny $F$ $(7,11)$};
+        %
+        % Here's the vertex
+        \draw[color=red,thick,fill=red] (7,7) circle [radius=0.25];
+        \node[red] at (5.5,7) {\tiny $V$ $(7,7)$};
+        %
+        % Here's the directrix
+        \draw[ultra thick, solid, red] (-2,3) -- (12,3); 
+        \node[red] at (14,3.1) {\small $\mathscr{D}$: $y=3$};
+        %
+        % Here are the annotations for p
+        \draw[to-to,thick, solid, red] (7.75,7.05) -- (7.75,11); 
+        \node[red] at (8.25,9) {\tiny $p=4$};
+        \draw[to-to,thick, solid, red] (7.75,3) -- (7.75,6.95); 
+        \node[red] at (8.25,5) {\tiny $p=4$};
+        %
+        % Here is the parabola
+        \tkzFct[ dotted, very thick, samples=500, domain=-10:15,]{((x-7)**2)/12 + 7}
+    }
+\end{myTikzpictureGrid}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+    \tiny
+    \whenTEACHER{
+        \begin{enumerate}[fullwidth,]
+            \item Start by drawing the focus $F$ and directrix $\mathscr{D}$
+                \begin{itemize}[nosep]
+                    \item Say, ``The focus is a POINT.''
+                    \item Say, ``The directrix is a HORIZONTAL LINE.''
+                    \item Say, ``The eq of a horiz line is \fbox{$y=\dots$}.''
+                \end{itemize}
+            \item Draw the vertex $V$.
+                \begin{itemize}[nosep]
+                    \item Say, ``The vertex is HALFWAY between $F$ \& $\mathscr{D}$.''
+                    \item B/c parabola pts are the SAME dist from $F$ and $\mathscr{D}$.
+                \end{itemize}
+            \item Show the 2 $p$'s on the graph. 
+            \item Draw the AOS 
+                \begin{itemize}[nosep]
+                    \item Say, ``perpendicular to the directrix''
+                    \item Say, ``through the vertex \& focus''
+                \end{itemize}
+            \item Sketch in a parabola.
+                \begin{itemize}[nosep]
+                    \item Say and write, ``start at the vertex''
+                    \item Say and write, ``bend AWAY from the directrix''
+                    \item Say and write, ``WRAP around the focus''
+                \end{itemize}
+        \end{enumerate}
+    }
+\end{minipage}
+
+\subsection{Horizontal Parabolas}
+
+
+\begin{minipage}{0.49\textwidth}
+    \begin{myTikzpictureGrid}{0.45} [-1]{15}[-1]{15}
+        \whenTEACHER{
+            % Here's the AOS 
+            \draw[very thick, dashed, red] (-1,8) -- (14,8);
+            \node[red] at (15,8) {\tiny AOS};
+            % Here's the focus
+            \draw[color=red,thick,fill=white] (8,8) circle [radius=0.35];
+            \draw[color=red,thick,fill=red,opacity=1.0] (8,8) circle [radius=0.15];
+            \node[red] at (8,8.75) {\tiny $F$ $(8,8)$};
+            %
+            % Here's the vertex
+            \draw[color=red,thick,fill=red] (5,8) circle [radius=0.25];
+            \node[red] at (5,8.75) {\tiny $V$ $(5,8)$};
+            %
+            % Here's the directrix
+            \draw[ultra thick, solid, red] (2,1) -- (2,14); 
+            \node[red] at (2,0.5) {\small $\mathscr{D}$: $x=2$};
+            %
+            % Here are the annotations for p
+            \draw[to-to,thick, solid, red] (2,7.25) -- (4.95,7.25); 
+            \node[red] at (3.5,6.75) {\tiny $p=3$};
+            \draw[to-to,thick, solid, red] (5.05,7.25) -- (8,7.25); 
+            \node[red] at (6.5,6.75) {\tiny $p=3$};
+            % %
+            % % Here is the parabola
+            \tkzFct[ dotted, very thick, samples=500, domain=4:15,]{sqrt(12*x - 60) + 8}
+            \tkzFct[ dotted, very thick, samples=500, domain=4:15,]{-sqrt(12*x - 60) + 8}
+        }
+    \end{myTikzpictureGrid}
+    \end{minipage}
+    %
+    \begin{minipage}{0.49\textwidth}
+        \tiny
+        \whenTEACHER{
+            \begin{enumerate}[fullwidth,]
+                \item Start by drawing the focus $F$ and directrix $\mathscr{D}$
+                    \begin{itemize}[nosep]
+                        \item Say, ``The focus is a point.''
+                        \item Say, ``The directrix is a VERTICAL LINE.''
+                        \item Say, ``The eq of a vert line is \fbox{$x=\dots$}.''
+                    \end{itemize}
+                \item Draw the vertex $V$.
+                    \begin{itemize}[nosep]
+                        \item Say, ``The vertex is HALFWAY between $F$ \& $\mathscr{D}$.''
+                        \item B/c parabola pts are the SAME dist from $F$ and $\mathscr{D}$.
+                    \end{itemize}
+                \item Show the 2 $p$'s on the graph. 
+                \item Draw the AOS 
+                    \begin{itemize}[nosep]
+                        \item Say, ``perpendicular to the directrix''
+                        \item Say, ``through the vertex \& focus''
+                    \end{itemize}
+                \item Sketch in a parabola.
+                    \begin{itemize}[nosep]
+                        \item Say and write, ``start at the vertex''
+                        \item Say and write, ``bend AWAY from the directrix''
+                        \item Say and write, ``WRAP around the focus''
+                    \end{itemize}
+            \end{enumerate}
+        }
+    \end{minipage}
+    

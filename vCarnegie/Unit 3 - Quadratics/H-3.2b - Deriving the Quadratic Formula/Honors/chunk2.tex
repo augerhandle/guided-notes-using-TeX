@@ -1,0 +1,72 @@
+\section{Where it comes from}
+
+Where does the quadratic formula come from?
+Let's \gap{complete} the \gap{square}.
+
+
+\begin{tcolorbox}[width=0.65\textwidth,colback=white,colframe=white,]
+    \large
+    \addtolength\jot{0.5em} %increases line spacing for AMS aligned equations
+    \begin{align*}
+        a x^2 + bx + c &= 0 \\
+        %
+        %
+        a \left[ \frac{ax^2}{a} + \frac{bx}{a} \right]  +  c &= 0 \\
+        %
+        %
+        a \left[ x^2 + \frac{b}{a}x \right]  +  c &= 0 \\
+    \end{align*}
+\end{tcolorbox}
+
+Complete the square of {$x^2 + \frac{b}{a}x$}:
+\hspace{0.5in}
+{
+\large
+$B = \frac{b}{a}$
+\qquad
+$\frac{B}{2} = \frac{b}{2a}$ 
+\qquad
+$\left(\frac{B}{2}\right)^2 = \frac{b^2}{4a^2}$
+}
+\begin{tcolorbox}[width=0.65\textwidth,colback=white,colframe=white,]
+    \large
+    \addtolength\jot{0.5em} %increases line spacing for AMS aligned equations
+    \begin{align*}
+        %
+        %
+        a \left[ \left( x + \frac{b}{2a} \right)^2 - \frac{b^2}{4a^2}  \right]  +  c &= 0 \\
+        %
+        %
+        a \left[ \left( x + \frac{b}{2a} \right)^2 - \frac{b^2}{4a^2}  \right]   &= -c \\
+        %
+        %
+        \left[ \left( x + \frac{b}{2a} \right)^2 - \frac{b^2}{4a^2}  \right]   &= \frac{-c}{a} \\
+        %
+        %
+        \left( x + \frac{b}{2a} \right)^2 - \frac{b^2}{4a^2}   &= - \frac{c}{a} \\
+        %
+        %
+        \left( x + \frac{b}{2a} \right)^2 &= \frac{b^2}{4a^2} - \frac{c}{a} \\
+        %
+        %
+        \left( x + \frac{b}{2a} \right)^2 &= \frac{b^2}{4a^2} - \frac{c}{a} \left( \frac{4a}{4a}\right) \\
+        %
+        %
+        \left( x + \frac{b}{2a} \right)^2 &= \frac{b^2}{4a^2} - \frac{4ac}{4a^2} \\
+        %
+        %
+        x + \frac{b}{2a}  &= \pm \myRoot{  \frac{b^2-4ac}{4a^2}  }  \\
+        %
+        %
+        x + \frac{b}{2a}  &= \pm {  \frac{\myRoot{b^2-4ac}}{\myRoot{4a^2}}  }  \\
+        %
+        %
+        x + \frac{b}{2a}  &= \pm {  \frac{\myRoot{b^2-4ac}}{2a}  }  \\
+        %
+        %
+        x &= - \frac{b}{2a} \pm {  \frac{\myRoot{b^2-4ac}}{2a}  }  \\
+        %
+        %
+        x &= \frac{-b \pm \myRoot{b^2-4ac}}{2a}\qquad\blacksquare  \\
+    \end{align*}
+\end{tcolorbox}

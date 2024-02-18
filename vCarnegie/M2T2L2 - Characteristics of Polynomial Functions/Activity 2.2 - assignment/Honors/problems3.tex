@@ -1,0 +1,40 @@
+\myWideProblemWithContent[This problem is like those above, except there are \myEmph{two} paramters involved.]
+{
+    $T(x) = x^3$\\
+    $V(x) = T(x-5)+ 2$
+    \tcblower
+    A B C D {\tiny\itshape (circle one)} = \gap{$C=5$}
+    \hspace{0.5in}
+    A B C D {\tiny\itshape (circle another one)} = \gap{$D=2$}\\[0.5em]
+    {\small\itshape transf. description:} \gap{{ right by 3, up by 2}}\\[2em]
+    \begin{minipage}{0.5\textwidth}
+        \begin{tabular}{ccc}
+            \thead{{\itshape reference points}\\{\itshape on $p(x)$}} &  & \thead{{\itshape transformed points}\\{\itshape on $q(x)$}} \\ 
+            \midrule 
+            $(-2,-8)$ & $\rightarrow$ & \gap{$(3,-6)$} \\
+            $(-1,-1)$ & $\rightarrow$ & \gap{$(4,1)$} \\
+            $(0,0)$   & $\rightarrow$ & \gap{$(5, 2)$} \\
+            $(1,1)$   & $\rightarrow$ & \gap{$(6,3)$} \\
+            $(2,8)$   & $\rightarrow$ & \gap{$(7,10)$} \\
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        \begin{myTikzpictureGrid}{0.3} {10}{10} [solid]
+            \tkzFct[ solid, thick, samples=100, domain=-4:4,]{x**3}
+            %
+            \myDot{(-2,-8)}
+            \myDot{(-1,-1)}
+            \myDot{(0,0)}
+            \myDot{(1,1)}
+            \myDot{(2,8)}
+            \myAnswer{
+                \tkzFct[ solid, thick, samples=100, domain=-2:8,]{(x-5)**3+2}
+                \myDot{(3,-6)}[red]
+                \myDot{(4,1)}[red]
+                \myDot{(5,2)}[red]
+                \myDot{(6,3)}[red]
+                \myDot{(7,10)}[red]
+                }
+        \end{myTikzpictureGrid}
+    \end{minipage}
+}

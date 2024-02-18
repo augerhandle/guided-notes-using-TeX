@@ -1,0 +1,8 @@
+\newenvironment{myVocabulary}{
+    \begin{myTabularAnnotate}{Vocabulary}{}
+}{
+    \end{myTabularAnnotate}
+}
+\newcommand{\myDefinition}[2]{
+    \myRow{#1}{#2}
+}

@@ -1,0 +1,218 @@
+% ---------------------------------------------------------------------------
+% number lines using Tkz
+% ---------------------------------------------------------------------------
+
+% a simple number line
+%
+% #1 scale of the numberline
+% #2 max x
+% #3 min x (optional, if absent it defaults to negative of the max)
+% #4 label on the x-axis (optional, if absent there's no label)
+%
+\NewDocumentCommand{\myNumberLine}{ O{0.4} m o O{{}} }{
+    \begin{tikzpicture}[
+        scale=#1,
+        xaxe style/.style = { very thick, arrows={-{Straight Barb}}, },                 
+        ]
+        \tkzInit[ xmax=#2, xmin=\IfValueTF{#3}{#3}{-#2}, xstep=1, ]
+        \tkzDrawX[
+            % right=12pt,
+            label=#4,
+            noticks=false, % Yes, I want ticks!
+            tickup=1em, tickdn=1em,
+            right space=0.05cm, left space=0.05cm, % extend the line beyond the last ticks
+            ]
+        % \tkzLabelX[ 
+        %     % orig=false,
+        %     step=#4,
+        %     font=\small,
+        %     below left=2pt,
+        %  ]
+    \end{tikzpicture}
+}
+
+
+% ---------------------------------------------------------------------------
+% a numberline 
+% (Must be inside a tikzpicture.)
+%
+% #1 lower number line limit 
+% #2 upper number line limit
+% #3 label font commands
+%
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\myDrawNumberline}{ o m O{\ttfamily\tiny} }
+{
+        %
+        % Draw the line.
+        \draw (\IfValueTF{#1}{#1}{-#2},0) -- (#2,0);
+        %
+        % Draw tickmarks and labels.
+        \foreach \i in {\IfValueTF{#1}{#1}{-#2},...,#2} {
+            \draw (\i,0.1) -- + (0,-0.2); 
+            \draw[node font=#3] (\i,-0.2) node[below]{\i};
+        }
+        %
+}
+
+
+% ---------------------------------------------------------------------------
+% numberline labels
+% (Must be inside a tikzpicture.)
+%
+% #1 list of x-coordinates for plain labels
+% #3 plain label font commands
+%
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\myDrawNumberlineLabels}{ m O{\ttfamily\tiny} }
+{
+    \foreach \i in {#1} {
+        \draw[node font=#2,] (\i,-0.1) node[below] {\i}; 
+        % \draw (-9,-5) node{x};
+    }
+}
+
+
+% ---------------------------------------------------------------------------
+% numberline point and label
+% (Must be inside a tikzpicture.)
+%
+% #1 x-coordinates for the point
+% #2 point circle fill color
+%
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\myDrawNumberlineCircle}{ m m }
+{
+        \draw[black,thick,fill=#2] (#1,0) circle (0.175 cm);
+}
+
+
+% ---------------------------------------------------------------------------
+% numberline point and label
+% (Must be inside a tikzpicture.)
+%
+% #1 x-coordinates for the point
+% #2 point circle fill color
+%
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\myDrawNumberlineCircleAndLabel}{ m m }
+{
+        \draw[black,thick,fill=#2] (#1,0) circle (0.175 cm);
+        \draw[node font=\sffamily\bfseries] (#1,-0.2) node[below]{#1};
+}
+
+
+
+% ---------------------------------------------------------------------------
+% x-y graphs using Tkz
+% ---------------------------------------------------------------------------
+
+% a tikzpicture wrapper environment that uses Tkz to draw an x-y grid
+%
+% #1 tikzpicture scale
+%
+% #2 optional xmin (defaults to negative of xmax)
+% #3 xmax
+% #4 optional ymin (defaults to negative of ymax)
+% #5 ymax
+% #6 drawing style of x/y axes (solid, dashed, etc...)
+%
+\NewDocumentEnvironment{myTikzpictureGrid}{ m omom O{solid} }{
+    \begin{tikzpicture}[
+        scale=#1,
+        xaxe style/.style = { #6, very thick, arrows={-{Straight Barb}}, },                 
+        yaxe style/.style = { #6, very thick, arrows={-{Straight Barb}}, },                 
+        ]
+        \tkzInit[
+            xmin={\IfValueTF{#2}{#2}{-#3}}, xmax=#3, xstep=1,
+            ymin={\IfValueTF{#4}{#4}{-#5}}, ymax=#5, ystep=1,
+            ]
+        \tkzGrid[ sub, subxstep=1, subystep=1, ]
+        \tkzDrawX[label={$x$},color=black, right=0.2em,]
+        \tkzDrawY[label={$y$},color=black, above=0.2em,]
+        % \tkzLabelX[orig=false,] \tkzLabelY[orig=false,]
+}{
+    \end{tikzpicture}
+}
+
+
+% ---------------------------------------------------------------------------
+% #1 what kind of shape to draw at the point
+% #2 size of the shape
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\myDrawPointA}{ O{circle} O{4pt}} {
+    \tkzDrawPoint[shape=#1, size=#2,](A)
+}
+
+% ---------------------------------------------------------------------------
+% A command to draw a grid with dots at the grid points 
+% with the objective of manually constructing slope fields.
+%
+% #1 width of resizebox wrapped around it all 
+% #2 dy/dx equation
+% #3 upper limits of x & y (symmetric so also is the lower limit of x & y)
+%
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\mySlopeFieldGrid}{ O{2in} mm }{
+    \resizebox{#1}{!}
+    {
+        \centering
+        \begin{myTikzpictureGrid}{0.45} {#3}{#3}[solid]
+            \foreach \x in {-#3,...,#3}
+            \foreach \y in {-#3,...,#3}
+            {
+                \fill[black!60] (\x,\y) circle (0.11cm);
+            }       
+        \end{myTikzpictureGrid}
+    }
+    \\[0.5\onelineskip]
+    \centering
+    $ \frac{ dy }{ dx } = #2$
+    }
+
+% ---------------------------------------------------------------------------
+% Commands to draw various kinds of "interval" numberlines.
+%
+% #1 scale
+% #2 left circle fill color 
+% #3 right circle fill color 
+% #4 left bound 
+% #5 right bound
+% ---------------------------------------------------------------------------
+
+% The default scale used by the interval commands.
+% Use \renewcommand to redefine this default. (This avoids specifying the arg each time.)
+\newcommand{\myIntervalScale}{0.5}
+
+% The default font size used for the interval endpoint labels.
+\newcommand{\myIntervalTextSize}{\footnotesize}
+
+% Draw an interval with two circles and a line between them.
+\NewDocumentCommand{\myAndInterval}{O{\myIntervalScale} m O{#2} O{L} O{R}}{
+    \myIntervalTextSize
+    \begin{tikzpicture}[scale=#1]
+        % a straight line segment
+        \draw[-,] (0,0) -- (10,0);
+        % the thicker segment
+        \draw[line width=1mm,] (3,0) -- (7,0);
+        % the labels
+        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$#4$}] at (3,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$#5$}] at (7,0) {};
+    \end{tikzpicture}
+}
+
+% Draw an interval with two circles with outward-facing arrows.
+\NewDocumentCommand{\myOrInterval}{O{\myIntervalScale} m O{#2} O{L} O{R}}{
+    \myIntervalTextSize
+    \begin{tikzpicture}[scale=#1]
+        % a straight line segment
+        \draw[<->, arrows={{Latex[width=4mm, length=4mm]}-{Latex[width=4mm, length=4mm]}}] 
+            (0,0) -- (10,0);
+        % the thicker segment
+        \draw[line width=1mm,] (0.25,0) -- (3,0); % trim off 0.25 to avoid the arrow
+        \draw[line width=1mm,] (7,0) -- (9.75,0); % trim off 0.25 to avoid the arrow
+        % the labels
+        \node[circle,inner sep=0.3em,draw=black,fill=#2,line width=0.7mm,label=below:{$#4$}] at (3,0) {};
+        \node[circle,inner sep=0.3em,draw=black,fill=#3,line width=0.7mm,label=below:{$#5$}] at (7,0) {};
+    \end{tikzpicture}
+}
