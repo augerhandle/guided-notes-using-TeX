@@ -1,0 +1,150 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+\iftstu 
+    \dashundergapssetup{gap-font={\ECFAugie\MTversion{augie}\color{red}},}
+\fi
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{4.5}{Absolute Value Practice}
+%-----------------------------------------------------------------------------------------
+
+\myProblems[Evaluate these expressions.]
+{
+    $|-32|$
+}
+{
+    $-|8-5|$
+}
+{0.4in}
+\myProblems[]
+{
+    $|50-75|$
+}
+{
+    $|75-50|$
+}
+{0.4in}
+
+
+\myProblems[]
+{
+    Describe some \myEmph{differences} between 
+    vertical and horizontal reflections.
+}
+{
+    Explain what the constants $A$, $B$, $C$, $D$ are. 
+}
+{1.5in}
+\myProblems[]
+{
+    Write the formula for a horizontal reflection.
+}
+{
+    Write the formula for a vertical reflection.
+}
+{1in}
+
+
+\myProblems[Describe the transformation(s) on these functions.]
+{
+    $g(x) = 2|x| - 5$
+}
+{
+    $g(x) = -5|x+3| $
+}
+{1in}
+\myProblems[]
+{
+    $g(x) = \frac{2}{3}|x+ 11| + 22$
+}
+{
+    $g(x) = 6.02|x- 0.123| -8$
+}
+{1in}
+
+
+\myProblems[Write the formula for absolute value functions that have the following transformations.]
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item horizontal shift right by 5
+        \item vertical shift down by 13
+    \end{itemize}
+}
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item horizontal stretch by 3
+        \item horizontal shift left by 12
+        \item vertical shift up by 8
+    \end{itemize}
+}
+{0.4in}
+\myProblems[]
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item vertical compression by $\frac{1}{5}$
+        \item horizontal shift right by 2
+        \item vertical shift up by 5
+    \end{itemize}
+}
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item horizontal compression by 0.25
+        \item reflection across the $x$-axis
+        \item vertical shift up by 5
+    \end{itemize}
+}
+{0.4in}
+
+
+\myProblemsWithContent[In these problems, do the following \myEmph{three} things.
+\begin{itemize}
+    \setlength\itemsep{-0.5em}
+    \item Sketch and label the graph of the parent function, $f(x) = |x|$.
+    \item Sketch and label the graph of the transformed function, $g(x)$.
+    \item List all the transformations for $g(x)$.
+\end{itemize}
+]
+{
+    $g(x) = |x| -7$
+    \tcblower
+    \begin{myTikzpictureGrid}{0.25} {8}{8}
+    \end{myTikzpictureGrid}
+    \vspace{4\onelineskip}
+}
+{
+    $g(x) = - |x-5| + 6$
+    \tcblower
+    \begin{myTikzpictureGrid}{0.25} {8}{8}
+    \end{myTikzpictureGrid}
+}
+
+
+
+\end{document}

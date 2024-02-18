@@ -1,0 +1,126 @@
+\section{Parent Functions}
+
+\vfil
+{
+    \begin{minipage}{0.2\textwidth}
+        \begin{center}
+            {\bfseries\itshape Quadratics}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[ dashed,  thick, samples=100, domain=-10:10,]{x**2}
+            \end{myTikzpictureGrid}
+        \end{center}\vspace{-1\onelineskip}
+        {$f(x) = x^2$}
+
+        {$g(x) = \bm{a}(x-\bm{h})^2 + \bm{k}$}
+    \end{minipage}
+}
+\hfill 
+{
+    \begin{minipage}{0.2\textwidth}
+        \begin{center}
+            {\bfseries\itshape Reciprocals}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[ dashed,  thick, samples=100, domain=0.01:6,]{1/x}
+                \tkzFct[ dashed,  thick, samples=100, domain=-6:-0.01,]{1/x}
+            \end{myTikzpictureGrid}
+        \end{center}\vspace{-1\onelineskip}
+        {$f(x) = \frac{1}{x}$}
+
+        {$g(x) = \frac{\bm{a}}{x-\bm{h}} + \bm{k}$}
+    \end{minipage}
+}
+\hfill
+{
+    \begin{minipage}{0.2\textwidth}
+        \begin{center}
+            {\bfseries\itshape Absolute Value}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[ dashed,  thick, samples=100, domain=-10:10,]{abs(x)}
+            \end{myTikzpictureGrid}
+        \end{center}\vspace{-1\onelineskip}
+        {$f(x) = |x|$}
+
+        {$g(x) = \bm{a}|x-\bm{h}| + \bm{k}$}
+    \end{minipage}
+}
+\hfill 
+{
+    \begin{minipage}{0.2\textwidth}
+        \begin{center}
+            {\bfseries\itshape Cube Root}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[dashed, thick,samples=3500,domain =0:6]{   ( 10.0**(log10(\x)/3))   }
+                \tkzFct[dashed, thick,samples=3500,domain =-6:0]  {  -( 10**(log10(-\x)/3))   }
+        \end{myTikzpictureGrid}
+    \end{center}\vspace{-1\onelineskip}
+    {$f(x) = \myRoot[3]{x}$}
+
+        {$g(x) = \bm{a}\myRoot[3]{x-\bm{h}} + \bm{k}$}
+    \end{minipage}
+}
+
+
+{
+    \begin{minipage}{0.3\textwidth}
+        \begin{center}
+            {\bfseries\itshape Cubics}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:6,]{\x**3}
+            \end{myTikzpictureGrid}
+        \end{center}\vspace{-1\onelineskip}
+        {$f(x) = x^3$}
+
+        {$g(x) = \bm{a} (x-\bm{h})^3 + \bm{k}$}
+    \end{minipage}
+}
+\hfill 
+{
+    \begin{minipage}{0.3\textwidth}
+        \begin{center}
+            {\bfseries\itshape Exponential Growth}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:6,]{1.1**x}
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:6,]{1.2**x}
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:5,]{1.6**x}
+                %
+                \tkzFct[ solid, ultra thick, samples=200, domain=-6:3,]{2**x}
+                %
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:3,]{6**x}
+            \end{myTikzpictureGrid}
+        \end{center}\vspace{-1\onelineskip}
+        {$f(x) = b^x$} {\small($b>1$ for growth)}
+
+        {$g(x) = \bm{a}\,b^{x-\bm{h}} + \bm{k}$}
+    \end{minipage}
+}
+\hfill 
+{
+    \begin{minipage}{0.3\textwidth}
+        \begin{center}
+            {\bfseries\itshape Exponential Decay}\\
+            \begin{myTikzpictureGrid}{0.25} {6}{6}
+                \tkzFct[ dashed,  thick, samples=200, domain=-3:6,]{6**-x}
+                %
+                \tkzFct[ solid, ultra thick, samples=200, domain=-3:6,]{0.5**x}
+                %
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:6,]{1.1**-x}
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:6,]{1.2**-x}
+                \tkzFct[ dashed,  thick, samples=200, domain=-6:5,]{1.6**-x}
+            \end{myTikzpictureGrid}
+        \end{center}\vspace{-1\onelineskip}
+        {$f(x) = b^x$} {\small($0<b<1$ for decay)}
+
+        {$g(x) = \bm{a}\,b^{x-\bm{h}} + \bm{k}$}
+    \end{minipage}
+}
+
+\begin{tcolorbox}[center,width=5.5in,colback=white,]
+    \small
+    Remember that the base, $b$, is a \gap{multipler} 
+    that defines how fast or slowly the {\myEmph exponential functions }
+    grow or decay.\\[0.5\onelineskip]
+    So this is really a \gap{bunch} of parent functions, 
+    one for each value of $b$.
+\end{tcolorbox}
+
+

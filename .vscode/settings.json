@@ -5,6 +5,8 @@
     "latex-workshop.view.pdf.zoom": "page-width",
     "latex-workshop.texcount.interval": 2000,
     "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.command": "latexmk",
+    "latex-workshop.latex.clean.method": "glob",
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.clean.fileTypes":[
         "*.aux", 
@@ -23,6 +25,7 @@
         "*.synctex.gz(busy)", 
         "*.synctex.gz",
         "*.tkzfonct.gnuplot",
+        ".tkzfonct.gnuplot",
         "*.tkzfonct.table",
         "*.nav"
     ],

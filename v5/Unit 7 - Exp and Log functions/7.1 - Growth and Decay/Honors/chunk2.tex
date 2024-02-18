@@ -1,0 +1,86 @@
+\section{Exponents with a coefficient}
+Consider a slightly different exponential function:
+\begin{tcolorbox}[width=2in,center,colback=white,]
+    \large
+    \vspace{-1\onelineskip}
+    \[ g(x) = b^{rx} \]
+\end{tcolorbox}
+
+
+\begin{tcbraster}[
+    raster columns = 4,
+    raster equal height,
+    colback = white,
+    raster equal skip = 0mm,
+]
+\begin{tcolorbox}[colframe=white]
+    \begin{myTikzpictureGrid}{0.225} {6}{6}
+        \tkzFct[ black, dashed, ultra thick, samples=100, domain=-6:3,]{2**(1.25*x)}
+    \end{myTikzpictureGrid}
+    \\ 
+    $b = 2 $ \\ 
+    $r = 1.25 $
+\end{tcolorbox}
+\begin{tcolorbox}[colframe=white]
+    \begin{myTikzpictureGrid}{0.225} {6}{6}
+        \tkzFct[ black, dashed, ultra thick, samples=100, domain=-6:3,]{0.5**(1.25*x)}
+    \end{myTikzpictureGrid}
+    \\ 
+    $b = \frac{1}{2} $ \\ 
+    $r = 1.25 $
+\end{tcolorbox}
+\begin{tcolorbox}[colframe=white]
+    \begin{myTikzpictureGrid}{0.225} {6}{6}
+        \tkzFct[ black, dashed, ultra thick, samples=100, domain=-6:3,]{2**(-1.25*x)}
+    \end{myTikzpictureGrid}
+    \\ 
+    $b = 2 $ \\ 
+    $r = -1.25 $
+\end{tcolorbox}
+\begin{tcolorbox}[colframe=white]
+    \begin{myTikzpictureGrid}{0.225} {6}{6}
+        \tkzFct[ black, dashed, ultra thick, samples=100, domain=-6:3,]{0.5**(-1.25*x)}
+    \end{myTikzpictureGrid}
+    \\ 
+    $b = \frac{1}{2} $ \\ 
+    $r = -1.25 $
+\end{tcolorbox}
+\end{tcbraster}
+
+Whether exponential functions are growth or decay depends on \myEmph{both} 
+\gap{$b$} and the coefficient \gap{$r$}.
+
+\begin{tcolorbox}[colback=white,center,width=3.75in]
+\begin{center}
+    \large
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{l||c|c}
+        & {\itshape positive $r$} & {\itshape negative $r$} \\ \hline\hline
+        $0<b<1$ & decay & growth \\ \hline
+        $b>1$   & growth & decay \\ 
+    \end{tabular}
+\end{center}
+\end{tcolorbox}
+        
+
+
+\myProblems[%
+    Are these functions exponential growth or decay.
+    Explain why.
+]
+{
+    $f(x) = 3^{0.002x}$ \myAnswer{\tiny\hfill growth b/c $b>1$ and $r$ is pos.}
+}
+{
+    $h(x) = 3^{-2x}$    \myAnswer{\tiny\hfill decay b/c $b>1$ and $r$ is neg.}
+}
+{0.5in}
+
+\myProblems
+{
+    $g(x) = \pi^{-\frac{x}{10}}$    \myAnswer{\tiny\hfill decay b/c $b>1$ and $r$ is neg.}
+}
+{
+    $f(x) = \left(\frac{1}{5}\right)^{-2\pi x}$   \myAnswer{\tiny\hfill growth b/c $0<b<1$ and $r$ is neg.}
+}
+{0.5in}

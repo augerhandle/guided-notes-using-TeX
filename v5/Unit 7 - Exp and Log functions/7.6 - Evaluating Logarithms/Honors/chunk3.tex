@@ -1,0 +1,75 @@
+\section{The Change of Base Formula}
+\begin{NoHyper} % I don't want my \eqref's to be visible/clickable links.
+
+\myWideProblem[Find this logarithm.]
+{
+    $log_5(13)$  
+    \whenTEACHER{
+        \hfill\tiny 
+        You can't do this with a calculator unless you have a \myKey{$log_5$} button.}
+}
+{0.25in}
+
+
+\subsection{The Problem}
+
+How do we calculate $ log_Z(A) $ 
+if our calculator doesn't have a button for \myKey{$log_Z$}?
+
+\subsection{The Solution}
+
+Let's assume that the result is $x$ (even though we can't calculate it \dots yet):
+\begin{equation} log_Z(A) = \text{\gap{$x$}} \label{eq:x}\end{equation}
+Let's \gap{solve} \gap{for} \gap{$x$}.
+
+Suppose there is a \myKey{$log_F$} button on your calculator
+(for example, \gap{\myKey{$log$}} or \gap{\myKey{$ln$}}). 
+Assume they are 
+
+\begin{alignat}{3}
+    &log_F(A) &&= && \text{\gap{$Q$}} \label{eq:Q}\\
+    &log_F(Z) &&= && \text{\gap{$R$}} \label{eq:R}
+\end{alignat}
+\whenTEACHER{\tiny We can find Q and R using a calculator.}
+
+Convert these three equations to \gap{exponential} \gap{form}
+\begin{alignat}{7}
+    & log_Z(A) && = &\,\,& x &\qquad& \longrightarrow &\qquad& \text{\gap{$Z^x$}} && = &\,\,& \text{\gap{$A$}} \label{eq:1}\\
+    & log_F(A) && = && Q     &\qquad& \longrightarrow &\qquad& \text{\gap{$F^Q$}} && = &&     \text{\gap{$A$}} \label{eq:2}\\
+    & log_F(Z) && = && R     &\qquad& \longrightarrow &\qquad& \text{\gap{$F^R$}} && = &&     \text{\gap{$Z$}} \label{eq:3}
+\end{alignat}
+Since \eqref{eq:1} and \eqref{eq:2} 
+are both equal to $A$, 
+\begin{equation}
+    \text{\gap{$Z^x$}} = \text{\gap{$F^Q$}} 
+\end{equation} 
+Substitute $Z$ from \eqref{eq:3} into this
+and then \gap{solve} \gap{for} \gap{x}:
+\begin{alignat*}{3}
+    & \left( \text{\gap{$F^R$}} \right)^x && = &\,\,& F^Q \\
+    & \text{\gap{$F^{Rx}$}}               && = &&     F^Q \\
+    & \text{\gap{$Rx$}}                   && = &&     \text{\gap{$Q$}}   \\
+    & x                                   && = &&     \text{\gap{$\frac{Q}{R}$}}
+\end{alignat*}
+And finally substituting for $Q$ and $R$ from \eqref{eq:Q} and \eqref{eq:R},
+\begin{alignat*}{3}
+    & x && = && 
+                \frac
+                {\quad  \text{\gap{$log_F(A)$}}  \quad}
+                {\quad  \text{\gap{$log_F(Z)$}}  \quad}
+\end{alignat*}
+%
+So we have \gap{solved} \gap{for} \gap{x}. 
+Using \eqref{eq:x}, we can write the final result.
+
+\begin{tcolorbox}[center,width=3in,colback=white,title={\itshape Change of Base Formula},colbacktitle=white,coltitle=black]
+    \[ 
+        log_Z(A) = \frac {log_F(A)} {log_F(Z)}
+    \]
+    \centering 
+    where \myKey{$log_F$} is on your calculator
+\end{tcolorbox}
+
+
+
+\end{NoHyper}

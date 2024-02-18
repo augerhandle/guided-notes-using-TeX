@@ -1,0 +1,40 @@
+\section{Bouncing Ball}
+
+\begin{itemize}
+    \item Fill in the bouncing ball sequence.
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {10};
+        \node (2) at (2,0)  [myShape,draw] {8};
+        \node (3) at (4,0)  [myShape,draw] {\tiny\gap{6.4}};
+        \node (4) at (6,0)  [myShape,draw] {\tiny\gap{5.12}};
+        \node (5) at (8,0)  [myShape,draw] {4.096};
+        \node (6) at (10,0) [myShape,draw] {3.277};
+        \node (7) at (12,0) [myShape,draw] {2.621};
+        \node (8) at (14,0) [myShape,draw] {2.097};
+        \node (dots) at (15.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$\times 0.8$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$\times 0.8$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$\times 0.8$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$\times 0.8$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$\times 0.8$} (6.north west);
+        \draw [-Stealth] (6.north east) to node  {\tiny$\times 0.8$} (7.north west);
+        \draw [-Stealth] (7.north east) to node  {\tiny$\times 0.8$} (8.north west);
+    \end{tikzpicture}  
+\end{itemize}
+
+\begin{tcolorbox}[center,colback=white]
+    \centering
+    When you \myEmph{multiply} each term by the same amount,
+    it is called a \scshape{Geometric Sequence}.
+\end{tcolorbox}
+
+\begin{itemize}
+    \item The bouncing ball sequence is geometric, because you multiply by \gap{0.8} to get the next term.
+\end{itemize}
+

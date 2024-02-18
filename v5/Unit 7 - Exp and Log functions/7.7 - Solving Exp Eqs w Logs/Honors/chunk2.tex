@@ -1,0 +1,65 @@
+\section{Inverse Functions}
+
+\begin{tcolorbox}[center,width=6in,colback=white]
+    \myEmph{Logarithmic} functions are \gap{inverses} of \myEmph{exponential} functions.
+    \large
+    \begin{alignat*}{3}
+        &
+            \text{\normalsize\itshape exponential function:\quad} 
+        &\quad&
+            f(x) 
+        && 
+            = b^x \\ 
+        &
+            \text{\normalsize\itshape log function:\quad}
+        &&
+            f^{-1}(x)
+        && 
+            = log_b(x)
+    \end{alignat*}
+\end{tcolorbox}
+
+\vspace{-1\onelineskip}
+\begin{center}
+Inverse functions \gap{undo} each other.
+\end{center}
+
+\begin{tcbraster}[ 
+    raster columns = 4,
+    % raster left skip = 0.25in, raster right skip = 0.25in, raster column skip = 0.75in,
+    raster before skip = 0in, raster after skip = 0in,
+    raster equal height,
+    colback=white,
+    top=0in, bottom=0in, boxsep=0in,
+    ]
+    \begin{tcolorbox}[valign=center,]
+        \begin{align*}
+            f(X) = Y \\
+            f^{-1}(Y) = X \\
+        \end{align*}
+    \end{tcolorbox}
+    \begin{tcolorbox}[valign=center,]
+        \begin{center}
+            \begin{tikzpicture}[codi] 
+                \obj { X & Y \\ }; 
+                \mor :[bend left] X f:-> Y;
+                \mor :[bend left] Y ["f^{-1}"]:-> X;
+            \end{tikzpicture} 
+        \end{center}
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \[ f^{-1}\left( f(X) \right) = X \] 
+    \end{tcolorbox}
+    \begin{tcolorbox}[]
+        \[ log_b\left( b^{X} \right) = X \] 
+    \end{tcolorbox}
+\end{tcbraster}
+
+\myProblems[Evaluate these expressions.]
+{
+    $log_3\left(3^x\right)$ \myAnswer{\hfill\tiny cancel log \& exp: $x$}
+}
+{
+    $log\left(10^{2x-3}\right)$ \myAnswer{\hfill\tiny cancel log \& exp: $2x-3$}
+}
+{0.25in}

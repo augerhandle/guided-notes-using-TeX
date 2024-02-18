@@ -1,0 +1,80 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+\iftstu 
+    \dashundergapssetup{gap-font={\ECFAugie\MTversion{augie}\color{red}},}
+\fi
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{Arithmetic and Geometric Sequence Patterns}{}
+%-----------------------------------------------------------------------------------------
+\usetikzlibrary {shapes.geometric} 
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=1, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\tikzstyle{myShape}
+    =
+    [
+        regular polygon, 
+        regular polygon sides=6, 
+        shape border rotate=30, 
+        draw=black,
+        fill=white,
+        very thick,
+        minimum size=3.5em,
+        inner sep=0pt
+    ]
+
+
+\noindent 
+Use Chrome and fill in the blanks based on
+what you do on this interactive web page:
+
+\hfill\url{https://mathigon.org/course/sequences/introduction}\hfill{}
+
+\noindent \\Work on these two sections of that page:
+\begin{itemize}[nosep]
+    \item[$>$] \sffamily{Introduction }
+    \item[$>$] \sffamily{Arithmetic and Geometric sequences}
+\end{itemize}
+
+
+\input{chunk1.tex}
+\input{chunk2.tex}
+\input{chunk3.tex}
+\input{chunk4.tex}
+\input{chunk5.tex}
+\input{chunk6.tex}
+\input{chunk7.tex}
+
+
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[12pt,letterpaper]{memoir}
+
+\input{../../../common/packages}
+\input{../../../common/defs}
+\input{../../../common/scaffold}
+\input{../../../common/assignment-defs}
+\input{../../../common/system-table}
+\input{../../../common/student-or-teacher}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+\input{../../../common/course-name}
+
+\input{for-whom}
+\iftstu 
+    \dashundergapssetup{gap-font={\ECFAugie\MTversion{augie}\color{red}},}
+\fi
+
+% memoir commands to define the text block geometry
+\setulmarginsandblock{0.5in}{*}{*}
+\setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+
+\begin{document}
+\pagestyle{plain}
+\checkandfixthelayout
+\raggedbottom
+
+
+\noindent
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{Absolute Value Quiz}{B}
+%-----------------------------------------------------------------------------------------
+
+
+
+
+\myProblems[List all the transformation(s) on these functions.]
+{
+    $g(x) = |x + 4| + 5$
+    \myAnswer{\tiny\hfill left 4, up 5}
+}
+{
+    $g(x) = -|x - 8| $
+    \myAnswer{\tiny\hfill refl across $x$, right 8}
+}
+{1in}
+\myProblems[]
+{
+    $g(x) = 2|x- 5| -4$
+    \myAnswer{\tiny\hfill V str by 2, right 5, down 4}
+}
+{
+    $g(x) = \frac{1}{3}|2x| - 13$
+    \myAnswer{\tiny\hfill V comp by $\frac{1}{3}$, H comp by $\frac{1}{2}$, down 13}
+}
+{1in}
+
+
+\myProblems[Write the formula for absolute value functions that have the following transformations.]
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item horizontal shift left by 5 \myAnswer{\tiny\hfill $g(x) = |x+5| - 3$}
+        \item vertical shift down by 3
+    \end{itemize}
+}
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item vertical stretch by 4 \myAnswer{\tiny\hfill $g(x) = 4|x-2| +6$}
+        \item horizontal shift right by 2
+        \item vertical shift up by 6
+    \end{itemize}
+}
+{1.5in}
+\myProblems[]
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item vertical compression by $\frac{1}{2}$  \myAnswer{\tiny\hfill $g(x) = \frac{1}{2}|x| +7$}
+        \item vertical shift up by 7
+    \end{itemize}
+}
+{
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item horizontal compression by $\frac{1}{3}$ \myAnswer{\tiny\hfill $g(x) = |3x|$}
+    \end{itemize}
+}
+{1.5in}
+
+
+\vspace{1em}
+\myProblemsWithContent[In these problems, do the following \myEmph{three} things.
+\begin{itemize}
+    \setlength\itemsep{-0.5em}
+    \item Sketch the graph of the parent function, $f(x) = |x|$.
+    \item Sketch the graph of the transformed function, $g(x)$.
+    \item List all the transformations for $g(x)$.
+\end{itemize}
+]
+{
+    $g(x) = |x-4| -7$
+    \tcblower
+    \begin{myTikzpictureGrid}{0.25} {10}{10}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=2000, domain=-10:10,]{abs(x)}
+            \draw[color=red,thick,fill=red] (0,0) circle (0.25 cm);
+            \tkzFct[ solid, ultra thick, samples=2000, domain=-10:10,]{abs(x-4) - 7}
+            \draw[color=red,thick,fill=red] (4,-7) circle (0.25 cm);
+        }
+    \end{myTikzpictureGrid}\\
+    Transformations:
+    \myAnswer{right 4, down 7}
+    \vspace{8\onelineskip}
+}
+{
+    $g(x) = - |x| +7$
+    \tcblower
+    \begin{myTikzpictureGrid}{0.25} {10}{10}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=2000, domain=-10:10,]{abs(x)}
+            \draw[color=red,thick,fill=red] (0,0) circle (0.25 cm);
+            \tkzFct[ solid, ultra thick, samples=2000, domain=-10:10,]{-abs(x) + 7}
+            \draw[color=red,thick,fill=red] (0,7) circle (0.25 cm);
+        }
+    \end{myTikzpictureGrid}\\
+    Transformations:
+    \myAnswer{refl across $x$, up 7}
+}
+
+
+\end{document}

@@ -1,0 +1,98 @@
+\section{Reciprocal Functions}
+
+The \myEmph{reciprocal parent function} is \tcbox[on line]{$f(x) = \frac{1}{x}$.}
+\vspace{1\onelineskip}
+
+\myWideProblemWithContent[Fill in the table, plot the points, and sketch the graph.]
+{
+\begin{minipage}{0.57\textwidth}
+    \centering 
+    \small
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{r|p{1.5in}|c}
+        $x$  & $y = f(x) = \frac{1}{x}$ & $(x,y)$\\ 
+        \hline\hline
+        $-3$ & $f(-3)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-2$ & $f(-2)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-1$ & $f(-1)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-0.5$ & $f(-0.5)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-0.25$ & $f(-0.25)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        $-0.1$ & $f(-0.11)=$ & $(\hspace{0.25in},\hspace{0.25in})$ \\
+        %
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.425\textwidth}
+    \centering
+    \begin{myTikzpictureGrid}{0.25} {10}{10}
+        \whenTEACHER{
+            \tkzFct[ solid, ultra thick, samples=100, domain=0.01:10,]{1/x}
+            \tkzFct[ solid, ultra thick, samples=100, domain=-10:-0.01,]{1/x}
+            %
+            \draw[black,thick,fill=red] (-3,-0.333) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-2,-0.5) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-1,-1) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-0.5,-2) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-0.25,-4) circle (0.2 cm);
+            \draw[black,thick,fill=red] (-0.1,-10) circle (0.2 cm);
+            %
+            \draw[black,thick,fill=red] (3,0.333) circle (0.2 cm);
+            \draw[black,thick,fill=red] (2,0.5) circle (0.2 cm);
+            \draw[black,thick,fill=red] (1,1) circle (0.2 cm);
+            \draw[black,thick,fill=red] (0.5,2) circle (0.2 cm);
+            \draw[black,thick,fill=red] (0.25,4) circle (0.2 cm);
+            \draw[black,thick,fill=red] (0.1,10) circle (0.2 cm);
+        }
+    \end{myTikzpictureGrid}
+\end{minipage}
+}
+
+\myWideProblem{
+    If you evaluate this function at $x=0$ on a calculator, 
+    you get an error.
+    Why?
+}{0.25in}
+
+\myWideProblemWithContent[Do these things:
+    \begin{itemize}[nosep]
+        \item Sketch a transformed function that has been
+            shifted \myEmph{down} by 3. 
+        \item Put a BIG DOT at the center.
+        \item Draw the horizontal and vertical asymptotes 
+            that cross at the center (your DOT) as DASHED LINES.
+        \item Then fill in the blanks.
+    \end{itemize}
+    ]
+{
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \begin{myTikzpictureGrid}{0.35}{6}{6}
+            \whenTEACHER{
+                \tkzFct[ solid, ultra thick, samples=100, domain=-9:-0.01,]{(1/x)-3}
+                \tkzFct[ solid, ultra thick, samples=100, domain=0.01:9,]{(1/x)-3}
+                \draw[fill,black,fill=red] (0,-3) circle (3mm);
+                \draw [red, ultra thick, dashed] (-0.1,-7) -- (-0.1,7);
+                \draw [red, ultra thick, dashed] (-7,-3.1) -- (7,-3.1);
+            }
+        \end{myTikzpictureGrid}
+    \end{minipage}
+    \begin{minipage}{0.64\textwidth}
+        \centering 
+        \small
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{lcl}
+            coords of the vertex & : & (\gap{$0$},\gap{$-3$}) \\
+            $a$, $h$, and $k$           & : & $a=$ \gap{$1$}, $h=$ \gap{$0$}, $k=$ \gap{$-3$} \\
+            transformed function        & : & $g(x)=$ \gap{$\frac{1}{x} - 3 $}
+        \end{tabular}
+    \end{minipage}
+}
+
+\myWideProblem
+{
+   The word ``reciprocal'' means to \myEmph{turn upside down}.
+   The reciprocal of $5$ is $\frac{1}{5}$. The reciprocal of $10$ is $\frac{1}{10}$.
+   Explain why you think this function is called 
+   the \myEmph{reciprocal} parent function.
+}
+{0.5in}
+

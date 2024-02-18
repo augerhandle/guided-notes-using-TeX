@@ -1,0 +1,41 @@
+\section{Triangle Numbers}
+
+\begin{itemize}
+    \item For \myEmph{triangle numbers},
+    the length of each new \myEmph{row} 
+    increases by \gap{one}.
+
+    \item Fill in the missing terms.
+    
+    \begin{tikzpicture}[auto, bend left=30]
+        \dashundergapssetup{
+            gap-widen=false,
+        }
+    
+        \node (1) at (0,0)  [myShape,draw] {1};
+        \node (2) at (2,0)  [myShape,draw] {3};
+        \node (3) at (4,0)  [myShape,draw] {6};
+        \node (4) at (6,0)  [myShape,draw] {10};
+        \node (5) at (8,0)  [myShape,draw] {15};
+        \node (6) at (10,0) [myShape,draw] {21};
+        \node (7) at (12,0) [myShape,draw] {\tiny\gap{28}};
+        \node (8) at (14,0) [myShape,draw] {\tiny\gap{36}};
+        \node (dots) at (15.5,0) {\huge\dots};
+    
+        \draw [-Stealth] (1.north east) to node  {\tiny$+2$} (2.north west);
+        \draw [-Stealth] (2.north east) to node  {\tiny$+3$} (3.north west);
+        \draw [-Stealth] (3.north east) to node  {\tiny$+4$} (4.north west);
+        \draw [-Stealth] (4.north east) to node  {\tiny$+5$} (5.north west);
+        \draw [-Stealth] (5.north east) to node  {\tiny$+6$} (6.north west);
+        \draw [-Stealth] (6.north east) to node  {\tiny$+7$} (7.north west);
+        \draw [-Stealth] (7.north east) to node  {\tiny$+8$} (8.north west);
+    \end{tikzpicture}  
+    
+    \item The \myEmph{recursive formula} for triangle numbers is
+    \begin{align}
+        \left(\text{\itshape{the next term}}\right) &= \left(\text{the previous term}\right) + n \\
+        x_n                                         &= x_{n-1} + n 
+    \end{align}
+    As long as you know the \gap{first} term in the sequence,
+    you can calculate all the rest.
+\end{itemize}
