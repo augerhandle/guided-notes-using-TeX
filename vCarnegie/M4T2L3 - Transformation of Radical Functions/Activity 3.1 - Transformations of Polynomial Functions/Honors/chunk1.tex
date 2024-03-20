@@ -2,12 +2,21 @@
     \centering
     {
     \large
-    \vspace{-1\baselineskip}
-    \begin{align*}
-    y &= \bm{A} f\left( \text{\rule{0pt}{0.9em}}\bm{B}(x-\bm{C})\right) + \bm{D} \\ 
-    y &= \bm{A} \myRoot{ \bm{B}(x-\bm{C})} + \bm{D}\\ 
-    y &= \bm{A} \myRoot[3]{ \bm{B}(x-\bm{C})} + \bm{D}
-    \end{align*}
+    \renewcommand{\arraystretch}{1.5}
+    \addtolength{\tabcolsep}{2em}
+    \begin{tabular}{lr}
+        \multicolumn{2}{c}{
+            $y = \bm{A} \text{\Large $f$}\!\left( \text{\rule{0pt}{0.9em}}\bm{B}(x-\bm{C})\right) + \bm{D}$ 
+            }\\
+            {\footnotesize $y = \bm{A} \myRoot{ \bm{B}(x-\bm{C})} + \bm{D}$}
+            &%
+            {\footnotesize $y = \bm{A} \myRoot[3]{ \bm{B}(x-\bm{C})} + \bm{D}$}
+    \end{tabular}
+    % \begin{align*}
+    % y &= \bm{A} f\left( \text{\rule{0pt}{0.9em}}\bm{B}(x-\bm{C})\right) + \bm{D} \\ 
+    % y &= \bm{A} \myRoot{ \bm{B}(x-\bm{C})} + \bm{D}\\ 
+    % y &= \bm{A} \myRoot[3]{ \bm{B}(x-\bm{C})} + \bm{D}
+    % \end{align*}
     }
     \tcblower 
     % \small
