@@ -1,0 +1,45 @@
+\documentclass[12pt,letterpaper]{memoir}
+    % memoir commands to define the text block geometry
+    \setulmarginsandblock{0.5in}{*}{*}
+    \setlrmarginsandblock{0.5in}{*}{*} % leave space in left margin for punched holes
+
+\input{../../../common/packages}
+\dashundergapssetup{
+    gap-format=underline,
+    teacher-gap-format=dot,
+    gap-font={\ECFAugie\MTversion{augie}\color{black}},
+    gap-numbers=false,
+    gap-widen=true,
+    gap-extend-percent=75, % note: making this too big might create errors
+    gap-number-format=\,\textsuperscript{\normalfont(\thegapnumber)},
+}
+
+\input{../../../common/course-name}
+\input{../../../common/defs}
+\input{../../../common/student-or-teacher}
+\input{../../../common/assignment-defs}
+\input{../../../common/packages}
+\input{../../../common/graphs}
+\input{../../../common/problems}
+
+\renewcommand\arraystretch{1.2}
+
+\begin{document}
+
+\input{for-whom}
+
+\pagestyle{empty}
+\checkandfixthelayout
+\raggedbottom
+
+%-----------------------------------------------------------------------------------------
+\myAssignmentHeader{Activity 2.1}{Characteristics of Exp Functions}
+%-----------------------------------------------------------------------------------------
+
+\input{chunk1}
+\input{chunk2}
+\input{chunk3}
+\input{chunk4}
+\input{chunk5}
+
+\end{document}

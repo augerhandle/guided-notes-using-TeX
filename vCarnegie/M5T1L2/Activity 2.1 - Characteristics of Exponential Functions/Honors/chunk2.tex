@@ -1,0 +1,72 @@
+
+\myProblemsWithContent
+{
+    \begin{center}
+        {$f(x) = 1\cdot10^x$} \phantom{$\left(\frac{1}{10}\right)$}      
+    \end{center}
+    \tcblower
+    {
+        \begin{minipage}{0.49\textwidth}
+            \begin{itemize}[nosep,fullwidth]
+                \item $A=$\gap{1} 
+                \item $b=$\gap{10}
+                \item \gap{growth}
+            \end{itemize}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \begin{myTikzpictureGrid}{0.18} {10}{10} [dotted]
+                \tkzFct[ solid, very thick, samples=100, domain=-10:2,]{10**x}
+            \end{myTikzpictureGrid}   
+        \end{minipage}\\
+        \vspace{-1\onelineskip}
+        \begin{center}
+            \small
+            \begin{tabular}{|c|c|}
+                \hline
+                \multicolumn{2}{|c|}{\myEmph{characteristics}} \\ \hline 
+                {\itshape domain} & \gap{$(-\infty,\infty)$} \\
+                \hline
+                {\itshape range}  & \gap{$(0,\infty)$} \\
+                \hline
+                {\itshape asymptote}     & \gap{$y=0$} \\
+                \hline
+                {\itshape $y$-intercept} & \gap{1} \\
+                \hline
+            \end{tabular}
+        \end{center}
+    }
+}
+{
+    \begin{center}
+        {$f(x) = 1\left(\frac{1}{10}\right)^x =  1(0.1)^x$}     
+    \end{center}
+    \tcblower
+    \begin{minipage}{0.49\textwidth}
+        \begin{itemize}[nosep,fullwidth]
+            \item $A=$\gap{1} 
+            \item $b=$\gap{1/10}
+            \item \gap{decay}
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        \begin{myTikzpictureGrid}{0.18} {10}{10} [dotted]
+            \tkzFct[ solid, very thick, samples=100, domain=-2:10,]{0.1**x}
+        \end{myTikzpictureGrid}   
+    \end{minipage}\\
+    \vspace{-1\onelineskip}
+    \begin{center}
+        \small
+        \begin{tabular}{|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{\myEmph{characteristics}} \\ \hline 
+            {\itshape domain} & \gap{$(-\infty,\infty)$} \\
+            \hline
+            {\itshape range}  & \gap{$(0,\infty)$} \\
+            \hline
+            {\itshape asymptote}     & \gap{$y=0$} \\
+            \hline
+            {\itshape $y$-intercept} & \gap{1} \\
+            \hline
+        \end{tabular}
+    \end{center}
+}
