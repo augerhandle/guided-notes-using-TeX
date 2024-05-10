@@ -27,6 +27,8 @@
         "*.tkzfonct.gnuplot",
         ".tkzfonct.gnuplot",
         "*.tkzfonct.table",
+        "*pgf-plot.gnuplot",
+        "*.dvi",
         "*.nav"
     ],
     "latex-workshop.latex.tools": [

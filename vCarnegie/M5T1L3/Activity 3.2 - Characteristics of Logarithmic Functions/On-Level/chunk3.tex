@@ -1,0 +1,93 @@
+    
+\myProblemsWithContent
+{
+    \begin{center}
+        {$p(x) = \myLog[10](x) = \myLog[{}](x)$}      
+    \end{center}
+    \tcblower
+    {
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    xmin=-10,xmax=10,
+                    ymin=-10,ymax=10,
+                    grid=both,
+                    grid style={line width=0.5pt, draw=gray!100},
+                    major grid style={line width=0.5pt,draw=gray!100},
+                    axis lines=middle,
+                    axis line style={dashed,thick,arrows={-{Straight Barb}}},
+                    minor tick num=4,
+                    xticklabel={\empty}, yticklabel={\empty},
+                    width=2in,
+                    height=2in,
+                    ]
+                % \addplot[black,domain=-10:4] {pow(2,x)}; %node[above]{$y=2^x$};
+                \addplot[black,very thick,domain=0.0000000001:10,samples=1500]{log2(x)/log2(10)}; %node[above left] {$y=\log_2(x)$};
+                \end{axis}
+            \end{tikzpicture}
+            \\
+            {
+                \small
+                \begin{tabular}{|c|c|}
+                    \hline
+                    \multicolumn{2}{|c|}{\myEmph{characteristics}} \\ 
+                    \hline 
+                    {\itshape base} & $b=$\gap{10}\\ 
+                    \hline
+                    {\itshape domain} & \gap{$(0,\infty)$} \\
+                    \hline
+                    {\itshape range}  & \gap{$(-\infty,\infty)$} \\
+                    \hline
+                    {\itshape asymptote}     & \gap{$x=0$} \\
+                    \hline
+                    {\itshape $x$-intercept} & \gap{$(1,0)$} \\
+                    \hline
+                \end{tabular}
+            }
+        \end{center}
+    }
+}
+{
+    \begin{center}
+        {$p(x) = \myLog[e](x) = \ln(x)$}      
+    \end{center}
+    \tcblower
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                xmin=-10,xmax=10,
+                ymin=-10,ymax=10,
+                grid=both,
+                grid style={line width=0.5pt, draw=gray!100},
+                major grid style={line width=0.5pt,draw=gray!100},
+                axis lines=middle,
+                axis line style={dashed,thick,arrows={-{Straight Barb}}},
+                minor tick num=4,
+                xticklabel={\empty}, yticklabel={\empty},
+                width=2in,
+                height=2in,
+                ]
+            \addplot[black,very thick,domain=0.00000000001:10,samples=1500]{log2(x)/log2(2.718281828)}; %node[above left] {$y=\log_2(x)$};
+            \end{axis}
+        \end{tikzpicture}
+        \\
+        {
+            \small
+            \begin{tabular}{|c|c|}
+                \hline
+                \multicolumn{2}{|c|}{\myEmph{characteristics}} \\ 
+                \hline 
+                {\itshape base} & $b=$\gap{$e$}\\ 
+                \hline
+                {\itshape domain} & \gap{$(0,\infty)$} \\
+                \hline
+                {\itshape range}  & \gap{$(-\infty,\infty)$} \\
+                \hline
+                {\itshape asymptote}     & \gap{$x=0$} \\
+                \hline
+                {\itshape $x$-intercept} & \gap{$(1,0)$} \\
+                \hline
+            \end{tabular}
+        }
+    \end{center}
+}
